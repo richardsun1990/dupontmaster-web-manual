@@ -625,118 +625,164 @@
                 padding: 8px 4px;
             }
             
-            /* Hero区域 */
+            /* Hero区域 - 确保显示 */
             .hero {
                 padding-top: 100px;
                 padding-bottom: 60px;
+                display: block;
             }
             
-            .hero h1 {
-                font-size: 36px;
-            }
-            
-            .hero .subtitle {
-                font-size: 18px;
-            }
-            
-            .hero .description {
-                font-size: 15px;
-                padding: 0 10px;
-            }
-            
-            .hero-stats {
-                flex-direction: column;
-                gap: 24px;
-                padding: 20px 0;
-            }
-            
-            .hero-stat-value {
-                font-size: 28px;
+            .hero-content {
+                display: block;
             }
             
             .hero-badge {
+                display: inline-block;
                 font-size: 11px;
                 padding: 4px 12px;
             }
             
+            .hero h1 {
+                font-size: 32px;
+                display: block;
+            }
+            
+            .hero .subtitle {
+                font-size: 18px;
+                display: block;
+            }
+            
+            .hero .description {
+                font-size: 14px;
+                padding: 0 10px;
+                display: block;
+                margin-bottom: 20px;
+            }
+            
+            .hero-stats {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                gap: 10px;
+                padding: 20px 10px;
+            }
+            
+            .hero-stat {
+                display: block;
+            }
+            
+            .hero-stat-value {
+                font-size: 24px;
+            }
+            
+            .hero-stat-label {
+                font-size: 12px;
+            }
+            
             .cta-buttons {
+                display: flex;
                 flex-direction: column;
                 align-items: center;
                 gap: 12px;
             }
             
             .cta-primary, .cta-secondary {
+                display: inline-block;
                 padding: 10px 24px;
                 font-size: 14px;
             }
             
-            /* Section标题 */
-            .section-title {
-                font-size: 28px;
+            /* Section通用 - 确保显示 */
+            .section-title, .four-features h2, .data-coverage h2, .comparison h2, .faq h2 {
+                display: block;
+                font-size: 24px;
                 padding: 0 16px;
             }
             
-            .section-subtitle {
-                font-size: 16px;
+            .section-subtitle, .four-features .subtitle, .data-coverage .section-subtitle, .comparison .section-subtitle {
+                display: block;
+                font-size: 14px;
                 padding: 0 20px;
             }
             
-            /* 四大功能模块 - 移动端2列 */
+            /* 四大功能模块 - 确保显示 */
+            .four-features {
+                display: block;
+                padding: 50px 0;
+            }
+            
             .four-features-grid {
+                display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 gap: 12px;
                 padding: 0 16px;
             }
             
             .four-feature-card {
-                padding: 20px 16px;
+                display: block;
+                padding: 16px 12px;
             }
             
             .four-feature-number {
-                width: 36px;
-                height: 36px;
-                font-size: 18px;
-                margin-bottom: 16px;
+                width: 32px;
+                height: 32px;
+                font-size: 16px;
+                margin-bottom: 12px;
             }
             
             .four-feature-card h3 {
-                font-size: 16px;
-                margin-bottom: 8px;
+                font-size: 14px;
+                margin-bottom: 6px;
             }
             
             .four-feature-card p {
-                font-size: 13px;
+                font-size: 12px;
             }
             
-            /* 数据覆盖 - 移动端2列 */
+            /* 数据覆盖 - 确保显示 */
+            .data-coverage {
+                display: block;
+                padding: 50px 0;
+            }
+            
             .coverage-grid {
+                display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 gap: 12px;
                 padding: 0 16px;
             }
             
             .coverage-card {
-                padding: 20px 12px;
+                display: block;
+                padding: 16px 12px;
             }
             
             .coverage-icon {
-                font-size: 28px;
-                margin-bottom: 12px;
+                font-size: 24px;
+                margin-bottom: 10px;
             }
             
             .coverage-card h4 {
-                font-size: 15px;
+                font-size: 14px;
             }
             
             .coverage-card p {
-                font-size: 12px;
+                font-size: 11px;
             }
             
             /* 对比表格 - 改为纵向卡片 */
+            .comparison {
+                display: block;
+                padding: 50px 0;
+            }
+            
             .comparison-table {
+                display: block;
                 max-width: 100%;
                 margin: 0 16px;
                 border-radius: 16px;
+                background: white;
+                overflow: hidden;
             }
             
             .comparison-table thead {
@@ -746,103 +792,130 @@
             .comparison-table tbody {
                 display: flex;
                 flex-direction: column;
-                gap: 12px;
-                padding: 16px;
             }
             
             .comparison-table tr {
                 display: flex;
                 flex-direction: column;
-                background: white;
-                border-radius: 12px;
                 padding: 16px;
-                box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+                border-bottom: 1px solid var(--border);
+            }
+            
+            .comparison-table tr:last-child {
+                border-bottom: none;
+            }
+            
+            .comparison-table tr:nth-child(even) {
+                background: #f8fafc;
             }
             
             .comparison-table td {
-                padding: 8px 0;
-                border: none;
-                font-size: 14px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                padding: 12px 0;
+                border: none;
+                font-size: 15px;
             }
             
             .comparison-table td:first-child {
                 font-weight: 600;
                 color: var(--text);
-                border-bottom: 1px solid var(--border);
-                padding-bottom: 12px;
-                margin-bottom: 8px;
+                padding-bottom: 8px;
+            }
+            
+            .comparison-table td:last-child {
+                color: var(--text-secondary);
             }
             
             .comparison-table tr:last-child {
-                background: #f0f9ff;
+                background: #eff6ff;
             }
             
             /* 价格区域 */
             .price-box {
-                margin: 40px 16px 0;
-                padding: 30px 20px;
-                border-radius: 20px;
+                display: block;
+                margin: 30px 16px 0;
+                padding: 24px 16px;
+                border-radius: 16px;
             }
             
             .price {
-                font-size: 36px;
+                font-size: 32px;
             }
             
             .price-period {
-                font-size: 18px;
+                font-size: 16px;
             }
             
             .price-box p {
-                font-size: 13px;
+                font-size: 12px;
             }
             
             /* 客户评价 */
+            .testimonials {
+                display: block;
+                padding: 50px 0;
+            }
+            
             .testimonials-grid {
+                display: grid;
                 grid-template-columns: 1fr;
                 gap: 16px;
                 padding: 0 16px;
             }
             
             .testimonial-card {
-                padding: 24px;
+                display: block;
+                padding: 20px;
             }
             
             /* FAQ */
+            .faq {
+                display: block;
+                padding: 50px 0;
+            }
+            
             .faq-list {
+                display: block;
                 padding: 0 16px;
             }
             
             .faq-item summary {
-                padding: 20px 0;
-                font-size: 16px;
+                display: flex;
+                padding: 18px 0;
+                font-size: 15px;
             }
             
             .faq-item answer {
-                font-size: 14px;
+                display: block;
+                font-size: 13px;
             }
             
             /* CTA */
             .cta-section {
-                padding: 60px 20px;
+                display: block;
+                padding: 50px 20px;
             }
             
             .cta-section h2 {
-                font-size: 28px;
+                display: block;
+                font-size: 24px;
             }
             
             .cta-section p {
-                font-size: 16px;
+                display: block;
+                font-size: 14px;
             }
             
             /* Footer */
             footer {
-                padding: 30px 16px;
+                display: block;
+                padding: 24px 16px;
             }
             
             footer .footer-links {
+                display: flex;
                 flex-wrap: wrap;
                 gap: 12px;
             }
