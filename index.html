@@ -605,40 +605,262 @@
         
         /* Responsive */
         @media (max-width: 768px) {
+            /* 导航栏 - 移动端简化 */
+            nav ul {
+                justify-content: space-between;
+                padding: 0 16px;
+            }
+            
+            nav li:not(:first-child):not(:last-child) {
+                display: none;
+            }
+            
+            nav li {
+                flex: 0 1 auto;
+                padding: 0 8px;
+            }
+            
+            nav a:not(.logo) {
+                font-size: 13px;
+                padding: 8px 4px;
+            }
+            
+            /* Hero区域 */
+            .hero {
+                padding-top: 100px;
+                padding-bottom: 60px;
+            }
+            
             .hero h1 {
-                font-size: 42px;
+                font-size: 36px;
             }
             
             .hero .subtitle {
-                font-size: 22px;
+                font-size: 18px;
             }
             
             .hero .description {
-                font-size: 16px;
+                font-size: 15px;
+                padding: 0 10px;
             }
             
             .hero-stats {
                 flex-direction: column;
-                gap: 30px;
+                gap: 24px;
+                padding: 20px 0;
+            }
+            
+            .hero-stat-value {
+                font-size: 28px;
+            }
+            
+            .hero-badge {
+                font-size: 11px;
+                padding: 4px 12px;
             }
             
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
+                gap: 12px;
             }
             
+            .cta-primary, .cta-secondary {
+                padding: 10px 24px;
+                font-size: 14px;
+            }
+            
+            /* Section标题 */
             .section-title {
-                font-size: 36px;
+                font-size: 28px;
+                padding: 0 16px;
             }
             
-            .four-features-grid,
-            .coverage-grid,
-            .testimonials-grid {
-                grid-template-columns: 1fr;
+            .section-subtitle {
+                font-size: 16px;
+                padding: 0 20px;
+            }
+            
+            /* 四大功能模块 - 移动端2列 */
+            .four-features-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+                padding: 0 16px;
+            }
+            
+            .four-feature-card {
+                padding: 20px 16px;
+            }
+            
+            .four-feature-number {
+                width: 36px;
+                height: 36px;
+                font-size: 18px;
+                margin-bottom: 16px;
+            }
+            
+            .four-feature-card h3 {
+                font-size: 16px;
+                margin-bottom: 8px;
+            }
+            
+            .four-feature-card p {
+                font-size: 13px;
+            }
+            
+            /* 数据覆盖 - 移动端2列 */
+            .coverage-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+                padding: 0 16px;
+            }
+            
+            .coverage-card {
+                padding: 20px 12px;
+            }
+            
+            .coverage-icon {
+                font-size: 28px;
+                margin-bottom: 12px;
+            }
+            
+            .coverage-card h4 {
+                font-size: 15px;
+            }
+            
+            .coverage-card p {
+                font-size: 12px;
+            }
+            
+            /* 对比表格 - 改为纵向卡片 */
+            .comparison-table {
+                max-width: 100%;
+                margin: 0 16px;
+                border-radius: 16px;
+            }
+            
+            .comparison-table thead {
+                display: none;
+            }
+            
+            .comparison-table tbody {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                padding: 16px;
+            }
+            
+            .comparison-table tr {
+                display: flex;
+                flex-direction: column;
+                background: white;
+                border-radius: 12px;
+                padding: 16px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            }
+            
+            .comparison-table td {
+                padding: 8px 0;
+                border: none;
+                font-size: 14px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .comparison-table td:first-child {
+                font-weight: 600;
+                color: var(--text);
+                border-bottom: 1px solid var(--border);
+                padding-bottom: 12px;
+                margin-bottom: 8px;
+            }
+            
+            .comparison-table tr:last-child {
+                background: #f0f9ff;
+            }
+            
+            /* 价格区域 */
+            .price-box {
+                margin: 40px 16px 0;
+                padding: 30px 20px;
+                border-radius: 20px;
             }
             
             .price {
-                font-size: 48px;
+                font-size: 36px;
+            }
+            
+            .price-period {
+                font-size: 18px;
+            }
+            
+            .price-box p {
+                font-size: 13px;
+            }
+            
+            /* 客户评价 */
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+                padding: 0 16px;
+            }
+            
+            .testimonial-card {
+                padding: 24px;
+            }
+            
+            /* FAQ */
+            .faq-list {
+                padding: 0 16px;
+            }
+            
+            .faq-item summary {
+                padding: 20px 0;
+                font-size: 16px;
+            }
+            
+            .faq-item answer {
+                font-size: 14px;
+            }
+            
+            /* CTA */
+            .cta-section {
+                padding: 60px 20px;
+            }
+            
+            .cta-section h2 {
+                font-size: 28px;
+            }
+            
+            .cta-section p {
+                font-size: 16px;
+            }
+            
+            /* Footer */
+            footer {
+                padding: 30px 16px;
+            }
+            
+            footer .footer-links {
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+        }
+        
+        /* 更小屏幕 (480px以下) */
+        @media (max-width: 480px) {
+            .four-features-grid,
+            .coverage-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 28px;
+            }
+            
+            .hero .subtitle {
+                font-size: 16px;
             }
         }
     </style>
