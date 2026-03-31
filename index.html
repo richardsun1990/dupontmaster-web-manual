@@ -625,58 +625,31 @@
                 padding: 8px 4px;
             }
             
-            /* Hero区域 - 确保显示 */
+            /* Hero区域 - 手机端简化 */
             .hero {
-                padding-top: 100px;
-                padding-bottom: 60px;
-                display: block;
-            }
-            
-            .hero-content {
-                display: block;
+                padding-top: 80px;
+                padding-bottom: 40px;
             }
             
             .hero-badge {
-                display: inline-block;
-                font-size: 11px;
-                padding: 4px 12px;
+                display: none;
             }
             
             .hero h1 {
-                font-size: 32px;
-                display: block;
+                font-size: 28px;
             }
             
             .hero .subtitle {
-                font-size: 18px;
-                display: block;
+                font-size: 16px;
+                display: none;
             }
             
             .hero .description {
-                font-size: 14px;
-                padding: 0 10px;
-                display: block;
-                margin-bottom: 20px;
+                display: none;
             }
             
             .hero-stats {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                gap: 10px;
-                padding: 20px 10px;
-            }
-            
-            .hero-stat {
-                display: block;
-            }
-            
-            .hero-stat-value {
-                font-size: 24px;
-            }
-            
-            .hero-stat-label {
-                font-size: 12px;
+                display: none;
             }
             
             .cta-buttons {
@@ -687,154 +660,43 @@
             }
             
             .cta-primary, .cta-secondary {
-                display: inline-block;
                 padding: 10px 24px;
                 font-size: 14px;
             }
             
-            /* Section通用 - 确保显示 */
-            .section-title, .four-features h2, .data-coverage h2, .comparison h2, .faq h2 {
-                display: block;
-                font-size: 24px;
-                padding: 0 16px;
-            }
-            
-            .section-subtitle, .four-features .subtitle, .data-coverage .section-subtitle, .comparison .section-subtitle {
-                display: block;
-                font-size: 14px;
-                padding: 0 20px;
-            }
-            
-            /* 四大功能模块 - 确保显示 */
-            .four-features {
-                display: block;
-                padding: 50px 0;
-            }
-            
-            .four-features-grid {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 12px;
-                padding: 0 16px;
-            }
-            
-            .four-feature-card {
-                display: block;
-                padding: 16px 12px;
-            }
-            
-            .four-feature-number {
-                width: 32px;
-                height: 32px;
-                font-size: 16px;
-                margin-bottom: 12px;
-            }
-            
-            .four-feature-card h3 {
-                font-size: 14px;
-                margin-bottom: 6px;
-            }
-            
-            .four-feature-card p {
-                font-size: 12px;
-            }
-            
-            /* 数据覆盖 - 确保显示 */
-            .data-coverage {
-                display: block;
-                padding: 50px 0;
-            }
-            
-            .coverage-grid {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 12px;
-                padding: 0 16px;
-            }
-            
-            .coverage-card {
-                display: block;
-                padding: 16px 12px;
-            }
-            
-            .coverage-icon {
-                font-size: 24px;
-                margin-bottom: 10px;
-            }
-            
-            .coverage-card h4 {
-                font-size: 14px;
-            }
-            
-            .coverage-card p {
-                font-size: 11px;
-            }
-            
-            /* 对比表格 - 改为纵向卡片 */
-            .comparison {
-                display: block;
-                padding: 50px 0;
-            }
-            
-            .comparison-table {
-                display: block;
-                max-width: 100%;
-                margin: 0 16px;
-                border-radius: 16px;
-                background: white;
-                overflow: hidden;
-            }
-            
-            .comparison-table thead {
+            /* 手机端隐藏不必要的区块 */
+            .four-features,
+            .data-coverage,
+            .testimonials,
+            .faq,
+            .cta-section {
                 display: none;
             }
             
-            .comparison-table tbody {
-                display: flex;
-                flex-direction: column;
+            /* 对比表格 - 保持横向布局 */
+            .comparison {
+                padding: 40px 0;
             }
             
-            .comparison-table tr {
-                display: flex;
-                flex-direction: column;
-                padding: 16px;
-                border-bottom: 1px solid var(--border);
+            .comparison-table {
+                max-width: 100%;
+                margin: 0 12px;
+                border-radius: 12px;
+                overflow-x: auto;
             }
             
-            .comparison-table tr:last-child {
-                border-bottom: none;
+            .comparison-table table {
+                min-width: 500px;
             }
             
-            .comparison-table tr:nth-child(even) {
-                background: #f8fafc;
-            }
-            
+            .comparison-table th,
             .comparison-table td {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 12px 0;
-                border: none;
-                font-size: 15px;
-            }
-            
-            .comparison-table td:first-child {
-                font-weight: 600;
-                color: var(--text);
-                padding-bottom: 8px;
-            }
-            
-            .comparison-table td:last-child {
-                color: var(--text-secondary);
-            }
-            
-            .comparison-table tr:last-child {
-                background: #eff6ff;
+                padding: 12px 8px;
+                font-size: 13px;
             }
             
             /* 价格区域 */
             .price-box {
-                display: block;
                 margin: 30px 16px 0;
                 padding: 24px 16px;
                 border-radius: 16px;
@@ -852,65 +714,8 @@
                 font-size: 12px;
             }
             
-            /* 客户评价 */
-            .testimonials {
-                display: block;
-                padding: 50px 0;
-            }
-            
-            .testimonials-grid {
-                display: grid;
-                grid-template-columns: 1fr;
-                gap: 16px;
-                padding: 0 16px;
-            }
-            
-            .testimonial-card {
-                display: block;
-                padding: 20px;
-            }
-            
-            /* FAQ */
-            .faq {
-                display: block;
-                padding: 50px 0;
-            }
-            
-            .faq-list {
-                display: block;
-                padding: 0 16px;
-            }
-            
-            .faq-item summary {
-                display: flex;
-                padding: 18px 0;
-                font-size: 15px;
-            }
-            
-            .faq-item answer {
-                display: block;
-                font-size: 13px;
-            }
-            
-            /* CTA */
-            .cta-section {
-                display: block;
-                padding: 50px 20px;
-            }
-            
-            .cta-section h2 {
-                display: block;
-                font-size: 24px;
-            }
-            
-            .cta-section p {
-                display: block;
-                font-size: 14px;
-            }
-            
             /* Footer */
             footer {
-                display: block;
                 padding: 24px 16px;
             }
             
