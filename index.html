@@ -671,6 +671,12 @@
                 padding: 40px 0;
             }
             
+            .faq h2 {
+                font-size: 22px;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+            
             .faq-list {
                 padding: 0 16px;
             }
@@ -692,32 +698,46 @@
             
             .cta-section h2 {
                 font-size: 22px;
+                text-align: center;
             }
             
             .cta-section p {
                 font-size: 14px;
+                text-align: center;
             }
             
-            /* 对比表格 - 保持横向布局 */
+            /* 对比表格 - 手机端窄宽布局 */
             .comparison {
                 padding: 40px 0;
             }
             
             .comparison-table {
-                max-width: 100%;
-                margin: 0 12px;
+                max-width: 340px;
+                margin: 0 auto;
                 border-radius: 12px;
-                overflow-x: auto;
             }
             
             .comparison-table table {
-                min-width: 500px;
+                min-width: auto;
+                width: 100%;
             }
             
             .comparison-table th,
             .comparison-table td {
-                padding: 12px 8px;
+                padding: 10px 12px;
                 font-size: 13px;
+                text-align: center;
+            }
+            
+            .comparison-table th:first-child,
+            .comparison-table td:first-child {
+                border-right: none;
+                text-align: center;
+            }
+            
+            .comparison-table th:not(:first-child),
+            .comparison-table td:not(:first-child) {
+                width: 35%;
             }
             
             /* 价格区域 */
