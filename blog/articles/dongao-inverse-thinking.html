@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>东阿阿胶：反过来思考这家公司 - DuPont Master</title>
+    <meta name="description" content="东阿阿胶：反过来思考这家公司 - DuPont Master财务分析文章">
+    <style>
+        :root { --primary: #0071e3; --text: #1d1d1f; --text-secondary: #86868b; --bg: #fff; --bg-alt: #f5f5f7; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif; line-height: 1.8; color: var(--text); background: var(--bg); }
+        
+        .nav { background: rgba(0,0,0,0.85); padding: 12px 0; }
+        .nav-c { max-width: 800px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { color: #fff; text-decoration: none; font-weight: 700; font-size: 17px; }
+        .nav a { color: rgba(255,255,255,0.85); text-decoration: none; margin-left: 14px; font-size: 13px; }
+        
+        .cover { width: 100%; height: 320px; background-image: url('https://prod-files-secure.s3.us-west-2.amazonaws.com/382c4c3f-a159-8181-a8b4-0003196c647c/98a1adb9-e0ed-4c35-a8ab-c0713829cc50/SCR-20260401-itww.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YQIVHNBR%2F20260402%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260402T102328Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIQCp6yE6BWbCX7A1iHR8rxBplTLsxzQ0pVfvmMmi6YGBugIgJXLWzyL%2FprDDIrsuczsVBkG%2BD03b9e3vG1lKESY2n28q%2FwMIahAAGgw2Mzc0MjMxODM4MDUiDFM6vDFUxELPBtlOMSrcA9saMA7HOq8li%2FYcf%2Ft5sBdnOJuYN2oSxdgsQJAsnAU0%2Bnh43N8I2nZ5y2hXI%2FvJDIGylWlISYIwZAmU7Ait3UhpJvf7fe5zUBzuU9vaN%2FKjlhCqo2aW0FLOJwKurA78Hhi8aiDgEWQHDT0tqYzfKaOPccsqbUR87rnlsfhggAnMgZoCIXTdBRs8qfIGpj8LLW8EJUZIT%2FsL3RLug6qmTiATku%2FBtQnZ%2Bc02nCYCsbko94CyLUgNL%2Fi9XNJqApEO54rhAnAs%2BirWP30kxnT3ZVt5%2FjALfBIxvmDq7ZE2VwlfZa57ysUDjDLH9RalOhtGsU6HLqiPlDQbefiIhFiP1tz6s0Wf4WXD1o5RjAOPXQ4lefbCnTjNwNRDmCGYp3MjEItenEv3q%2BpoMMu2yVYYa85DRZGBwOovVVY%2F%2BYh4lxJVUtmNeNvGYR1F%2BCNDUWAsSsSeRXIr%2BIqYgQJF1JqsqRpvE%2BNPenamL7P1VUH6KUI0nEQea2MtF7DNuLQc1%2BNBekaA8iH9YxGTGuUj98cafJQ0iOg%2BMsDfa9Za%2BNvuG0%2FK2%2FJiDf%2F8KC3nzp0a12OXirq6yrqGCczFcBICwymq4mUlH6Xm8LSnDq7uZ6Uz%2BHgHktaQNvxMnRgU6ArnMMfnuM4GOqUBKVzn7HwWXjVAaiBB5EFw33lO%2BM4yaArOO0pYHiSgCHmW%2F%2B6bgw1psUUSlcltTXfK%2FCYJ9TrEOiFGHNRnSxn27ztqqWNxs%2BIPXzI1jOKeHzLb75TTLMopwfDR4g8og9q8ZUpQcUd3a1VjtC6hyQkjGpKTGMPvlWKfuPBLEvEdT1JW4Xj5CbZVZ2C4DC6vTnJXbYn8ZzNAxHRRts5NNpWoICb%2BiLfC&X-Amz-Signature=23b1f5c3527bd84343eb1308040eaa60e1249078a2b96b85ddea3860f44d9739&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject'); background-size: cover; background-position: center; position: relative; }
+        .cover::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 100px; background: linear-gradient(transparent, rgba(0,0,0,0.6)); }
+        
+        .box { max-width: 800px; margin: -80px auto 0; padding: 0 20px 60px; position: relative; z-index: 1; }
+        .header { background: #fff; padding: 28px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 28px; }
+        .tag { display: inline-block; background: rgba(0,113,227,0.1); color: var(--primary); padding: 5px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; margin-bottom: 14px; }
+        .title { font-size: 28px; font-weight: 700; line-height: 1.35; margin-bottom: 12px; }
+        .meta { color: var(--text-secondary); font-size: 13px; }
+        
+        .content { font-size: 16px; }
+        .content p { margin-bottom: 18px; }
+        .content h2 { font-size: 22px; font-weight: 600; margin: 36px 0 16px; }
+        .content h3 { font-size: 18px; font-weight: 600; margin: 28px 0 12px; }
+        .content h4 { font-size: 16px; font-weight: 600; margin: 22px 0 10px; }
+        .content li { margin-bottom: 6px; margin-left: 18px; }
+        .content figure { margin: 20px 0; }
+        .content img { max-width: 100%; border-radius: 8px; }
+        
+        .related { margin-top: 48px; padding-top: 28px; border-top: 1px solid #eee; }
+        .related h3 { font-size: 18px; font-weight: 600; margin-bottom: 16px; }
+        .rel-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .rel-card { display: block; text-decoration: none; color: inherit; background: var(--bg-alt); border-radius: 12px; padding: 16px; transition: transform 0.2s; }
+        .rel-card:hover { transform: translateY(-2px); }
+        .rel-card h4 { font-size: 14px; font-weight: 600; line-height: 1.4; }
+        
+        .cta { background: linear-gradient(135deg, #1e3a5f, #3b82f6); color: #fff; padding: 28px; border-radius: 12px; text-align: center; margin: 44px 0; }
+        .cta h3 { font-size: 18px; margin-bottom: 8px; }
+        .cta p { font-size: 14px; opacity: 0.9; }
+        .cta a { display: inline-block; background: #fff; color: var(--primary); padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 14px; }
+        
+        footer { background: var(--bg-alt); padding: 32px 20px; text-align: center; font-size: 13px; color: var(--text-secondary); }
+        footer a { color: var(--primary); text-decoration: none; }
+        
+        @media (max-width: 768px) { .title { font-size: 22px; } .rel-grid { grid-template-columns: 1fr; } .cover { height: 220px; } }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-c">
+            <a href="https://www.dupontmaster.com" class="logo">DuPont Master</a>
+            <div>
+                <a href="https://www.dupontmaster.com">首页</a>
+                <a href="/blog/">博客</a>
+                <a href="https://app.dupontmaster.com">控制台</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="cover"></div>
+    
+    <article class="box">
+        <header class="header">
+            <span class="tag">财务分析</span>
+            <h1 class="title">东阿阿胶：反过来思考这家公司</h1>
+            <div class="meta">📅 2026-04-01 · ⏱ 约10分钟阅读</div>
+        </header>
+        
+        <div class="content">
+<p>芒格说：「如果我知道自己会死在哪里，我就永远不去那里。」</p>
+<p>这句话看似简单，实则是研究一家公司最有效的方法论。大多数投资者问的是"这家公司好不好"、"要不要买"、"能涨多少"。但芒格式的思考从不从这里开始。</p>
+<p>研究一家公司，首先问的是：它会怎么死？</p>
+<p>对于东阿阿胶，我花了很长时间思考这个问题。这篇文章，就是我思考的记录。</p>
+<p>一、倒退十年：这家公司差点死了两次</p>
+<p>第一次：1990年代的草莽时代</p>
+<p>东阿阿胶1996年上市，融资3000万。但当时这家公司几乎没有任何竞争力。</p>
+<p>阿胶市场的核心问题是：没有标准，消费者无法区分东阿和其他品牌。</p>
+<p>为什么后来东阿能跑出来？因为它做对了一件事——建立标准。东阿阿胶参与了阿胶行业标准的制定，把自己变成了"正宗阿胶"的代名词。</p>
+<p>反过来想：</p>
+<p>1996年的东阿阿胶没有护城河，但它有一样东西——上市的资本。有了资本，它可以做品牌、做渠道、做标准。这说明什么？</p>
+<p>在一个没有标准的行业，谁先建立标准，谁就是规则本身。</p>
+<figure><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/382c4c3f-a159-8181-a8b4-0003196c647c/98a1adb9-e0ed-4c35-a8ab-c0713829cc50/SCR-20260401-itww.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YQIVHNBR%2F20260402%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260402T102328Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIQCp6yE6BWbCX7A1iHR8rxBplTLsxzQ0pVfvmMmi6YGBugIgJXLWzyL%2FprDDIrsuczsVBkG%2BD03b9e3vG1lKESY2n28q%2FwMIahAAGgw2Mzc0MjMxODM4MDUiDFM6vDFUxELPBtlOMSrcA9saMA7HOq8li%2FYcf%2Ft5sBdnOJuYN2oSxdgsQJAsnAU0%2Bnh43N8I2nZ5y2hXI%2FvJDIGylWlISYIwZAmU7Ait3UhpJvf7fe5zUBzuU9vaN%2FKjlhCqo2aW0FLOJwKurA78Hhi8aiDgEWQHDT0tqYzfKaOPccsqbUR87rnlsfhggAnMgZoCIXTdBRs8qfIGpj8LLW8EJUZIT%2FsL3RLug6qmTiATku%2FBtQnZ%2Bc02nCYCsbko94CyLUgNL%2Fi9XNJqApEO54rhAnAs%2BirWP30kxnT3ZVt5%2FjALfBIxvmDq7ZE2VwlfZa57ysUDjDLH9RalOhtGsU6HLqiPlDQbefiIhFiP1tz6s0Wf4WXD1o5RjAOPXQ4lefbCnTjNwNRDmCGYp3MjEItenEv3q%2BpoMMu2yVYYa85DRZGBwOovVVY%2F%2BYh4lxJVUtmNeNvGYR1F%2BCNDUWAsSsSeRXIr%2BIqYgQJF1JqsqRpvE%2BNPenamL7P1VUH6KUI0nEQea2MtF7DNuLQc1%2BNBekaA8iH9YxGTGuUj98cafJQ0iOg%2BMsDfa9Za%2BNvuG0%2FK2%2FJiDf%2F8KC3nzp0a12OXirq6yrqGCczFcBICwymq4mUlH6Xm8LSnDq7uZ6Uz%2BHgHktaQNvxMnRgU6ArnMMfnuM4GOqUBKVzn7HwWXjVAaiBB5EFw33lO%2BM4yaArOO0pYHiSgCHmW%2F%2B6bgw1psUUSlcltTXfK%2FCYJ9TrEOiFGHNRnSxn27ztqqWNxs%2BIPXzI1jOKeHzLb75TTLMopwfDR4g8og9q8ZUpQcUd3a1VjtC6hyQkjGpKTGMPvlWKfuPBLEvEdT1JW4Xj5CbZVZ2C4DC6vTnJXbYn8ZzNAxHRRts5NNpWoICb%2BiLfC&X-Amz-Signature=23b1f5c3527bd84343eb1308040eaa60e1249078a2b96b85ddea3860f44d9739&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject" alt="" style="max-width:100%;border-radius:8px;margin:16px 0;"></figure>
+<p>第二次：2019年濒临死亡</p>
+<p>2019年，东阿阿胶ROE跌至-5%，自上市以来首次亏损。这一次，比1996年更危险。</p>
+<p>表面看是"渠道库存积压"。但本质是什么？</p>
+<p>用第一性原理追问：</p>
+<ul>
+<li>阿胶的价值主张是什么？补血、滋补、养生</li>
+<li>这个价值主张在2019年还成立吗？成立，但消费者不认了</li>
+<li>为什么消费者不认了？因为价格涨到离谱，一斤阿胶卖3000块</li>
+<li>为什么价格能涨到3000？因为过去10年一直在涨，消费者形成了"涨价=保值"的预期</li>
+<li>为什么这个预期在2019年崩塌了？因为经济下行，消费者开始理性消费</li>
+</ul>
+<p>多追问一层：</p>
+<p>为什么茅台可以持续提价，而东阿阿胶不能？</p>
+<p>因为茅台的稀缺性是物理意义上的稀缺——赤水河畔的独特地理环境、复杂的酿造工艺、时间的沉淀。这些东西学不来。</p>
+<p>但东阿阿胶的"稀缺性"是心理意义上的稀缺——消费者相信它稀缺。这种稀缺可以被创造，也可以被打破。</p>
+<p>2019年，这个预期被打破了。</p>
+<p>结论：2019年的危机，本质是"涨价预期"这个赌局的崩塌。公司把"提价"当成了核心竞争力，但提价从来不是竞争力——它只是竞争力的结果。</p>
+<p>二、用生物学的眼光看驴皮</p>
+<p>研究东阿阿胶，只看财务报表是不够的。你必须理解它的核心资源——驴皮——在整个生物学体系中的位置。</p>
+<p>驴是繁殖效率极低的动物：</p>
+<ul>
+<li>妊娠期12个月</li>
+<li>每胎通常1只</li>
+<li>幼驴需要2-3年才能成熟</li>
+<li>在自然界，驴几乎没有生存优势</li>
+</ul>
+<p>这意味着什么？</p>
+<p>国内驴存栏量从2010年的620万头，下降到2024年的不足200万头——这不是波动，是趋势。</p>
+<p>趋势的意思是：它不会自行逆转。</p>
+<p>反过来想这个问题</p>
+<ul>
+<li>问：如果你是竞争对手福牌阿胶，你怎么打东阿阿胶？</li>
+<li>答：不打。因为东阿阿胶的驴皮供应迟早出问题。</li>
+<li>问：如果你是东阿阿胶的管理层，你怎么解决驴皮问题？</li>
+<li>答：进口。但进口意味着成本波动加大，而且供应链安全永远受制于人。</li>
+<li>问：如果驴皮价格涨到200元/kg，东阿阿胶还能存活吗？</li>
+<li>答：不知道。但这是公司必须认真思考的问题。</li>
+</ul>
+<p>再追问一层：</p>
+<p>为什么驴皮价格持续上涨，而公司依然能维持25%以上的净利率？</p>
+<p>答案可能有两个：</p>
+<ol>
+<li>公司成功把成本转嫁给消费者（持续提价）</li>
+<li>公司提前做了战略储备（囤驴皮）</li>
+</ol>
+<p>从资产结构看，东阿阿胶账上有91.91亿类现金资产，占总资产的68.7%。这意味着公司确实在做驴皮战略储备——用闲置现金囤积原材料，平抑成本波动。</p>
+<p>这是一个务实的策略，但它能持续多久？</p>
+<p>三、财务数据背后的反直觉真相</p>
+<p>杜邦视角：三种完全不同的商业模式</p>
+<p>研究东阿阿胶，必须把它和同行放在一起比较。我选取了片仔癀和同仁堂，这三家公司代表了三種截然不同的商业模式：</p>
+<figure><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/382c4c3f-a159-8181-a8b4-0003196c647c/4f4d6f2d-e8ec-4433-9265-33b6fd19b183/SCR-20260401-jcyu.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YQIVHNBR%2F20260402%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260402T102328Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIQCp6yE6BWbCX7A1iHR8rxBplTLsxzQ0pVfvmMmi6YGBugIgJXLWzyL%2FprDDIrsuczsVBkG%2BD03b9e3vG1lKESY2n28q%2FwMIahAAGgw2Mzc0MjMxODM4MDUiDFM6vDFUxELPBtlOMSrcA9saMA7HOq8li%2FYcf%2Ft5sBdnOJuYN2oSxdgsQJAsnAU0%2Bnh43N8I2nZ5y2hXI%2FvJDIGylWlISYIwZAmU7Ait3UhpJvf7fe5zUBzuU9vaN%2FKjlhCqo2aW0FLOJwKurA78Hhi8aiDgEWQHDT0tqYzfKaOPccsqbUR87rnlsfhggAnMgZoCIXTdBRs8qfIGpj8LLW8EJUZIT%2FsL3RLug6qmTiATku%2FBtQnZ%2Bc02nCYCsbko94CyLUgNL%2Fi9XNJqApEO54rhAnAs%2BirWP30kxnT3ZVt5%2FjALfBIxvmDq7ZE2VwlfZa57ysUDjDLH9RalOhtGsU6HLqiPlDQbefiIhFiP1tz6s0Wf4WXD1o5RjAOPXQ4lefbCnTjNwNRDmCGYp3MjEItenEv3q%2BpoMMu2yVYYa85DRZGBwOovVVY%2F%2BYh4lxJVUtmNeNvGYR1F%2BCNDUWAsSsSeRXIr%2BIqYgQJF1JqsqRpvE%2BNPenamL7P1VUH6KUI0nEQea2MtF7DNuLQc1%2BNBekaA8iH9YxGTGuUj98cafJQ0iOg%2BMsDfa9Za%2BNvuG0%2FK2%2FJiDf%2F8KC3nzp0a12OXirq6yrqGCczFcBICwymq4mUlH6Xm8LSnDq7uZ6Uz%2BHgHktaQNvxMnRgU6ArnMMfnuM4GOqUBKVzn7HwWXjVAaiBB5EFw33lO%2BM4yaArOO0pYHiSgCHmW%2F%2B6bgw1psUUSlcltTXfK%2FCYJ9TrEOiFGHNRnSxn27ztqqWNxs%2BIPXzI1jOKeHzLb75TTLMopwfDR4g8og9q8ZUpQcUd3a1VjtC6hyQkjGpKTGMPvlWKfuPBLEvEdT1JW4Xj5CbZVZ2C4DC6vTnJXbYn8ZzNAxHRRts5NNpWoICb%2BiLfC&X-Amz-Signature=c13a856220b2709b83a0aaaaf7de4f016fabe268e0a6d3b44bd2b8a9ef73895c&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject" alt="" style="max-width:100%;border-radius:8px;margin:16px 0;"></figure>
+<p>杜邦三要素拆解：</p>
+<p>东阿阿胶：25.96% × 0.50 × 1.29 ≈ 16.8%</p>
+<p>片仔癀：27.60% × 0.62 × 1.23 ≈ 21.0%</p>
+<p>同仁堂：8.21% × 0.60 × 2.36 ≈ 11.6%</p>
+<p>三种模式：</p>
+<ol>
+<li>东阿阿胶：高利润 + 低周转 + 零杠杆</li>
+<li>产品溢价能力强，但资产运营效率低</li>
+<li>不借钱，财务极度保守</li>
+<li>ROE依赖净利率，一旦提价失败，ROE崩塌</li>
+<li>片仔癀：高利润 + 中等周转 + 零杠杆</li>
+<li>更高的净利率，来自于国家级绝密配方的护城河</li>
+<li>资产运营效率优于东阿</li>
+<li>ROE最稳健，几乎没有大起大落</li>
+<li>同仁堂：低利润 + 中等周转 + 高杠杆</li>
+<li>产品线太杂，大众产品拖累利润</li>
+<li>借债扩张，权益乘数高达2.36</li>
+<li>ROE最低，但反脆弱性最强</li>
+</ol>
+<p>68.7%的类现金——这到底是好事还是坏事？</p>
+<p>大多数人会说"好事"。账上有钱，心里不慌。</p>
+<p>但，为什么一家"好公司"会有这么多现金？</p>
+<figure><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/382c4c3f-a159-8181-a8b4-0003196c647c/14def719-8077-4ec9-84c1-c9522d64ec07/SCR-20260401-jcox.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YQIVHNBR%2F20260402%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260402T102328Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIQCp6yE6BWbCX7A1iHR8rxBplTLsxzQ0pVfvmMmi6YGBugIgJXLWzyL%2FprDDIrsuczsVBkG%2BD03b9e3vG1lKESY2n28q%2FwMIahAAGgw2Mzc0MjMxODM4MDUiDFM6vDFUxELPBtlOMSrcA9saMA7HOq8li%2FYcf%2Ft5sBdnOJuYN2oSxdgsQJAsnAU0%2Bnh43N8I2nZ5y2hXI%2FvJDIGylWlISYIwZAmU7Ait3UhpJvf7fe5zUBzuU9vaN%2FKjlhCqo2aW0FLOJwKurA78Hhi8aiDgEWQHDT0tqYzfKaOPccsqbUR87rnlsfhggAnMgZoCIXTdBRs8qfIGpj8LLW8EJUZIT%2FsL3RLug6qmTiATku%2FBtQnZ%2Bc02nCYCsbko94CyLUgNL%2Fi9XNJqApEO54rhAnAs%2BirWP30kxnT3ZVt5%2FjALfBIxvmDq7ZE2VwlfZa57ysUDjDLH9RalOhtGsU6HLqiPlDQbefiIhFiP1tz6s0Wf4WXD1o5RjAOPXQ4lefbCnTjNwNRDmCGYp3MjEItenEv3q%2BpoMMu2yVYYa85DRZGBwOovVVY%2F%2BYh4lxJVUtmNeNvGYR1F%2BCNDUWAsSsSeRXIr%2BIqYgQJF1JqsqRpvE%2BNPenamL7P1VUH6KUI0nEQea2MtF7DNuLQc1%2BNBekaA8iH9YxGTGuUj98cafJQ0iOg%2BMsDfa9Za%2BNvuG0%2FK2%2FJiDf%2F8KC3nzp0a12OXirq6yrqGCczFcBICwymq4mUlH6Xm8LSnDq7uZ6Uz%2BHgHktaQNvxMnRgU6ArnMMfnuM4GOqUBKVzn7HwWXjVAaiBB5EFw33lO%2BM4yaArOO0pYHiSgCHmW%2F%2B6bgw1psUUSlcltTXfK%2FCYJ9TrEOiFGHNRnSxn27ztqqWNxs%2BIPXzI1jOKeHzLb75TTLMopwfDR4g8og9q8ZUpQcUd3a1VjtC6hyQkjGpKTGMPvlWKfuPBLEvEdT1JW4Xj5CbZVZ2C4DC6vTnJXbYn8ZzNAxHRRts5NNpWoICb%2BiLfC&X-Amz-Signature=44cac5215158880a9c6f111b3c284412568ba89ac1ffdbc92f5c202aa02f35c1&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject" alt="" style="max-width:100%;border-radius:8px;margin:16px 0;"></figure>
+<p>对比一下：</p>
+<ul>
+<li>海天味业的类现金占比约40%</li>
+<li>A股消费品公司平均类现金占比约20%</li>
+</ul>
+<p>东阿阿胶的类现金占比，在整个A股消费品赛道都是极其罕见的高。</p>
+<p>这意味着什么？可能的原因有两个：</p>
+<ul>
+<li>原因A（好事）：公司在等待合适的投资机会，现在"现金为王"。</li>
+<li>原因B（坏事）：公司不敢投资。因为2019年的创伤太深，或者它找不到值得投资的项目。</li>
+</ul>
+<p>从ROE历史走势来看：</p>
+<figure style="background:#f5f5f7;padding:24px;border-radius:8px;margin:20px 0;text-align:center;">📊 数据对比表</figure>
+<p>看到了吗？</p>
+<ul>
+<li>东阿阿胶：大起大落，2019年差点破产</li>
+<li>片仔癀：稳健上行，2021年达到25%</li>
+<li>同仁堂：平稳，几乎没有波动</li>
+</ul>
+<p>反过来想：一家真正有竞争力的公司，ROE应该是稳步提升的，而不是大起大落的。东阿阿胶的大起大落说明什么？说明它的竞争力根基不稳。</p>
+<p>零有息负债——这是优势还是劣势？</p>
+<p>大多数价值投资者喜欢零有息负债的公司。但我们应该问：</p>
+<p>为什么一家ROE 16.82%的公司，不需要任何杠杆？</p>
+<p>可能的原因：</p>
+<ul>
+<li>管理层保守（经历过2019年的教训）</li>
+<li>公司真的没有好的投资机会</li>
+<li>银行不愿意借钱（为什么？）</li>
+</ul>
+<p>如果是原因1和2，这意味着公司的成长性可能受限。如果是原因3，这更值得警惕——银行的风控模型可能看到了我们没看到的东西。</p>
+<p>对比一下：同仁堂的权益乘数是2.36，意味着它有约30亿的有息负债。对于一家ROE 11.56%的公司来说，这合理吗？</p>
+<p>同仁堂的逻辑是：用别人的钱赚钱。ROE虽然低，但稳定。</p>
+<p>东阿阿胶的逻辑是：不借钱，净利率虽然高，但周转慢。</p>
+<p>两种模式，没有对错。但你需要问自己：你更信任哪一种？</p>
+<p>四、竞争格局：为什么没有人真正挑战东阿？</p>
+<p>表面上的垄断</p>
+<p>东阿阿胶在阿胶行业的市场份额约60%，是绝对龙头。</p>
+<p>但这个"垄断"是怎么来的？</p>
+<p>答案：不是靠产品力，而是靠提价。</p>
+<p>福牌阿胶的价格只有东阿的一半，但东阿依然卖得动。为什么？</p>
+<p>因为消费者相信"贵=好"。至少在滋补品这个品类，这个逻辑依然成立。</p>
+<p>反过来想：</p>
+<ul>
+<li>问：如果明天福牌阿胶把价格提到和东阿一样，消费者会买单吗？</li>
+<li>答：不会。</li>
+</ul>
+<p>这说明什么？</p>
+<p>东阿阿胶的护城河不是真正的护城河，而是品牌认知。认知需要时间建立，但也需要时间消亡。</p>
+<p>一旦消费者开始质疑"东阿凭什么卖这么贵"，护城河就会迅速崩塌。</p>
+<p>2019年就是前车之鉴。</p>
+<p>再追问一层：</p>
+<p>为什么茅台的护城河比东阿阿胶更深？</p>
+<p>因为茅台的稀缺性是物理意义上的。你无法复制赤水河畔的酿造环境，也无法复制几十年的窖池。</p>
+<p>但东阿阿胶的"稀缺性"是心理意义上的。只要消费者不再相信"东阿阿胶是最好的阿胶"，护城河就会消失。</p>
+<p>片仔癀：真正的护城河</p>
+<p>片仔癀的ROE长期稳定在20%以上，几乎没有经历过致命危机。</p>
+<p>为什么？</p>
+<p>因为片仔癀有国家绝密配方——这是一种法律保护的垄断。东阿阿胶的"品牌"可以被复制，但片仔癀的配方不能。</p>
+<ul>
+<li>反过来想：如果片仔癀明天开始提价，消费者会流失吗？可能会，但流失的速度远慢于东阿阿胶。</li>
+</ul>
+<p>这就是护城河质量的区别。</p>
+<p>五、投资之前必须回答的问题</p>
+<p>如果我要投资东阿阿胶，我需要先回答这些问题：</p>
+<p>关于驴皮</p>
+<ol>
+<li>驴皮价格涨到200元/kg时，公司的净利率还能维持25%吗？</li>
+<li>公司91亿的现金，有多少是"战略储备"，有多少是"无处可投的垃圾"？</li>
+<li>进口驴皮的供应链安全吗？如果主要进口国限制出口，公司怎么办？</li>
+</ol>
+<p>关于商业模式</p>
+<ol>
+<li>2019年的危机是"一次性事件"，还是"商业模式的必然"？</li>
+<li>管理层有没有承认2019年的错误，并从根本上修正了策略？还是只是"去库存"了事？</li>
+<li>公司的复方阿胶浆能否成为第二增长曲线？还是只是一个补充产品？</li>
+</ol>
+<p>关于消费者</p>
+<ol>
+<li>如果年轻消费者（30岁以下）不吃阿胶，10年后公司的核心用户群体是谁？</li>
+<li>电商渠道的占比提升，对公司是好事还是坏事？（电商会削弱品牌溢价能力）</li>
+</ol>
+<p>关于竞争对手</p>
+<ol>
+<li>如果福牌阿胶开始讲故事、提品牌，东阿阿胶的"正宗"定位还能守住吗？</li>
+<li>片仔癀会不会进入阿胶赛道，用同样的方式打败东阿？</li>
+</ol>
+<p>六、一句话总结</p>
+<p>东阿阿胶是一家"靠预期活着"的公司。它活得好不好，取决于消费者是否相信它"应该"卖得贵。这种商业模式，在经济上升期是护城河，在经济下行期是深渊。</p>
+<p>它的真正问题不是驴皮，不是库存，不是渠道——而是它把"消费者愿意支付的价格"当成了"自己产品的价值"。</p>
+<p>这两者从来不是一回事。</p>
+<p>附录：关键数据速览</p>
+<p>东阿阿胶杜邦指标（2025）：</p>
+<figure><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/382c4c3f-a159-8181-a8b4-0003196c647c/a72d296a-a061-4066-ae1a-79247ac740b0/SCR-20260401-jlhy.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YVBOQUR2%2F20260402%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260402T102331Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIQDQs2cGY1wnspdTwKx5RtCH8fVixGS%2BLrPO7dWCQ6PVlAIgTjiM84X5DhDy7%2BybkDQVBYFTG9uqkrAxTzwHpXfaCkwq%2FwMIahAAGgw2Mzc0MjMxODM4MDUiDOzosU3LR9%2FQq7i1MCrcA18fy8Aho42t7HZMjLRn8o1kfbjxfkJRwCpeTTxwDtlDZDHD7hIgFqC6t5i2znU36qmuQQ0NoAHs90WgftVj1LN1TpsfipDczZOZi1hQ4%2Fku9bgL37l4mEe5DEn9QlXK%2BYXim4NXQhHx577O2gs6PoGsCZ0oG0gmuB9mKduPIfP0003NcOlzzJfsjvSmiQiWwsZhFPcEuAJMBswZ76q3J7UFptRu9EIHEWZfb8TbzMpZQ3FEKG8s5zBeh7maaKmJHeJkpOUYZzwzDpH0k8ga6JbnEGT65crejCmtZrBcI%2FBC%2FfrJD7LcZstD2q91UOt1TPDOxNIFc64Xm2dsHPFayNyztr67i4ow%2FvvtENO3yXVmZ8MVCejh7ZMZ2CN3ODqFYicZ%2FrZaxw0YWV5lFSeea6%2FVil6HGdn%2ByKfEySdVkWiE4xm4Cbm9NqOU726pWF9pa99LfRh7Z2k%2BGcindEX%2BziO4B2C3rJ2105jfnNLwvqvykQywwNJGUuTfwxShq9kWkAHNU7SboRysJ1o7sQ3Q%2BgLqkvapQVdrC1UxeciMiGlLE%2FAfegUBJRFYVgB%2FxVqBHI5yrwgyR4KL3yK7sffGKxFBzfq8QdbhOWaAxJDi9RYdnE3yiR5nkL7P3sP0MMDnuM4GOqUBV8Swd%2Brc%2Fzow47ENB4rLDTaPswHOGrtBmUaDN9ixGzY4Pr3a%2BS4IyYSsM%2F4kW4O2K%2B%2BSpVrxUUwqM1KB2XwmA3rXfN3UMigij1BmqCd%2Bb0WYG03E%2FfWzSnNnhpq%2B9UqnUpqbG13TERswYmgfukyHtPsuTYii6xXTNwuo80vu8CK8zEeS6EC9jfeLpKR5L55Di%2FaCKU1m43fgYhAZEZVACI4Mmud1&X-Amz-Signature=381f292377a51cb9fa4076ca968c15728a1dd9b4eeada9caf81f9b26339bd763&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject" alt="" style="max-width:100%;border-radius:8px;margin:16px 0;"></figure>
+<p>东阿阿胶利润结构（2025年）：</p>
+<figure><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/382c4c3f-a159-8181-a8b4-0003196c647c/a19482ee-919e-4a76-a668-6ddaa30fc14a/%E6%88%AA%E5%B1%8F2026-04-01_10.20.08.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YVBOQUR2%2F20260402%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260402T102331Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIQDQs2cGY1wnspdTwKx5RtCH8fVixGS%2BLrPO7dWCQ6PVlAIgTjiM84X5DhDy7%2BybkDQVBYFTG9uqkrAxTzwHpXfaCkwq%2FwMIahAAGgw2Mzc0MjMxODM4MDUiDOzosU3LR9%2FQq7i1MCrcA18fy8Aho42t7HZMjLRn8o1kfbjxfkJRwCpeTTxwDtlDZDHD7hIgFqC6t5i2znU36qmuQQ0NoAHs90WgftVj1LN1TpsfipDczZOZi1hQ4%2Fku9bgL37l4mEe5DEn9QlXK%2BYXim4NXQhHx577O2gs6PoGsCZ0oG0gmuB9mKduPIfP0003NcOlzzJfsjvSmiQiWwsZhFPcEuAJMBswZ76q3J7UFptRu9EIHEWZfb8TbzMpZQ3FEKG8s5zBeh7maaKmJHeJkpOUYZzwzDpH0k8ga6JbnEGT65crejCmtZrBcI%2FBC%2FfrJD7LcZstD2q91UOt1TPDOxNIFc64Xm2dsHPFayNyztr67i4ow%2FvvtENO3yXVmZ8MVCejh7ZMZ2CN3ODqFYicZ%2FrZaxw0YWV5lFSeea6%2FVil6HGdn%2ByKfEySdVkWiE4xm4Cbm9NqOU726pWF9pa99LfRh7Z2k%2BGcindEX%2BziO4B2C3rJ2105jfnNLwvqvykQywwNJGUuTfwxShq9kWkAHNU7SboRysJ1o7sQ3Q%2BgLqkvapQVdrC1UxeciMiGlLE%2FAfegUBJRFYVgB%2FxVqBHI5yrwgyR4KL3yK7sffGKxFBzfq8QdbhOWaAxJDi9RYdnE3yiR5nkL7P3sP0MMDnuM4GOqUBV8Swd%2Brc%2Fzow47ENB4rLDTaPswHOGrtBmUaDN9ixGzY4Pr3a%2BS4IyYSsM%2F4kW4O2K%2B%2BSpVrxUUwqM1KB2XwmA3rXfN3UMigij1BmqCd%2Bb0WYG03E%2FfWzSnNnhpq%2B9UqnUpqbG13TERswYmgfukyHtPsuTYii6xXTNwuo80vu8CK8zEeS6EC9jfeLpKR5L55Di%2FaCKU1m43fgYhAZEZVACI4Mmud1&X-Amz-Signature=f4c5b6d92d4684f4f1fbddb83c925e14712156f76b235917d7e777fdade42f54&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject" alt="" style="max-width:100%;border-radius:8px;margin:16px 0;"></figure>
+<p>业务板块历史走势：</p>
+<figure><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/382c4c3f-a159-8181-a8b4-0003196c647c/45ac5025-e317-495d-a601-dd60c21df9c8/SCR-20260401-jlsa.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YVBOQUR2%2F20260402%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260402T102331Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIQDQs2cGY1wnspdTwKx5RtCH8fVixGS%2BLrPO7dWCQ6PVlAIgTjiM84X5DhDy7%2BybkDQVBYFTG9uqkrAxTzwHpXfaCkwq%2FwMIahAAGgw2Mzc0MjMxODM4MDUiDOzosU3LR9%2FQq7i1MCrcA18fy8Aho42t7HZMjLRn8o1kfbjxfkJRwCpeTTxwDtlDZDHD7hIgFqC6t5i2znU36qmuQQ0NoAHs90WgftVj1LN1TpsfipDczZOZi1hQ4%2Fku9bgL37l4mEe5DEn9QlXK%2BYXim4NXQhHx577O2gs6PoGsCZ0oG0gmuB9mKduPIfP0003NcOlzzJfsjvSmiQiWwsZhFPcEuAJMBswZ76q3J7UFptRu9EIHEWZfb8TbzMpZQ3FEKG8s5zBeh7maaKmJHeJkpOUYZzwzDpH0k8ga6JbnEGT65crejCmtZrBcI%2FBC%2FfrJD7LcZstD2q91UOt1TPDOxNIFc64Xm2dsHPFayNyztr67i4ow%2FvvtENO3yXVmZ8MVCejh7ZMZ2CN3ODqFYicZ%2FrZaxw0YWV5lFSeea6%2FVil6HGdn%2ByKfEySdVkWiE4xm4Cbm9NqOU726pWF9pa99LfRh7Z2k%2BGcindEX%2BziO4B2C3rJ2105jfnNLwvqvykQywwNJGUuTfwxShq9kWkAHNU7SboRysJ1o7sQ3Q%2BgLqkvapQVdrC1UxeciMiGlLE%2FAfegUBJRFYVgB%2FxVqBHI5yrwgyR4KL3yK7sffGKxFBzfq8QdbhOWaAxJDi9RYdnE3yiR5nkL7P3sP0MMDnuM4GOqUBV8Swd%2Brc%2Fzow47ENB4rLDTaPswHOGrtBmUaDN9ixGzY4Pr3a%2BS4IyYSsM%2F4kW4O2K%2B%2BSpVrxUUwqM1KB2XwmA3rXfN3UMigij1BmqCd%2Bb0WYG03E%2FfWzSnNnhpq%2B9UqnUpqbG13TERswYmgfukyHtPsuTYii6xXTNwuo80vu8CK8zEeS6EC9jfeLpKR5L55Di%2FaCKU1m43fgYhAZEZVACI4Mmud1&X-Amz-Signature=93320f6d06781628f2856354a5a56271f229862427afdf2d86662365bda93c51&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject" alt="" style="max-width:100%;border-radius:8px;margin:16px 0;"></figure>
+<p>数据来源：DuPont Master、公司年报</p>
+<p>免责声明：本文仅为研究参考，不构成投资建议</p>
+        </div>
+        
+        <div class="related">
+            <h3>相关文章推荐</h3>
+            <div class="rel-grid">
+                <a href="/blog/articles/catl-inverse-thinking.html" class="rel-card">
+                    <h4>宁德时代：反过来思考这家公司</h4>
+                </a>
+            </div>
+        </div>
+        
+        <div class="cta">
+            <h3>用DuPont Master分析更多公司</h3>
+            <p>立即体验杜邦分析工具</p>
+            <a href="https://app.dupontmaster.com">开始分析 →</a>
+        </div>
+    </article>
+    
+    <footer>
+        <p><strong>DuPont Master</strong> © 2026 · 让投资分析更简单</p>
+        <p><a href="https://www.dupontmaster.com">返回首页</a> · <a href="/blog/">返回博客</a></p>
+    </footer>
+</body>
+</html>

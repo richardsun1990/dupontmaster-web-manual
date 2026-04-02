@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DuPont Master 博客 - 财务分析专业文章</title>
+    <meta name="description" content="DuPont Master官方博客，提供专业的财报分析、杜邦分析、ROE计算等投资分析文章。">
+    <link rel="canonical" href="https://www.dupontmaster.com/blog/">
+    
+    <style>
+        :root {
+            --primary: #0071e3;
+            --primary-hover: #0077ed;
+            --text: #1d1d1f;
+            --text-secondary: #86868b;
+            --background: #ffffff;
+            --background-alt: #f5f5f7;
+            --card-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--background-alt);
+        }
+        
+        /* Header */
+        header {
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(20px);
+            padding: 14px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        
+        nav a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            margin-left: 28px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        nav a:hover {
+            color: white;
+        }
+        
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #1e3a5f 0%, #0d1b2a 100%);
+            color: white;
+            padding: 80px 24px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 52px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            color: rgba(255,255,255,0.75);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Blog Grid */
+        .blog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 48px 24px 80px;
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+        }
+        
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .section-title::before {
+            content: '';
+            width: 5px;
+            height: 28px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        
+        .filter-tags {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-tag {
+            background: white;
+            border: 1px solid #e0e0e0;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .filter-tag:hover, .filter-tag.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        /* Article Grid */
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 24px;
+        }
+        
+        .article-card {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+        }
+        
+        .card-image {
+            height: 180px;
+            background: linear-gradient(135deg, #e8e8ed 0%, #d0d0d5 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+        }
+        
+        .card-content {
+            padding: 24px;
+        }
+        
+        .card-tag {
+            display: inline-block;
+            background: rgba(0,113,227,0.1);
+            color: var(--primary);
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        
+        .card-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .card-excerpt {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.6;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            margin-bottom: 16px;
+        }
+        
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: #999;
+            padding-top: 16px;
+            border-top: 1px solid #f0f0f0;
+        }
+        
+        /* Footer */
+        footer {
+            background: white;
+            padding: 40px 24px;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        footer p {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .article-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-header {
+                flex-direction: column;
+                gap: 16px;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="https://www.dupontmaster.com" class="logo">DuPont Master</a>
+            <nav>
+                <a href="https://www.dupontmaster.com">首页</a>
+                <a href="/blog/">博客</a>
+                <a href="https://app.dupontmaster.com">控制台</a>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <h1>DuPont Master 博客</h1>
+        <p>专业的财报分析知识，助您做出更明智的投资决策</p>
+    </section>
+    
+    <main class="blog-container">
+        <div class="section-header">
+            <h2 class="section-title">全部文章</h2>
+            <div class="filter-tags">
+                <span class="filter-tag active">全部</span>
+                <span class="filter-tag">财务分析</span>
+                <span class="filter-tag">教程</span>
+                <span class="filter-tag">对比分析</span>
+                <span class="filter-tag">数据报告</span>
+            </div>
+        </div>
+        
+        <div class="article-grid">
+            <a href="/blog/articles/dongao-inverse-thinking.html" class="article-card">
+                <div class="card-image" style="background-image: url('https://prod-files-secure.s3.us-west-2.amazonaws.com/382c4c3f-a159-8181-a8b4-0003196c647c/98a1adb9-e0ed-4c35-a8ab-c0713829cc50/SCR-20260401-itww.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4663UBYBC7C%2F20260402%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260402T102503Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQCzMU9rCyOz98gsNZ5tGZCneg%2FxDbYUcjcIGnAWIQASUwIhAKm6FmsRV72rA8xbKhGTD3ClAwYYXPrjv%2BRV7NXcQ4gyKv8DCGoQABoMNjM3NDIzMTgzODA1IgwUBoqi8x1ni6BIvAAq3ANPACJMhGQv5tWD2geiV1WYcvSMVH%2F1j6C23MSV460Ugu24I2jB3F5zLgZtQTS3aVS3Mmwafaetvku2Mc0SXVvoxfMu7G0mkCEpuSO4Qgerr4bwG6qcBrg6KC2b%2FfKQ9NYPpsDwoJZZpczB48lzVEifaH9gcugP2%2FCsLxEx3U6ONdbnzTgeW2TP%2F0jCPYmp11Rq8NoKMIYaPQDt0E0of5%2FSTaSp8W1l7qmQcLtvt6LBAIRf6IftGvYjNXFd18yjiSY%2B5kpBVrux9lV6tKACLShpDNFRo%2BcrH6C1FTMgLelQvVS3p1KS8QdfMCXe%2FDe3qmhvK7y9hR8R3rvlFkDxYIIttm%2Ff%2BgcYeYm4hhAPd2frm9H6NKL%2FwvI3DaZ%2F81oyCJ1Qvj4AdKLghnkpddMtMz6XU2JwVUglGiRsdY%2FJhIMk7ZDqp0KvvS2oT322LtSnk5Hw5XB9nJW9vV2DPj0s4%2B%2BL6LTrEJXegZWwRndPa0C1a223SWAxl2AR4q%2BfJW%2FQ2CEcB4DZPIVgZlXNsZTNLr8925QYRxP%2FWUkHjakpkBMt0Yq0jpAD3ASYljFvooTNGLbP6xgsj%2BRcruFK7C0XPomEPLogDD8NIhQxBNocUC%2Bi9KeMrwJQ0fmhAJIddTDB57jOBjqkARnoKIf%2B4Lp3RydbaCry50FpyGw9BvKw2o5LCOaNKSt1XDfi%2FDJTqeFj0m0qyzuMVkPK%2FAsK1O2KK1MNT18iVtuMsu%2Blwn%2BkxNGNxtDjKpPPQY7CPlcqbQkXR3SjbH8rLNHP2c%2BbXpCBMnqPYBWnz6ulTc09hUZx36mz9MXANj%2FtCGuOllNtkGChEWjX%2B1GWqE%2BTxUNu%2Fc8VatqUhqrTDbgqHdEx&X-Amz-Signature=21124968b9f8152c6ba7eee0b1ee56c2c058fe0732c90e5589ba1d9cc780e4e4&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject'); background-size: cover; background-position: center;"></div>
+                <div class="card-content">
+                    <span class="card-tag">企业分析</span>
+                    <h3 class="card-title">东阿阿胶：反过来思考这家公司</h3>
+                    <div class="card-meta">
+                        <span>📅 2026-04-01</span>
+                    </div>
+                </div>
+            </a>
+            <a href="/blog/articles/catl-inverse-thinking.html" class="article-card">
+                <div class="card-image" style="background-image: url('https://prod-files-secure.s3.us-west-2.amazonaws.com/382c4c3f-a159-8181-a8b4-0003196c647c/2ec708a3-c1f8-4de5-9541-0647c245ffc0/SCR-20260402-jgvv.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4666UF6PTMO%2F20260402%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260402T102506Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIQCYIeOmnOah4YVl4LnGePVQxw75iM%2BzMorwrahagA8BPQIgLo%2BQLyVjmqPjsl1yplaKb7oh7GnL8qhAMvEEJKz1E0Eq%2FwMIahAAGgw2Mzc0MjMxODM4MDUiDEGXKgJjwXnsM8IY7ircAyCXWvqBqKPcsosl11mm1uUqkxQeY0pTJ48dLrabxF9dGPleh9RRFJ5UySx1fgTAmKq8mnELO9Lu9OnOgW2A8TP3XpTsr9AVFwJSVxzh3tYMzfvQtGcrcv564QpBQEs%2F9G33%2F6BSO2KotexGIvxN4hWffXnl1FAuY7o2Dc7jh%2ByQfMsvb2tAT3p5%2Bo%2BupveeFtOTfkktHibQvoUf%2BAnFIEYsZZrjYJOOA7eNPC%2BpJkXWaP6RtqP2gadT55kLckoxyH1%2BU3pCv7nz6%2BeQ3OaH0KPrs1bFXuz0sN2ml8XOdN2OMJn%2Bs19gBF6z8xT4JXLYmDx%2BK4sXgYKXIT9%2BTZ%2FxZBQ5nds9hgEX86DquCEoeo89KN8kV%2FFSap86ScZVnEmcAUi3e2bP%2FbRWs8rRTtDRzXpKoYvJ6hnhFwxld%2BKV38EpKFZba7CwV1jTmf6XQ7id%2Fqb1ewq1J6mEXpPBuOJkyPLJqvY0x0Vgrph%2FCw3%2Bj3G0yUk%2BMP7MQ0IFVe9fsBM3k7lBLEe1WXJngmApAU2GrgZJzs6sIxzXgbjF%2B5Gi0base3P2apBB%2FwJnPD%2Fuf%2B4nSMahjSAH3T8LBiDOYKGRwPvo6EPUEOf9xaEe4axzunn3eJCU0nW%2F21bzWfStMMDnuM4GOqUBoDbUcm0HfJ5N07RDm%2FRmk8CS2msFoppAz6qYQqo2jFUjShkCnUEhSH7CK1rzVaMY4OCdR3Jr8RH3612Q9UmacDONP3KIK5M%2BQGVCxDbu3TevYXbOhYaCgupkoDXq3ljEXyEGbbMEwidKXaWKv5W9HMfN7kScIIixLJHckr1S%2FZu0UVlJLA4NHbWlrOHjfhICip2yTsoAQcWPBQNp3YfvVRSmOSGs&X-Amz-Signature=05748fd3dc1fd2a245976fc4a54978d558d8ca97ec09a9a4a69ea65990b2bc44&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject'); background-size: cover; background-position: center;"></div>
+                <div class="card-content">
+                    <span class="card-tag">企业分析</span>
+                    <h3 class="card-title">宁德时代：反过来思考这家公司</h3>
+                    <div class="card-meta">
+                        <span>📅 2026-04-02</span>
+                    </div>
+                </div>
+            </a></div></main>
+    
+    <footer>
+        <p><strong>DuPont Master</strong> © 2026 · 让投资分析更简单</p>
+        <p><a href="https://www.dupontmaster.com">返回首页</a> · <a href="https://app.dupontmaster.com">控制台</a></p>
+    </footer>
+</body>
+</html>

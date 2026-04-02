@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宁德时代：反过来思考这家公司 - DuPont Master</title>
+    <style>
+        :root { --primary: #0071e3; --text: #1d1d1f; --text-secondary: #86868b; --bg: #fff; --bg-alt: #f5f5f7; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.8; color: var(--text); background: var(--bg); }
+        
+        .nav { background: rgba(0,0,0,0.85); padding: 12px 0; }
+        .nav-c { max-width: 800px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; }
+        .logo { color: #fff; text-decoration: none; font-weight: 700; font-size: 17px; }
+        .nav a { color: rgba(255,255,255,0.8); text-decoration: none; margin-left: 14px; font-size: 13px; }
+        
+        .cover { width: 100%; height: 300px; background-image: url('https://prod-files-secure.s3.us-west-2.amazonaws.com/382c4c3f-a159-8181-a8b4-0003196c647c/2ec708a3-c1f8-4de5-9541-0647c245ffc0/SCR-20260402-jgvv.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466WF5QZGUI%2F20260402%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260402T054706Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJ3%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQDWOefwFsP5A%2FvdmSCz3oXmGQY1AXHJNBs4R4ci7MPc8QIhAPT1LHMnrMrJlCoktXomEDEL0eAmod28b1LaL9H8iDtsKv8DCGYQABoMNjM3NDIzMTgzODA1Igwqyn%2FlVHzbBrxQ4EQq3AOvmQgCHvpvt8F1afZgN9TMjW9xIh2YFu8IcGIPPOMFBPFqocmCgOOtwAhrSn1GA4yB4MeDEqc3zMUktlKEMb%2FzqaGlw8pe37%2FkTeg0ZDNQWqVquCO%2F38I1dD4sZq0ty2tLon73B%2FdTLz7uh8O8yGUpc6%2FXrsoUkApmglrP%2BaqKIcUJRjG7H42eaGEc912vD2EQPAySns23u12uwCsd1WuXRaRtrVehsaTn%2F12UgAQjtjEngtc2YiM%2B5TUN3VcBmqsXagsxGlvVJAjMoqvIdAw%2BrvLy0mctqMvqfx%2BLVlxrnEGA69l%2FxzpqUy96G3NOJA%2B2RvJYXhLUHOz3qZNKP8GXoDrsgSat1bcNWuc2PMGdo9d%2Bw39fbAd7OEADS2AHtI1MpWKsC%2Ff8bxNPTRG46%2FadASnSAUy1J4yJVmWiXzQIdhEc5zV31gkRh1z07P25mM6Gj6iS%2BwHdpzJ%2FliGWXjL4A9tzPBMRO0X%2BQFLudWrqGDFJ9fm%2FDEoyCkW7VrtYxGzpg5n7q6V69gypRkyvRpWvaizaJzET8SGbDEmbwXZcOTcmAEXeW%2FZa8YwACCJYmTqweFf2Y0yponBUXYuQffCtDoibGQIP%2Fh8Qr%2Bsd5i8f5xivbj7dOCJkCMPMSzDR9rfOBjqkAWSy3WlywcWjZy5XXWQ95G5XT0OT%2F%2FHy%2BXOjt0XWpTbBZkdAIxKlzkwxQRXlthMTFulyQ6%2F4NtPKvCDSJA9BpdXesmYulH3yT0YLDVpJ7h2qb0ITU9iR4CY9FcjR%2BBuAjXKNeLPqEDuwoUDeS09524HrkF8l059foybZp0%2FwGZdG3%2B8h%2BDufotVq9FDd2M90W8GrQO7%2BSOVrZt9rLuZGIbHXsA52&X-Amz-Signature=c8f8e4b1c60fd28c611c0ed081eb5a6e3cbdc95dfcc4e4f2ab2ecf473fb94e24&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject'); background-size: cover; background-position: center; }
+        
+        .box { max-width: 800px; margin: -70px auto 0; padding: 0 20px 60px; position: relative; z-index: 1; }
+        .header { background: #fff; padding: 24px; border-radius: 14px; box-shadow: 0 2px 14px rgba(0,0,0,0.07); margin-bottom: 24px; }
+        .tag { display: inline-block; background: rgba(0,113,227,0.1); color: var(--primary); padding: 4px 10px; border-radius: 5px; font-size: 12px; margin-bottom: 10px; }
+        .title { font-size: 26px; font-weight: 700; line-height: 1.3; margin-bottom: 10px; }
+        .meta { color: var(--text-secondary); font-size: 13px; }
+        
+        .content { font-size: 16px; }
+        .content p { margin-bottom: 16px; }
+        .content h2 { font-size: 21px; font-weight: 600; margin: 32px 0 14px; }
+        .content h3 { font-size: 18px; font-weight: 600; margin: 26px 0 10px; }
+        .content h4 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; }
+        .content li { margin-bottom: 5px; margin-left: 16px; }
+        .content img { max-width: 100%; border-radius: 8px; margin: 16px 0; }
+        
+        .related { margin-top: 40px; padding-top: 28px; border-top: 1px solid #eee; }
+        .related h3 { font-size: 17px; font-weight: 600; margin-bottom: 14px; }
+        .rel-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+        .rel-card { display: block; text-decoration: none; color: inherit; background: var(--bg-alt); border-radius: 10px; padding: 14px; }
+        .rel-card:hover { transform: translateY(-2px); }
+        .rel-card h4 { font-size: 14px; font-weight: 600; }
+        
+        .cta { background: linear-gradient(135deg, #1e3a5f, #3b82f6); color: #fff; padding: 24px; border-radius: 10px; text-align: center; margin: 36px 0; }
+        .cta a { display: inline-block; background: #fff; color: var(--primary); padding: 10px 18px; border-radius: 7px; text-decoration: none; font-weight: 600; margin-top: 10px; }
+        
+        footer { background: var(--bg-alt); padding: 28px 20px; text-align: center; font-size: 13px; color: var(--text-secondary); }
+        footer a { color: var(--primary); text-decoration: none; }
+        
+        @media (max-width: 768px) { .title { font-size: 21px; } .rel-grid { grid-template-columns: 1fr; } .cover { height: 220px; } }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-c">
+            <a href="https://www.dupontmaster.com" class="logo">DuPont Master</a>
+            <div>
+                <a href="https://www.dupontmaster.com">首页</a>
+                <a href="/blog/">博客</a>
+                <a href="https://app.dupontmaster.com">控制台</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="cover"></div>
+    
+    <article class="box">
+        <header class="header">
+            <span class="tag">财务分析</span>
+            <h1 class="title">宁德时代：反过来思考这家公司</h1>
+            <div class="meta">📅 2026-04-02 · ⏱ 约10分钟阅读</div>
+        </header>
+        
+        <div class="content">
+<h2>宁德时代：反过来想想这家公司</h2>
+<p>我研究公司有个习惯，先问一个问题：这家公司会怎么死？</p>
+<p>不是要咒谁，研究生意嘛，得先知道它的弱点在哪。芒格管这招叫"反向思维"——想赢，先想想怎么输。</p>
+<p>今天说宁德时代。这公司现在风光无限，新能源电池全球老大，市占率35%以上。但我越看越觉得有些地方不对劲！当然，有不对的地方欢迎在评论区讨论。</p>
+<h3>2017年那场豪赌</h3>
+<p>2017年，曾毓群做了一个让所有人都捏把汗的决定：把全部身家押在三元锂电池上，磷酸铁锂路线基本放弃。那时候行业主流是磷酸铁锂，安全、便宜、成熟。三元虽然能量密度高，但不稳定，起火新闻时不时就有。</p>
+<p>曾老板赌的是：消费者会为了续航里程忍受更高的风险。事后看他赌对了。2017年押注三元，2020年特斯拉爆发，宁德时代一夜之间成了香饽饽。</p>
+<p>但我就在想：如果当时三元路线出问题呢？</p>
+<p>2017年的宁德时代，员工不到一万，营收刚到200亿。押错路线？直接出局，没有第二次机会。</p>
+<p>这说明什么？宁德时代的骨子里就有"赌性"。它的成功从一开始就是高风险换来的。</p>
+<h3>2020年那口气差点没喘上来</h3>
+<p>2019年到2020年，新能源补贴退坡，行业一片哀嚎。宁德时代股价腰斩。表面是政策压力，实质还是商业模式遭到的挑战。</p>
+<img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/382c4c3f-a159-8181-a8b4-0003196c647c/2ec708a3-c1f8-4de5-9541-0647c245ffc0/SCR-20260402-jgvv.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466WF5QZGUI%2F20260402%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260402T054706Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJ3%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQDWOefwFsP5A%2FvdmSCz3oXmGQY1AXHJNBs4R4ci7MPc8QIhAPT1LHMnrMrJlCoktXomEDEL0eAmod28b1LaL9H8iDtsKv8DCGYQABoMNjM3NDIzMTgzODA1Igwqyn%2FlVHzbBrxQ4EQq3AOvmQgCHvpvt8F1afZgN9TMjW9xIh2YFu8IcGIPPOMFBPFqocmCgOOtwAhrSn1GA4yB4MeDEqc3zMUktlKEMb%2FzqaGlw8pe37%2FkTeg0ZDNQWqVquCO%2F38I1dD4sZq0ty2tLon73B%2FdTLz7uh8O8yGUpc6%2FXrsoUkApmglrP%2BaqKIcUJRjG7H42eaGEc912vD2EQPAySns23u12uwCsd1WuXRaRtrVehsaTn%2F12UgAQjtjEngtc2YiM%2B5TUN3VcBmqsXagsxGlvVJAjMoqvIdAw%2BrvLy0mctqMvqfx%2BLVlxrnEGA69l%2FxzpqUy96G3NOJA%2B2RvJYXhLUHOz3qZNKP8GXoDrsgSat1bcNWuc2PMGdo9d%2Bw39fbAd7OEADS2AHtI1MpWKsC%2Ff8bxNPTRG46%2FadASnSAUy1J4yJVmWiXzQIdhEc5zV31gkRh1z07P25mM6Gj6iS%2BwHdpzJ%2FliGWXjL4A9tzPBMRO0X%2BQFLudWrqGDFJ9fm%2FDEoyCkW7VrtYxGzpg5n7q6V69gypRkyvRpWvaizaJzET8SGbDEmbwXZcOTcmAEXeW%2FZa8YwACCJYmTqweFf2Y0yponBUXYuQffCtDoibGQIP%2Fh8Qr%2Bsd5i8f5xivbj7dOCJkCMPMSzDR9rfOBjqkAWSy3WlywcWjZy5XXWQ95G5XT0OT%2F%2FHy%2BXOjt0XWpTbBZkdAIxKlzkwxQRXlthMTFulyQ6%2F4NtPKvCDSJA9BpdXesmYulH3yT0YLDVpJ7h2qb0ITU9iR4CY9FcjR%2BBuAjXKNeLPqEDuwoUDeS09524HrkF8l059foybZp0%2FwGZdG3%2B8h%2BDufotVq9FDd2M90W8GrQO7%2BSOVrZt9rLuZGIbHXsA52&X-Amz-Signature=c8f8e4b1c60fd28c611c0ed081eb5a6e3cbdc95dfcc4e4f2ab2ecf473fb94e24&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject" style="max-width:100%;border-radius:8px;margin:20px 0;">
+<p>2015-2021年它的自由现金流，始终在盈亏之间徘徊，甚至偶尔为负值。在建工程从2016年的27亿飙升到2019年的200亿。简单说就是：借钱建厂，厂建好了等风口。</p>
+<p>那口气怎么喘上来的？特斯拉上海工厂量产，欧洲电动化浪潮起来，需求爆发。</p>
+<p>但我想问一句：如果特斯拉没来呢？答案可能是：产能建好了，卖给谁？</p>
+<h3>2024年：价格战来了</h3>
+<img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/382c4c3f-a159-8181-a8b4-0003196c647c/0f9c2ea4-f8a7-4980-8957-c4be7d3e38e3/SCR-20260402-jire.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466WF5QZGUI%2F20260402%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260402T054706Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJ3%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQDWOefwFsP5A%2FvdmSCz3oXmGQY1AXHJNBs4R4ci7MPc8QIhAPT1LHMnrMrJlCoktXomEDEL0eAmod28b1LaL9H8iDtsKv8DCGYQABoMNjM3NDIzMTgzODA1Igwqyn%2FlVHzbBrxQ4EQq3AOvmQgCHvpvt8F1afZgN9TMjW9xIh2YFu8IcGIPPOMFBPFqocmCgOOtwAhrSn1GA4yB4MeDEqc3zMUktlKEMb%2FzqaGlw8pe37%2FkTeg0ZDNQWqVquCO%2F38I1dD4sZq0ty2tLon73B%2FdTLz7uh8O8yGUpc6%2FXrsoUkApmglrP%2BaqKIcUJRjG7H42eaGEc912vD2EQPAySns23u12uwCsd1WuXRaRtrVehsaTn%2F12UgAQjtjEngtc2YiM%2B5TUN3VcBmqsXagsxGlvVJAjMoqvIdAw%2BrvLy0mctqMvqfx%2BLVlxrnEGA69l%2FxzpqUy96G3NOJA%2B2RvJYXhLUHOz3qZNKP8GXoDrsgSat1bcNWuc2PMGdo9d%2Bw39fbAd7OEADS2AHtI1MpWKsC%2Ff8bxNPTRG46%2FadASnSAUy1J4yJVmWiXzQIdhEc5zV31gkRh1z07P25mM6Gj6iS%2BwHdpzJ%2FliGWXjL4A9tzPBMRO0X%2BQFLudWrqGDFJ9fm%2FDEoyCkW7VrtYxGzpg5n7q6V69gypRkyvRpWvaizaJzET8SGbDEmbwXZcOTcmAEXeW%2FZa8YwACCJYmTqweFf2Y0yponBUXYuQffCtDoibGQIP%2Fh8Qr%2Bsd5i8f5xivbj7dOCJkCMPMSzDR9rfOBjqkAWSy3WlywcWjZy5XXWQ95G5XT0OT%2F%2FHy%2BXOjt0XWpTbBZkdAIxKlzkwxQRXlthMTFulyQ6%2F4NtPKvCDSJA9BpdXesmYulH3yT0YLDVpJ7h2qb0ITU9iR4CY9FcjR%2BBuAjXKNeLPqEDuwoUDeS09524HrkF8l059foybZp0%2FwGZdG3%2B8h%2BDufotVq9FDd2M90W8GrQO7%2BSOVrZt9rLuZGIbHXsA52&X-Amz-Signature=d8b5fd273134c35258af9f6c0ef6e43457e490996c59f7e0549473fc7a8991b3&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject" style="max-width:100%;border-radius:8px;margin:20px 0;">
+<p>2024年，行业进入淘汰赛。所有人都在降价抢市场。宁德时代营收预计3800亿，比2023年下滑大约5%。这是它高速增长以来第一次负增长。</p>
+<p>怎么就变成这样了？四个字：产能过剩。</p>
+<p>所有人都相信新能源汽车会高速增长，所有人都疯狂扩产。现在呢？大家都在抢同一个客户，价格自然往下压。</p>
+<p>忍不住思考：宁德时代的电池和比亚迪、LG的有多大差异？如果产品差不多，价格战就是必然。而价格战的本质是：产品没有差异化，只能拼价格。</p>
+<h3>锂电池的物理极限</h3>
+<p>锂电池这东西，本质是个储存电子的容器。但它有三个绕不过去的物理极限：</p>
+<p>能量密度极限：现在的液态锂电池，能量密度已经接近理论上限的90%了。越往后提升越难，边际成本越来越高。</p>
+<p>安全性极限：能量密度越高，热失控风险越大。2023年几起电动车起火事故，已经开始让消费者心里打鼓了。</p>
+<p>成本极限：碳酸锂从2022年60万/吨跌到2024年10万/吨，但电池成本降得没这么快。因为制造、设备、人工这些环节省不下来。</p>
+<img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/382c4c3f-a159-8181-a8b4-0003196c647c/0ac78ce5-ad46-48f8-ab88-04b8676cbd67/SCR-20260402-jlex.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466WF5QZGUI%2F20260402%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260402T054706Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJ3%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQDWOefwFsP5A%2FvdmSCz3oXmGQY1AXHJNBs4R4ci7MPc8QIhAPT1LHMnrMrJlCoktXomEDEL0eAmod28b1LaL9H8iDtsKv8DCGYQABoMNjM3NDIzMTgzODA1Igwqyn%2FlVHzbBrxQ4EQq3AOvmQgCHvpvt8F1afZgN9TMjW9xIh2YFu8IcGIPPOMFBPFqocmCgOOtwAhrSn1GA4yB4MeDEqc3zMUktlKEMb%2FzqaGlw8pe37%2FkTeg0ZDNQWqVquCO%2F38I1dD4sZq0ty2tLon73B%2FdTLz7uh8O8yGUpc6%2FXrsoUkApmglrP%2BaqKIcUJRjG7H42eaGEc912vD2EQPAySns23u12uwCsd1WuXRaRtrVehsaTn%2F12UgAQjtjEngtc2YiM%2B5TUN3VcBmqsXagsxGlvVJAjMoqvIdAw%2BrvLy0mctqMvqfx%2BLVlxrnEGA69l%2FxzpqUy96G3NOJA%2B2RvJYXhLUHOz3qZNKP8GXoDrsgSat1bcNWuc2PMGdo9d%2Bw39fbAd7OEADS2AHtI1MpWKsC%2Ff8bxNPTRG46%2FadASnSAUy1J4yJVmWiXzQIdhEc5zV31gkRh1z07P25mM6Gj6iS%2BwHdpzJ%2FliGWXjL4A9tzPBMRO0X%2BQFLudWrqGDFJ9fm%2FDEoyCkW7VrtYxGzpg5n7q6V69gypRkyvRpWvaizaJzET8SGbDEmbwXZcOTcmAEXeW%2FZa8YwACCJYmTqweFf2Y0yponBUXYuQffCtDoibGQIP%2Fh8Qr%2Bsd5i8f5xivbj7dOCJkCMPMSzDR9rfOBjqkAWSy3WlywcWjZy5XXWQ95G5XT0OT%2F%2FHy%2BXOjt0XWpTbBZkdAIxKlzkwxQRXlthMTFulyQ6%2F4NtPKvCDSJA9BpdXesmYulH3yT0YLDVpJ7h2qb0ITU9iR4CY9FcjR%2BBuAjXKNeLPqEDuwoUDeS09524HrkF8l059foybZp0%2FwGZdG3%2B8h%2BDufotVq9FDd2M90W8GrQO7%2BSOVrZt9rLuZGIbHXsA52&X-Amz-Signature=03718a14c181a7742e02cc6478f7f8ee50e639d02f095a73ae94fa654371f67a&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject" style="max-width:100%;border-radius:8px;margin:20px 0;">
+<p>行业都说固态电池是下一代技术。但商业化时间表呢？</p>
+<p>2015年说2020年量产、2018年说2023年量产、2021年说2025年量产、现在说2028年……</p>
+<p>听着是不是像可控核聚变？"永远还有30年"。如果固态电池2030年商业化，现有生产线怎么办？全部报废。宁德时代账面上2228亿固定资产，到时候可能就是一堆废铁。</p>
+<h3>财务上的几个思考</h3>
+<img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/382c4c3f-a159-8181-a8b4-0003196c647c/c6c30aaf-dfbe-4d8c-bdea-189c44e54bcf/SCR-20260402-jlkn.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466WF5QZGUI%2F20260402%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260402T054706Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJ3%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQDWOefwFsP5A%2FvdmSCz3oXmGQY1AXHJNBs4R4ci7MPc8QIhAPT1LHMnrMrJlCoktXomEDEL0eAmod28b1LaL9H8iDtsKv8DCGYQABoMNjM3NDIzMTgzODA1Igwqyn%2FlVHzbBrxQ4EQq3AOvmQgCHvpvt8F1afZgN9TMjW9xIh2YFu8IcGIPPOMFBPFqocmCgOOtwAhrSn1GA4yB4MeDEqc3zMUktlKEMb%2FzqaGlw8pe37%2FkTeg0ZDNQWqVquCO%2F38I1dD4sZq0ty2tLon73B%2FdTLz7uh8O8yGUpc6%2FXrsoUkApmglrP%2BaqKIcUJRjG7H42eaGEc912vD2EQPAySns23u12uwCsd1WuXRaRtrVehsaTn%2F12UgAQjtjEngtc2YiM%2B5TUN3VcBmqsXagsxGlvVJAjMoqvIdAw%2BrvLy0mctqMvqfx%2BLVlxrnEGA69l%2FxzpqUy96G3NOJA%2B2RvJYXhLUHOz3qZNKP8GXoDrsgSat1bcNWuc2PMGdo9d%2Bw39fbAd7OEADS2AHtI1MpWKsC%2Ff8bxNPTRG46%2FadASnSAUy1J4yJVmWiXzQIdhEc5zV31gkRh1z07P25mM6Gj6iS%2BwHdpzJ%2FliGWXjL4A9tzPBMRO0X%2BQFLudWrqGDFJ9fm%2FDEoyCkW7VrtYxGzpg5n7q6V69gypRkyvRpWvaizaJzET8SGbDEmbwXZcOTcmAEXeW%2FZa8YwACCJYmTqweFf2Y0yponBUXYuQffCtDoibGQIP%2Fh8Qr%2Bsd5i8f5xivbj7dOCJkCMPMSzDR9rfOBjqkAWSy3WlywcWjZy5XXWQ95G5XT0OT%2F%2FHy%2BXOjt0XWpTbBZkdAIxKlzkwxQRXlthMTFulyQ6%2F4NtPKvCDSJA9BpdXesmYulH3yT0YLDVpJ7h2qb0ITU9iR4CY9FcjR%2BBuAjXKNeLPqEDuwoUDeS09524HrkF8l059foybZp0%2FwGZdG3%2B8h%2BDufotVq9FDd2M90W8GrQO7%2BSOVrZt9rLuZGIbHXsA52&X-Amz-Signature=a40bf87a2e647e50cca9a662b60fd82c7d94986a343567da789d1f2a83d20f89&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject" style="max-width:100%;border-radius:8px;margin:20px 0;">
+<p>ROE21%看着不错，但是权益乘数2.89，杠杆可不低。虽然有息负债只有3%，但无息负债高达59%——主要是欠上下游的钱。欠钱不可怕，可怕的是这种"优势"能持续多久？如果比亚迪、特斯拉这些车企联合起来要求账期延长，宁德时代的资金链会瞬间紧张。</p>
+<img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/382c4c3f-a159-8181-a8b4-0003196c647c/7850a8ff-b6b2-46bb-80eb-f20a89186a36/SCR-20260402-jofi.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466WF5QZGUI%2F20260402%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260402T054706Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJ3%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQDWOefwFsP5A%2FvdmSCz3oXmGQY1AXHJNBs4R4ci7MPc8QIhAPT1LHMnrMrJlCoktXomEDEL0eAmod28b1LaL9H8iDtsKv8DCGYQABoMNjM3NDIzMTgzODA1Igwqyn%2FlVHzbBrxQ4EQq3AOvmQgCHvpvt8F1afZgN9TMjW9xIh2YFu8IcGIPPOMFBPFqocmCgOOtwAhrSn1GA4yB4MeDEqc3zMUktlKEMb%2FzqaGlw8pe37%2FkTeg0ZDNQWqVquCO%2F38I1dD4sZq0ty2tLon73B%2FdTLz7uh8O8yGUpc6%2FXrsoUkApmglrP%2BaqKIcUJRjG7H42eaGEc912vD2EQPAySns23u12uwCsd1WuXRaRtrVehsaTn%2F12UgAQjtjEngtc2YiM%2B5TUN3VcBmqsXagsxGlvVJAjMoqvIdAw%2BrvLy0mctqMvqfx%2BLVlxrnEGA69l%2FxzpqUy96G3NOJA%2B2RvJYXhLUHOz3qZNKP8GXoDrsgSat1bcNWuc2PMGdo9d%2Bw39fbAd7OEADS2AHtI1MpWKsC%2Ff8bxNPTRG46%2FadASnSAUy1J4yJVmWiXzQIdhEc5zV31gkRh1z07P25mM6Gj6iS%2BwHdpzJ%2FliGWXjL4A9tzPBMRO0X%2BQFLudWrqGDFJ9fm%2FDEoyCkW7VrtYxGzpg5n7q6V69gypRkyvRpWvaizaJzET8SGbDEmbwXZcOTcmAEXeW%2FZa8YwACCJYmTqweFf2Y0yponBUXYuQffCtDoibGQIP%2Fh8Qr%2Bsd5i8f5xivbj7dOCJkCMPMSzDR9rfOBjqkAWSy3WlywcWjZy5XXWQ95G5XT0OT%2F%2FHy%2BXOjt0XWpTbBZkdAIxKlzkwxQRXlthMTFulyQ6%2F4NtPKvCDSJA9BpdXesmYulH3yT0YLDVpJ7h2qb0ITU9iR4CY9FcjR%2BBuAjXKNeLPqEDuwoUDeS09524HrkF8l059foybZp0%2FwGZdG3%2B8h%2BDufotVq9FDd2M90W8GrQO7%2BSOVrZt9rLuZGIbHXsA52&X-Amz-Signature=38ec5f783fcb93c02e24fe6138a5de81cf71b624491a92ca5aae3b9182bc9e22&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject" style="max-width:100%;border-radius:8px;margin:20px 0;">
+<p>宁德时代有很高的市占率，达35%，净利率也有17%，这在制造行业中属于不错的利润率。但这个利润率可以维持多久呢？下游车企也不是吃素的。比亚迪自己造电池，特斯拉在搞自研，LG、松下虎视眈眈。宁德时代想提价？下游就去找别人。</p>
+<p>比亚迪和宁德时代，表面是竞争对手，其实关系很微妙。比亚迪的电池只给自己用。宁德时代的电池卖给所有车企——包括比亚迪的对手。宁德时代在帮比亚迪的竞争对手造车。这些对手长大了，反过来就有可能抢宁德时代的市场。宁德时代不是在做生意，它是在培养敌人。</p>
+<h3>宁德时代第二曲线：</h3>
+<img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/382c4c3f-a159-8181-a8b4-0003196c647c/700af2d3-ec7f-41bf-80de-f2487b22d4f2/SCR-20260402-joom.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466WF5QZGUI%2F20260402%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260402T054706Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJ3%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQDWOefwFsP5A%2FvdmSCz3oXmGQY1AXHJNBs4R4ci7MPc8QIhAPT1LHMnrMrJlCoktXomEDEL0eAmod28b1LaL9H8iDtsKv8DCGYQABoMNjM3NDIzMTgzODA1Igwqyn%2FlVHzbBrxQ4EQq3AOvmQgCHvpvt8F1afZgN9TMjW9xIh2YFu8IcGIPPOMFBPFqocmCgOOtwAhrSn1GA4yB4MeDEqc3zMUktlKEMb%2FzqaGlw8pe37%2FkTeg0ZDNQWqVquCO%2F38I1dD4sZq0ty2tLon73B%2FdTLz7uh8O8yGUpc6%2FXrsoUkApmglrP%2BaqKIcUJRjG7H42eaGEc912vD2EQPAySns23u12uwCsd1WuXRaRtrVehsaTn%2F12UgAQjtjEngtc2YiM%2B5TUN3VcBmqsXagsxGlvVJAjMoqvIdAw%2BrvLy0mctqMvqfx%2BLVlxrnEGA69l%2FxzpqUy96G3NOJA%2B2RvJYXhLUHOz3qZNKP8GXoDrsgSat1bcNWuc2PMGdo9d%2Bw39fbAd7OEADS2AHtI1MpWKsC%2Ff8bxNPTRG46%2FadASnSAUy1J4yJVmWiXzQIdhEc5zV31gkRh1z07P25mM6Gj6iS%2BwHdpzJ%2FliGWXjL4A9tzPBMRO0X%2BQFLudWrqGDFJ9fm%2FDEoyCkW7VrtYxGzpg5n7q6V69gypRkyvRpWvaizaJzET8SGbDEmbwXZcOTcmAEXeW%2FZa8YwACCJYmTqweFf2Y0yponBUXYuQffCtDoibGQIP%2Fh8Qr%2Bsd5i8f5xivbj7dOCJkCMPMSzDR9rfOBjqkAWSy3WlywcWjZy5XXWQ95G5XT0OT%2F%2FHy%2BXOjt0XWpTbBZkdAIxKlzkwxQRXlthMTFulyQ6%2F4NtPKvCDSJA9BpdXesmYulH3yT0YLDVpJ7h2qb0ITU9iR4CY9FcjR%2BBuAjXKNeLPqEDuwoUDeS09524HrkF8l059foybZp0%2FwGZdG3%2B8h%2BDufotVq9FDd2M90W8GrQO7%2BSOVrZt9rLuZGIbHXsA52&X-Amz-Signature=9b8141beee587a1c812dacd9966bc432b236b58a154b49891905cb8d92ede9b0&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject" style="max-width:100%;border-radius:8px;margin:20px 0;">
+<p>宁德时代把储能当作第二增长曲线。2025年预计营收624亿，占比快15%了。但储能这生意，门槛比动力电池还低。动力电池要安全性、一致性，储能只要便宜就行。</p>
+<p>一旦储能产能过剩，价格战会比重演动力电池的悲剧。到时候宁德时代的第二曲线可能也会变成问题。</p>
+<h3>我的一些疑问</h3>
+<p>研究完这公司，我脑子里有几个没答案的问题：</p>
+<ol>
+<li>固态电池如果2028年商业化，现在2228亿固定资产怎么算？</li>
+<li>比亚迪垂直整合，宁德时代最后会不会变成代工厂？</li>
+<li>全球电动车渗透率如果提前见顶——比如2030年到40%就停了——增长故事怎么讲？</li>
+</ul>
+<h3>一句话总结</h3>
+<p>宁德时代是一家被时代选中的公司。2017年赌对路线，2020年赶上风口，2021-2022年高速增长。</p>
+<p>但它的成功，建立在一个假设之上：新能源汽车会持续高速增长。一旦这个假设被证伪，无论是固态电池颠覆，还是全球经济放缓导致电动车卖不动，它的帝国就会开始晃动。</p>
+<p>宁德时代的护城河，是规模带来的成本优势。这个护城河可以被复制，但技术壁垒才是真正的壁垒。</p>
+<p>以上分析仅是我分析一家企业的常用思考方式，不代表对企业的优劣判断。希望听到各种声音，欢迎评论区讨论！</p>
+<p>数据来源：DuPont Master、公司年报</p>
+<p>免责声明：随便看看，别当投资建议</p>
+        </div>
+        
+        <div class="related">
+            <h3>相关文章推荐</h3>
+        
+            <div class="rel-grid">
+                <a href="/blog/articles/dongao-inverse-thinking.html" class="rel-card">
+                    <h4>东阿阿胶：反过来思考这家公司</h4>
+                </a>
+            </div>
+        </div>
+        
+        <div class="cta">
+            <h3>用DuPont Master分析更多公司</h3>
+            <p>立即体验杜邦分析工具</p>
+            <a href="https://app.dupontmaster.com">开始分析 →</a>
+        </div>
+    </article>
+    
+    <footer>
+        <p><strong>DuPont Master</strong> © 2026 · 让投资分析更简单</p>
+        <p><a href="https://www.dupontmaster.com">返回首页</a> · <a href="/blog/">返回博客</a></p>
+    </footer>
+</body>
+</html>
