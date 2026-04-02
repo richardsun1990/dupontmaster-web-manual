@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/app", "destination": "https://dupontmaster-mobile-4h0n3y1p6-crazymanrichards-projects.vercel.app" }
+  ]
+}
