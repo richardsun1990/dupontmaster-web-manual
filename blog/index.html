@@ -276,7 +276,7 @@
     <main class="blog-container">
         <div class="section-header">
             <h2 class="section-title">全部文章</h2>
-            <div class="filter-tags"><span class="filter-tag active" data-tag="全部">全部</span><span class="filter-tag" data-tag="企业分析">企业分析</span></div>
+            <div class="filter-tags"><span class="filter-tag active" data-tag="全部">全部</span><span class="filter-tag" data-tag="企业分析">企业分析</span><span class="filter-tag" data-tag="创始故事">创始故事</span></div>
         </div>
         
         <div class="article-grid">
@@ -308,5 +308,28 @@
         <p><strong>DuPont Master</strong> © 2026 · 让投资分析更简单</p>
         <p><a href="https://www.dupontmaster.com">返回首页</a> · <a href="https://app.dupontmaster.com">控制台</a></p>
     </footer>
+    
+    <script>
+        // 标签筛选功能
+        document.querySelectorAll('.filter-tag').forEach(tag => {
+            tag.addEventListener('click', function() {
+                // 更新选中状态
+                document.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                const selectedTag = this.dataset.tag;
+                
+                // 筛选文章
+                document.querySelectorAll('.article-card').forEach(card => {
+                    const cardTag = card.querySelector('.card-tag').textContent;
+                    if (selectedTag === '全部' || cardTag === selectedTag) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
