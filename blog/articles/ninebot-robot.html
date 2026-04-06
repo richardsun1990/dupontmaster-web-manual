@@ -89,5 +89,79 @@
     <p><strong>数据来源</strong>：九号公司招股说明书、2024年年报、<strong>2025年年报</strong>、雅迪爱玛小牛2024年财报、证券时报/创业邦/36氪等媒体报道、券商研究报告</p>
     <p>图片来源：Dupont Master、企业年报</p>
     <p><strong>免责声明</strong>：随便看看，别当投资建议</p>
+
+    <!-- Share Component -->
+    <style>
+    .share-section { margin-top: 32px; padding-top: 24px; border-top: 1px solid #eee; }
+    .share-title { font-size: 15px; font-weight: 600; color: var(--text-secondary); margin-bottom: 14px; }
+    .share-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+    .share-btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 8px; font-size: 13px; font-weight: 500; text-decoration: none; cursor: pointer; border: none; transition: all 0.2s; }
+    .share-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+    .weixin { background: #07c160; color: #fff; }
+    .weibo { background: #e6162d; color: #fff; }
+    .linkedin { background: #0a66c2; color: #fff; }
+    .twitter { background: #000; color: #fff; }
+    .copy { background: #f5f5f7; color: var(--text); border: 1px solid #ddd; }
+    .qr-popup { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); z-index: 999; align-items: center; justify-content: center; }
+    .qr-popup.show { display: flex; }
+    .qr-box { background: #fff; padding: 24px; border-radius: 12px; text-align: center; }
+    .qr-box h4 { margin-bottom: 14px; font-size: 15px; }
+    .qr-box canvas { border-radius: 8px; }
+    .qr-close { margin-top: 14px; padding: 8px 20px; background: #f5f5f7; border: none; border-radius: 6px; cursor: pointer; }
+    .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: #333; color: #fff; padding: 12px 20px; border-radius: 8px; font-size: 14px; opacity: 0; transition: opacity 0.3s; z-index: 1000; }
+    .toast.show { opacity: 1; }
+    </style>
+
+    <div class="share-section">
+        <div class="share-title">分享这篇文章</div>
+        <div class="share-btns">
+            <button class="share-btn weixin" onclick="shareToWeixin()">💚 微信</button>
+            <button class="share-btn weibo" onclick="shareToWeibo()">📕 微博</button>
+            <button class="share-btn linkedin" onclick="shareToLinkedIn()">💼 LinkedIn</button>
+            <button class="share-btn twitter" onclick="shareToTwitter()">𝕏 Twitter</button>
+            <button class="share-btn copy" onclick="copyLink()">🔗 复制链接</button>
+        </div>
+    </div>
+
+    <div id="qrPopup" class="qr-popup" onclick="closeQrPopup()">
+        <div class="qr-box" onclick="event.stopPropagation()">
+            <h4>微信扫码分享</h4>
+            <canvas id="qrCanvas"></canvas>
+            <button class="qr-close" onclick="closeQrPopup()">关闭</button>
+        </div>
+    </div>
+    <div id="toast" class="toast">链接已复制到剪贴板</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+    <script>
+    const pageUrl = window.location.href;
+    const pageTitle = document.title;
+
+    function shareToWeixin() {
+        document.getElementById('qrPopup').classList.add('show');
+        const canvas = document.getElementById('qrCanvas');
+        QRCode.toCanvas(canvas, pageUrl, { width: 200, margin: 2 }, function(error) {
+            if (error) console.error(error);
+        });
+    }
+    function closeQrPopup() { document.getElementById('qrPopup').classList.remove('show'); }
+    function shareToWeibo() {
+        window.open('https://service.weibo.com/share/share.php?url=' + encodeURIComponent(pageUrl) + '&title=' + encodeURIComponent(pageTitle), '_blank');
+    }
+    function shareToLinkedIn() {
+        window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(pageUrl), '_blank');
+    }
+    function shareToTwitter() {
+        window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(pageUrl) + '&text=' + encodeURIComponent(pageTitle), '_blank');
+    }
+    function copyLink() {
+        navigator.clipboard.writeText(pageUrl).then(function() {
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            setTimeout(function() { toast.classList.remove('show'); }, 2000);
+        });
+    }
+    </script>
+
 </body>
 </html>
