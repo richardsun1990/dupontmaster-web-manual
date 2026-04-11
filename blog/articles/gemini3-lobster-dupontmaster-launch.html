@@ -22,25 +22,10 @@
         .tag { display: inline-block; background: rgba(0,113,227,0.1); color: var(--primary); padding: 5px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; margin-bottom: 14px; }
         .title { font-size: 28px; font-weight: 700; line-height: 1.35; margin-bottom: 12px; }
         .meta { color: var(--text-secondary); font-size: 13px; }
-        .content { font-size: 16px; }
-        .content p { margin-bottom: 18px; }
-        .content h2 { font-size: 22px; font-weight: 600; margin: 36px 0 16px; }
-        .content h3 { font-size: 18px; font-weight: 600; margin: 28px 0 12px; }
-        .content img { max-width: 100%; border-radius: 8px; margin: 16px 0; }
-        .content li { margin-bottom: 6px; margin-left: 18px; }
-        .highlight-box { background: #f0f7ff; border-left: 4px solid #0071e3; padding: 16px 20px; margin: 24px 0; border-radius: 0 8px 8px 0; }
+        .video-container { margin: 32px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .video-container iframe { width: 100%; height: 500px; display: block; }
         footer { text-align: center; padding: 32px 0; border-top: 1px solid #eee; margin-top: 48px; color: var(--text-secondary); font-size: 13px; }
         footer a { color: var(--primary); text-decoration: none; }
-        .share-row { display: flex; align-items: center; gap: 8px; margin: 16px 0; padding: 8px 0; border-top: 1px solid #eee; }
-        .share-label { font-size: 13px; color: #86868b; }
-        .share-icon { text-decoration: none; font-size: 14px; cursor: pointer; opacity: 0.7; }
-        .share-icon:hover { opacity: 1; }
-        .related { margin-top: 48px; padding-top: 28px; border-top: 1px solid #eee; }
-        .related h3 { font-size: 18px; font-weight: 600; margin-bottom: 16px; }
-        .rel-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-        .rel-card { display: block; text-decoration: none; color: inherit; background: var(--bg-alt); border-radius: 12px; padding: 16px; }
-        .rel-card h4 { font-size: 14px; font-weight: 600; }
-        .rel-card p { font-size: 12px; color: var(--text-secondary); margin-top: 4px; }
         .cta-box { background: linear-gradient(135deg, #1e3a5f 0%, #3b82f6 100%); color: white; padding: 32px; border-radius: 12px; margin: 40px 0; text-align: center; }
         .cta-box h3 { font-size: 22px; margin-bottom: 12px; color: white; }
         .cta-box p { font-size: 15px; opacity: 0.9; margin-bottom: 20px; }
@@ -62,143 +47,17 @@
         <div class="header">
             <span class="tag">投资干货</span>
             <h1 class="title">NO.83 Gemini3+龙虾联手，财报分析网站上线！</h1>
-            <p class="meta">发布于 2026-04-10 · 约 8 分钟阅读</p>
-        </div>
-        <div class="content">
-            <p>去年年底 Gemini3 发布，我用它做了一款财报分析网站，反响不错。</p>
-            
-            <p>但问题也很明显——纯前端，必须绑定 Gemini API 才能用，部署一直没能解决。</p>
-            
-            <p>直到我的搭档「龙虾费曼」出手相助，把纯前端网站绑上了服务器，还用公式搞定了 AI 功能的部分。</p>
-            
-            <p>反复测试、不断优化，现在终于可以正式上线了！</p>
-            
-            <p><strong>dupontmaster.com</strong> —— 让投资分析更简单，这就是我做这个网站的目的。</p>
-            
-            <p>废话不多说，直接演示。</p>
-            
-            <div style="margin: 24px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=116379940298145&bvid=BV1s5QwBGEDF&cid=37390650692&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width:100%;height:500px;"></iframe>
-            </div>
-            
-            <hr style="border: none; border-top: 1px solid #eee; margin: 32px 0;">
-            
-            <h2>账号系统</h2>
-            
-            <p>点击「立即开始」，进入登录页。</p>
-            
-            <p>每个用户都有独立账号，方便管理自己收藏的企业。而且电脑、手机都能用——不过我更推荐电脑和 iPad，视图效果会更好。</p>
-            
-            <p>第一次进入可能稍慢，如果大家觉得好用，我会升级服务器，速度会更快。</p>
-            
-            <h2>项目管理</h2>
-            
-            <p>进入项目管理界面，目前已经上传了 104 家公司。等 4 月底年报陆续发布，会持续更新大家关注的企业。</p>
-            
-            <p>视图可以切换，看个人喜好来定。</p>
-            
-            <h2>杜邦分析</h2>
-            
-            <p>我最近在研究东阿阿胶，就拿它当案例展示。</p>
-            
-            <p>进入东阿阿胶页面，首先是杜邦分析——净资产收益率的拆解。</p>
-            
-            <p>2025 年 ROE 16.82%，由三部分构成：26% 净利率、0.5 周转率、1.29 权益乘数。</p>
-            
-            <p>往下是 2002 年至今的 ROE 变化趋势，同时能看到净利率与 ROE 的关系。</p>
-            
-            <p>通过趋势图的变化，可以定位到需要重点关注的年份。点击任意年份，就能看到当年的 ROE 拆解。</p>
-            
-            <div class="highlight-box">
-                <strong>ROE 是巴菲特最看重的指标</strong>，它直观地反映企业投入的资产可以带来多少收益的能力。
-            </div>
-            
-            <h2>利润结构</h2>
-            
-            <p>用桑基图展示，东阿阿胶是怎么赚钱的、一年能赚多少钱。</p>
-            
-            <p>2025 年营收 67 亿，同比增长 8.8%。其中阿胶及系列占比 92.5%。营业成本占比 26.5%，对应毛利率 73.5%、净利率 26%——非常能赚钱的公司。</p>
-            
-            <p>再往下，这个功能更直观：分业务看增长趋势。</p>
-            
-            <p>单独看阿胶产品线近年的增长——趋势图中最重要的，是通过变化定位关键年份和事件。</p>
-            
-            <p>比如 2019 年营收大幅下滑，点击就能锁定那年发生了什么。到 2025 年，营收已经逐步恢复到 2019 年的高点。</p>
-            
-            <p>再看其他产品线，营收逐年下降——说明阿胶在不断聚焦核心主业，甚至毛驴养殖也在收缩，可能进口驴皮确实解决了驴皮供应问题。</p>
-            
-            <h2>资产结构</h2>
-            
-            <p>这是我在投资中最看重的部分。判断是否投资一家公司，看一眼资产结构就能排除 80% 的企业。</p>
-            
-            <p>我把它分为四块：<strong>类现金资产、经营性资产、生产性资产、投资型资产</strong>。</p>
-            
-            <p><strong>类现金资产</strong>——现金储备和短期可调用的钱，比如一年内理财。东阿阿胶高达 68.7%，难怪近两年分红率达到净利润的 80%。</p>
-            
-            <p><strong>经营性资产</strong>——库存和应收账款，日常经营用的。东阿阿胶仅占 10.7%。对比一下，2019 年这块高达 46.8%——你就知道那年发生了什么。</p>
-            
-            <p><strong>生产性资产</strong>——固定资产、在建工程、无形资产，搬不走的资产。阿胶仅 15.6%，2025 年用 21 亿的生产投入带来了 134 亿的收入。</p>
-            
-            <p><strong>投资型资产</strong>——商誉、股权投资、长期理财等。阿胶在这块异常谨慎，资金利用率很低，说明它非常聚焦主业，没有因为有钱就胡乱挥霍。</p>
-            
-            <p>资产图另一边是负债和权益。有息负债为 0，归母权益 103.38 亿——A股少有。</p>
-            
-            <h2>企业估值</h2>
-            
-            <p>分析的目的，是确定企业的内在价值。这里提供了一个 DCF 估值计算器。</p>
-            
-            <p>巴菲特估值体系的核心是 DCF——未来自由现金流的折现。不过芒格老爷子说过，他从没见过巴菲特真用计算机算一家公司值多少钱。</p>
-            
-            <p>对我们普通投资者来说，DCF 最重要的作用是心里有个<strong>锚</strong>——在股价涨跌的过程中，不慌。</p>
-            
-            <p>DCF 的基础是自由现金流。自由现金流 = 经营性现金流 - 资本支出。</p>
-            
-            <p>淡紫色是经营性现金流，深紫色是减去资本支出后的自由现金流。</p>
-            
-            <p>可以看到，阿胶的经营性现金流和自由现金流几乎一样——说明每年需要的资本支出极少。不需要持续大量投入资产，就能年年赚大钱。让我想到巴菲特的喜诗糖果。</p>
-            
-            <h3>估值计算</h3>
-            
-            <p>2025 年自由现金流 22.1 亿。根据你对这家企业的判断，可以选择 3 年、5 年或 10 年的预期增长率。这里用默认的 5 年。</p>
-            
-            <p>增长率默认取近十年年化平均增长——阿胶是 12.26%。永续增长率和折现率用默认数据。</p>
-            
-            <p>计算得出内在价值 <strong>579 亿</strong>，对应股价 <strong>89.92 元</strong>。</p>
-            
-            <p>你觉得阿胶值多少？</p>
-            
-            <p>下面还有估值敏感性分析，感兴趣可以自己看看。返回首页还能做同行业对比。</p>
-            
-            <hr style="border: none; border-top: 1px solid #eee; margin: 32px 0;">
-            
-            <p>以上就是我和「龙虾费曼」共同开发的 Dupontmaster。</p>
-            
-            <p>如果你觉得有用，记得<strong>点赞、收藏、转发</strong>，让更多人看到——这也是我持续更新优化的动力。</p>
-            
-            <p>我是达子，下期见！</p>
-            
-            <div class="cta-box">
-                <h3>开始您的投资分析之旅</h3>
-                <p>无需注册即可预览，5分钟了解任意公司财务状况</p>
-                <a href="https://app.dupontmaster.com">立即体验 →</a>
-            </div>
+            <p class="meta">发布于 2026-04-10</p>
         </div>
         
-        <!-- Share -->
-        <div class="share-row">
-            <span class="share-label">分享：</span>
-            <a href="javascript:void(0)" onclick="shareToWeixin()" class="share-icon" title="微信">💬</a>
-            <a href="javascript:void(0)" onclick="shareToWeibo()" class="share-icon" title="微博">📤</a>
-            <a href="javascript:void(0)" onclick="shareToTwitter()" class="share-icon" title="Twitter">🐦</a>
-            <a href="javascript:void(0)" onclick="copyLink()" class="share-icon" title="复制链接">🔗</a>
+        <div class="video-container">
+            <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=116379940298145&bvid=BV1s5QwBGEDF&cid=37390650692&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
         </div>
         
-        <div class="related">
-            <h3>相关文章</h3>
-            <div class="rel-grid">
-                <a href="dongao-yanji.html" class="rel-card"><h4>东阿阿胶深度研究</h4><p>企业分析</p></a>
-                <a href="dongao-inverse-thinking.html" class="rel-card"><h4>东阿阿胶：反过来思考</h4><p>企业分析</p></a>
-            </div>
+        <div class="cta-box">
+            <h3>开始您的投资分析之旅</h3>
+            <p>无需注册即可预览，5分钟了解任意公司财务状况</p>
+            <a href="https://app.dupontmaster.com">立即体验 →</a>
         </div>
     </div>
     <footer>
