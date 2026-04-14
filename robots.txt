@@ -1,0 +1,9 @@
+# robots.txt for dupontmaster.com
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.dupontmaster.com/sitemap.xml
+
+# Crawl-delay (optional, be nice to servers)
+Crawl-delay: 1
