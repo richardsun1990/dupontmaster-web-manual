@@ -30,6 +30,19 @@
         .cta-box { background: linear-gradient(135deg, #1e3a5f 0%, #3b82f6 100%); color: white; padding: 32px; border-radius: 12px; text-align: center; margin: 48px 0; }
         .cta-box h3 { color: white; margin-bottom: 12px; }
         .cta-box a { display: inline-block; background: white; color: var(--primary); padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 16px; }
+        .share-section { margin-top: 32px; padding-top: 24px; border-top: 1px solid #eee; }
+        .share-title { font-size: 15px; font-weight: 600; color: #86868b; margin-bottom: 14px; }
+        .share-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+        .share-btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 8px; font-size: 13px; font-weight: 500; text-decoration: none; cursor: pointer; border: none; transition: all 0.2s; }
+        .share-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+        .weixin { background: #07c160; color: #fff; }
+        .weibo { background: #e6162d; color: #fff; }
+        .twitter { background: #000; color: #fff; }
+        .copy { background: #f5f5f7; color: #1d1d1f; border: 1px solid #ddd; }
+        .qr-popup { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); z-index: 999; align-items: center; justify-content: center; }
+        .qr-popup.show { display: flex; }
+        .qr-box { background: #fff; padding: 24px; border-radius: 12px; text-align: center; }
+        .qr-box h4 { margin-bottom: 14px; font-size: 15px; }
         footer { text-align: center; padding: 40px; color: #86868b; font-size: 13px; }
         @media (max-width: 768px) {
             .header, .content { padding: 24px; }
@@ -133,6 +146,41 @@
                 <p>想了解任意公司的杜邦分析数据？立即体验DuPont Master</p>
                 <a href="https://app.dupontmaster.com">开始分析 →</a>
             </div>
+            <div class="share-section">
+                <div class="share-title">分享这篇文章</div>
+                <div class="share-btns">
+                    <button class="share-btn weixin" onclick="shareToWeixin()">💚 微信</button>
+                    <button class="share-btn weibo" onclick="shareToWeibo()">📕 微博</button>
+                    <button class="share-btn twitter" onclick="shareToTwitter()">𝕏 Twitter</button>
+                    <button class="share-btn copy" onclick="copyLink()">🔗 复制链接</button>
+                </div>
+            </div>
+
+            <div id="qrPopup" class="qr-popup" onclick="closeQrPopup()">
+                <div class="qr-box" onclick="event.stopPropagation()">
+                    <h4>扫码分享到微信</h4>
+                    <div id="qrcode"></div>
+                </div>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+            <script>
+            function shareToWeixin() {
+                document.getElementById('qrPopup').classList.add('show');
+                document.getElementById('qrcode').innerHTML = '';
+                new QRCode(document.getElementById('qrcode'), { text: window.location.href, width: 180, height: 180 });
+            }
+            function closeQrPopup() { document.getElementById('qrPopup').classList.remove('show'); }
+            function shareToWeibo() {
+                var url = 'https://service.weibo.com/share/share.php?url=' + encodeURIComponent(window.location.href) + '&title=' + encodeURIComponent(document.title);
+                window.open(url, '_blank');
+            }
+            function shareToTwitter() {
+                var url = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent(document.title);
+                window.open(url, '_blank');
+            }
+            function copyLink() { navigator.clipboard.writeText(window.location.href); alert('链接已复制'); }
+            </script>
         </div>
         <footer>
             <p>© 2024 杜邦分析 · 数据仅供参考，不构成投资建议</p>
