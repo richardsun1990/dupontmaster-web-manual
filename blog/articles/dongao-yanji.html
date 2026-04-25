@@ -394,40 +394,51 @@
         </div>
     </div>
     <div id="toast" class="toast">链接已复制到剪贴板</div>
+<div class="cta-box">
+                <h3>用DuPont Master分析更多公司</h3>
+                <p>想了解任意公司的杜邦分析数据？立即体验DuPont Master</p>
+                <a href="https://app.dupontmaster.com">开始分析 →</a>
+            </div>
+            <div class="share-section">
+                <div class="share-title">分享这篇文章</div>
+                <div class="share-btns">
+                    <button class="share-btn weixin" onclick="shareToWeixin()">💚 微信</button>
+                    <button class="share-btn weibo" onclick="shareToWeibo()">📕 微博</button>
+                    <button class="share-btn twitter" onclick="shareToTwitter()">𝕏 Twitter</button>
+                    <button class="share-btn copy" onclick="copyLink()">🔗 复制链接</button>
+                </div>
+            </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
-    <script>
-    const pageUrl = window.location.href;
-    const pageTitle = document.title;
+            <div id="qrPopup" class="qr-popup" onclick="closeQrPopup()">
+                <div class="qr-box" onclick="event.stopPropagation()">
+                    <h4>扫码分享到微信</h4>
+                    <div id="qrcode"></div>
+                </div>
+            </div>
 
-    function shareToWeixin() {
-        document.getElementById('qrPopup').classList.add('show');
-        const canvas = document.getElementById('qrCanvas');
-        QRCode.toCanvas(canvas, pageUrl, { width: 200, margin: 2 }, function(error) {
-            if (error) console.error(error);
-        });
-    }
-    function closeQrPopup() { document.getElementById('qrPopup').classList.remove('show'); }
-    function shareToWeibo() {
-        window.open('https://service.weibo.com/share/share.php?url=' + encodeURIComponent(pageUrl) + '&title=' + encodeURIComponent(pageTitle), '_blank');
-    }
-    function shareToLinkedIn() {
-        window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(pageUrl), '_blank');
-    }
-    function shareToTwitter() {
-        window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(pageUrl) + '&text=' + encodeURIComponent(pageTitle), '_blank');
-    }
-    function copyLink() {
-        navigator.clipboard.writeText(pageUrl).then(function() {
-            const toast = document.getElementById('toast');
-            toast.classList.add('show');
-            setTimeout(function() { toast.classList.remove('show'); }, 2000);
-        });
-    }
-    </script>
-
-
-    <!-- Share Component -->
-    <footer><p><strong>DuPont Master</strong> © 2026 · 让投资分析更简单</p><p><a href="https://www.dupontmaster.com">返回首页</a> · <a href="/blog/">返回博客</a></p></footer>
+            <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+            <script>
+            function shareToWeixin() {
+                document.getElementById('qrPopup').classList.add('show');
+                document.getElementById('qrcode').innerHTML = '';
+                new QRCode(document.getElementById('qrcode'), { text: window.location.href, width: 180, height: 180 });
+            }
+            function closeQrPopup() { document.getElementById('qrPopup').classList.remove('show'); }
+            function shareToWeibo() {
+                var url = 'https://service.weibo.com/share/share.php?url=' + encodeURIComponent(window.location.href) + '&title=' + encodeURIComponent(document.title);
+                window.open(url, '_blank');
+            }
+            function shareToTwitter() {
+                var url = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent(document.title);
+                window.open(url, '_blank');
+            }
+            function copyLink() { navigator.clipboard.writeText(window.location.href); alert('链接已复制'); }
+            </script>
+        </div>
+        <footer>
+            <p><strong>DuPont Master</strong> © 2026 · 让投资分析更简单</p>
+            <p><a href="https://www.dupontmaster.com">首页</a> · <a href="https://app.dupontmaster.com">控制台</a> · <a href="/blog/">博客</a></p>
+        </footer>
+    </div>
 </body>
 </html>
