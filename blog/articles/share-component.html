@@ -43,3 +43,71 @@
             .content h2 { font-size: 20px; }
         }
     </style>
+
+<div class="share-section">
+    <div class="share-title">分享这篇文章</div>
+    <div class="share-btns">
+        <button class="share-btn weixin" onclick="shareToWeixin()">💚 微信</button>
+        <button class="share-btn weibo" onclick="shareToWeibo()">📕 微博</button>
+        <button class="share-btn linkedin" onclick="shareToLinkedIn()">💼 LinkedIn</button>
+        <button class="share-btn twitter" onclick="shareToTwitter()">𝕏 Twitter</button>
+        <button class="share-btn copy" onclick="copyLink()">🔗 复制链接</button>
+    </div>
+</div>
+
+<!-- 微信二维码弹窗 -->
+<div id="qrPopup" class="qr-popup" onclick="closeQrPopup()">
+    <div class="qr-box" onclick="event.stopPropagation()">
+        <h4>微信扫码分享</h4>
+        <canvas id="qrCanvas"></canvas>
+        <button class="qr-close" onclick="closeQrPopup()">关闭</button>
+    </div>
+</div>
+
+<!-- 复制链接提示 -->
+<div id="toast" class="toast">链接已复制到剪贴板</div>
+
+<!-- 二维码库 -->
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+
+<script>
+const pageUrl = window.location.href;
+const pageTitle = document.title;
+
+function shareToWeixin() {
+    document.getElementById('qrPopup').classList.add('show');
+    const canvas = document.getElementById('qrCanvas');
+    QRCode.toCanvas(canvas, pageUrl, { width: 200, margin: 2 }, function(error) {
+        if (error) console.error(error);
+    });
+}
+
+function closeQrPopup() {
+    document.getElementById('qrPopup').classList.remove('show');
+}
+
+function shareToWeibo() {
+    const url = 'https://service.weibo.com/share/share.php?url=' + encodeURIComponent(pageUrl) + '&title=' + encodeURIComponent(pageTitle);
+    window.open(url, '_blank');
+}
+
+function shareToLinkedIn() {
+    const url = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(pageUrl);
+    window.open(url, '_blank');
+}
+
+function shareToTwitter() {
+    const url = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(pageUrl) + '&text=' + encodeURIComponent(pageTitle);
+    window.open(url, '_blank');
+}
+
+function copyLink() {
+    navigator.clipboard.writeText(pageUrl).then(function() {
+        const toast = document.getElementById('toast');
+        toast.classList.add('show');
+        setTimeout(function() { toast.classList.remove('show'); }, 2000);
+    }, function(err) {
+        console.error('复制失败: ', err);
+    });
+}
+</script>
