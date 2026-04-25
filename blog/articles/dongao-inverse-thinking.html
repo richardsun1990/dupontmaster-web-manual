@@ -4,141 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>东阿阿胶：反过来思考这家公司 - DuPont Master</title>
-    <meta name="description" content="文章内容。四个月后，只剩225块，膝盖斩。但要知道它2025年年报，营收59亿，增长16%；净利润18亿，增长12%。为什么会这样？">
-    <meta property="og:title" content="东阿阿胶：反过来思考这家公司 - DuPont Master">
-    <meta property="og:description" content="从股价波动、收入结构、ROE拆解、资产质量等多维度深度分析金山办公的投资价值。">
-    <meta property="og:type" content="article">
-    
-<style>
+    <style>
+        :root { --primary: #0071e3; --text: #1d1d1f; --text-secondary: #86868b; --bg: #fff; --bg-alt: #f5f5f7; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.8; color: #1d1d1f; background: #f5f5f7; }
-        .nav { background: #fff; border-bottom: 1px solid #d2d2d7; padding: 16px 24px; position: sticky; top: 0; z-index: 100; }
-        .nav a { color: #0066cc; text-decoration: none; font-size: 15px; }
-        .nav a:hover { text-decoration: underline; }
-        .box { max-width: 800px; margin: 40px auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); overflow: hidden; }
-        .header { padding: 48px 48px 32px; border-bottom: 1px solid #d2d2d7; }
-        .tag { display: inline-block; background: rgba(0,113,227,0.1); color: #0071e3; padding: 4px 12px; border-radius: 4px; font-size: 13px; margin-bottom: 16px; }
-        .title { font-size: 32px; font-weight: 600; line-height: 1.3; margin-bottom: 16px; color: #000; }
-        .meta { color: #86868b; font-size: 14px; }
-        .content { padding: 40px 48px; }
-        .content h2 { font-size: 22px; font-weight: 600; margin: 40px 0 20px; color: #000; }
-        .content h3 { font-size: 18px; font-weight: 600; margin: 30px 0 16px; color: #000; }
-        .content p { margin-bottom: 20px; font-size: 16px; color: #1d1d1f; }
-        .content img { max-width: 100%; height: auto; border-radius: 8px; margin: 24px 0; display: block; }
-        .content ul, .content ol { margin: 20px 0; padding-left: 24px; }
-        .content li { margin-bottom: 12px; font-size: 16px; }
-        .content blockquote { border-left: 4px solid #0071e3; padding-left: 20px; margin: 24px 0; color: #515154; font-style: italic; }
-        .cta-box { background: linear-gradient(135deg, #1e3a5f 0%, #3b82f6 100%); color: white; padding: 32px; border-radius: 12px; text-align: center; margin: 48px 0; }
-        .cta-box h3 { color: white; margin-bottom: 12px; }
-        .cta-box a { display: inline-block; background: white; color: #0071e3; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 16px; }
-        .share-section { margin-top: 32px; padding-top: 24px; border-top: 1px solid #eee; }
-        .share-title { font-size: 15px; font-weight: 600; color: #86868b; margin-bottom: 14px; }
-        .share-btns { display: flex; gap: 10px; flex-wrap: wrap; }
-        .share-btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 8px; font-size: 13px; font-weight: 500; text-decoration: none; cursor: pointer; border: none; transition: all 0.2s; }
-        .share-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
-        .weixin { background: #07c160; color: #fff; }
-        .weibo { background: #e6162d; color: #fff; }
-        .twitter { background: #000; color: #fff; }
-        .copy { background: #f5f5f7; color: #1d1d1f; border: 1px solid #ddd; }
-        .qr-popup { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); z-index: 999; align-items: center; justify-content: center; }
-        .qr-popup.show { display: flex; }
-        .qr-box { background: #fff; padding: 24px; border-radius: 12px; text-align: center; }
-        .qr-box h4 { margin-bottom: 14px; font-size: 15px; }
-        footer { text-align: center; padding: 40px; color: #86868b; font-size: 13px; }
-        @media (max-width: 768px) {
-            .header, .content { padding: 24px; }
-            .title { font-size: 24px; }
-            .content h2 { font-size: 20px; }
-        }
+        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.8; color: var(--text); }
+        .nav { background: rgba(0,0,0,0.85); padding: 12px 0; }
+        .nav-c { max-width: 800px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; }
+        .logo { color: #fff; text-decoration: none; font-weight: 700; font-size: 17px; }
+        .nav a { color: rgba(255,255,255,0.85); text-decoration: none; margin-left: 14px; font-size: 13px; }
+        .box { max-width: 800px; margin: 0 auto; padding: 40px 20px 60px; }
+        .header { margin-bottom: 32px; }
+        .tag { display: inline-block; background: rgba(0,113,227,0.1); color: var(--primary); padding: 5px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; margin-bottom: 14px; }
+        .title { font-size: 28px; font-weight: 700; line-height: 1.35; margin-bottom: 12px; }
+        .meta { color: var(--text-secondary); font-size: 13px; }
+        .content { font-size: 16px; }
+        .content p { margin-bottom: 18px; }
+        .content h2 { font-size: 22px; font-weight: 600; margin: 36px 0 16px; }
+        .content h3 { font-size: 18px; font-weight: 600; margin: 28px 0 12px; }
+        .content h4 { font-size: 16px; font-weight: 600; margin: 22px 0 10px; }
+        .content li { margin-bottom: 6px; margin-left: 18px; }
+        .related { margin-top: 48px; padding-top: 28px; border-top: 1px solid #eee; }
+        .related h3 { font-size: 18px; font-weight: 600; margin-bottom: 16px; }
+        .rel-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .rel-card { display: block; text-decoration: none; color: inherit; background: var(--bg-alt); border-radius: 12px; padding: 16px; }
+        .rel-card h4 { font-size: 14px; font-weight: 600; }
+        .cta { background: linear-gradient(135deg, #1e3a5f, #3b82f6); color: #fff; padding: 28px; border-radius: 12px; text-align: center; margin: 44px 0; }
+        .cta a { display: inline-block; background: #fff; color: var(--primary); padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 14px; }
+        footer { background: var(--bg-alt); padding: 32px 20px; text-align: center; font-size: 13px; color: var(--text-secondary); }
+        footer a { color: var(--primary); text-decoration: none; }
     </style>
-<div class="box">
-        <div class="header">
-            <span class="tag">企业分析</span>
-            <h1 class="title">东阿阿胶：反过来思考这家公司 - DuPont Master</h1>
-            <p class="meta">发布于 2026-04-22 · 约 12 分钟阅读</p>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "东阿阿胶：反过来思考这家公司 - DuPont Master",
+        "datePublished": "2026-04-03",
+        "author": {
+            "@type": "Organization",
+            "name": "DuPont Master",
+            "url": "https://www.dupontmaster.com"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "DuPont Master",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.dupontmaster.com/icon-512.png"
+            }
+        }
+    }
+    </script>
+    
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-c">
+            <a href="https://www.dupontmaster.com" class="logo">DuPont Master</a>
+            <div><a href="https://www.dupontmaster.com">首页</a><a href="/blog/">博客</a><a href="https://app.dupontmaster.com">控制台</a></div>
         </div>
-        <div class="content">
-            <p>文章内容。四个月后，只剩225块，膝盖斩。但要知道它2025年年报，营收59亿，增长16%；净利润18亿，增长12%。</p>
-            <p>为什么会这样？今天我们来好好聊聊。</p>
-
-            <h2>金山到底是怎么赚钱的？</h2>
-            <p>先把金山的收入拆开看看。2025年，金山有四大块收入：</p>
-
-            <img src="https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/images/2026-04-24-kingsoft-office/kingsoft_office_34bc4c3fa15980be.png" alt="金山办公利润分析">
-
-            <p><strong>WPS个人会员：36亿，占总收入61%。</strong></p>
-            <p>这是绝对主力。你用的WPS会员、稻壳会员，都是这块。这部分每年增长10%左右，还挺稳的。</p>
-            <p>WPS在全球有6.78亿个月活设备，但付费用户只有4615万。7亿设备里，掏钱的只有4600万，付费率大概6.8%。</p>
-            <p>这个数字和微软Office的付费率就差多了。所以金山的问题不是没用户，而是用户还没怎么花钱。</p>
-            <p>那怎么让更多人掏钱？AI。</p>
-            <p>金山在疯狂推AI功能——帮你写文案、帮你做表格、帮你做PPT。你用得越多，越觉得会员值，然后就一直续费了。2025年，WPS AI月活用户超过8000万，同比涨了3倍多。Token调用量涨了12倍。这说明用户真的在用AI，而且越用越上瘾。</p>
-
-            <p><strong>WPS 365企业服务：7.2亿，占总收入12%，同比增长65%。</strong></p>
-            <p>这是给企业用的，协作办公套件。企业在用的可以理解为企业版WPS。这块涨得特别猛，连续四个季度收入增速超过60%。已经服务了上百万家企业，中国民营500强里七成都在用WPS 365。</p>
-            <p>逻辑很简单：企业一旦用上WPS 365，文档、协作、AI全在一起了，迁移成本很高，用了基本离不开。</p>
-
-            <p><strong>软件授权：14.6亿，占总收入25%。</strong></p>
-            <p>政府和国企采购WPS的钱。2024年信创行业有点冷，这块下滑了。信创就是国产替代计划。但2025年回暖了，信创又开始搞了。</p>
-
-            <p><strong>其他收入：1.2亿。</strong></p>
-            <p>主要是广告。金山已经在逐步关停广告业务，2023年宣布关闭PC端广告。广告短期能赚钱，但长期伤害用户体验，管理层想明白了。</p>
-
-            <p>总结一下：73%收入来自订阅，25%政府企业采购，广告已经不重要了。金山的商业模式很清晰——订阅为主，稳健增长。</p>
-
-            <h2>为什么说金山是一门好生意？</h2>
-            <p>我们来拆解一下ROE，就是净资产收益率。金山的ROE大约14%，在软件行业算健康的。</p>
-
-            <img src="https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/images/2026-04-24-kingsoft-office/kingsoft_office_34bc4c3fa159807f.png" alt="杜邦分析">
-
-            <p><strong>净利率——31%。</strong></p>
-            <p>意味着金山每收100块钱，能净赚31块。这个数字在软件行业非常恐怖。</p>
-            <p>为什么这么能赚？软件的成本主要是研发人员工资和服务器带宽，但卖出一份会员，边际成本几乎为零。你多卖100万份会员，成本几乎不增加，但收入哗哗往上涨。这就像你建了个游乐场，门票卖出去了，里面每多一个游客成本几乎不增加，但他花的钱都是你的。</p>
-
-            <p><strong>资产周转率——0.33次。</strong></p>
-            <p>这个数字看起来不高，但你得看金山资产里有什么。182亿总资产，其中149亿是现金。现金放那儿不动，不能产生营业收入，所以周转率自然低。但这不是问题——账上堆满现金，说明公司有钱，而且安全。</p>
-
-            <p><strong>权益乘数——几乎没有负债。</strong></p>
-            <p>有息负债相比流动资产几乎为零。金山不欠别人钱，财务上非常健康。</p>
-
-            <p>三个因素加在一起——高净利率、低负债、账上堆满现金——这就是金山的ROE。</p>
-
-            <h2>资产质量——现金之王</h2>
-            <p>说现金，我们来好好看看金山这张资产负债表。总资产182亿，其中现金类资产149亿。占比超过82%。</p>
-
-            <img src="https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/images/2026-04-24-kingsoft-office/kingsoft_office_34bc4c3fa15980a3.png" alt="资产负债表">
-
-            <p><strong>82%是什么概念？</strong>金山账上的现金，淹到脖子了。更关键的是，这149亿几乎没有受限的——没有抵押、没有冻结，就是随时可以花的真金白银。</p>
-
-            <p>除了现金，金山还有大约11%的"投资性资产"，大约11个亿。根据2025年年报，金山主要围绕"AI、协作、国际化"在布局。</p>
-            <p>有投AI技术的，比如北京庖丁科技，专注AI和文档处理。有投协作办公的，比如亦心科技。有投内容设计的，比如创客贴、仓耳文字。还有投海外市场的，比如日本的WPS株式会社。</p>
-            <p>这些不是单纯的财务投资，更像是金山在下棋——用这些棋子，把WPS的生态圈围起来。</p>
-
-            <img src="https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/images/2026-04-24-kingsoft-office/kingsoft_office_34bc4c3fa15980dd.png" alt="自由现金流">
-
-            <p>金山还有一个被忽视的优势——自由现金流。2025年，金山经营现金流净额25个亿，真金白银从客户口袋里流到金山账上。</p>
-            <p>但金山每年需要花很少的钱来维持现有的市场地位，资本开支非常稳定，并没有大钱要砸进去建工厂、买设备。</p>
-            <p>至少回头看金山近几年来看都是一门"躺赚"的生意。但现在面对AI的冲击，未来还能否继续是一门躺赚的生意呢？</p>
-            <p>金山的管理层对资金的使用非常的保守，账上趴着149亿现金，相比每年的分红比例就非常低了。</p>
-            <p>2025年每10股分12.52块，总额5.8亿，创下新高。2024年每10股分9块，2023年每10股分8.8块，最近三年累计分红14个亿。2024年还首次做了回购，花了约1个亿给员工做股权激励。</p>
-            <p>可能就是为了应对AI的冲击吧，AI是一场技术军备竞赛。金山现在研发费用率35%，2025年投入将近21个亿，同比增长24%，主要是近4000名研发人员的人力成本。如果把钱全分了，未来AI竞争加剧的时候，就没钱打仗啦。</p>
-
-            <h2>现在的股价贵不贵？</h2>
-            <p>好，现在进入关键问题——金山现在这个价格，值得买吗？</p>
-
-            <img src="https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/images/2026-04-24-kingsoft-office/kingsoft_office_34bc4c3fa15980d8.png" alt="DCF估值">
-
-            <p>好，现在进入关键问题——金山现在这个价格，值得买吗？</p>
-
-            <img src="https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/images/2026-04-24-kingsoft-office/kingsoft_office_34bc4c3fa15980d8.png" alt="股价分析">
-
-            <p>金山现在市值1400多亿，2025年净利润18亿，对应50多倍PE。从历史估值看，金山近5年的PE中间价大约70倍，最高90倍，最低20倍。</p>
-
-            <p>50倍放在历史里算中等偏低。但你要知道，2025年净利润增速只有12%，增速已经明显放缓了。增速放缓，市场给的估值就会下降。</p>
-
-            <p>所以我的结论是：金山是好公司，商业模式优秀，现金流充沛。但估值嘛，现在不算便宜。2025年已经炒过一波AI概念了，估值被拉得很高。如果你是长期持有，3-5年角度，金山大概率不会让你失望。但如果你是想短期赚快钱，可能要等等看。</p>
-
-            
-<p>芒格说：「如果我知道自己会死在哪里，我就永远不去那里。」</p>
+    </div>
+    <article class="box">
+        <header class="header">
+            <span class="tag">财务分析</span>
+            <h1 class="title">东阿阿胶：反过来思考这家公司</h1>
+            <div class="meta">📅 2026-04-01 · ⏱ 约10分钟阅读</div>
+        </header>
+        <div class="content"><p>芒格说：「如果我知道自己会死在哪里，我就永远不去那里。」</p>
 <p>这句话看似简单，实则是研究一家公司最有效的方法论。大多数投资者问的是"这家公司好不好"、"要不要买"、"能涨多少"。但芒格式的思考从不从这里开始。</p>
 <p>研究一家公司，首先问的是：它会怎么死？</p>
 <p>对于东阿阿胶，我花了很长时间思考这个问题。这篇文章，就是我思考的记录。</p>
@@ -317,7 +249,49 @@
 <p>东阿阿胶利润结构（2025年）：</p>
 <p>业务板块历史走势：</p>
 <p>数据来源：DuPont Master、公司年报</p>
-<p>免责声明：本文仅为研究参考，不构成投资建议</p>
+<p>免责声明：本文仅为研究参考，不构成投资建议</p></div><div class="related"><h3>相关文章推荐</h3><div class="rel-grid"><a href="/blog/articles/catl-inverse-thinking.html" class="rel-card"><h4>宁德时代：反过来思考这家公司</h4></a></div></div><div class="cta"><h3>用DuPont Master分析更多公司</h3><p>立即体验杜邦分析工具</p><a href="https://app.dupontmaster.com">开始分析 →</a></div></article>
+
+    <!-- Share Component -->
+    <style>
+    .share-section { margin-top: 32px; padding-top: 24px; border-top: 1px solid #eee; }
+    .share-title { font-size: 15px; font-weight: 600; color: var(--text-secondary); margin-bottom: 14px; }
+    .share-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+    .share-btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 8px; font-size: 13px; font-weight: 500; text-decoration: none; cursor: pointer; border: none; transition: all 0.2s; }
+    .share-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+    .weixin { background: #07c160; color: #fff; }
+    .weibo { background: #e6162d; color: #fff; }
+    .linkedin { background: #0a66c2; color: #fff; }
+    .twitter { background: #000; color: #fff; }
+    .copy { background: #f5f5f7; color: var(--text); border: 1px solid #ddd; }
+    .qr-popup { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); z-index: 999; align-items: center; justify-content: center; }
+    .qr-popup.show { display: flex; }
+    .qr-box { background: #fff; padding: 24px; border-radius: 12px; text-align: center; }
+    .qr-box h4 { margin-bottom: 14px; font-size: 15px; }
+    .qr-box canvas { border-radius: 8px; }
+    .qr-close { margin-top: 14px; padding: 8px 20px; background: #f5f5f7; border: none; border-radius: 6px; cursor: pointer; }
+    .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: #333; color: #fff; padding: 12px 20px; border-radius: 8px; font-size: 14px; opacity: 0; transition: opacity 0.3s; z-index: 1000; }
+    .toast.show { opacity: 1; }
+    </style>
+
+    <div class="share-section">
+        <div class="share-title">分享这篇文章</div>
+        <div class="share-btns">
+            <button class="share-btn weixin" onclick="shareToWeixin()">💚 微信</button>
+            <button class="share-btn weibo" onclick="shareToWeibo()">📕 微博</button>
+            <button class="share-btn linkedin" onclick="shareToLinkedIn()">💼 LinkedIn</button>
+            <button class="share-btn twitter" onclick="shareToTwitter()">𝕏 Twitter</button>
+            <button class="share-btn copy" onclick="copyLink()">🔗 复制链接</button>
+        </div>
+    </div>
+
+    <div id="qrPopup" class="qr-popup" onclick="closeQrPopup()">
+        <div class="qr-box" onclick="event.stopPropagation()">
+            <h4>微信扫码分享</h4>
+            <canvas id="qrCanvas"></canvas>
+            <button class="qr-close" onclick="closeQrPopup()">关闭</button>
+        </div>
+    </div>
+    <div id="toast" class="toast">链接已复制到剪贴板</div>
 <div class="cta-box">
                 <h3>用DuPont Master分析更多公司</h3>
                 <p>想了解任意公司的杜邦分析数据？立即体验DuPont Master</p>
