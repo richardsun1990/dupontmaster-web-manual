@@ -52,9 +52,19 @@
       .replace(/"/g, '&quot;');
   }
 
+  function isExternalUrl(value) {
+    return /^(https?:)?\/\//i.test(value) || value.startsWith('/');
+  }
+
+  function rawContentUrl(value) {
+    if (isExternalUrl(value)) return value;
+    const clean = value.replace(/^\.\//, '');
+    return `${rawBase}/${clean.split('/').map(encodeURIComponent).join('/')}`;
+  }
+
   function inlineMarkdown(value) {
     return escapeHtml(value)
-      .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1">')
+      .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (_, alt, src) => `<img src="${rawContentUrl(src)}" alt="${alt}">`)
       .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
       .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
       .replace(/`([^`]+)`/g, '<code>$1</code>');

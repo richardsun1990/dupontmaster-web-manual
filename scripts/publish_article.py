@@ -87,9 +87,19 @@ def make_slug(title: str, file_stem: str, explicit_slug: str | None, article_dat
     return base or f"article-{article_date}"
 
 
+def asset_url(value: str) -> str:
+    if re.match(r"^(https?:)?//", value) or value.startswith("/"):
+        return value
+    return "/content/articles/" + value.lstrip("./")
+
+
 def inline_markdown(text: str) -> str:
     escaped = html.escape(text)
-    escaped = re.sub(r"!\[([^\]]*)\]\(([^)]+)\)", r'<img src="\2" alt="\1">', escaped)
+    escaped = re.sub(
+        r"!\[([^\]]*)\]\(([^)]+)\)",
+        lambda match: f'<img src="{html.escape(asset_url(match.group(2)))}" alt="{match.group(1)}">',
+        escaped,
+    )
     escaped = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r'<a href="\2">\1</a>', escaped)
     escaped = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", escaped)
     escaped = re.sub(r"`([^`]+)`", r"<code>\1</code>", escaped)
