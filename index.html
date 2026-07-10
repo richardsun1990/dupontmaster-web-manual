@@ -475,11 +475,11 @@
         }
 
         .screenshot-showcase {
-            max-width: 1120px;
+            max-width: 1180px;
             margin: 0 auto;
             padding: 0 20px;
             display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 22px;
             align-items: stretch;
         }
@@ -493,18 +493,18 @@
         }
 
         .screenshot-card.featured {
-            grid-row: span 3;
+            grid-column: 1 / -1;
         }
 
         .screenshot-frame {
-            background: #f8fafc;
-            padding: 12px;
+            background: #ffffff;
+            padding: 10px;
+            aspect-ratio: 16 / 9;
         }
 
         .screenshot-frame img {
             width: 100%;
             height: 100%;
-            min-height: 210px;
             display: block;
             object-fit: cover;
             object-position: center top;
@@ -512,8 +512,16 @@
             border: 1px solid #eef2f7;
         }
 
-        .screenshot-card.featured .screenshot-frame img {
-            min-height: 560px;
+        .screenshot-card.featured .screenshot-frame {
+            aspect-ratio: 2 / 1;
+        }
+
+        .screenshot-card.chart .screenshot-frame {
+            aspect-ratio: 16 / 10;
+        }
+
+        .screenshot-card.tall .screenshot-frame {
+            aspect-ratio: 16 / 10;
         }
 
         .screenshot-caption {
@@ -1216,17 +1224,18 @@
             }
 
             .screenshot-card.featured {
-                grid-row: auto;
+                grid-column: auto;
             }
 
             .screenshot-frame {
                 padding: 8px;
+                aspect-ratio: 16 / 10;
             }
 
-            .screenshot-frame img,
-            .screenshot-card.featured .screenshot-frame img {
-                min-height: 220px;
-                max-height: 360px;
+            .screenshot-card.featured .screenshot-frame,
+            .screenshot-card.chart .screenshot-frame,
+            .screenshot-card.tall .screenshot-frame {
+                aspect-ratio: 16 / 10;
             }
 
             .screenshot-caption {
@@ -1451,7 +1460,7 @@
 
     <section class="product-preview" id="product">
         <h2 class="section-title">把财报数据变成可解释的研究视图</h2>
-        <p class="section-subtitle">DupontMaster 不只是保存指标，而是把 ROE、利润、资产和估值放到同一个公司研究工作台里。</p>
+        <p class="section-subtitle">DupontMaster 不只是保存指标，而是把 ROE、利润、现金流、资产和估值放到同一个公司研究工作台里。</p>
         <div class="screenshot-showcase" aria-label="DupontMaster 贵州茅台分析截图">
             <article class="screenshot-card featured">
                 <div class="screenshot-frame">
@@ -1471,6 +1480,15 @@
                     <p>用利润分配结构图观察收入、费用、税费和净利润之间的关系。</p>
                 </div>
             </article>
+            <article class="screenshot-card chart">
+                <div class="screenshot-frame">
+                    <img src="assets/screenshots/maotai-cashflow.png" alt="DupontMaster 贵州茅台现金流质量分析截图" loading="lazy">
+                </div>
+                <div class="screenshot-caption">
+                    <h3>现金流质量</h3>
+                    <p>对比经营现金流、自由现金流和增长变化，观察利润能否转化为真实现金回流。</p>
+                </div>
+            </article>
             <article class="screenshot-card">
                 <div class="screenshot-frame">
                     <img src="assets/screenshots/maotai-assets.png" alt="DupontMaster 贵州茅台资产结构截图" loading="lazy">
@@ -1480,12 +1498,12 @@
                     <p>把资产拆成类现金、经营、生产、投资和其他资产，辅助判断资产质量。</p>
                 </div>
             </article>
-            <article class="screenshot-card">
+            <article class="screenshot-card tall">
                 <div class="screenshot-frame">
                     <img src="assets/screenshots/maotai-valuation.png" alt="DupontMaster 贵州茅台企业估值截图" loading="lazy">
                 </div>
                 <div class="screenshot-caption">
-                    <h3>企业估值</h3>
+                    <h3>DCF 估值辅助</h3>
                     <p>围绕现金流、增长率、折现率和股本参数，观察估值假设变化带来的影响。</p>
                 </div>
             </article>
