@@ -167,7 +167,13 @@
     try {
       const articles = await fetchArticles();
       if (!articles.length) return;
-      target.insertAdjacentHTML('afterbegin', articles.slice(0, limit).map((item) => card(item, homepage)).join(''));
+      const visibleArticles = articles.filter((item) => {
+        const dynamicHref = articleUrl(item.slug);
+        const staticHref = `/blog/articles/${encodeURIComponent(item.slug)}.html`;
+        return !target.querySelector(`a[href="${dynamicHref}"], a[href="${staticHref}"]`);
+      });
+      if (!visibleArticles.length) return;
+      target.insertAdjacentHTML('afterbegin', visibleArticles.slice(0, limit).map((item) => card(item, homepage)).join(''));
     } catch (error) {
       console.warn('Markdown articles load failed:', error);
     }
