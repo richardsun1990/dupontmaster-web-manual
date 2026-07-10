@@ -15,6 +15,32 @@
 
 不需要配置 GitHub Actions，也不需要额外创建 HTML 文件。
 
+## 图片怎么处理
+
+推荐图片走阿里云 OSS，不放进网站仓库。
+
+最简单流程：
+
+1. 把图片上传到阿里云 OSS
+2. 复制图片的公开访问链接
+3. 在 Notion 里用图片链接插入图片
+4. 导出 Markdown 后，网站会直接读取 OSS 图片
+
+Markdown 中图片大概会长这样：
+
+```markdown
+![公司 ROE 趋势图](https://你的-bucket.oss-cn-hangzhou.aliyuncs.com/blog/company/roe.png)
+```
+
+这样做的好处：
+
+- GitHub 仓库不会越来越大
+- 网站页面加载图片时主要走阿里云 OSS
+- 后续替换图片时，只需要换 OSS 图片链接
+- Notion 导出的 Markdown 可以直接上传
+
+如果你没有使用 OSS，而是用 Notion 导出的本地图片文件夹，也可以一起上传到 `content/articles/`，网站会自动处理相对路径。但长期看，OSS 更稳。
+
 ## 推荐文件名
 
 Notion 导出的文件名可以直接用，但更建议改成英文短横线：

@@ -22,3 +22,9 @@ source: 公司公告、年报、交易所披露文件及 DupontMaster 整理。
 ## 三、风险提示
 
 这里写公司和行业层面的主要风险。
+
+## 图片说明
+
+建议把图片上传到阿里云 OSS，然后在正文中使用公开图片链接：
+
+![公司 ROE 趋势图](https://你的-bucket.oss-cn-hangzhou.aliyuncs.com/blog/company/roe.png)
