@@ -474,6 +474,73 @@
             font-size: 13px;
         }
 
+        .screenshot-showcase {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 22px;
+            align-items: stretch;
+        }
+
+        .screenshot-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow: 0 18px 45px rgba(15,23,42,0.10);
+        }
+
+        .screenshot-card.featured {
+            grid-row: span 3;
+        }
+
+        .screenshot-frame {
+            background: #f8fafc;
+            padding: 12px;
+        }
+
+        .screenshot-frame img {
+            width: 100%;
+            height: 100%;
+            min-height: 210px;
+            display: block;
+            object-fit: cover;
+            object-position: center top;
+            border-radius: 14px;
+            border: 1px solid #eef2f7;
+        }
+
+        .screenshot-card.featured .screenshot-frame img {
+            min-height: 560px;
+        }
+
+        .screenshot-caption {
+            padding: 18px 20px 20px;
+        }
+
+        .screenshot-caption h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .screenshot-caption p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .screenshot-note {
+            max-width: 980px;
+            margin: 22px auto 0;
+            padding: 0 20px;
+            color: var(--text-secondary);
+            font-size: 13px;
+            line-height: 1.7;
+            text-align: center;
+        }
+
         .workflow {
             padding: var(--spacing) 20px;
             background: var(--background-alt);
@@ -1142,6 +1209,30 @@
                 font-size: 11px;
             }
 
+            .screenshot-showcase {
+                grid-template-columns: 1fr;
+                padding: 0 16px;
+                gap: 16px;
+            }
+
+            .screenshot-card.featured {
+                grid-row: auto;
+            }
+
+            .screenshot-frame {
+                padding: 8px;
+            }
+
+            .screenshot-frame img,
+            .screenshot-card.featured .screenshot-frame img {
+                min-height: 220px;
+                max-height: 360px;
+            }
+
+            .screenshot-caption {
+                padding: 16px;
+            }
+
             .metric-card strong {
                 font-size: 21px;
             }
@@ -1361,59 +1452,45 @@
     <section class="product-preview" id="product">
         <h2 class="section-title">把财报数据变成可解释的研究视图</h2>
         <p class="section-subtitle">DupontMaster 不只是保存指标，而是把 ROE、利润、资产和估值放到同一个公司研究工作台里。</p>
-        <div class="preview-shell" aria-label="DupontMaster 产品界面预览">
-            <div class="preview-bar">
-                <div class="preview-dots"><span></span><span></span><span></span></div>
-                <span>app.dupontmaster.com · 公司财务分析工作台</span>
-                <span>可导出图表</span>
-            </div>
-            <div class="preview-body">
-                <aside class="preview-sidebar">
-                    <h3>贵州茅台</h3>
-                    <div class="preview-nav-item active">杜邦分析</div>
-                    <div class="preview-nav-item">利润结构</div>
-                    <div class="preview-nav-item">资产结构</div>
-                    <div class="preview-nav-item">企业估值</div>
-                    <div class="preview-nav-item">研究笔记</div>
-                </aside>
-                <div class="preview-main">
-                    <div class="preview-header">
-                        <div>
-                            <h3>2025 年财务质量概览</h3>
-                            <p>用同一套框架观察盈利能力、资产效率和财务杠杆。</p>
-                        </div>
-                        <span class="preview-pill">公开财报数据整理</span>
-                    </div>
-                    <div class="preview-grid">
-                        <div class="metric-card"><span>ROE</span><strong>31.8%</strong></div>
-                        <div class="metric-card"><span>净利率</span><strong>48.6%</strong></div>
-                        <div class="metric-card"><span>资产周转率</span><strong>0.47</strong></div>
-                        <div class="metric-card"><span>权益乘数</span><strong>1.39</strong></div>
-                    </div>
-                    <div class="chart-grid">
-                        <div class="chart-panel">
-                            <h4>ROE 来源拆解</h4>
-                            <div class="bar-row"><span>净利率</span><div class="bar-track"><div class="bar-fill" style="width: 86%;"></div></div><span>高</span></div>
-                            <div class="bar-row"><span>周转率</span><div class="bar-track"><div class="bar-fill" style="width: 54%;"></div></div><span>中</span></div>
-                            <div class="bar-row"><span>杠杆</span><div class="bar-track"><div class="bar-fill" style="width: 38%;"></div></div><span>低</span></div>
-                            <div class="preview-actions">
-                                <span class="preview-action">查看趋势</span>
-                                <span class="preview-action">导出图片</span>
-                                <span class="preview-action">生成研究素材</span>
-                            </div>
-                        </div>
-                        <div class="chart-panel">
-                            <h4>利润与资产结构</h4>
-                            <div class="flow-card">
-                                <div class="flow-node"><strong>收入</strong>观察增长和主营业务贡献</div>
-                                <div class="flow-node"><strong>毛利 / 经营利润</strong>识别利润质量和费用压力</div>
-                                <div class="flow-node"><strong>资产分类</strong>区分现金、经营、生产和投资类资产</div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="screenshot-showcase" aria-label="DupontMaster 贵州茅台分析截图">
+            <article class="screenshot-card featured">
+                <div class="screenshot-frame">
+                    <img src="assets/screenshots/maotai-dupont.png" alt="DupontMaster 贵州茅台杜邦分析截图" loading="lazy">
                 </div>
-            </div>
+                <div class="screenshot-caption">
+                    <h3>杜邦分析：拆解 ROE 来源</h3>
+                    <p>从净利率、资产周转率和权益乘数拆开看，判断公司回报率主要来自经营能力、资产效率还是财务杠杆。</p>
+                </div>
+            </article>
+            <article class="screenshot-card">
+                <div class="screenshot-frame">
+                    <img src="assets/screenshots/maotai-profit.png" alt="DupontMaster 贵州茅台利润结构截图" loading="lazy">
+                </div>
+                <div class="screenshot-caption">
+                    <h3>利润结构</h3>
+                    <p>用利润分配结构图观察收入、费用、税费和净利润之间的关系。</p>
+                </div>
+            </article>
+            <article class="screenshot-card">
+                <div class="screenshot-frame">
+                    <img src="assets/screenshots/maotai-assets.png" alt="DupontMaster 贵州茅台资产结构截图" loading="lazy">
+                </div>
+                <div class="screenshot-caption">
+                    <h3>资产结构</h3>
+                    <p>把资产拆成类现金、经营、生产、投资和其他资产，辅助判断资产质量。</p>
+                </div>
+            </article>
+            <article class="screenshot-card">
+                <div class="screenshot-frame">
+                    <img src="assets/screenshots/maotai-valuation.png" alt="DupontMaster 贵州茅台企业估值截图" loading="lazy">
+                </div>
+                <div class="screenshot-caption">
+                    <h3>企业估值</h3>
+                    <p>围绕现金流、增长率、折现率和股本参数，观察估值假设变化带来的影响。</p>
+                </div>
+            </article>
         </div>
+        <p class="screenshot-note">截图仅用于展示产品功能和界面结构，所示公司与数据不构成任何投资建议或买卖依据。</p>
     </section>
     
     <section class="audience" id="audience">
