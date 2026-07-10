@@ -172,8 +172,13 @@
         const staticHref = `/blog/articles/${encodeURIComponent(item.slug)}.html`;
         return !target.querySelector(`a[href="${dynamicHref}"], a[href="${staticHref}"]`);
       });
-      if (!visibleArticles.length) return;
-      target.insertAdjacentHTML('afterbegin', visibleArticles.slice(0, limit).map((item) => card(item, homepage)).join(''));
+      if (visibleArticles.length) {
+        target.insertAdjacentHTML('afterbegin', visibleArticles.slice(0, limit).map((item) => card(item, homepage)).join(''));
+      }
+      if (homepage) {
+        const cards = [...target.querySelectorAll('a[href]')].filter((item) => item.getAttribute('data-more-link') !== 'true');
+        cards.slice(limit).forEach((item) => item.remove());
+      }
     } catch (error) {
       console.warn('Markdown articles load failed:', error);
     }
