@@ -30,6 +30,12 @@ git commit -m "发布文章：文章标题"
 git push origin main
 ```
 
+如果 zip 识别不到 Markdown，也可以先解压，再直接传 `.md` 文件：
+
+```bash
+python3 scripts/import_notion_article.py "$HOME/Downloads/英伟达：重新认识这家公司/英伟达：重新认识这家公司 399c4c3fa1598086a342ec54272a5010.md" --slug nvidia-reunderstanding
+```
+
 脚本会自动完成：
 
 - 读取 Notion 导出的 Markdown

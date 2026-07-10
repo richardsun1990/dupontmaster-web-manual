@@ -70,22 +70,35 @@ def slugify(value: str) -> str:
     return value or "notion-article"
 
 
-def extract_source(source: Path) -> tuple[Path, tempfile.TemporaryDirectory[str] | None]:
+def extract_source(source: Path) -> tuple[Path, tempfile.TemporaryDirectory[str] | None, Path | None]:
     source = source.expanduser().resolve()
+    if source.is_file() and source.suffix.lower() in (".md", ".markdown"):
+        return source.parent, None, source
     if source.is_dir():
-        return source, None
+        return source, None, None
     if source.suffix.lower() != ".zip":
         raise SystemExit("请输入 Notion 导出的 zip，或解压后的文件夹。")
     temp_dir = tempfile.TemporaryDirectory(prefix="notion-export-")
     with zipfile.ZipFile(source) as zf:
         zf.extractall(temp_dir.name)
-    return Path(temp_dir.name), temp_dir
+    return Path(temp_dir.name), temp_dir, None
 
 
 def find_markdown_file(folder: Path, preferred: str | None = None) -> Path:
-    markdown_files = sorted(folder.rglob("*.md"))
+    if folder.is_file() and folder.suffix.lower() in (".md", ".markdown"):
+        return folder
+    markdown_files = sorted(
+        item for item in folder.rglob("*")
+        if item.is_file() and item.suffix.lower() in (".md", ".markdown")
+    )
     if not markdown_files:
-        raise SystemExit("导出包里没有找到 Markdown 文件。")
+        samples = "\n".join(
+            f"- {item.relative_to(folder)}"
+            for item in sorted(folder.rglob("*"))
+            if item.is_file()
+        )[:1200]
+        detail = f"\n导出包内文件示例：\n{samples}" if samples else ""
+        raise SystemExit(f"导出包里没有找到 Markdown 文件。{detail}")
     if preferred:
         preferred_path = Path(preferred)
         for item in markdown_files:
@@ -199,9 +212,9 @@ def main() -> None:
     parser.add_argument("--file", help="导出包里要导入的 Markdown 文件名")
     args = parser.parse_args()
 
-    folder, temp_dir = extract_source(Path(args.source))
+    folder, temp_dir, direct_file = extract_source(Path(args.source))
     try:
-        markdown_file = find_markdown_file(folder, preferred=args.file)
+        markdown_file = direct_file or find_markdown_file(folder, preferred=args.file)
         slug = slugify(args.slug or markdown_file.stem)
         markdown_text = markdown_file.read_text(encoding="utf-8")
         markdown_text = rewrite_images(markdown_text, markdown_file, slug)
