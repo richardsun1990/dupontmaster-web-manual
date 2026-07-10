@@ -53,6 +53,8 @@
             --spacing: 80px;
             --gradient-start: #1e3a5f;
             --gradient-end: #3b82f6;
+            --success: #16a34a;
+            --warning: #f59e0b;
         }
         
         * {
@@ -193,7 +195,7 @@
         .hero .description {
             font-size: 19px;
             color: rgba(255,255,255,0.7);
-            max-width: 600px;
+            max-width: 720px;
             margin: 0 auto 30px;
             line-height: 1.5;
         }
@@ -264,6 +266,286 @@
         .cta-secondary:hover {
             background: rgba(255,255,255,0.1);
             border-color: rgba(255,255,255,0.5);
+        }
+
+        /* Product Preview */
+        .product-preview {
+            padding: var(--spacing) 20px;
+            background: var(--background);
+        }
+
+        .preview-shell {
+            max-width: 1100px;
+            margin: 0 auto;
+            border: 1px solid #e5e7eb;
+            border-radius: 22px;
+            overflow: hidden;
+            background: #0f172a;
+            box-shadow: 0 24px 70px rgba(15,23,42,0.18);
+        }
+
+        .preview-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 14px 18px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            color: rgba(255,255,255,0.72);
+            font-size: 13px;
+        }
+
+        .preview-dots {
+            display: flex;
+            gap: 8px;
+        }
+
+        .preview-dots span {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.24);
+        }
+
+        .preview-body {
+            display: grid;
+            grid-template-columns: 220px minmax(0, 1fr);
+            min-height: 520px;
+            background: #f8fafc;
+        }
+
+        .preview-sidebar {
+            background: #111827;
+            color: rgba(255,255,255,0.72);
+            padding: 24px 18px;
+        }
+
+        .preview-sidebar h3 {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 18px;
+        }
+
+        .preview-nav-item {
+            padding: 10px 12px;
+            border-radius: 10px;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .preview-nav-item.active {
+            background: rgba(59,130,246,0.22);
+            color: #bfdbfe;
+        }
+
+        .preview-main {
+            padding: 26px;
+        }
+
+        .preview-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 18px;
+            align-items: flex-start;
+            margin-bottom: 22px;
+        }
+
+        .preview-header h3 {
+            font-size: 24px;
+            margin-bottom: 6px;
+        }
+
+        .preview-header p {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .preview-pill {
+            background: #dcfce7;
+            color: #166534;
+            border: 1px solid #bbf7d0;
+            border-radius: 999px;
+            padding: 8px 12px;
+            font-size: 13px;
+            white-space: nowrap;
+        }
+
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            margin-bottom: 18px;
+        }
+
+        .metric-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            padding: 16px;
+        }
+
+        .metric-card span {
+            display: block;
+            color: var(--text-secondary);
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+
+        .metric-card strong {
+            font-size: 24px;
+            color: #0f172a;
+        }
+
+        .chart-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 16px;
+        }
+
+        .chart-panel {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 18px;
+            min-height: 220px;
+        }
+
+        .chart-panel h4 {
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+
+        .bar-row {
+            display: grid;
+            grid-template-columns: 70px minmax(0, 1fr) 48px;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: 13px;
+            color: #475569;
+        }
+
+        .bar-track {
+            height: 10px;
+            border-radius: 999px;
+            background: #e5e7eb;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: inherit;
+            background: linear-gradient(90deg, #2563eb, #22c55e);
+        }
+
+        .flow-card {
+            display: grid;
+            gap: 10px;
+        }
+
+        .flow-node {
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 10px 12px;
+            font-size: 13px;
+            color: #334155;
+            background: #f8fafc;
+        }
+
+        .flow-node strong {
+            display: block;
+            color: #0f172a;
+            margin-bottom: 2px;
+        }
+
+        .preview-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        .preview-action {
+            border: 1px solid #dbeafe;
+            background: #eff6ff;
+            color: #1d4ed8;
+            border-radius: 999px;
+            padding: 8px 12px;
+            font-size: 13px;
+        }
+
+        .workflow {
+            padding: var(--spacing) 20px;
+            background: var(--background-alt);
+        }
+
+        .workflow-grid {
+            max-width: 980px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .workflow-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 18px;
+            padding: 28px;
+        }
+
+        .workflow-card .step {
+            width: 38px;
+            height: 38px;
+            border-radius: 12px;
+            background: #dbeafe;
+            color: #1d4ed8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .workflow-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .workflow-card p {
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .content-kit {
+            max-width: 980px;
+            margin: 42px auto 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .content-kit-card {
+            background: #0f172a;
+            color: white;
+            border-radius: 20px;
+            padding: 30px;
+        }
+
+        .content-kit-card:nth-child(2) {
+            background: #12312b;
+        }
+
+        .content-kit-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .content-kit-card p {
+            color: rgba(255,255,255,0.76);
+            font-size: 15px;
+            line-height: 1.7;
         }
         
         /* 4大分析模块 Section */
@@ -797,6 +1079,8 @@
             
             .four-features,
             .audience,
+            .product-preview,
+            .workflow,
             .data-coverage,
             .testimonials {
                 display: block;
@@ -805,6 +1089,8 @@
 
             .four-features h2,
             .audience h2,
+            .product-preview h2,
+            .workflow h2,
             .data-coverage h2,
             .testimonials h2 {
                 font-size: 24px;
@@ -818,10 +1104,51 @@
 
             .four-features-grid,
             .audience-grid,
+            .workflow-grid,
+            .content-kit,
             .coverage-grid,
             .testimonials-grid {
                 grid-template-columns: 1fr;
                 gap: 16px;
+            }
+
+            .preview-shell {
+                border-radius: 16px;
+            }
+
+            .preview-body {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+
+            .preview-sidebar {
+                display: none;
+            }
+
+            .preview-main {
+                padding: 18px;
+            }
+
+            .preview-header {
+                flex-direction: column;
+            }
+
+            .preview-grid,
+            .chart-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .preview-bar {
+                font-size: 11px;
+            }
+
+            .metric-card strong {
+                font-size: 21px;
+            }
+
+            .workflow-card,
+            .content-kit-card {
+                padding: 22px;
             }
             
             /* FAQ - 手机端显示 */
@@ -992,6 +1319,7 @@
     <nav>
         <ul>
             <li><a href="#" class="logo"><img src="logo.svg" alt="DuPont Master"> DuPont Master</a></li>
+            <li><a href="#product">产品</a></li>
             <li><a href="#audience">适合谁</a></li>
             <li><a href="#features">分析能力</a></li>
             <li><a href="/blog/">博客</a></li>
@@ -1029,6 +1357,64 @@
             </div>
         </div>
     </section>
+
+    <section class="product-preview" id="product">
+        <h2 class="section-title">把财报数据变成可解释的研究视图</h2>
+        <p class="section-subtitle">DupontMaster 不只是保存指标，而是把 ROE、利润、资产和估值放到同一个公司研究工作台里。</p>
+        <div class="preview-shell" aria-label="DupontMaster 产品界面预览">
+            <div class="preview-bar">
+                <div class="preview-dots"><span></span><span></span><span></span></div>
+                <span>app.dupontmaster.com · 公司财务分析工作台</span>
+                <span>可导出图表</span>
+            </div>
+            <div class="preview-body">
+                <aside class="preview-sidebar">
+                    <h3>贵州茅台</h3>
+                    <div class="preview-nav-item active">杜邦分析</div>
+                    <div class="preview-nav-item">利润结构</div>
+                    <div class="preview-nav-item">资产结构</div>
+                    <div class="preview-nav-item">企业估值</div>
+                    <div class="preview-nav-item">研究笔记</div>
+                </aside>
+                <div class="preview-main">
+                    <div class="preview-header">
+                        <div>
+                            <h3>2025 年财务质量概览</h3>
+                            <p>用同一套框架观察盈利能力、资产效率和财务杠杆。</p>
+                        </div>
+                        <span class="preview-pill">公开财报数据整理</span>
+                    </div>
+                    <div class="preview-grid">
+                        <div class="metric-card"><span>ROE</span><strong>31.8%</strong></div>
+                        <div class="metric-card"><span>净利率</span><strong>48.6%</strong></div>
+                        <div class="metric-card"><span>资产周转率</span><strong>0.47</strong></div>
+                        <div class="metric-card"><span>权益乘数</span><strong>1.39</strong></div>
+                    </div>
+                    <div class="chart-grid">
+                        <div class="chart-panel">
+                            <h4>ROE 来源拆解</h4>
+                            <div class="bar-row"><span>净利率</span><div class="bar-track"><div class="bar-fill" style="width: 86%;"></div></div><span>高</span></div>
+                            <div class="bar-row"><span>周转率</span><div class="bar-track"><div class="bar-fill" style="width: 54%;"></div></div><span>中</span></div>
+                            <div class="bar-row"><span>杠杆</span><div class="bar-track"><div class="bar-fill" style="width: 38%;"></div></div><span>低</span></div>
+                            <div class="preview-actions">
+                                <span class="preview-action">查看趋势</span>
+                                <span class="preview-action">导出图片</span>
+                                <span class="preview-action">生成研究素材</span>
+                            </div>
+                        </div>
+                        <div class="chart-panel">
+                            <h4>利润与资产结构</h4>
+                            <div class="flow-card">
+                                <div class="flow-node"><strong>收入</strong>观察增长和主营业务贡献</div>
+                                <div class="flow-node"><strong>毛利 / 经营利润</strong>识别利润质量和费用压力</div>
+                                <div class="flow-node"><strong>资产分类</strong>区分现金、经营、生产和投资类资产</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
     <section class="audience" id="audience">
         <h2 class="section-title">适合谁使用？</h2>
@@ -1045,6 +1431,38 @@
             <div class="audience-card">
                 <h3>财报学习者</h3>
                 <p>把复杂的三张表和财务指标转化为图表，降低财报学习门槛。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="workflow" id="workflow">
+        <h2 class="section-title">从财报到内容，只需要三步</h2>
+        <p class="section-subtitle">适合日常跟踪公司、写企业研究文章，也适合把财报知识讲给更多人听。</p>
+        <div class="workflow-grid">
+            <div class="workflow-card">
+                <div class="step">1</div>
+                <h3>选择或导入公司数据</h3>
+                <p>通过公司数据池、一键加载或 Excel 文件导入，整理上市公司多年公开财报数据。</p>
+            </div>
+            <div class="workflow-card">
+                <div class="step">2</div>
+                <h3>生成财务分析图表</h3>
+                <p>自动生成杜邦分析、利润桑基图、资产结构图、估值敏感性分析和核心指标趋势。</p>
+            </div>
+            <div class="workflow-card">
+                <div class="step">3</div>
+                <h3>沉淀研究和传播素材</h3>
+                <p>导出图表、保存研究笔记，把分析结果用于文章、视频口播、投资复盘和教学内容。</p>
+            </div>
+        </div>
+        <div class="content-kit">
+            <div class="content-kit-card">
+                <h3>面向投资研究</h3>
+                <p>用统一框架横向比较公司，避免只看单一指标。更适合围绕经营质量、资产效率和估值假设做持续跟踪。</p>
+            </div>
+            <div class="content-kit-card">
+                <h3>面向内容创作</h3>
+                <p>产品图表可以作为文章配图、视频脚本素材和讲解提纲，让企业分析内容更有结构，也更容易被读者理解。</p>
             </div>
         </div>
     </section>
@@ -1078,29 +1496,29 @@
     </section>
     
     <section class="data-coverage" id="coverage">
-        <h2 class="section-title">数据覆盖与研究场景</h2>
-        <p class="section-subtitle">围绕上市公司公开财报数据，支持多行业企业的横向比较和长期跟踪。</p>
+        <h2 class="section-title">围绕 app 工作流设计的研究能力</h2>
+        <p class="section-subtitle">从数据进入、图表生成到研究输出，尽量减少重复整理表格的时间。</p>
         
         <div class="coverage-grid">
             <div class="coverage-card">
-                <div class="coverage-icon">🥃</div>
-                <h4>白酒</h4>
-                <p>茅台、五粮液、泸州老窖...</p>
+                <div class="coverage-icon">01</div>
+                <h4>公司数据池</h4>
+                <p>复用已整理的公司历史财务数据，减少重复导入和清洗。</p>
             </div>
             <div class="coverage-card">
-                <div class="coverage-icon">🏠</div>
-                <h4>白色家电</h4>
-                <p>格力、美的、海尔...</p>
+                <div class="coverage-icon">02</div>
+                <h4>Excel 导入</h4>
+                <p>支持利润表、资产负债表、现金流量表和主营构成表导入。</p>
             </div>
             <div class="coverage-card">
-                <div class="coverage-icon">💊</div>
-                <h4>中药</h4>
-                <p>片仔癀、云南白药、东阿阿胶...</p>
+                <div class="coverage-icon">03</div>
+                <h4>图表导出</h4>
+                <p>将杜邦、利润、资产和估值图表导出，用于研究和内容创作。</p>
             </div>
             <div class="coverage-card">
-                <div class="coverage-icon">🛒</div>
-                <h4>其他行业</h4>
-                <p>覆盖多行业A股...</p>
+                <div class="coverage-icon">04</div>
+                <h4>公司对比</h4>
+                <p>在同一年份横向比较多家公司，辅助识别经营质量差异。</p>
             </div>
         </div>
     </section>
