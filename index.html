@@ -944,6 +944,129 @@
             font-size: 13px !important;
             opacity: 0.72 !important;
         }
+
+        .pricing-cards {
+            max-width: 900px;
+            margin: 0 auto 32px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .plan-card {
+            position: relative;
+            padding: 32px;
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            background: white;
+            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.05);
+        }
+
+        .plan-card.pro {
+            border: 2px solid var(--primary);
+            box-shadow: 0 14px 38px rgba(0, 113, 227, 0.12);
+        }
+
+        .plan-badge {
+            display: inline-flex;
+            align-items: center;
+            min-height: 28px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: #eef4ff;
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .plan-card h3 {
+            margin-top: 18px;
+            font-size: 26px;
+        }
+
+        .plan-card .plan-description {
+            min-height: 46px;
+            margin-top: 8px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .plan-card .plan-price {
+            margin-top: 22px;
+            font-size: 42px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .plan-card .plan-price span {
+            margin-left: 4px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0;
+        }
+
+        .plan-highlights {
+            display: grid;
+            gap: 11px;
+            margin: 24px 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .plan-highlights li {
+            display: flex;
+            gap: 9px;
+            color: #334155;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .plan-highlights li::before {
+            content: '✓';
+            flex: 0 0 auto;
+            color: #16a34a;
+            font-weight: 700;
+        }
+
+        .plan-action {
+            display: block;
+            width: 100%;
+            padding: 12px 18px;
+            border: 1px solid var(--primary);
+            border-radius: 12px;
+            color: var(--primary);
+            font-size: 14px;
+            font-weight: 700;
+            text-align: center;
+            text-decoration: none;
+            transition: 0.2s ease;
+        }
+
+        .plan-action:hover {
+            background: #eef6ff;
+        }
+
+        .plan-card.pro .plan-action {
+            background: var(--primary);
+            color: white;
+        }
+
+        .plan-card.pro .plan-action:hover {
+            background: var(--primary-hover);
+        }
+
+        .featured-companies {
+            max-width: 800px;
+            margin: 18px auto 0;
+            padding: 0 20px;
+            color: var(--text-secondary);
+            font-size: 13px;
+            line-height: 1.7;
+            text-align: center;
+        }
         
         /* Testimonials */
         .testimonials {
@@ -1340,6 +1463,25 @@
             .comparison-table td:not(:first-child) {
                 width: 35%;
             }
+
+            .pricing-cards {
+                grid-template-columns: 1fr;
+                padding: 0 16px;
+                gap: 14px;
+            }
+
+            .plan-card {
+                padding: 24px;
+                border-radius: 18px;
+            }
+
+            .plan-card .plan-description {
+                min-height: 0;
+            }
+
+            .plan-card .plan-price {
+                font-size: 34px;
+            }
             
             /* 价格区域 */
             .price-box {
@@ -1597,54 +1739,83 @@
     </section>
     
     <section class="comparison" id="pricing">
-        <h2 class="section-title">当前测试期：全部核心功能免费开放</h2>
-        <p class="section-subtitle">DupontMaster 杜邦大师目前处于公开测试阶段，用户可以免费体验核心财务分析功能。正式版上线后，免费用户可继续使用基础功能，Pro 会员将解锁完整公司库、高级图表、导出能力和深度分析功能。</p>
+        <h2 class="section-title">免费版够用，Pro 为持续研究而设</h2>
+        <p class="section-subtitle">轻度使用可以长期免费。需要持续跟踪更多公司的用户，可选择每年 199 元的 Pro 年度会员。</p>
+
+        <div class="pricing-cards">
+            <article class="plan-card">
+                <span class="plan-badge">长期免费</span>
+                <h3>免费版</h3>
+                <p class="plan-description">适合体验核心财务分析，以及日常轻量研究。</p>
+                <div class="plan-price">¥0<span>无需付费</span></div>
+                <ul class="plan-highlights">
+                    <li>登录即可查看 9 家精选公司</li>
+                    <li>额外添加 10 家自选公司</li>
+                    <li>邀请好友注册，双方各得 3 个额度</li>
+                    <li>核心杜邦分析与财务图表</li>
+                </ul>
+                <a href="https://app.dupontmaster.com/" class="plan-action">免费开始使用</a>
+            </article>
+
+            <article class="plan-card pro">
+                <span class="plan-badge">适合持续研究</span>
+                <h3>Pro 年度会员</h3>
+                <p class="plan-description">适合需要长期跟踪公司、深度对比与导出的用户。</p>
+                <div class="plan-price">¥199<span>/ 年 · 不自动续费</span></div>
+                <ul class="plan-highlights">
+                    <li>包含免费版全部功能</li>
+                    <li>会员期内不限量添加公司（合理使用）</li>
+                    <li>完整历史财务数据</li>
+                    <li>高级对比、导出及后续 Pro 新功能</li>
+                </ul>
+                <a href="https://app.dupontmaster.com/" class="plan-action">查看 Pro 会员</a>
+            </article>
+        </div>
         
         <div class="comparison-table">
             <table>
                 <thead>
                     <tr>
                         <th>功能</th>
-                        <th>测试期</th>
-                        <th>正式版计划</th>
+                        <th>免费版</th>
+                        <th>Pro 年度版</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>可查看公司数量</td>
-                        <td>核心功能免费开放</td>
-                        <td>基础功能 / Pro 权益分层</td>
+                        <td>精选公司</td>
+                        <td>9 家</td>
+                        <td>9 家</td>
                     </tr>
                     <tr>
-                        <td>杜邦分析</td>
+                        <td>额外添加公司</td>
+                        <td>初始 10 家</td>
+                        <td>不限量*</td>
+                    </tr>
+                    <tr>
+                        <td>邀请奖励</td>
+                        <td>双方各 +3 家</td>
+                        <td>额度继续保留</td>
+                    </tr>
+                    <tr>
+                        <td>核心财务分析</td>
                         <td><span class="check">✓</span></td>
                         <td><span class="check">✓</span></td>
                     </tr>
                     <tr>
-                        <td>利润结构图</td>
-                        <td><span class="check">✓</span></td>
-                        <td><span class="check">✓</span></td>
-                    </tr>
-                    <tr>
-                        <td>资产结构图</td>
-                        <td><span class="check">✓</span></td>
+                        <td>完整历史数据</td>
+                        <td><span class="cross">—</span></td>
                         <td><span class="check">✓</span></td>
                     </tr>
                     <tr>
-                        <td>企业估值</td>
-                        <td><span class="check">✓</span></td>
+                        <td>高级对比与导出</td>
+                        <td><span class="cross">—</span></td>
                         <td><span class="check">✓</span></td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        
-        <div class="price-box">
-            <div class="price">免费<span class="price-period">测试期</span></div>
-            <p>正式版计划：¥199/年</p>
-            <p class="price-footnote">最终价格和权益以正式上线版本为准。</p>
-            <a href="https://app.dupontmaster.com/" class="cta-primary">测试期免费使用 →</a>
-        </div>
+        <p class="featured-companies"><strong>9 家精选公司：</strong>贵州茅台、泸州老窖、格力电器、美的集团、腾讯控股、美团、东阿阿胶、泡泡玛特、中芯国际。<br>* “不限量”遵循合理使用原则；Pro 开通方式以应用内会员页面为准。</p>
         <p class="risk-note">风险提示：DupontMaster 杜邦大师仅提供公开财务数据整理、指标计算、图表展示和研究辅助，不构成任何证券投资建议、投资顾问服务或买卖依据。投资有风险，决策需谨慎。</p>
     </section>
     
