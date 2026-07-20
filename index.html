@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DupontMaster 杜邦大师｜财报可视化分析工具</title>
-    <meta name="description" content="DupontMaster 杜邦大师是一款面向价值投资者、财经博主和财报学习者的上市公司财务数据可视化分析工具，支持杜邦分析、ROE 拆解、利润结构、资产结构和估值辅助分析。">
+    <meta name="description" content="DupontMaster 杜邦大师是一款上市公司财报数据可视化分析工具，支持杜邦分析、ROE 拆解、利润结构、资产结构和估值辅助分析。">
     <meta name="google-site-verification" content="1Ad8II3-7RmkJz4vGIDPGeSYrMfWa887_HUCPQBQYmg">
     <meta name="baidu-site-verification" content="codeva-CXzgotfFH6">
     <meta name="keywords" content="杜邦分析,财务分析,投资,ROE,利润结构,资产构成,企业估值">
@@ -133,9 +133,9 @@
         
         /* Hero Section */
         .hero {
-            min-height: 760px;
-            padding-top: 170px;
-            padding-bottom: 110px;
+            min-height: 720px;
+            padding-top: 150px;
+            padding-bottom: 96px;
             text-align: center;
             background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
             color: white;
@@ -176,10 +176,13 @@
         }
         
         .hero h1 {
-            font-size: 64px;
+            max-width: 860px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 58px;
             font-weight: 700;
             letter-spacing: -0.02em;
-            margin-bottom: 18px;
+            margin-bottom: 20px;
             background: linear-gradient(135deg, #fff 0%, #a5b4fc 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -187,26 +190,26 @@
         }
         
         .hero .subtitle {
-            font-size: 28px;
+            font-size: 24px;
             font-weight: 600;
-            margin-bottom: 22px;
+            margin-bottom: 18px;
             color: rgba(255,255,255,0.9);
         }
         
         .hero .description {
-            font-size: 19px;
+            font-size: 18px;
             color: rgba(255,255,255,0.7);
             max-width: 760px;
-            margin: 0 auto 46px;
+            margin: 0 auto 40px;
             line-height: 1.65;
         }
         
         .hero-stats {
             display: flex;
             justify-content: center;
-            gap: 70px;
-            margin: 0 auto 58px;
-            padding: 34px 0;
+            gap: 62px;
+            margin: 0 auto 46px;
+            padding: 28px 0;
             max-width: 720px;
             border-top: 1px solid rgba(255,255,255,0.1);
             border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -1241,28 +1244,45 @@
             
             /* Hero区域 - 手机端简化 */
             .hero {
-                padding-top: 80px;
-                padding-bottom: 40px;
+                min-height: 100svh;
+                padding: 84px 0 48px;
+                display: flex;
+                align-items: center;
             }
-            
-            .hero-badge,
+
+            .hero-content {
+                width: 100%;
+                padding: 0 22px;
+            }
+
             .hero-stats {
                 display: none;
             }
+
+            .hero-badge {
+                padding: 6px 12px;
+                margin-bottom: 24px;
+                font-size: 12px;
+            }
             
             .hero h1 {
-                font-size: 34px;
+                font-size: 38px;
+                line-height: 1.15;
+                letter-spacing: -0.04em;
+                margin-bottom: 16px;
             }
             
             .hero .subtitle {
-                font-size: 18px;
+                font-size: 17px;
                 display: block;
+                margin-bottom: 14px;
             }
 
             .hero .description {
                 display: block;
                 font-size: 15px;
-                margin-bottom: 24px;
+                line-height: 1.65;
+                margin-bottom: 30px;
             }
             
             .cta-buttons {
@@ -1273,7 +1293,8 @@
             }
             
             .cta-primary, .cta-secondary {
-                padding: 10px 24px;
+                width: min(100%, 280px);
+                padding: 12px 24px;
                 font-size: 14px;
             }
             
@@ -1373,7 +1394,15 @@
 
             .workflow-card,
             .content-kit-card {
-                padding: 22px;
+                padding: 20px;
+            }
+
+            .audience-card p,
+            .workflow-card p,
+            .four-feature-card p,
+            .screenshot-caption p {
+                font-size: 14px;
+                line-height: 1.65;
             }
             
             /* FAQ - 手机端显示 */
@@ -1522,7 +1551,7 @@
             }
             
             .hero h1 {
-                font-size: 28px;
+                font-size: 34px;
             }
             
             .hero .subtitle {
@@ -1539,7 +1568,7 @@
       "name": "DupontMaster 杜邦大师",
       "url": "https://www.dupontmaster.com",
       "logo": "https://www.dupontmaster.com/icon-512.png",
-      "description": "面向价值投资者、财经博主和财报学习者的上市公司财务数据可视化分析工具",
+      "description": "面向企业研究、内容创作和财报学习的上市公司财务数据可视化分析工具",
       "sameAs": [
         "https://twitter.com/dupontmaster"
       ]
@@ -1573,28 +1602,28 @@
     
     <section class="hero" id="overview">
         <div class="hero-content">
-            <div class="hero-badge">🎯 23年历史数据 · 2002-2025</div>
-            <h1>DuPont Master</h1>
-            <p class="subtitle">让投资分析更简单</p>
-            <p class="description">可视化分析ROE来源、利润结构、资产构成、企业估值，助您轻松了解任意公司财务状况。无需专业背景，5分钟掌握公司基本面。</p>
+            <div class="hero-badge">上市公司财报可视化</div>
+            <h1>看懂一家公司的经营质量</h1>
+            <p class="subtitle">DuPont Master 财报分析工具</p>
+            <p class="description">从 ROE、利润、现金流、资产与估值出发，把公开财报变成清晰图表。</p>
             
             <div class="hero-stats">
                 <div class="hero-stat">
-                    <div class="hero-stat-value">23+</div>
-                    <div class="hero-stat-label">年历史数据</div>
+                    <div class="hero-stat-value">10年</div>
+                    <div class="hero-stat-label">免费版财报数据</div>
                 </div>
                 <div class="hero-stat">
-                    <div class="hero-stat-value">4</div>
-                    <div class="hero-stat-label">大分析模块</div>
+                    <div class="hero-stat-value">全部</div>
+                    <div class="hero-stat-label">Pro 可用年份</div>
                 </div>
                 <div class="hero-stat">
-                    <div class="hero-stat-value">100%</div>
-                    <div class="hero-stat-label">免费体验</div>
+                    <div class="hero-stat-value">4类</div>
+                    <div class="hero-stat-label">核心分析视角</div>
                 </div>
             </div>
             
             <div class="cta-buttons">
-                <a href="https://app.dupontmaster.com/" class="cta-primary">立即开始 →</a>
+                <a href="https://app.dupontmaster.com/" class="cta-primary">免费开始分析 →</a>
             </div>
         </div>
     </section>
@@ -1657,48 +1686,38 @@
         <p class="section-subtitle">围绕企业研究、内容创作和财报学习，把复杂指标变成更容易理解的图表。</p>
         <div class="audience-grid">
             <div class="audience-card">
-                <h3>价值投资者</h3>
-                <p>快速判断一家公司的 ROE 是来自高利润率、高周转，还是高杠杆，避免只看表面增长。</p>
+                <h3>企业财报研究者</h3>
+                <p>用统一框架理解 ROE、利润、资产与现金流。</p>
             </div>
             <div class="audience-card">
                 <h3>财经博主 / 内容创作者</h3>
-                <p>用统一的财务分析框架拆解公司，快速生成文章、视频口播和研究提纲。</p>
+                <p>快速获得结构化图表与企业研究素材。</p>
             </div>
             <div class="audience-card">
                 <h3>财报学习者</h3>
-                <p>把复杂的三张表和财务指标转化为图表，降低财报学习门槛。</p>
+                <p>把三张表和财务指标变成直观图表。</p>
             </div>
         </div>
     </section>
 
     <section class="workflow" id="workflow">
-        <h2 class="section-title">从财报到内容，只需要三步</h2>
-        <p class="section-subtitle">适合日常跟踪公司、写企业研究文章，也适合把财报知识讲给更多人听。</p>
+        <h2 class="section-title">三步开始分析</h2>
+        <p class="section-subtitle">添加公司、查看图表、持续跟踪。</p>
         <div class="workflow-grid">
             <div class="workflow-card">
                 <div class="step">1</div>
-                <h3>选择或导入公司数据</h3>
-                <p>通过公司数据池一键加载公司数据，整理上市公司多年公开财报数据。</p>
+                <h3>添加自选公司</h3>
+                <p>搜索公司，一键添加到自选。</p>
             </div>
             <div class="workflow-card">
                 <div class="step">2</div>
-                <h3>生成财务分析图表</h3>
-                <p>自动生成杜邦分析、利润桑基图、资产结构图、估值敏感性分析和核心指标趋势。</p>
+                <h3>查看财务图表</h3>
+                <p>自动生成杜邦、利润、资产和估值图表。</p>
             </div>
             <div class="workflow-card">
                 <div class="step">3</div>
-                <h3>沉淀研究和传播素材</h3>
-                <p>导出图表、保存研究笔记，把分析结果用于文章、视频口播、投资复盘和教学内容。</p>
-            </div>
-        </div>
-        <div class="content-kit">
-            <div class="content-kit-card">
-                <h3>面向投资研究</h3>
-                <p>用统一框架横向比较公司，避免只看单一指标。更适合围绕经营质量、资产效率和估值假设做持续跟踪。</p>
-            </div>
-            <div class="content-kit-card">
-                <h3>面向内容创作</h3>
-                <p>产品图表可以作为文章配图、视频脚本素材和讲解提纲，让企业分析内容更有结构，也更容易被读者理解。</p>
+                <h3>持续跟踪变化</h3>
+                <p>查看多年趋势，记录企业经营变化。</p>
             </div>
         </div>
     </section>
@@ -1711,22 +1730,22 @@
             <div class="four-feature-card">
                 <div class="four-feature-number">1</div>
                 <h3><span class="highlight">ROE 到底从哪里来？</span></h3>
-                <p>拆解净利率、资产周转率和权益乘数，判断公司回报率来自经营能力、资产效率，还是财务杠杆。</p>
+                <p>拆解净利率、周转率和权益乘数，看清回报来自经营、效率还是杠杆。</p>
             </div>
             <div class="four-feature-card">
                 <div class="four-feature-number">2</div>
                 <h3><span class="highlight">利润质量是否可靠？</span></h3>
-                <p>观察收入、毛利、营业利润和净利润之间的关系，识别主营业务盈利能力和一次性收益影响。</p>
+                <p>对照收入、费用与利润，观察主营盈利和非经常性影响。</p>
             </div>
             <div class="four-feature-card">
                 <div class="four-feature-number">3</div>
                 <h3><span class="highlight">资产是不是健康？</span></h3>
-                <p>分析流动资产、非流动资产、存货、应收账款和长期资产占比，判断企业资产质量与资金占用情况。</p>
+                <p>查看现金、存货、应收及长期资产占比，理解资金如何被占用。</p>
             </div>
             <div class="four-feature-card">
                 <div class="four-feature-number">4</div>
-                <h3><span class="highlight">当前价格隐含什么预期？</span></h3>
-                <p>结合盈利能力、成长性和估值指标，辅助理解市场价格背后的增长假设。</p>
+                <h3><span class="highlight">估值假设如何变化？</span></h3>
+                <p>调整增长率、现金流和折现率，观察不同假设下的估值变化。</p>
             </div>
         </div>
     </section>
@@ -1740,18 +1759,18 @@
     
     <section class="comparison" id="pricing">
         <h2 class="section-title">免费版够用，Pro 为持续研究而设</h2>
-        <p class="section-subtitle">免费版可查看企业最近 10 个财年；Pro 年度会员解锁全部可用历史年份，并支持不限量添加公司。</p>
+        <p class="section-subtitle">免费版可查看最近 10 个财年；Pro 解锁全部可用年份，并可不限量添加公司。</p>
 
         <div class="pricing-cards">
             <article class="plan-card">
                 <span class="plan-badge">长期免费</span>
                 <h3>免费版</h3>
-                <p class="plan-description">适合体验核心财务分析，以及日常轻量研究。</p>
+                <p class="plan-description">适合轻量查看和财报学习。</p>
                 <div class="plan-price">¥0<span>无需付费</span></div>
                 <ul class="plan-highlights">
                     <li>登录即可查看 9 家精选公司</li>
                     <li>额外添加 10 家自选公司</li>
-                    <li>查看企业最近 10 个财年的数据</li>
+                    <li>查看最近 10 个财年</li>
                     <li>邀请好友注册，双方各得 3 个额度</li>
                     <li>核心杜邦分析与财务图表</li>
                 </ul>
@@ -1761,13 +1780,13 @@
             <article class="plan-card pro">
                 <span class="plan-badge">适合持续研究</span>
                 <h3>Pro 年度会员</h3>
-                <p class="plan-description">适合需要长期跟踪公司、深度对比与导出的用户。</p>
+                <p class="plan-description">适合长期跟踪更多公司。</p>
                 <div class="plan-price">¥199<span>/ 年 · 不自动续费</span></div>
                 <ul class="plan-highlights">
                     <li>包含免费版全部功能</li>
                     <li>会员期内不限量添加公司（合理使用）</li>
-                    <li>查看企业全部可获得的历史财报年份</li>
-                    <li>高级对比、导出及后续 Pro 新功能</li>
+                    <li>查看全部可用历史年份</li>
+                    <li>核心分析方法与免费版一致</li>
                 </ul>
                 <a href="https://app.dupontmaster.com/" class="plan-action">查看 Pro 会员</a>
             </article>
@@ -1808,15 +1827,10 @@
                         <td>最近 10 个财年</td>
                         <td>全部可用年份*</td>
                     </tr>
-                    <tr>
-                        <td>高级对比与导出</td>
-                        <td><span class="cross">—</span></td>
-                        <td><span class="check">✓</span></td>
-                    </tr>
                 </tbody>
             </table>
         </div>
-        <p class="featured-companies"><strong>9 家精选公司：</strong>贵州茅台、泸州老窖、格力电器、美的集团、腾讯控股、美团、东阿阿胶、泡泡玛特、中芯国际。<br>* “不限量”遵循合理使用原则；“全部可用年份”取决于公司上市时间与公开数据源覆盖范围；Pro 开通方式以应用内会员页面为准。</p>
+        <p class="featured-companies"><strong>9 家精选公司：</strong>贵州茅台、泸州老窖、格力电器、美的集团、腾讯控股、美团、东阿阿胶、泡泡玛特、中芯国际。<br>* “不限量”遵循合理使用原则；“全部可用年份”取决于公司上市时间与公开数据源覆盖范围。</p>
         <p class="risk-note">风险提示：DupontMaster 杜邦大师仅提供公开财务数据整理、指标计算、图表展示和研究辅助，不构成任何证券投资建议、投资顾问服务或买卖依据。投资有风险，决策需谨慎。</p>
     </section>
     
@@ -1879,9 +1893,11 @@
             <p>公司名称：备案主体完成后补充</p>
             <p>联系邮箱：<a href="mailto:crazymanrichard1990@gmail.com">crazymanrichard1990@gmail.com</a></p>
             <div class="footer-links">
-                <a href="#">用户协议</a>
-                <a href="#">隐私政策</a>
-                <a href="#pricing">免责声明</a>
+                <a href="/terms.html">用户协议</a>
+                <a href="/privacy.html">隐私政策</a>
+                <a href="/membership-service.html">会员服务协议</a>
+                <a href="/refund-policy.html">退款规则</a>
+                <a href="/disclaimer.html">免责声明</a>
                 <a href="mailto:crazymanrichard1990@gmail.com">联系我们</a>
                 <a href="https://www.xiaohongshu.com/user/profile/59ec53ed4eacab5b314a41bb?xsec_token=AB7CSy595Pmc_kl5GDfxNRsHhtz_Gqq8GfozP1pmqcC54%3D&xsec_source=pc_search">小红书</a>
             </div>
