@@ -7,8 +7,6 @@ description: 从DRAM工作原理、奇梦达倒闭、专利路径、AI红利、�
 source: 长鑫科技招股书、审计报告、交易所问询回复、公司公告、三巨头公开资料及DupontMaster整理。
 ---
 
-# 长鑫科技：借奇梦达的遗产入场，能否避开奇梦达的命运？
-
 2023年，长鑫科技营业收入90.87亿元，归母净利润亏损163.40亿元。
 
 2025年，营业收入增长到617.99亿元，归母净利润刚刚转正，达到18.75亿元。
@@ -51,7 +49,9 @@ DRAM就是我们通常所说的运行内存。
 
 这条公式同时决定了技术、成本和利润。
 
-{{DRAM_PRINCIPLE}}
+[![DRAM工作原理与存储位置](https://raw.githubusercontent.com/richardsun1990/dupontmaster-web-manual/main/blog/assets/changxin/dram-principle-published.svg)](https://www.dupontmaster.com/)
+
+*图1：DRAM处于高速缓存与长期存储之间，真正的竞争焦点是容量密度、良率与单位bit成本。点击配图可进入DupontMaster。*
 
 DRAM又是一种高度标准化的产品。同一代DDR5需要遵循JEDEC标准，不同厂商的接口、速率和基础功能高度一致。普通客户很难长期为某一家原厂支付明显品牌溢价，因此竞争最终会回到三个问题：
 
@@ -127,7 +127,9 @@ DRAM价格上涨时，几乎所有厂商都能赚钱；价格跌到现金成本�
 
 这段历史可以压缩成三句话：
 
-> 专利决定能不能合法进入赛场；良率决定能不能留在赛场；成本曲线决定能不能赢得比赛。
+> 专利决定能不能合法进入赛场；  
+> 良率决定能不能留在赛场；  
+> 成本曲线决定能不能赢得比赛。
 
 奇梦达给长鑫留下了一张重要入场券，但长鑫今天的三座晶圆厂、四代工艺平台、客户认证和规模化收入，仍然需要靠自己重新建立。
 
@@ -153,9 +155,9 @@ DRAM价格上涨时，几乎所有厂商都能赚钱；价格跌到现金成本�
 
 按DupontMaster对2025年营业收入的拆分，LPDDR系列收入407.04亿元，占65.9%，仍然是长鑫最大的收入来源；DDR系列收入195.31亿元，占31.6%，但同比增长515.4%，明显快于LPDDR的105.6%。这说明长鑫增长最快的方向，已经从以移动端为主的LPDDR，开始向DDR5和服务器内存迁移，但收入底盘仍然主要依赖手机等移动设备。
 
-![长鑫科技2025年业务板块趋势](/blog/assets/changxin/business-trend.svg)
+[![长鑫科技2025年业务板块趋势：LPDDR仍是收入主体，DDR增速更快](https://raw.githubusercontent.com/richardsun1990/dupontmaster-web-manual/main/blog/assets/changxin/business-trend.svg)](https://www.dupontmaster.com/)
 
-*图2：LPDDR仍贡献约三分之二收入，但DDR增速更快，服务器内存正在成为新的增长方向。点击图表可进入DupontMaster。*
+*图2：长鑫科技业务板块趋势。LPDDR仍贡献约三分之二收入，DDR增速更快。点击图表进入DupontMaster。*
 
 按应用划分，移动设备收入占60.40%，服务器占26.51%，个人电脑只占3.87%。服务器收入从2023年的3.95亿元增长到2025年的159.70亿元，速度非常快，但公司同时明确表示，应用于人工智能算力服务器的DRAM收入占比仍然较低。
 
@@ -187,7 +189,9 @@ AI当然会增加存储需求。
 
 > AI需求爆发 → 三巨头扩大HBM投入 → 普通DRAM供给受到挤压 → DDR和LPDDR价格上涨 → 长鑫现有产品利润大幅提升。
 
-{{AI_TRANSMISSION}}
+[![AI红利如何传导到长鑫](https://raw.githubusercontent.com/richardsun1990/dupontmaster-web-manual/main/blog/assets/changxin/ai-transmission-published.svg)](https://www.dupontmaster.com/)
+
+*图3：长鑫当前更多受益于普通DRAM供给收紧和服务器DDR5放量，而不是直接依靠HBM取得高溢价。*
 
 长鑫确实借助了AI浪潮，但它当前获得的主要是三层收益：
 
@@ -217,19 +221,23 @@ AI当然会增加存储需求。
 
 从企业生存角度看，这是长鑫最重要的护城河之一。
 
-{{CAPITAL_RETURN}}
+[![长期资本、扩产与股东回报的核心矛盾](https://raw.githubusercontent.com/richardsun1990/dupontmaster-web-manual/main/blog/assets/changxin/capital-return-published.svg)](https://www.dupontmaster.com/)
+
+*图4：长期资本增强了周期生存能力，但合并利润需要经过少数股东损益，才能转化为归母利润。*
 
 但从普通股东角度看，资本充足并不自动等于高回报。
 
 2023年至2025年，长鑫累计购建固定资产、无形资产和其他长期资产支付现金约1646亿元；同期经营现金流累计只有361亿元，粗略自由现金流累计约为负1285亿元，筹资活动现金流净流入约1741亿元。
 
-{{CASHFLOW_QUALITY}}
+[![长鑫科技现金流质量分析：经营现金流改善，但自由现金流仍为负](https://raw.githubusercontent.com/richardsun1990/dupontmaster-web-manual/main/blog/assets/changxin/cashflow-quality-published.svg)](https://www.dupontmaster.com/)
+
+*图5：长鑫科技现金流质量。2025年经营现金流明显改善，但扣除资本开支后的自由现金流仍为负。点击图表进入DupontMaster。*
 
 这张图比“净利润转正”更能说明长鑫所处的阶段：经营端已经开始产生大量现金，但仍不足以覆盖晶圆厂和技术升级所需的资本开支。长鑫过去几年的高速成长，主要依靠外部资本，而不是依靠自身经营现金流滚动完成。
 
 截至2025年末，公司固定资产达到1830亿元，长期借款约1188亿元。晶圆厂、设备和工艺升级会在未来多年持续形成折旧；即使DRAM价格下跌，这些固定成本也不会同步下降。
 
-资产结构数据把这个问题展示得更直观：3367.85亿元总资产中，生产性资产达到2202.20亿元，占65.4%；资金来源中，有息负债1465.33亿元、少数股东权益973.46亿元，而归母权益只有567.54亿元。
+DupontMaster的资产结构分析把这个问题展示得更直观：3367.85亿元总资产中，生产性资产达到2202.20亿元，占65.4%；资金来源中，有息负债1465.33亿元、少数股东权益973.46亿元，而归母权益只有567.54亿元。
 
 更值得注意的是，长鑫控制的三座核心经营主体，并不全部由上市主体100%持有。
 
@@ -347,9 +355,9 @@ AI当然会增加存储需求。
 
 估值前还需要看ROE的质量。按DupontMaster统一采用期末资产和期末权益的简化杜邦口径，长鑫2025年ROE约为3.30%，由3.0%的净利率、0.18次资产周转率和5.93倍权益乘数共同形成。若改用平均权益计算，具体数值会有所不同，但结论不变：长鑫当年的股东回报仍然偏低，而且是在较高杠杆和庞大资产基础上实现的。
 
-![长鑫科技2025年杜邦分析与历年趋势](/blog/assets/changxin/dupont-roe.svg)
+[![长鑫科技2025年杜邦分析与历年趋势：ROE转正但仍处低位](https://raw.githubusercontent.com/richardsun1990/dupontmaster-web-manual/main/blog/assets/changxin/dupont-roe.svg)](https://www.dupontmaster.com/)
 
-*图5：ROE已经从深度负值回到正值，但净利率和资产周转率仍不足以证明稳定的高资本回报。点击图表可进入DupontMaster。*
+*图6：长鑫科技杜邦分析与历年趋势。ROE已经从深度负值回到正值，但净利率和资产周转率仍不足以证明稳定的高资本回报。点击图表进入DupontMaster。*
 
 2025年是刚刚扭亏的低基数，不能代表正常盈利；2026年又处于价格、利用率和经营杠杆共同推动的峰值区域，同样不能代表长期利润。
 
@@ -420,7 +428,8 @@ AI当然会增加存储需求。
 3. **资产与利润归属：** 少数股东权益和少数股东损益是否继续侵蚀归母回报；
 4. **杜邦分析：** ROE改善究竟来自净利率和周转率，还是主要来自更高杠杆。
 
-> **文章负责提出问题，DupontMaster负责把答案持续更新。** [进入DupontMaster查看公司财务图表与杜邦分析](https://www.dupontmaster.com/)
+> **文章负责提出问题，DupontMaster负责把答案持续更新。**  
+> [进入DupontMaster查看公司财务图表与杜邦分析](https://www.dupontmaster.com/)
 
 ---
 
@@ -428,7 +437,7 @@ AI当然会增加存储需求。
 
 1. 长鑫科技《首次公开发行股票并在科创板上市招股意向书》，2026年7月9日。
 2. 长鑫科技《财务报表及审计报告（2023—2025年度）》及首轮、第二轮问询回复。
-3. [长鑫科技首次公开发行股票并在科创板上市发行结果公告](https://paper.cnstock.com/html/2026-07/22/content_2247189.htm)
+3. [长鑫科技首次公开发行股票并在科创板上市发行结果公告](https://paper.cnstock.com/html/2026/07/22/content_2247189.htm)
 4. [长鑫与WiLAN子公司签署DRAM专利许可及收购协议](https://www.cxmt.com/en/news/info_5.html)
 5. [长鑫与Rambus签署DRAM专利许可协议](https://www.cxmt.com/en/news/info_4.html)
 6. [英飞凌2008—2009年公开文件：奇梦达经营与破产情况](https://www.sec.gov/Archives/edgar/data/1107457/000095012309069073/f03184e20vf.htm)
