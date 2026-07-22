@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="788" viewBox="0 0 1400 788">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffffff"/><stop offset="1" stop-color="#f7f9ff"/></linearGradient>
+  <linearGradient id="violet" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#4f46e5"/><stop offset="1" stop-color="#60a5fa"/></linearGradient>
+  <filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0f172a" flood-opacity=".08"/></filter>
+</defs>
+<rect width="1400" height="788" fill="url(#bg)"/>
+<text x="58" y="68" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="40" font-weight="800" fill="#101828">长鑫科技</text>
+<text x="58" y="106" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="22" font-weight="650" fill="#64748b">DRAM工作原理与存储位置</text>
+<rect x="55" y="140" width="620" height="500" rx="22" fill="#fff" stroke="#e5e7eb" filter="url(#shadow)"/>
+<rect x="725" y="140" width="620" height="500" rx="22" fill="#fff" stroke="#e5e7eb" filter="url(#shadow)"/>
+<rect x="82" y="172" width="6" height="34" rx="3" fill="#5b55f5"/>
+<text x="102" y="198" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="22" font-weight="750" fill="#1e293b">存储层级：DRAM处于中间层</text>
+<line x1="135" y1="260" x2="135" y2="540" stroke="#94a3b8" stroke-width="3"/>
+<path d="M135 245l-8 15h16z" fill="#94a3b8"/><path d="M135 555l-8-15h16z" fill="#94a3b8"/>
+<text x="92" y="238" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#475569">容量小</text><text x="92" y="258" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#475569">速度快</text>
+<text x="92" y="580" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#475569">容量大</text><text x="92" y="600" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#475569">速度慢</text>
+<path d="M240 238h250l45 92H195z" fill="#f2f1ff" stroke="#c7d2fe"/>
+<text x="365" y="278" text-anchor="middle" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="22" font-weight="750" fill="#25304f">CPU / GPU Cache</text><text x="365" y="306" text-anchor="middle" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#64748b">高速缓存 · KB至数十MB · 最快</text>
+<path d="M205 350h320l42 105H163z" fill="#eef2ff" stroke="#6366f1" stroke-width="3"/>
+<text x="365" y="397" text-anchor="middle" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="27" font-weight="800" fill="#4f46e5">DRAM 运行内存</text><text x="365" y="430" text-anchor="middle" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#475569">GB至数百GB · 纳秒级 · 当前程序与数据</text>
+<path d="M170 477h390l48 112H122z" fill="#eff6ff" stroke="#bfdbfe"/>
+<text x="365" y="525" text-anchor="middle" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="25" font-weight="750" fill="#2563eb">SSD / HDD</text><text x="365" y="559" text-anchor="middle" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#64748b">长期存储 · TB至PB · 容量更大</text>
+<rect x="752" y="172" width="6" height="34" rx="3" fill="#5b55f5"/>
+<text x="772" y="198" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="22" font-weight="750" fill="#1e293b">DRAM单元：1T1C</text>
+<rect x="805" y="232" width="470" height="62" rx="14" fill="#f4f3ff" stroke="#c7d2fe"/>
+<text x="1040" y="271" text-anchor="middle" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="22" font-weight="750" fill="#4f46e5">一个晶体管 + 一个电容</text>
+<line x1="850" y1="375" x2="1040" y2="375" stroke="#4f46e5" stroke-width="5"/><circle cx="950" cy="375" r="8" fill="#4f46e5"/>
+<line x1="950" y1="375" x2="950" y2="455" stroke="#4f46e5" stroke-width="5"/>
+<rect x="915" y="455" width="70" height="75" rx="12" fill="#eef2ff" stroke="#4f46e5" stroke-width="4"/>
+<text x="950" y="493" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" font-weight="800" fill="#4f46e5">T</text><text x="950" y="517" text-anchor="middle" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="13" fill="#475569">晶体管</text>
+<line x1="985" y1="492" x2="1108" y2="492" stroke="#60a5fa" stroke-width="5"/>
+<line x1="1108" y1="448" x2="1108" y2="536" stroke="#60a5fa" stroke-width="5"/><line x1="1135" y1="448" x2="1135" y2="536" stroke="#60a5fa" stroke-width="5"/>
+<text x="1122" y="580" text-anchor="middle" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="18" font-weight="750" fill="#2563eb">C 电容：存储电荷</text>
+<text x="810" y="365" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#475569">字线 Word Line</text><text x="860" y="550" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#475569">位线 Bit Line</text>
+<rect x="1190" y="335" width="115" height="68" rx="12" fill="#ecfdf5" stroke="#a7f3d0"/><text x="1248" y="364" text-anchor="middle" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="18" font-weight="750" fill="#059669">有电 = 1</text><text x="1248" y="388" text-anchor="middle" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="12" fill="#475569">电容带电</text>
+<rect x="1190" y="420" width="115" height="68" rx="12" fill="#f8fafc" stroke="#cbd5e1"/><text x="1248" y="449" text-anchor="middle" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="18" font-weight="750" fill="#475569">无电 = 0</text><text x="1248" y="473" text-anchor="middle" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="12" fill="#64748b">电容无电</text>
+<rect x="1190" y="505" width="115" height="84" rx="12" fill="#fff7ed" stroke="#fed7aa"/><text x="1248" y="536" text-anchor="middle" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="16" font-weight="750" fill="#d97706">周期刷新</text><text x="1248" y="561" text-anchor="middle" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="12" fill="#64748b">电荷会泄漏</text><text x="1248" y="579" text-anchor="middle" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="12" fill="#64748b">需定期刷新</text>
+<rect x="55" y="665" width="1290" height="70" rx="16" fill="#eef2ff" stroke="#c7d2fe"/>
+<text x="88" y="707" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="20" font-weight="800" fill="#4f46e5">核心本质：</text><text x="205" y="707" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="20" font-weight="650" fill="#27335b">DRAM竞争不只是能不能做出来，而是每片晶圆能生产多少合格bit。</text>
+<text x="58" y="770" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="17" font-weight="800" fill="#1e293b">DUPONTMASTER.COM</text><text x="285" y="770" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#94a3b8">数据来源：行业资料整理</text>
+</svg>
