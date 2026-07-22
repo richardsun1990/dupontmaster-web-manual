@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="788" viewBox="0 0 1400 788">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#f7f9ff"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0f172a" flood-opacity=".08"/></filter></defs>
+<rect width="1400" height="788" fill="url(#bg)"/>
+<g font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif">
+<text x="58" y="68" font-size="40" font-weight="800" fill="#101828">长鑫科技</text><text x="58" y="106" font-size="22" font-weight="650" fill="#64748b">技术、资本与股东回报的核心矛盾</text>
+<rect x="55" y="142" width="1290" height="480" rx="24" fill="#fff" stroke="#e5e7eb" filter="url(#s)"/>
+<rect x="82" y="178" width="365" height="360" rx="18" fill="#fff" stroke="#dfe4ee"/><rect x="107" y="204" width="6" height="34" rx="3" fill="#5b55f5"/><text x="128" y="231" font-size="25" font-weight="800" fill="#1e293b">长期资本</text>
+<circle cx="264" cy="282" r="42" fill="#eef2ff"/><path d="M234 300h60M242 296v-28h44v28M248 272l16-12 16 12" fill="none" stroke="#4f46e5" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="105" y="342" width="318" height="48" rx="10" fill="#f8fafc"/><text x="130" y="372" font-size="18" font-weight="750" fill="#27335b">地方国资</text><text x="257" y="372" font-size="14" fill="#64748b">稳定资本支持</text>
+<rect x="105" y="400" width="318" height="48" rx="10" fill="#f8fafc"/><text x="130" y="430" font-size="18" font-weight="750" fill="#27335b">产业基金</text><text x="257" y="430" font-size="14" fill="#64748b">产业协同与长期布局</text>
+<rect x="105" y="458" width="318" height="48" rx="10" fill="#f8fafc"/><text x="130" y="488" font-size="18" font-weight="750" fill="#27335b">银行融资</text><text x="257" y="488" font-size="14" fill="#64748b">保障建设与资金链</text>
+<rect x="105" y="518" width="318" height="64" rx="12" fill="#eef2ff"/><text x="264" y="546" text-anchor="middle" font-size="19" font-weight="800" fill="#4f46e5">帮助建设三座晶圆厂</text><text x="264" y="570" text-anchor="middle" font-size="13" fill="#64748b">为扩产与技术迭代提供基础</text>
+<path d="M465 350h55v-18l42 36-42 36v-18h-55z" fill="#cbd5e1"/>
+<rect x="577" y="178" width="365" height="360" rx="18" fill="#fff" stroke="#dfe4ee"/><rect x="602" y="204" width="6" height="34" rx="3" fill="#5b55f5"/><text x="623" y="231" font-size="25" font-weight="800" fill="#1e293b">扩产与利润</text>
+<circle cx="759" cy="282" r="42" fill="#eef2ff"/><path d="M731 303v-28h18v28M754 303v-44h18v44M777 303v-61h18v61M731 252l23-18 21 10 22-25" fill="none" stroke="#4f46e5" stroke-width="5" stroke-linecap="round"/>
+<rect x="600" y="342" width="318" height="64" rx="10" fill="#f8fafc"/><text x="622" y="369" font-size="18" font-weight="750" fill="#27335b">价格上行时经营杠杆放大</text><text x="622" y="392" font-size="14" fill="#64748b">收入与利润对价格更加敏感</text>
+<rect x="600" y="420" width="318" height="64" rx="10" fill="#f8fafc"/><text x="622" y="447" font-size="18" font-weight="750" fill="#27335b">合并利润快速增长</text><text x="622" y="470" font-size="14" fill="#64748b">规模效应和利用率同步释放</text>
+<rect x="600" y="500" width="318" height="82" rx="12" fill="#eef2ff"/><text x="759" y="534" text-anchor="middle" font-size="19" font-weight="800" fill="#4f46e5">扩产驱动利润弹性</text><text x="759" y="560" text-anchor="middle" font-size="13" fill="#64748b">但利润分配结构决定回报差异</text>
+<path d="M960 350h55v-18l42 36-42 36v-18h-55z" fill="#cbd5e1"/>
+<rect x="1072" y="178" width="246" height="360" rx="18" fill="#fff" stroke="#dfe4ee"/><rect x="1097" y="204" width="6" height="34" rx="3" fill="#0ea5e9"/><text x="1118" y="231" font-size="25" font-weight="800" fill="#1e293b">股东回报</text>
+<circle cx="1195" cy="282" r="42" fill="#eaf7ff"/><circle cx="1195" cy="270" r="13" fill="none" stroke="#0284c7" stroke-width="5"/><path d="M1168 309c4-18 17-27 27-27s23 9 27 27" fill="none" stroke="#0284c7" stroke-width="5"/>
+<rect x="1095" y="342" width="200" height="64" rx="10" fill="#f8fafc"/><text x="1115" y="369" font-size="17" font-weight="750" fill="#27335b">少数股东占比高</text><text x="1115" y="392" font-size="13" fill="#64748b">历史投入与合资结构所致</text>
+<rect x="1095" y="420" width="200" height="64" rx="10" fill="#f8fafc"/><text x="1115" y="447" font-size="17" font-weight="750" fill="#27335b">归母利润转化有限</text><text x="1115" y="470" font-size="13" fill="#64748b">普通股东回报被摊薄</text>
+<rect x="1095" y="500" width="200" height="82" rx="12" fill="#eaf7ff"/><text x="1195" y="534" text-anchor="middle" font-size="18" font-weight="800" fill="#0284c7">回报受制于股权结构</text><text x="1195" y="560" text-anchor="middle" font-size="13" fill="#64748b">需要提高利润分配效率</text>
+<rect x="82" y="555" width="1236" height="90" rx="16" fill="#f8fafc" stroke="#e2e8f0"/>
+<text x="190" y="584" text-anchor="middle" font-size="15" fill="#64748b">合并净利润</text><text x="190" y="620" text-anchor="middle" font-size="30" font-weight="850" fill="#4f46e5">71.44亿</text>
+<text x="465" y="608" text-anchor="middle" font-size="30" fill="#cbd5e1">→</text>
+<text x="690" y="584" text-anchor="middle" font-size="15" fill="#64748b">少数股东损益</text><text x="690" y="620" text-anchor="middle" font-size="30" font-weight="850" fill="#0284c7">52.69亿</text>
+<text x="945" y="608" text-anchor="middle" font-size="30" fill="#cbd5e1">→</text>
+<text x="1185" y="584" text-anchor="middle" font-size="15" fill="#64748b">归母净利润</text><text x="1185" y="620" text-anchor="middle" font-size="30" font-weight="850" fill="#059669">18.75亿</text>
+<rect x="55" y="655" width="1290" height="76" rx="16" fill="#fff7ed" stroke="#fed7aa"/><text x="86" y="701" font-size="21" font-weight="800" fill="#c2410c">长期资本解决了“能不能活下去”，但没有自动解决“普通股东能获得多少回报”。</text>
+<text x="58" y="770" font-size="17" font-weight="800" fill="#1e293b">DUPONTMASTER.COM</text><text x="285" y="770" font-size="14" fill="#94a3b8">数据来源：公司年报 / 行业资料整理</text>
+</g></svg>
