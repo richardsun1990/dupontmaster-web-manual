@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-import base64
 import hashlib
 import html
+import io
 import json
 import os
 import re
@@ -9,13 +9,18 @@ import shutil
 from pathlib import Path
 from urllib.parse import quote
 
-import oss2
 import markdown as md
+import oss2
+import requests
+from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 manifest_path = ROOT / os.environ.get("PUBLISH_MANIFEST", "publishing/aima-tech/manifest.json")
-manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+if not manifest_path.exists():
+    print(f"No pending manifest: {manifest_path}")
+    raise SystemExit(0)
 
+manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
 slug = manifest["slug"].strip()
 title = manifest["title"].strip()
 date = manifest["date"].strip()
@@ -25,6 +30,7 @@ source = manifest.get("source", "公司公告、年报、交易所披露文件�
 author = manifest.get("author", "DupontMaster 研究院").strip()
 cover_name = manifest["cover"]
 body = manifest["markdown"].strip()
+asset_urls = manifest.get("asset_urls", {})
 
 ak = os.environ["ALIYUN_OSS_ACCESS_KEY_ID"]
 sk = os.environ["ALIYUN_OSS_ACCESS_KEY_SECRET"]
@@ -33,18 +39,49 @@ endpoint = os.environ["ALIYUN_OSS_ENDPOINT"].strip().replace("https://", "").rep
 public_base = os.environ.get("ALIYUN_OSS_PUBLIC_BASE_URL", "").strip().rstrip("/")
 prefix = os.environ.get("ALIYUN_OSS_PREFIX", "blog/admin").strip().strip("/")
 
+if not asset_urls:
+    raise RuntimeError("manifest.json 缺少 asset_urls")
+
 auth = oss2.Auth(ak, sk)
 bucket = oss2.Bucket(auth, "https://" + endpoint, bucket_name)
 
-payloads = json.loads((manifest_path.parent / "assets.json").read_text(encoding="utf-8"))
+def download_and_convert(source_url: str) -> bytes:
+    response = requests.get(source_url, timeout=90, allow_redirects=True)
+    response.raise_for_status()
+    with Image.open(io.BytesIO(response.content)) as image:
+        image.load()
+        if image.mode in ("RGBA", "LA"):
+            canvas = Image.new("RGB", image.size, "white")
+            alpha = image.getchannel("A") if image.mode == "RGBA" else image.getchannel("A")
+            canvas.paste(image.convert("RGB"), mask=alpha)
+            image = canvas
+        elif image.mode != "RGB":
+            image = image.convert("RGB")
+        if image.width > 1600:
+            height = round(image.height * 1600 / image.width)
+            image = image.resize((1600, height), Image.Resampling.LANCZOS)
+        output = io.BytesIO()
+        image.save(output, format="WEBP", quality=88, method=6, optimize=True)
+        return output.getvalue()
+
 urls = {}
 date_part = date.replace("-", "")
 for name in manifest["assets"]:
-    raw = base64.b64decode(payloads[name])
+    source_url = asset_urls.get(name)
+    if not source_url:
+        raise RuntimeError(f"缺少图片地址：{name}")
+    raw = download_and_convert(source_url)
     digest = hashlib.sha1(raw).hexdigest()[:10]
     safe_name = re.sub(r"[^A-Za-z0-9._-]+", "-", name).strip("-")
     object_key = f"{prefix}/{slug}/{date_part}-{safe_name}-{digest}"
-    bucket.put_object(object_key, raw, headers={"Content-Type":"image/webp","Cache-Control":"public, max-age=31536000, immutable"})
+    bucket.put_object(
+        object_key,
+        raw,
+        headers={
+            "Content-Type": "image/webp",
+            "Cache-Control": "public, max-age=31536000, immutable",
+        },
+    )
     encoded_key = "/".join(quote(part, safe="") for part in object_key.split("/"))
     urls[name] = f"{public_base}/{encoded_key}" if public_base else f"https://{bucket_name}.{endpoint}/{encoded_key}"
 
@@ -71,7 +108,6 @@ content_path.write_text(article_md, encoding="utf-8")
 body_for_html = re.sub(r"^# .+\n+", "", body, count=1)
 body_html = md.markdown(body_for_html, extensions=["extra", "sane_lists"])
 canonical = f"https://www.dupontmaster.com/blog/articles/{quote(slug)}.html"
-
 article_html = f'''<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -183,5 +219,7 @@ entry = f'  <url><loc>{canonical}</loc><lastmod>{date}</lastmod><changefreq>mont
 sitemap = sitemap.replace("</urlset>", entry + "</urlset>")
 sitemap_path.write_text(sitemap, encoding="utf-8")
 
+result_path = ROOT / "publishing-result.json"
+result_path.write_text(json.dumps({"slug":slug,"url":canonical,"cover":cover_url,"assets":urls},ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 shutil.rmtree(manifest_path.parent)
-print(json.dumps({"slug":slug,"url":canonical,"cover":cover_url,"assets":urls},ensure_ascii=False,indent=2))
+print(result_path.read_text(encoding="utf-8"))
