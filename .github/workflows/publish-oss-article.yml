@@ -1,0 +1,72 @@
+name: Publish OSS Article
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'publishing/aima-tech/asset_urls.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-oss-article
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check pending article
+        id: pending
+        shell: bash
+        run: |
+          if [[ -f publishing/aima-tech/manifest.json && -f publishing/aima-tech/asset_urls.json ]]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "No pending article package."
+          fi
+
+      - name: Set up Python
+        if: steps.pending.outputs.ready == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install publishing dependencies
+        if: steps.pending.outputs.ready == 'true'
+        run: pip install --disable-pip-version-check oss2 markdown pillow requests
+
+      - name: Merge temporary image URLs
+        if: steps.pending.outputs.ready == 'true'
+        shell: bash
+        run: |
+          jq --slurpfile urls publishing/aima-tech/asset_urls.json '. + {asset_urls: $urls[0]}' publishing/aima-tech/manifest.json > publishing/aima-tech/manifest.tmp
+          mv publishing/aima-tech/manifest.tmp publishing/aima-tech/manifest.json
+
+      - name: Publish article and upload images to OSS
+        if: steps.pending.outputs.ready == 'true'
+        env:
+          PUBLISH_MANIFEST: publishing/aima-tech/manifest.json
+          ALIYUN_OSS_ACCESS_KEY_ID: ${{ secrets.ALIYUN_OSS_ACCESS_KEY_ID }}
+          ALIYUN_OSS_ACCESS_KEY_SECRET: ${{ secrets.ALIYUN_OSS_ACCESS_KEY_SECRET }}
+          ALIYUN_OSS_BUCKET: ${{ vars.ALIYUN_OSS_BUCKET || secrets.ALIYUN_OSS_BUCKET }}
+          ALIYUN_OSS_ENDPOINT: ${{ vars.ALIYUN_OSS_ENDPOINT || secrets.ALIYUN_OSS_ENDPOINT }}
+          ALIYUN_OSS_PUBLIC_BASE_URL: ${{ vars.ALIYUN_OSS_PUBLIC_BASE_URL || secrets.ALIYUN_OSS_PUBLIC_BASE_URL }}
+          ALIYUN_OSS_PREFIX: ${{ vars.ALIYUN_OSS_PREFIX || 'blog/admin' }}
+        run: python scripts/publish_oss_article.py
+
+      - name: Commit published article
+        if: steps.pending.outputs.ready == 'true'
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "发布爱玛科技深度文章" || exit 0
+          git push
