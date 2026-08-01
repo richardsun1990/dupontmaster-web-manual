@@ -1,0 +1,10 @@
+{
+  "cover.webp": "http://127.0.0.1:8765/cover.webp",
+  "chart-profitability.webp": "http://127.0.0.1:8765/chart-profitability.webp",
+  "chart-cashflow.webp": "http://127.0.0.1:8765/chart-cashflow.webp",
+  "chart-assets.webp": "http://127.0.0.1:8765/chart-assets.webp",
+  "chart-peer-roe.webp": "http://127.0.0.1:8765/chart-peer-roe.webp",
+  "evidence-card.webp": "http://127.0.0.1:8765/evidence-card.webp",
+  "conclusion-card.webp": "http://127.0.0.1:8765/conclusion-card.webp",
+  "risk-card.webp": "http://127.0.0.1:8765/risk-card.webp"
+}
