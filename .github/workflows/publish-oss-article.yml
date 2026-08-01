@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'publishing/aima-tech/asset_urls.json'
+      - 'publishing/**/asset_urls.json'
   workflow_dispatch:
 
 permissions:
@@ -21,12 +21,26 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Check pending article
+      - name: Locate pending article package
         id: pending
         shell: bash
         run: |
-          if [[ -f publishing/aima-tech/manifest.json && -f publishing/aima-tech/asset_urls.json ]]; then
+          manifest=""
+          while IFS= read -r candidate; do
+            project_dir="$(dirname "$candidate")"
+            if [[ -f "$project_dir/asset_urls.json" ]]; then
+              manifest="$candidate"
+              break
+            fi
+          done < <(find publishing -mindepth 2 -maxdepth 2 -name manifest.json -print | sort)
+
+          if [[ -n "$manifest" ]]; then
+            project_dir="$(dirname "$manifest")"
+            slug="$(jq -r '.slug // "article"' "$manifest")"
             echo "ready=true" >> "$GITHUB_OUTPUT"
+            echo "manifest=$manifest" >> "$GITHUB_OUTPUT"
+            echo "project_dir=$project_dir" >> "$GITHUB_OUTPUT"
+            echo "slug=$slug" >> "$GITHUB_OUTPUT"
           else
             echo "ready=false" >> "$GITHUB_OUTPUT"
             echo "No pending article package."
@@ -42,17 +56,31 @@ jobs:
         if: steps.pending.outputs.ready == 'true'
         run: pip install --disable-pip-version-check oss2 markdown pillow requests
 
+      - name: Prepare temporary image server
+        if: steps.pending.outputs.ready == 'true'
+        shell: bash
+        run: |
+          project_dir='${{ steps.pending.outputs.project_dir }}'
+          mkdir -p "$project_dir/assets"
+          unzip -o "$project_dir/assets.zip" -d "$project_dir/assets"
+          python -m http.server 8765 --bind 127.0.0.1 --directory "$project_dir/assets" >/tmp/yadea-assets-http.log 2>&1 &
+          echo $! > /tmp/yadea-assets-http.pid
+          sleep 2
+          curl --fail --silent --show-error http://127.0.0.1:8765/cover.webp >/dev/null
+
       - name: Merge temporary image URLs
         if: steps.pending.outputs.ready == 'true'
         shell: bash
         run: |
-          jq --slurpfile urls publishing/aima-tech/asset_urls.json '. + {asset_urls: $urls[0]}' publishing/aima-tech/manifest.json > publishing/aima-tech/manifest.tmp
-          mv publishing/aima-tech/manifest.tmp publishing/aima-tech/manifest.json
+          manifest='${{ steps.pending.outputs.manifest }}'
+          project_dir='${{ steps.pending.outputs.project_dir }}'
+          jq --slurpfile urls "$project_dir/asset_urls.json" '. + {asset_urls: $urls[0]}' "$manifest" > "$project_dir/manifest.tmp"
+          mv "$project_dir/manifest.tmp" "$manifest"
 
       - name: Publish article and upload images to OSS
         if: steps.pending.outputs.ready == 'true'
         env:
-          PUBLISH_MANIFEST: publishing/aima-tech/manifest.json
+          PUBLISH_MANIFEST: ${{ steps.pending.outputs.manifest }}
           ALIYUN_OSS_ACCESS_KEY_ID: ${{ secrets.ALIYUN_OSS_ACCESS_KEY_ID }}
           ALIYUN_OSS_ACCESS_KEY_SECRET: ${{ secrets.ALIYUN_OSS_ACCESS_KEY_SECRET }}
           ALIYUN_OSS_BUCKET: ${{ vars.ALIYUN_OSS_BUCKET || secrets.ALIYUN_OSS_BUCKET }}
@@ -68,5 +96,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "发布爱玛科技深度文章" || exit 0
+          git commit -m "发布官网文章：${{ steps.pending.outputs.slug }}" || exit 0
           git push
