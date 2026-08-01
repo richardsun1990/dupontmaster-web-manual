@@ -21,19 +21,49 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Check pending Yadea package
+        id: pending
+        shell: bash
+        run: |
+          if [[ -f publishing/yadea-2025/metadata.json && -f publishing/yadea-2025/asset_urls.json ]]; then
+            echo 'ready=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'ready=false' >> "$GITHUB_OUTPUT"
+            echo 'No pending Yadea package; nothing to publish.'
+          fi
+
       - name: Set up Python
+        if: steps.pending.outputs.ready == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
       - name: Install publishing dependencies
+        id: dependencies
+        if: steps.pending.outputs.ready == 'true'
+        continue-on-error: true
         run: pip install --disable-pip-version-check oss2 markdown pillow requests
 
-      - name: Assemble manifest
+      - name: Publish Yadea article with captured diagnostics
+        id: release
+        if: steps.pending.outputs.ready == 'true' && steps.dependencies.outcome == 'success'
+        continue-on-error: true
         shell: bash
+        env:
+          PUBLISH_MANIFEST: publishing/yadea-2025/manifest.json
+          ALIYUN_OSS_ACCESS_KEY_ID: ${{ secrets.ALIYUN_OSS_ACCESS_KEY_ID }}
+          ALIYUN_OSS_ACCESS_KEY_SECRET: ${{ secrets.ALIYUN_OSS_ACCESS_KEY_SECRET }}
+          ALIYUN_OSS_BUCKET: ${{ vars.ALIYUN_OSS_BUCKET || secrets.ALIYUN_OSS_BUCKET }}
+          ALIYUN_OSS_ENDPOINT: ${{ vars.ALIYUN_OSS_ENDPOINT || secrets.ALIYUN_OSS_ENDPOINT }}
+          ALIYUN_OSS_PUBLIC_BASE_URL: ${{ vars.ALIYUN_OSS_PUBLIC_BASE_URL || secrets.ALIYUN_OSS_PUBLIC_BASE_URL }}
+          ALIYUN_OSS_PREFIX: ${{ vars.ALIYUN_OSS_PREFIX || 'blog/admin' }}
         run: |
-          set -euo pipefail
-          python - <<'PY'
+          set +e
+          log='_yadea_publish.log'
+          : > "$log"
+          {
+            echo '=== assemble manifest ==='
+            python - <<'PY'
           import json
           from pathlib import Path
 
@@ -53,70 +83,93 @@ jobs:
           print(f'assembled {len(parts)} article parts')
           PY
 
-      - name: Rebuild and serve temporary image package
+            echo '=== rebuild image package ==='
+            project_dir='publishing/yadea-2025'
+            shopt -s nullglob
+            image_parts=("$project_dir"/assets.zip.b64.part-*)
+            if (( ${#image_parts[@]} == 0 )); then
+              echo 'No image package parts found' >&2
+              exit 21
+            fi
+            printf 'image part count: %s\n' "${#image_parts[@]}"
+            cat "${image_parts[@]}" | tr -d '\n\r ' | base64 --decode > "$project_dir/assets.zip"
+            unzip -t "$project_dir/assets.zip"
+            mkdir -p "$project_dir/assets"
+            unzip -o "$project_dir/assets.zip" -d "$project_dir/assets"
+            image_count="$(find "$project_dir/assets" -maxdepth 1 -name '*.webp' | wc -l | tr -d ' ')"
+            echo "webp image count: $image_count"
+            test "$image_count" -eq 8
+
+            echo '=== start temporary image server ==='
+            python -m http.server 8765 --bind 127.0.0.1 --directory "$project_dir/assets" >/tmp/yadea-assets-http.log 2>&1 &
+            server_pid=$!
+            sleep 2
+            for file in cover.webp chart-profitability.webp chart-cashflow.webp chart-assets.webp chart-peer-roe.webp evidence-card.webp conclusion-card.webp risk-card.webp; do
+              curl --fail --silent --show-error "http://127.0.0.1:8765/$file" >/dev/null
+              echo "served: $file"
+            done
+
+            echo '=== merge asset map ==='
+            jq --slurpfile urls "$project_dir/asset_urls.json" '. + {asset_urls: $urls[0]}' "$project_dir/manifest.json" > "$project_dir/manifest.tmp"
+            mv "$project_dir/manifest.tmp" "$project_dir/manifest.json"
+
+            echo '=== validate OSS configuration presence ==='
+            test -n "$ALIYUN_OSS_ACCESS_KEY_ID"
+            test -n "$ALIYUN_OSS_ACCESS_KEY_SECRET"
+            test -n "$ALIYUN_OSS_BUCKET"
+            test -n "$ALIYUN_OSS_ENDPOINT"
+            echo "bucket configured: yes"
+            echo "endpoint configured: yes"
+
+            echo '=== upload and generate site files ==='
+            python scripts/publish_oss_article.py
+
+            echo '=== verify generated files ==='
+            md='content/articles/yadea-dealer-recovery-2025.md'
+            html='blog/articles/yadea-dealer-recovery-2025.html'
+            test -f "$md"
+            test -f "$html"
+            test -f blog/articles.json
+            test -f blog/index.html
+            test -f sitemap.xml
+            grep -q 'https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/' "$md"
+            grep -q 'https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/' "$html"
+            ! grep -q '127.0.0.1\|{{image:\|data:image\|base64' "$md" "$html"
+            grep -q 'yadea-dealer-recovery-2025' blog/articles.json blog/index.html sitemap.xml
+            echo 'site file validation: passed'
+            kill "$server_pid" 2>/dev/null || true
+          } > >(tee -a "$log") 2>&1
+          status=$?
+          echo "exit_code=$status" >> "$GITHUB_OUTPUT"
+          exit "$status"
+
+      - name: Commit outputs or diagnostic log
+        if: always() && steps.pending.outputs.ready == 'true'
         shell: bash
         run: |
           set -euo pipefail
-          project_dir='publishing/yadea-2025'
-          shopt -s nullglob
-          parts=("$project_dir"/assets.zip.b64.part-*)
-          if (( ${#parts[@]} == 0 )); then
-            echo 'No image package parts found' >&2
-            exit 1
-          fi
-          cat "${parts[@]}" | tr -d '\n\r ' | base64 --decode > "$project_dir/assets.zip"
-          unzip -t "$project_dir/assets.zip"
-          mkdir -p "$project_dir/assets"
-          unzip -o "$project_dir/assets.zip" -d "$project_dir/assets"
-          test "$(find "$project_dir/assets" -maxdepth 1 -name '*.webp' | wc -l)" -eq 8
-          python -m http.server 8765 --bind 127.0.0.1 --directory "$project_dir/assets" >/tmp/yadea-assets-http.log 2>&1 &
-          echo $! >/tmp/yadea-assets-http.pid
-          sleep 2
-          for file in cover.webp chart-profitability.webp chart-cashflow.webp chart-assets.webp chart-peer-roe.webp evidence-card.webp conclusion-card.webp risk-card.webp; do
-            curl --fail --silent --show-error "http://127.0.0.1:8765/$file" >/dev/null
-          done
-
-      - name: Merge temporary image URLs
-        shell: bash
-        run: |
-          set -euo pipefail
-          project_dir='publishing/yadea-2025'
-          jq --slurpfile urls "$project_dir/asset_urls.json" '. + {asset_urls: $urls[0]}' "$project_dir/manifest.json" > "$project_dir/manifest.tmp"
-          mv "$project_dir/manifest.tmp" "$project_dir/manifest.json"
-
-      - name: Publish article and upload images to OSS
-        env:
-          PUBLISH_MANIFEST: publishing/yadea-2025/manifest.json
-          ALIYUN_OSS_ACCESS_KEY_ID: ${{ secrets.ALIYUN_OSS_ACCESS_KEY_ID }}
-          ALIYUN_OSS_ACCESS_KEY_SECRET: ${{ secrets.ALIYUN_OSS_ACCESS_KEY_SECRET }}
-          ALIYUN_OSS_BUCKET: ${{ vars.ALIYUN_OSS_BUCKET || secrets.ALIYUN_OSS_BUCKET }}
-          ALIYUN_OSS_ENDPOINT: ${{ vars.ALIYUN_OSS_ENDPOINT || secrets.ALIYUN_OSS_ENDPOINT }}
-          ALIYUN_OSS_PUBLIC_BASE_URL: ${{ vars.ALIYUN_OSS_PUBLIC_BASE_URL || secrets.ALIYUN_OSS_PUBLIC_BASE_URL }}
-          ALIYUN_OSS_PREFIX: ${{ vars.ALIYUN_OSS_PREFIX || 'blog/admin' }}
-        run: python scripts/publish_oss_article.py
-
-      - name: Verify generated website files
-        shell: bash
-        run: |
-          set -euo pipefail
-          md='content/articles/yadea-dealer-recovery-2025.md'
-          html='blog/articles/yadea-dealer-recovery-2025.html'
-          test -f "$md"
-          test -f "$html"
-          test -f blog/articles.json
-          test -f blog/index.html
-          test -f sitemap.xml
-          grep -q 'https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/' "$md"
-          grep -q 'https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/' "$html"
-          ! grep -q '127.0.0.1\|{{image:\|data:image\|base64' "$md" "$html"
-          grep -q 'yadea-dealer-recovery-2025' blog/articles.json blog/index.html sitemap.xml
-
-      - name: Commit published article
-        shell: bash
-        run: |
-          set -euo pipefail
+          {
+            echo '# Yadea website publication diagnostic'
+            echo
+            echo "- dependencies: ${{ steps.dependencies.outcome }}"
+            echo "- release: ${{ steps.release.outcome }}"
+            echo "- release_exit_code: ${{ steps.release.outputs.exit_code }}"
+            echo "- trigger_commit: ${{ github.sha }}"
+            echo
+            echo '```text'
+            if [[ -f _yadea_publish.log ]]; then
+              tail -n 300 _yadea_publish.log
+            else
+              echo 'No release log was generated.'
+            fi
+            echo '```'
+          } > yadea-publish-diagnostic.md
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -A
-          git commit -m '发布官网文章：yadea-dealer-recovery-2025'
+          git commit -m "雅迪官网发布结果：${{ steps.release.outcome }}" || exit 0
           git push
+
+      - name: Mark workflow failed when publication failed
+        if: steps.pending.outputs.ready == 'true' && (steps.dependencies.outcome != 'success' || steps.release.outcome != 'success')
+        run: exit 1
