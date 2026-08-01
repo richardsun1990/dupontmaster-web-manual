@@ -21,6 +21,26 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Assemble pending article manifests
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          for metadata_path in sorted(Path('publishing').glob('*/metadata.json')):
+              project_dir = metadata_path.parent
+              parts = sorted(project_dir.glob('article-part-*.md'))
+              if not parts:
+                  continue
+              manifest = json.loads(metadata_path.read_text(encoding='utf-8'))
+              manifest['markdown'] = ''.join(p.read_text(encoding='utf-8') for p in parts).strip()
+              (project_dir / 'manifest.json').write_text(
+                  json.dumps(manifest, ensure_ascii=False, indent=2) + '\n',
+                  encoding='utf-8',
+              )
+          PY
+
       - name: Locate pending article package
         id: pending
         shell: bash
@@ -63,8 +83,8 @@ jobs:
           project_dir='${{ steps.pending.outputs.project_dir }}'
           mkdir -p "$project_dir/assets"
           unzip -o "$project_dir/assets.zip" -d "$project_dir/assets"
-          python -m http.server 8765 --bind 127.0.0.1 --directory "$project_dir/assets" >/tmp/yadea-assets-http.log 2>&1 &
-          echo $! > /tmp/yadea-assets-http.pid
+          python -m http.server 8765 --bind 127.0.0.1 --directory "$project_dir/assets" >/tmp/article-assets-http.log 2>&1 &
+          echo $! > /tmp/article-assets-http.pid
           sleep 2
           curl --fail --silent --show-error http://127.0.0.1:8765/cover.webp >/dev/null
 
