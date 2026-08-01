@@ -76,11 +76,22 @@ jobs:
         if: steps.pending.outputs.ready == 'true'
         run: pip install --disable-pip-version-check oss2 markdown pillow requests
 
-      - name: Prepare temporary image server
+      - name: Rebuild and serve temporary image package
         if: steps.pending.outputs.ready == 'true'
         shell: bash
         run: |
+          set -euo pipefail
           project_dir='${{ steps.pending.outputs.project_dir }}'
+          if [[ ! -f "$project_dir/assets.zip" ]]; then
+            shopt -s nullglob
+            parts=("$project_dir"/assets.zip.b64.part-*)
+            if (( ${#parts[@]} == 0 )); then
+              echo "No assets.zip or base64 asset parts found in $project_dir" >&2
+              exit 1
+            fi
+            cat "${parts[@]}" | tr -d '\n\r ' | base64 --decode > "$project_dir/assets.zip"
+          fi
+          unzip -t "$project_dir/assets.zip"
           mkdir -p "$project_dir/assets"
           unzip -o "$project_dir/assets.zip" -d "$project_dir/assets"
           python -m http.server 8765 --bind 127.0.0.1 --directory "$project_dir/assets" >/tmp/article-assets-http.log 2>&1 &
