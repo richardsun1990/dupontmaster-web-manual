@@ -83,13 +83,17 @@ jobs:
           set -euo pipefail
           project_dir='${{ steps.pending.outputs.project_dir }}'
           if [[ ! -f "$project_dir/assets.zip" ]]; then
-            shopt -s nullglob
-            parts=("$project_dir"/assets.zip.b64.part-*)
-            if (( ${#parts[@]} == 0 )); then
-              echo "No assets.zip or base64 asset parts found in $project_dir" >&2
-              exit 1
+            if [[ -f "$project_dir/assets.zip.b64" ]]; then
+              tr -d '\n\r ' < "$project_dir/assets.zip.b64" | base64 --decode > "$project_dir/assets.zip"
+            else
+              shopt -s nullglob
+              parts=("$project_dir"/assets.zip.b64.part-*)
+              if (( ${#parts[@]} == 0 )); then
+                echo "No assets.zip, assets.zip.b64, or base64 asset parts found in $project_dir" >&2
+                exit 1
+              fi
+              cat "${parts[@]}" | tr -d '\n\r ' | base64 --decode > "$project_dir/assets.zip"
             fi
-            cat "${parts[@]}" | tr -d '\n\r ' | base64 --decode > "$project_dir/assets.zip"
           fi
           unzip -t "$project_dir/assets.zip"
           mkdir -p "$project_dir/assets"
