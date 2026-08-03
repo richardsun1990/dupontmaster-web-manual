@@ -1,0 +1,3 @@
+fix yadea-dealer-recovery-2025 markdown tables
+triggered_at=2026-08-03T12:10:00+08:00
+expected_raw_html_tables=all
