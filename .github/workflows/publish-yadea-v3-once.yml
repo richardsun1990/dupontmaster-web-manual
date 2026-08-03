@@ -1,0 +1,237 @@
+name: Publish Yadea Article V3 Once
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'publishing/yadea-v3/run.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-yadea-article-v3-once
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install renderer
+        run: pip install --disable-pip-version-check markdown
+
+      - name: Rebuild optimized article
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import html
+          import json
+          import re
+          from pathlib import Path
+          import markdown as md
+
+          root = Path('.')
+          slug = 'yadea-dealer-recovery-2025'
+          md_path = root / 'content' / 'articles' / f'{slug}.md'
+          html_path = root / 'blog' / 'articles' / f'{slug}.html'
+          text = md_path.read_text(encoding='utf-8')
+
+          if not text.startswith('---\n'):
+              raise RuntimeError('frontmatter missing')
+          end = text.find('\n---\n', 4)
+          if end < 0:
+              raise RuntimeError('frontmatter malformed')
+          raw_meta = text[4:end]
+          body = text[end + 5:].lstrip()
+          meta = {}
+          for line in raw_meta.splitlines():
+              if ':' not in line:
+                  continue
+              key, value = line.split(':', 1)
+              meta[key.strip()] = value.strip().strip('"')
+
+          title = meta['title']
+          date = meta['date']
+          tag = meta.get('tag', '企业分析')
+          description = meta['description']
+          source = meta['source']
+          author = 'DupontMaster 研究院'
+          cover_url = 'https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/yadea-dealer-recovery-2025/20260801-cover.webp-34b7ca55d8'
+          canonical = f'https://www.dupontmaster.com/blog/articles/{slug}.html'
+
+          body_for_html = re.sub(r'^# .+\n+', '', body, count=1)
+          rendered = md.markdown(body_for_html, extensions=['extra', 'sane_lists'])
+          rendered = rendered.replace('<table>', '<div class="table-wrap"><table>')
+          rendered = rendered.replace('</table>', '</table></div>')
+
+          article_html = f'''<!DOCTYPE html>
+          <html lang="zh-CN">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>{html.escape(title)} - DupontMaster 杜邦大师</title>
+            <meta name="description" content="{html.escape(description)}">
+            <link rel="canonical" href="{canonical}">
+            <meta property="og:title" content="{html.escape(title)}">
+            <meta property="og:description" content="{html.escape(description)}">
+            <meta property="og:type" content="article">
+            <meta property="og:url" content="{canonical}">
+            <meta property="og:image" content="{cover_url}">
+            <style>
+              * {{ margin:0; padding:0; box-sizing:border-box; }}
+              body {{ font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif; line-height:1.86; color:#172033; background:#f5f6fa; }}
+              .nav {{ background:#fff; border-bottom:1px solid #e2e6ef; padding:16px 24px; position:sticky; top:0; z-index:100; }}
+              .nav a {{ color:#315be8; text-decoration:none; font-size:15px; margin-right:18px; }}
+              .box {{ max-width:960px; margin:40px auto; background:#fff; border-radius:16px; box-shadow:0 8px 30px rgba(25,39,75,.08); overflow:hidden; }}
+              .header {{ padding:52px 58px 36px; border-bottom:1px solid #e7eaf1; }}
+              .tag {{ display:inline-block; background:rgba(82,74,232,.10); color:#5148dc; padding:5px 13px; border-radius:6px; font-size:13px; margin-bottom:18px; }}
+              .title {{ font-size:40px; font-weight:760; line-height:1.28; margin-bottom:16px; color:#101827; }}
+              .desc {{ color:#63708a; font-size:17px; margin-bottom:14px; }}
+              .meta {{ color:#8b96aa; font-size:14px; }}
+              .content {{ padding:46px 58px 56px; }}
+              .content h2 {{ font-size:27px; line-height:1.45; font-weight:720; margin:48px 0 20px; color:#101827; border-left:5px solid #5c55ea; padding-left:14px; }}
+              .content h3 {{ font-size:21px; font-weight:680; margin:32px 0 14px; color:#101827; }}
+              .content p {{ margin-bottom:21px; font-size:17px; color:#283449; }}
+              .content img {{ width:100%; height:auto; border-radius:10px; margin:30px 0 34px; display:block; border:1px solid #edf0f6; }}
+              .content ul,.content ol {{ margin:20px 0 24px; padding-left:28px; }}
+              .content li {{ margin-bottom:10px; font-size:17px; color:#283449; }}
+              .content blockquote {{ border-left:4px solid #5c55ea; background:#f5f5ff; padding:18px 22px; margin:28px 0; color:#34356f; border-radius:0 8px 8px 0; }}
+              .content blockquote p {{ margin-bottom:0; color:#34356f; }}
+              .table-wrap {{ width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; margin:24px 0 30px; border:1px solid #e3e7ef; border-radius:10px; }}
+              .content table {{ width:100%; min-width:720px; border-collapse:collapse; font-size:15px; line-height:1.55; background:#fff; }}
+              .content th {{ padding:11px 12px; border-bottom:1px solid #dfe4ee; border-right:1px solid #e8ebf2; background:#f5f5ff; text-align:left; white-space:nowrap; color:#20284a; }}
+              .content td {{ padding:11px 12px; border-bottom:1px solid #e8ebf2; border-right:1px solid #eef1f6; vertical-align:top; color:#344057; }}
+              .content tr:last-child td {{ border-bottom:0; }}
+              .content th:last-child,.content td:last-child {{ border-right:0; }}
+              .source-box {{ background:#f8fafc; border:1px solid #e5e9f1; border-radius:10px; padding:18px; margin-top:38px; color:#5e6a7d; font-size:14px; }}
+              .cta-box {{ background:linear-gradient(135deg,#252a55 0%,#5b55e7 100%); color:#fff; padding:32px; border-radius:12px; text-align:center; margin:42px 0; }}
+              .cta-box h3 {{ color:#fff; margin-bottom:10px; }}
+              .cta-box p {{ color:rgba(255,255,255,.83); }}
+              .cta-box a {{ display:inline-block; background:#fff; color:#4f48dc; padding:11px 22px; border-radius:8px; text-decoration:none; font-weight:650; margin-top:14px; }}
+              footer {{ text-align:center; padding:38px; color:#8a94a7; font-size:13px; }}
+              @media(max-width:768px) {{
+                .box {{ margin:0; border-radius:0; }}
+                .header,.content {{ padding:26px 22px; }}
+                .title {{ font-size:30px; }}
+                .content h2 {{ font-size:23px; }}
+                .content p,.content li {{ font-size:16px; }}
+                .content table {{ min-width:680px; font-size:14px; }}
+              }}
+            </style>
+          </head>
+          <body>
+            <nav class="nav"><a href="/blog/">&larr; 返回博客</a><a href="https://app.dupontmaster.com/">开始分析公司</a></nav>
+            <div class="box">
+              <div class="header">
+                <span class="tag">{html.escape(tag)}</span>
+                <h1 class="title">{html.escape(title)}</h1>
+                <p class="desc">{html.escape(description)}</p>
+                <div class="meta">作者：{author} · {date} · 更新于 2026-08-03</div>
+              </div>
+              <div class="content">
+                {rendered}
+                <div class="source-box"><strong>资料来源：</strong>{html.escape(source)}</div>
+                <div class="cta-box"><h3>用 DupontMaster 拆解企业资本回报</h3><p>从利润率、资产周转和财务杠杆重新理解一家企业。</p><a href="https://app.dupontmaster.com/">开始分析</a></div>
+              </div>
+            </div>
+            <footer>© 2026 DupontMaster · 本文不构成投资建议</footer>
+          </body>
+          </html>
+          '''
+          html_path.write_text(article_html, encoding='utf-8')
+
+          json_path = root / 'blog' / 'articles.json'
+          items = json.loads(json_path.read_text(encoding='utf-8'))
+          found = False
+          for item in items:
+              if item.get('slug') == slug:
+                  item['description'] = description
+                  found = True
+          if not found:
+              raise RuntimeError('articles.json missing slug')
+          json_path.write_text(json.dumps(items, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+          old_desc = '2024年清库存后，雅迪2025年收入、利润与现金流全面反弹，但真正决定修复质量的，是经销商库存、周转效率与持续补货意愿。'
+          for path in [root / 'blog' / 'index.html', root / 'index.html']:
+              page = path.read_text(encoding='utf-8')
+              page = page.replace(old_desc, description)
+              path.write_text(page, encoding='utf-8')
+
+          sitemap_path = root / 'sitemap.xml'
+          sitemap = sitemap_path.read_text(encoding='utf-8')
+          sitemap = re.sub(
+              rf'(<loc>{re.escape(canonical)}</loc><lastmod>)[^<]+',
+              r'\g<1>2026-08-03',
+              sitemap,
+          )
+          sitemap_path.write_text(sitemap, encoding='utf-8')
+
+          print(f'markdown_chars={len(text)}')
+          print(f'html_chars={len(article_html)}')
+          print(f'tables={article_html.count("<table>")}')
+          print(f'images={article_html.count("<img")}')
+          PY
+
+      - name: Verify publication
+        shell: bash
+        run: |
+          set -euo pipefail
+          md='content/articles/yadea-dealer-recovery-2025.md'
+          html='blog/articles/yadea-dealer-recovery-2025.html'
+          grep -q '370亿元不能直接除以门店数' "$md" "$html"
+          grep -q '表外渠道资本' "$md" "$html"
+          grep -q '722万元/经销商' "$md" "$html"
+          grep -q '92.5万元/网点' "$md" "$html"
+          grep -q '4,134辆' "$md" "$html"
+          grep -q '3,176辆' "$md" "$html"
+          grep -q '28.27亿元' "$md" "$html"
+          grep -q '7.6倍基准正常化利润' "$md" "$html"
+          grep -q 'class="table-wrap"' "$html"
+          test "$(grep -o 'https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/' "$md" | wc -l)" -eq 8
+          test "$(grep -o '<table>' "$html" | wc -l)" -ge 4
+          ! grep -q '<table style=' "$md"
+          ! grep -q 'overflow-x:auto' "$md"
+          grep -q 'yadea-dealer-recovery-2025' blog/articles.json blog/index.html index.html sitemap.xml
+
+      - name: Commit optimized publication
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf publishing/yadea-v3
+          rm -f .github/workflows/publish-yadea-v3-once.yml
+          rm -f yadea-v3-publish-diagnostic.md
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m '优化并重新发布雅迪深度文章v3'
+          git push
+
+      - name: Save diagnostic on failure
+        if: failure()
+        shell: bash
+        run: |
+          set +e
+          {
+            echo '# Yadea v3 publication diagnostic'
+            echo
+            echo "- trigger_commit: ${{ github.sha }}"
+            echo "- run_id: ${{ github.run_id }}"
+            echo
+            echo 'The article optimization workflow failed. Read the workflow job logs for the exact failing step.'
+          } > yadea-v3-publish-diagnostic.md
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add yadea-v3-publish-diagnostic.md
+          git commit -m '雅迪v3文章发布失败诊断' || exit 0
+          git push || true
+          exit 1
