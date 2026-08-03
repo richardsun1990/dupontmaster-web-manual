@@ -1,102 +1,557 @@
 ---
 title: "从清库存到利润翻倍：雅迪的经销商，真的活过来了吗？"
-slug: "yadea-dealer-recovery-2025"
 date: "2026-08-01"
 tag: "企业分析"
 description: "2024年清库存后，雅迪2025年收入、利润与现金流全面反弹，但真正决定修复质量的，是经销商库存、周转效率与持续补货意愿。"
+slug: "yadea-dealer-recovery-2025"
 source: "雅迪控股、爱玛科技、九号公司历年年报及已核验研究底稿；研究数据截至2026年7月31日。"
 ---
-
 # 从清库存到利润翻倍：雅迪的经销商，真的活过来了吗？
+
+![从清库存到利润翻倍：雅迪的经销商真的活过来了吗？](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/yadea-dealer-recovery-2025/20260801-cover.webp-34b7ca55d8)
 
 > **唯一主问题：**2024年清库存之后，雅迪2025年的大幅反弹，究竟代表终端需求与经销商盈利真正恢复，还是更多来自渠道重新补库？经销商能否持续赚钱并愿意拿真金白银继续补货，才是判断这轮反弹能否持续的核心。
 
 2024年和2025年的雅迪，像是两家公司。
 
-2024年，雅迪收入下降18.8%，归母净利润下降51.8%，经营现金流只有2.99亿元，按经营现金流减去购建长期资产支出测算，自由现金流约为负12.05亿元。
+2024年，收入下降18.8%，归母净利润下降51.8%，经营现金流只有2.99亿元，按经营现金流减去购建长期资产支出测算，自由现金流约为负12.05亿元。
 
-到了2025年，收入增长31.1%至370.08亿元，归母净利润增长128.8%至29.12亿元，毛利率从15.2%恢复到19.1%，平均ROE从14.8%回到30.3%，报表测算自由现金流跳到52.02亿元。
+到了2025年，收入增长31.1%至370.08亿元，归母净利润增长128.8%至29.12亿元，毛利率从15.2%恢复到19.1%，平均ROE从14.8%回到30.3%，报表测算自由现金流更是跳到52.02亿元。
 
 一年清库存，一年利润翻倍。
+
+![利润率修复才是雅迪2025年反弹的核心推力](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/yadea-dealer-recovery-2025/20260801-chart-profitability.webp-909002ac7f)
 
 如果只看年报，结论很容易：雅迪走出了低谷，规模优势重新兑现。
 
 但电动两轮车是一门高度依赖经销商的生意。总部确认了收入，不代表门店已经把车卖给消费者；公司库存下降，不代表经销商仓库没有车；总部现金流很好，也可能是库存和资金占用更多留在了渠道端。
 
-所以，判断这轮反弹的真实成色，不能只看雅迪卖给经销商多少辆车，更要看经销商是否卖得动、赚得到，并愿意继续补货。
+所以，这篇文章不准备从“雅迪卖了多少辆车”出发，而是从一个更朴素的问题出发：
+
+**那些替雅迪备货、租店、雇人、做售后、承担旧款跌价风险的经销商，2025年到底有没有真正活过来？**
+
+遗憾的是，年报没有披露经销商平均库存、单车毛利、闭店率和同店销量。我们不能假装拥有不存在的数据。
+
+但这不意味着无法研究。通过销量与网点扩张、收入确认方式、返利与门店支持、合同负债、现金流、价格带和竞品渠道模型，仍然可以判断这轮反弹的质量。
+
+我的结论先放在前面：
+
+> **雅迪2025年的修复有真实经营改善，也有政策换新、产品切换和渠道补库的放大。总部已经明显恢复，但经销商端是否全面恢复，证据仍不充分。相比爱玛，雅迪的优势是网络密度和供应链效率；相比九号，雅迪的弱点是单车利润空间更薄，对周转速度和渠道纪律要求更高。**
+>
+> **雅迪的护城河不在于拥有4万个网点，而在于这些网点能否持续卖得动、赚得到、愿意补。**
+
+![雅迪2025年经营修复的五条官方证据](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/yadea-dealer-recovery-2025/20260801-evidence-card.webp-36d73edd28)
+
+---
 
 ## 一、为什么经销商比总部利润更接近真实经营
 
-雅迪主要通过经销商网络销售，公司通常在经销商签收并取得收货凭证时确认收入。财报里的销量和收入更接近卖给经销商的 **sell-in**，而不是消费者最终买走的 **sell-through**。
+先把这门生意的账算明白。
+
+雅迪主要通过经销商网络销售，公司通常在经销商签收并取得收货凭证时确认收入。也就是说，财报里的销量和收入更接近卖给经销商的 **sell-in**，而不是消费者最终买走的 **sell-through**。
 
 两者在行业景气时差别不大。终端卖得快，经销商不断补货，总部销量和消费者销量同步上升。
 
-但在产品换代、需求放缓或库存偏高时，差别会突然变大。总部可以把车发给经销商并确认收入，经销商却可能需要用降价、赠品、置换补贴和延长库存周期把车慢慢消化。旧车型越多、产品切换越快，经销商承担的库存跌价风险越大。
+但在产品换代、需求放缓或库存偏高时，差别会突然变大。
 
-经销商利润可以粗略拆成：
+总部可以把车发给经销商并确认收入，经销商却可能需要用降价、赠品、置换补贴和延长库存周期把车慢慢消化。旧车型越多、产品切换越快，经销商承担的库存跌价风险越大。
 
-> 单车前端毛利 + 厂家返利 + 配件与售后利润 − 租金 − 人工 − 促销让利 − 库存跌价 − 资金成本。
+从普通股东角度看，经销商像是雅迪资产负债表之外的一层“缓冲垫”：
+
+- 经销商承担门店租金、人工和终端推广；
+- 经销商用自有资金或融资支付进货款；
+- 经销商持有大量终端库存；
+- 经销商承担真实成交价低于指导价的让利；
+- 总部则获得更低的应收账款、更轻的库存和更快的现金回笼。
+
+这是一种高效率的商业模式，并不等于压货。
+
+但它要求投资者同时看两张表：一张是雅迪总部的财务报表，另一张是看不见的经销商经营账。
 
 总部ROE很高，只能证明总部资本效率高；只有经销商也能获得合理回报，才能证明这套系统长期稳定。
 
-## 二、2024年的清库存，清掉的不只是车
+---
 
-雅迪没有披露全国经销商库存，因此“2024年清库存”是结合年报、行业政策、旧车型切换和公司经营表现形成的研究判断，而不是公司直接披露的数据。
+## 二、2024年的“清库存”，清掉的不只是车，还有经销商信心
 
-但几个事实放在一起，方向很清楚：收入下降18.8%，利润下降51.8%，销售净利率从7.59%降到4.51%，总资产周转率从1.374次降到1.123次，经营现金流降至2.99亿元。
+严格来说，雅迪没有披露一张全国经销商库存表。因此，“2024年清库存”是根据已核验年报、行业政策、旧车型切换和公司经营表现形成的研究判断，不应伪装成公司直接披露。
 
-这不是单纯少卖一点车。利润跌幅远大于收入跌幅，说明价格、产品结构、成本吸收和渠道费用同时承压；资产周转下降，说明同样一套资产创造的收入减少；现金流接近停滞，则说明经营端的补货与付款节奏明显恶化。
+但几个事实放在一起，方向很清楚：
 
-对于经销商，清库存比总部更难受。总部可以少生产、少发货；经销商面对的却是已经买下来的旧车、持续发生的租金与工资，以及新车型上市后旧款继续贬值的压力。
+- 收入下降18.8%；
+- 归母净利润下降51.8%；
+- 销售净利率从2023年的7.59%降到4.51%；
+- 总资产周转率从1.374次降到1.123次；
+- 经营现金流降至2.99亿元；
+- 报表测算自由现金流约为负12.05亿元。
 
-## 三、2025年的反弹，有真实改善，也有补库放大
+这不是单纯“少卖一点车”。
 
-2025年的经营修复并不是假的。雅迪电动自行车和电动踏板车的出厂均价分别提升约5.1%和4.1%，车辆业务毛利率由13.52%升至18.19%，说明产品结构和经营效率确实改善。
+利润跌幅远大于收入跌幅，说明价格、产品结构、成本吸收和渠道费用同时承压；资产周转下降，说明同样一套资产创造的收入减少；现金流接近停滞，则说明经营端的补货与付款节奏明显恶化。
 
-但反弹也受到政策换新、新国标切换、低基数和渠道重新补库的共同推动。总部收入确认发生在经销商收货时，因此只凭公司销量增长，无法判断消费者最终购买是否同步增长。
+对于经销商，清库存比总部更难受。
 
-更值得注意的是，雅迪的销售网络持续扩张。2021年，公司销售约1386万辆，拥有3353家经销商和超过2.8万个网点；2025年销售约1627万辆，经销商增至5122家，网点超过4万个。
+总部少生产、少发货，收入和利润下降；经销商面对的却是已经买下来的旧车、还在发生的租金与工资，以及新车型上市后旧款继续贬值的压力。
 
-粗略计算，销量增长明显慢于经销商和网点扩张。平均每家经销商对应销量由约4134辆降到3176辆；按网点上限测算，单网点对应销量也由约495辆降到407辆。
+经销商在清库存阶段通常只有四种选择：
 
-这不能直接证明门店盈利下降，因为网点口径、区域结构和车型价格都可能变化，但至少说明：雅迪的网络规模增长，并不自动等于单店经营质量改善。
+1. 降价，把毛利让给消费者；
+2. 接受更长库存周期，牺牲资金周转；
+3. 减少新货补单，保护现金；
+4. 退出或缩店，把损失一次性确认。
 
-## 四、雅迪、爱玛和九号，渠道盈利逻辑不同
+我们无法用公开资料判断全国经销商分别采取了哪一种方式，但2024年总部业绩的急剧下滑，至少证明渠道并没有能力无痛吸收终端压力。
 
-雅迪的经销商更依赖规模和周转。品牌知名度、供应链效率和密集网点可以带来客流，但单车利润空间相对有限，因此门店必须保持较快周转。
+这也是研究雅迪必须从2024年出发的原因。
 
-爱玛更依赖设计、女性消费者转化和区域化制造。若产品审美能够提高成交率，区域工厂能够缩短补货周期，经销商可能获得更好的库存效率；但重资产扩张也要求销量持续增长，才能消化新增产能。
+没有经历过清库存，就很容易把2025年的补货当成纯粹的终端增长。
 
-九号更依赖智能化、高价格带和更大的单车利润池。2025年九号电动两轮车收入约118.6亿元，同比增长64.45%，销量约409万辆，同比增长57.39%，披露毛利率约23.76%。更高的售价和毛利率为渠道服务、体验店建设和售后提供了更大的分配空间，但门店也需要承担更高的展示、人员和库存投入。
+---
 
-公开资料并不足以证明三家公司哪家的经销商一定更赚钱。真正需要比较的是同店销量、单车综合毛利、库存周转天数、闭店率和持续补货率，而这些关键数据尚未被完整披露。
+## 三、2025年的大反弹，至少由三股力量共同推动
 
-## 五、如何判断经销商是否真的活过来
+2025年的经营修复不是假的，但不能只归功于一种能力。
 
-后续跟踪雅迪，不应只盯着总部销量和净利润，而应重点观察五个信号：
+### 第一股力量：真实的产品与经营改善
 
-1. 经销商数量继续增长时，单店销量是否企稳；
-2. 返利和渠道支持增加后，真实成交价是否稳定；
-3. 合同负债和经销商预付款是否来自主动补货，而非任务式压货；
-4. 新车型切换时，旧车型折扣和库存周期是否恶化；
-5. 总部经营现金流改善时，经销商库存和资金压力是否同步下降。
+雅迪2025年电动自行车和电动踏板车合计销售约1,626.9万辆。电动自行车平均出厂收入约1,415元，同比增长约5.1%；电动踏板车平均出厂收入约1,878元，同比增长约4.1%。
 
-## 六、估值不应脱离渠道健康度
+整车及相关配件分部毛利率从13.52%升至18.19%，核心EBIT利润率即使剔除银行利息收入和金融资产公允价值收益后，仍约8.86%。
 
-在保守情景下，如果渠道库存重新上升、折扣扩大、返利增加且补货放缓，雅迪合理价值约为每股8.3至9.4港元。
+这些数据说明，雅迪并不是单纯靠多发低价车恢复利润。产品结构、成本控制、核心部件协同和规模效率确实在改善。
 
-在基准情景下，如果库存保持健康、终端成交稳定、经销商能够持续补货，合理价值约为每股14.4至16.4港元。
+### 第二股力量：政策换新与新国标切换
 
-在乐观情景下，如果同店销量恢复、产品升级顺利且网络扩张没有继续稀释单店效率，合理价值约为每股20.4至28.4港元。
+2025年以旧换新和新国标切换，为头部品牌带来了真实需求，也带来了旧车淘汰、新车替换和渠道重新配置库存的机会。
 
-这些估值区间不是精确预测，而是把渠道健康度与利润、自由现金流和估值倍数放在同一个框架中。
+这部分需求并非虚假，但它具有明确的政策与时点属性。
 
-## 结论
+政策可以提前释放换购需求，新国标可以推动经销商把旧款换成新款。它们会同时改善销量、均价、毛利率和渠道补货，却不等于以后每年都能重复同样的增幅。
 
-我的判断是：雅迪2025年的修复包含真实经营改善，但政策换新、产品切换、低基数和渠道补库放大了反弹幅度。总部已经明显恢复，经销商端是否全面恢复，公开证据仍然不足。
+### 第三股力量：2024年低基数后的渠道补库
 
-相比爱玛，雅迪的优势是网络密度和供应链效率；相比九号，雅迪的弱点是单车利润空间更薄，对周转速度和渠道纪律要求更高。
+如果2024年经销商主动压低库存、减少补单，那么2025年只要终端需求恢复到正常水平，经销商就需要重新建立安全库存。
 
-> **雅迪的护城河不在于拥有4万个网点，而在于这些网点能否持续卖得动、赚得到、愿意补。**
+这会制造一个很强的放大器：
 
-后续只要单店销量、库存周转和主动补货没有同步改善，就不能把2025年的利润翻倍简单外推为长期增长中枢。
+终端销量恢复10%，总部sell-in可能增长20%甚至更多，因为经销商不仅要满足当期销售，还要补回前一年压缩掉的库存。
+
+因此，2025年的大反弹可能同时包含：
+
+- 消费者真的多买了；
+- 消费者买得更贵了；
+- 经销商重新补货了；
+- 经销商为新国标车型提前备货了。
+
+问题不在于哪一项是“假”的，而在于哪些可以持续。
+
+---
+
+## 四、经销商能不能活下来，要看的是一套“小生意模型”
+
+经销商不是靠厂家收入增速生活，而是靠一辆车一辆车地赚钱。
+
+一间电动车门店的年度利润，大致可以拆成：
+
+> **经销商利润 ≈ 单车前端毛利 + 厂家返利 + 配件及售后利润 - 租金 - 人工 - 促销让利 - 库存跌价 - 资金成本**
+
+这里最容易被忽略的，是“周转”。
+
+假设两家门店一辆车都赚300元，一家一年周转8次，另一家只周转4次，它们对同样一万元库存资金的回报完全不同。
+
+因此，比“单车毛利”更有价值的指标是：
+
+> **单位库存回报率 ≈ 单车综合毛利 × 年周转次数 ÷ 平均库存资金**
+
+这也是为什么经销商是否愿意持续补货，比厂家一次性发了多少货更重要。
+
+一个健康的渠道，通常会出现几个信号：
+
+- 主力车型库存天数稳定；
+- 新品首批铺货后能够持续补单；
+- 真实成交价不依赖大幅折扣；
+- 经销商愿意优先陈列和推荐；
+- 返利是锦上添花，而不是维持盈利的唯一来源；
+- 售后配件和维修能够贡献稳定利润；
+- 经销商愿意继续开店、翻店，而不是只靠厂家补贴维持。
+
+反过来，如果销量增长伴随库存增加、折扣扩大、返利加码和单店销量下降，那么总部的收入反弹就可能透支未来。
+
+公开资料无法直接给出雅迪全国经销商的单位库存回报率，但可以从几个侧面观察。
+
+---
+
+## 五、雅迪的渠道：覆盖更广了，单店压力也可能更大了
+
+2021年，雅迪销量约1,386.3万辆，拥有3,353家经销商和超过2.8万个销售网点。
+
+2025年，销量约1,626.9万辆，经销商增至5,122家，销售网点超过4万个。
+
+四年里：
+
+- 销量增长约17%；
+- 经销商数量增长约53%；
+- 销售网点增长至少43%。
+
+粗略计算，单经销商对应销量从约4,134辆降到约3,176辆；按4万个网点计算，单网点对应销量上限从约495辆降到约407辆，相当于月均约34辆。由于实际网点数“超过4万”，407辆还是上限，而非精确单店销量。
+
+这组数据不能直接证明经销商盈利下降。
+
+网点加密可以缩短消费者到店距离，改善售后覆盖，提高县乡市场渗透；新开门店也可能处于爬坡期，不能和成熟门店简单比较。
+
+但它揭示了一个必须面对的事实：
+
+> **雅迪的渠道增长明显快于销量增长。**
+
+这意味着未来渠道价值不能再靠“网点数量”证明，而要靠同店销量、库存周转和单店利润证明。
+
+### 返利与门店支持：是护航，还是依赖？
+
+2025年，雅迪销售返利应付款约5.29亿元，占收入约1.43%；向经销商直接或代付、通常按三年目标摊销的渠道支持资金余额约7.61亿元。
+
+这些投入本身很合理。头部品牌需要支持门店形象、渠道扩张和促销执行。
+
+但对投资者而言，关键不是“有没有返利”，而是：
+
+- 返利增长是否长期快于收入；
+- 门店支持是否带来持续补单；
+- 新开门店离开补贴后能否独立盈利；
+- 返利是否被终端降价完全吃掉。
+
+目前没有证据证明雅迪依赖返利维持渠道，也没有证据证明所有新增网点已经形成健康回报。
+
+最准确的表述只能是：渠道支持是雅迪体系的一部分，但其投入回报仍需用单店经营验证。
+
+### 合同负债：经销商愿不愿意提前交钱
+
+2025年末，经销商预付款形成的合同负债约3.18亿元，低于2024年的4.14亿元。
+
+合同负债受发货时点、季节性和结算安排影响，不能单独用来判断渠道景气。但在收入大幅增长的年份，经销商预付款余额反而下降，至少不支持“年末渠道补货意愿极强”的简单叙事。
+
+它提醒我们：2025年的全年反弹很强，但年末经销商是否仍愿意以更高强度预付订货，需要继续观察。
+
+---
+
+## 六、总部52亿元自由现金流，为什么不能直接等于渠道繁荣
+
+2025年，雅迪经营现金流约59.90亿元，减去约7.87亿元购建长期资产支出后，报表测算自由现金流约52.02亿元。
+
+这是非常漂亮的数字。
+
+但当年净营运资本对经营现金生成的正向贡献约23.75亿元。若把这部分全部剔除，调整后自由现金流约28.27亿元。
+
+2022—2025年四年平均报表自由现金流约21.64亿元。
+
+因此，我愿意放进长期估值里的标准化自由现金流，是22亿—28亿元，而不是52亿元。
+
+经销商视角能帮助理解为什么。
+
+雅迪的经销模式使总部可以较快回款，并把相当一部分终端库存和门店资金占用留在渠道；同时，公司通过贸易及票据应付款获得供应商信用。2025年末贸易及票据应付款约140.99亿元，其中票据应付款约98.52亿元。
+
+这是经营效率，不是财务造假。
+
+但总部现金越轻，越需要确认经销商与供应商是否也能承受这套资金安排。
+
+如果经销商卖得慢，下一轮补货会下降；如果供应商账期收紧，总部现金需求会上升。2024年的自由现金流从高位跌到负数，已经展示过这套模型的周期弹性。
+
+所以，52亿元自由现金流证明雅迪在2025年现金回笼极强，却不能单独证明终端渠道极其健康。
+
+![自由现金流强劲修复但不能线性外推](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/yadea-dealer-recovery-2025/20260801-chart-cashflow.webp-9d4834ce08)
+
+---
+
+## 七、横向比较：雅迪、爱玛、九号，谁的经销商更容易活下来？
+
+这个问题不能用一个数字回答，因为三家公司给经销商的生存逻辑不同。
+
+### 1. 雅迪：薄利、高周转、超密度网络
+
+雅迪的核心优势是规模、品牌认知、全国网络、售后覆盖和供应链效率。
+
+对经销商来说，雅迪的价值在于：
+
+- 消费者认知高，获客难度较低；
+- 产品线广，覆盖多个价格带；
+- 售后和配件体系成熟；
+- 供应链规模大，补货相对稳定；
+- 县乡市场网络密，能形成区域防守。
+
+但雅迪的传统两轮车单车价值和制造端利润空间低于九号，门店更依赖销量与周转。网点增长快于销量，又可能稀释成熟区域的单店产出。
+
+雅迪经销商要活得好，关键不是卖一辆赚得特别多，而是持续卖得快、库存压得低、售后做得稳。
+
+### 2. 爱玛：设计差异化与区域制造，能否转化为更快动销
+
+爱玛2025年经销收入约242.55亿元，占营业收入约96.7%，同比增长17.5%；经销模式毛利率18.27%，同比提升0.53个百分点。
+
+2025年末应付销售返利约6.20亿元，同比增长14.8%，相当于经销收入约2.55%。返利增速没有超过经销收入增速，因此不能直接得出“靠返利推动增长”的结论。
+
+但爱玛也暴露出几个值得观察的信号：
+
+- 年末预收货款约2.71亿元，同比下降27.8%；
+- 合同负债整体下降约2.7%；
+- 应收账款同比增长35.4%，明显快于收入；
+- 2026年一季度相较年末，库存、应收账款上升，经营现金流转为负数。
+
+爱玛的优势更偏向产品设计、女性用户、品牌表达和区域化制造。如果这些能力能提高终端成交率、减少折扣、缩短补货半径，经销商单位库存回报率可能改善。
+
+但目前仍没有证据证明爱玛经销商的单车毛利、库存周转一定优于雅迪。爱玛同样采用以经销为主的模式，公司成品库存下降不等于门店库存下降。
+
+所以，对爱玛最重要的问题是：**设计带来的“好看”，有没有变成经销商更快卖掉的“好生意”。**
+
+### 3. 九号：高客单、高毛利与门店补贴，换来更强单店产出潜力
+
+九号2025年电动两轮车收入约118.59亿元，同比增长64.45%；销量约409.0万辆，同比增长57.39%。
+
+其电动两轮车披露毛利率约23.76%。公司同时说明，2025年有约1.94亿元建店补贴冲减收入；剔除建店补贴和质保因素后，调整毛利率约25.76%。
+
+这与雅迪、爱玛形成明显差异。
+
+九号依靠智能化、产品设计和更高价格带，为制造端和渠道提供了更厚的单车利润池。更年轻的品牌形象、线上内容种草和门店试骑，也可能带来更高的单店成交效率。
+
+但“毛利率更高”不能直接等于“经销商一定更赚钱”。
+
+九号还处在快速扩张期：
+
+- 建店补贴说明公司正在投入资金换渠道；
+- 2025年公司端电动两轮车库存增长92.3%，公司解释为业务规模扩张下增加备货；
+- 智能化产品售后复杂度、门店培训和体验要求更高；
+- 高价格带在需求转弱时也可能面临更大的促销弹性。
+
+九号的渠道模型更像“用产品溢价覆盖更高的门店投入”，而不是依赖极致网络密度。
+
+它的经销商可能单车赚得更多，但对选址、店员能力、体验服务和品牌热度的要求也更高。
+
+### 三家公司渠道模型对比
+
+<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin:24px 0;">
+<table style="width:100%;min-width:720px;border-collapse:collapse;font-size:15px;line-height:1.55;">
+<thead><tr><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">维度</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">雅迪</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">爱玛</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">九号</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">核心增长逻辑</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">规模、网络密度、供应链效率</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">设计差异化、区域制造、传统渠道深化</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">智能化、高价格带、产品溢价</td></tr>
+<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">经销商主要价值</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">渠道覆盖、快速补货与售后网络</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">产品差异化提高终端成交率</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">高客单、高单车利润与体验式成交</td></tr>
+<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">生存关键</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">库存周转与补货效率</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">新品动销、成交率与真实成交价</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">单店产出与产品热度</td></tr>
+<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">公开正面信号</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">2025销量、毛利率和现金流强劲恢复</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">经销收入增长、经销毛利率提升</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">两轮车收入与销量高速增长、毛利率较高</td></tr>
+<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">公开风险信号</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">网点增速快于销量，合同负债下降</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">预收下降、应收增速较快、2026Q1现金承压</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">建店补贴、公司端库存大增、渠道快速扩张</td></tr>
+<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">当前能否证明经销商更赚钱</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">不能</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">不能</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">不能</td></tr>
+<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">最值得验证</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">同店销量、库存天数、补单率</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">设计溢价、折扣、库存周转</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">单店销量、补贴退出后盈利、售后成本</td></tr>
+</tbody></table></div>
+
+这张表最重要的结论，不是谁绝对更好。
+
+而是三家公司在成熟市场中走了三条不同的路：
+
+- 雅迪依靠规模与渠道效率，核心是库存能否快速周转；
+- 爱玛依靠产品差异化，核心是新品能否持续提高消费者成交率；
+- 九号依靠高价值产品，核心是单店利润能否覆盖更高的渠道投入。
+
+最后胜出的渠道，不一定是门店最多的，也不一定是毛利率最高的，而是经销商在没有过度补贴和压货的情况下，仍然愿意长期经营的那一家。
+
+---
+
+## 八、DupontMaster告诉我们的，不只是30% ROE
+
+雅迪2022—2025年的三因素杜邦拆解如下：
+
+<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin:24px 0;">
+<table style="width:100%;min-width:720px;border-collapse:collapse;font-size:15px;line-height:1.55;">
+<thead><tr><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">年份</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">销售净利率</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">总资产周转率</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">权益乘数</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">平均ROE</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">2022</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">6.96%</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">1.400次</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">3.976倍</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">38.75%</td></tr>
+<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">2023</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">7.59%</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">1.374次</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">3.364倍</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">35.10%</td></tr>
+<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">2024</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">4.51%</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">1.123次</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">2.930倍</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">14.83%</td></tr>
+<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">2025</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">7.87%</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">1.355次</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">2.842倍</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">30.30%</td></tr>
+</tbody></table></div>
+
+2025年ROE恢复，主要来自净利率和资产周转率改善，权益乘数反而下降。五因素拆解中，EBIT利润率从5.90%升到9.83%，是最主要的推动力。
+
+所以，雅迪30%的ROE不是靠新增银行借款硬堆出来的。
+
+![雅迪资产结构偏轻且类现金资产占比较高](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/yadea-dealer-recovery-2025/20260801-chart-assets.webp-2d72095b44)
+
+![雅迪ROE已修复但并未对同行形成绝对领先](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/yadea-dealer-recovery-2025/20260801-chart-peer-roe.webp-299440701b)
+
+但从经销商视角看，还要补上一层解释：
+
+> **雅迪总部的高资产周转率，部分建立在经销商承担终端库存、门店资产和资金占用之上。**
+
+这不是对雅迪的否定，而是经销模式的客观结构。
+如果经销商周转健康，总部轻资产、经销商有回报，双方共同形成高效率系统；如果经销商回报恶化，总部的高ROE会先维持一段时间，随后通过补货下降、返利上升、折扣加深和现金流恶化反映出来。
+
+因此，雅迪的长期ROE不能只根据总部三张表外推。
+
+我的正常化ROE仍采用约15%—30%的三情景，基准约22%：
+
+<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin:24px 0;">
+<table style="width:100%;min-width:720px;border-collapse:collapse;font-size:15px;line-height:1.55;">
+<thead><tr><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">情景</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">渠道状态</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">净利率</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">总资产周转率</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">权益乘数</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">推导ROE</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">保守</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">库存偏高、折扣扩大、补货减弱</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">5.5%</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">1.15次</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">2.4倍</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">15.2%</td></tr>
+<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">基准</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">库存正常、补单稳定、价格平稳</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">6.5%</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">1.25次</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">2.7倍</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">21.9%</td></tr>
+<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">乐观</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">同店增长、产品升级、渠道扩张有效</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">7.5%</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">1.35次</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">3.0倍</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">30.4%</td></tr>
+</tbody></table></div>
+
+30%可以出现，但要成为长期中枢，必须建立在经销商持续健康之上。
+
+---
+
+## 九、估值不能只预测总部利润，还要给渠道质量定价
+
+估值基准日为2026年7月24日：
+
+- 基准股价约10.18港元；
+- 已发行股数约31.13亿股；
+- 港元兑人民币约0.864；
+- 折合人民币市值约273.8亿元；
+- 2025年静态PE约9.4倍；
+- 研究口径净金融资产约166.60亿元；
+- 少数股东影响不重大。
+
+我没有改变原有估值框架，但把三种情景与经销商状态绑定：
+
+<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin:24px 0;">
+<table style="width:100%;min-width:720px;border-collapse:collapse;font-size:15px;line-height:1.55;">
+<thead><tr><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">情景</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">经销商与终端假设</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">正常化归母利润</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">标准化FCF</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">加回超额现金</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">合理价值</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">保守</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">库存重新上升、折扣加深、返利加码、补货放缓</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">19亿元</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">22亿元</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">55亿元</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">8.3—9.4港元/股</td></tr>
+<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">基准</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">库存健康、真实成交价稳定、持续补单、同店基本平稳</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">26亿元</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">25亿元</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">75亿元</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">14.4—16.4港元/股</td></tr>
+<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">乐观</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">同店销量增长、产品升级兑现、渠道扩张不稀释单店盈利</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">32亿元</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">28亿元</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">100亿元</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">20.4—28.4港元/股</td></tr>
+</tbody></table></div>
+
+这套估值最关键的不是倍数，而是利润中枢的判断。
+
+如果经销商没有赚钱，2025年29.12亿元利润很难长期维持；如果经销商库存健康、真实成交价稳定并持续补单，那么26亿元正常化利润反而可能偏保守。
+
+按基准75亿元超额现金扣除后，当前核心经营资产隐含价值约198.8亿元，相当于约7.6倍基准正常化利润，或8.0倍基准标准化自由现金流。
+
+市场已经计入了明显的利润回落预期。
+
+但低估能否兑现，取决于经销商经营质量，而不是再来一次厂家发货高增长。
+
+---
+
+## 十、最强反方：2024才是异常年份，2025可能是新盈利中枢
+
+![哪些情况会让当前判断失效](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/yadea-dealer-recovery-2025/20260801-risk-card.webp-b5dd24d2b9)
+
+对这篇文章最有力的反驳是：
+
+> 2024年旧国标车型、需求疲弱和渠道去库存叠加，本来就是异常低谷；2025年新国标提高合规门槛、小品牌退出、以旧换新释放需求，雅迪凭借规模、品牌、供应链和网络率先恢复。经销商之所以愿意补货，是因为终端确实卖得动。2025年不是透支，而是行业集中度提升后的新中枢。
+
+这个反方完全可能成立。
+
+支持它的证据包括：
+
+- 2025年平均出厂收入提高；
+- 整车毛利率明显改善；
+- 核心EBIT利润率提升；
+- ROE恢复并非靠银行杠杆；
+- 雅迪拥有全国最深的触达和售后网络；
+- 2025年销量和现金流同步强劲恢复。
+
+如果2026年政策刺激减弱后，雅迪仍然能做到以下几点，反方就会越来越强：
+
+- 经销商库存维持在合理水平；
+- 主力车型真实成交价稳定；
+- 新品首批铺货后持续补单；
+- 返利与渠道支持增速不超过收入；
+- 同店销量不因门店扩张而明显下降；
+- 标准化自由现金流维持22亿—28亿元以上。
+
+我不会为了坚持谨慎而否认雅迪可能进入新中枢。
+
+但“经销商愿意拿钱持续补货”，必须比“总部发货增长”更有说服力。
+
+---
+
+## 十一、什么证据会证伪我的判断
+
+我的当前判断是：
+
+> **雅迪2025年的经营修复是真实的，但渠道补库放大了反弹。雅迪的规模、供应链和售后网络构成真实护城河，可是经销商盈利和单位库存回报率尚未被公开证据证明。当前估值具有吸引力，前提是渠道在2026年没有重新积压。**
+
+以下证据会增强我的判断：
+1. 经销商库存天数上升到3个月以上；
+2. 同店销量持续下降，网点数量继续增长；
+3. 返利和渠道支持连续快于收入增长；
+4. 主力车型真实成交价明显下滑，促销深度扩大；
+5. 合同负债持续偏弱，经销商预付款意愿下降；
+6. 标准化自由现金流连续两年低于18亿元；
+7. 2025年高销量之后，2026年出现明显补货回落。
+
+以下证据会削弱或证伪我的谨慎判断：
+
+1. 终端库存保持低位且新品持续补单；
+2. 同配置车型成交价稳定，高端产品占比提升；
+3. 同店销量增长，新增门店没有稀释成熟门店；
+4. 经销商访谈显示单车综合毛利、库存周转和售后利润改善；
+5. 政策影响减弱后，毛利率仍维持16%以上；
+6. 标准化自由现金流稳定在25亿元以上。
+
+最重要的现场调研问题不是“雅迪好卖吗”，而是：
+
+- 现在店里有多少辆库存？
+- 最老的一辆车放了多久？
+- 畅销款多久补一次？
+- 一辆车扣除优惠后真正赚多少？
+- 厂家返利占利润多少？
+- 旧国标车型怎么处理？
+- 同一商圈里，雅迪、爱玛、九号谁更容易成交？
+- 如果厂家不补贴装修，还愿不愿意继续开店？
+
+这些答案，才会把财务报表变成真实生意。
+
+---
+
+![雅迪2025年经营修复的结论卡](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/yadea-dealer-recovery-2025/20260801-conclusion-card.webp-0db8f1932c)
+
+## 结语：雅迪反弹的真相，不在工厂里，在经销商下一张订单里
+
+雅迪已经证明，自己能把一辆低单价、成熟、竞争激烈的交通工具，做成一套高效率的规模系统。
+
+2025年也证明，这套系统在政策换新、产品升级和渠道恢复时，利润弹性非常强。
+
+但对于普通股东，最重要的不是雅迪能不能把车生产出来，也不是能不能把车发给经销商。
+
+真正重要的是，经销商能不能在不依赖大幅折扣的情况下卖掉，卖掉以后还能赚钱，赚到钱以后还愿意拿自己的钱继续补货。
+
+雅迪依靠规模和渠道效率，关键是库存能否持续快速周转；爱玛依靠产品差异化，关键是新品能否持续提高消费者成交率；九号依靠高价值产品，关键是单店利润是否足够覆盖更高的渠道投入。
+
+这三条路都可能成立。
+
+但任何渠道护城河，最后都要落到同一个地方：
+
+**经销商不是被说服继续进货，而是因为赚钱主动继续进货。**
+
+所以，看雅迪，不要只看它一年卖给经销商多少辆车。
+
+要看经销商下一张订单，是为了补畅销款，还是为了完成任务。
+
+这两种订单，在年报里都叫收入。
+
+在估值里，却完全不是一回事。
+
+---
+
+## 数据口径与来源清单
+
+### 雅迪控股
+1. 雅迪控股2022—2025年度报告：收入、归母净利润、毛利率、销量、产品收入、现金流、资本开支、合同负债、销售返利、贸易及票据应付款、资金资产、股本及少数股东数据。
+2. 雅迪控股2021年度报告及渠道披露：经销商数量、销售网点数量和销量。
+3. 雅迪控股研究底稿：收入确认、渠道支持资金、2024去库存判断、DupontMaster三因素与五因素、标准化自由现金流和估值模型。
+4. 估值基准：2026年7月24日约10.18港元；汇率与股本沿用已核验模型。不是实时价格。
+
+### 爱玛科技
+5. 爱玛科技2025年度报告：经销收入242.55亿元、经销毛利率18.27%、销售返利6.20亿元、预收货款、合同负债、应收账款及产销库存数据。
+6. 爱玛科技2026年第一季度报告：库存、应收账款、合同负债和经营现金流变化。
+7. 爱玛科技研究任务《经销商经济模型与渠道库存》：已核验事实、研究边界与门店调研指标。
+
+### 九号公司
+8. 九号公司2025年度报告：电动两轮车收入118.59亿元、销量409.0万辆、披露毛利率23.76%、建店补贴1.94亿元、调整毛利率25.76%、公司端库存变化。
+9. 九号公司既有研究底稿：产品溢价、智能化、渠道扩张和门店服务模型。
+
+### 研究边界
+10. 三家公司均未充分披露全国经销商平均库存、单店销量、单车综合毛利、闭店率和单位库存回报率。文中关于经销商生存状态的内容，均明确区分为事实、推论与个人判断，不把缺失数据写成确定事实。
+
+
+> **风险提示：**本文仅基于公开资料与已核验研究证据进行商业分析，不构成任何投资建议。市场、政策、渠道库存、终端折扣与公司经营均可能发生变化，请独立判断。
