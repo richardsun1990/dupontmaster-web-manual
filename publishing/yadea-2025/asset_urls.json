@@ -1,10 +1,10 @@
 {
-  "cover.webp": "http://127.0.0.1:8765/cover.webp",
-  "chart-profitability.webp": "http://127.0.0.1:8765/chart-profitability.webp",
-  "chart-cashflow.webp": "http://127.0.0.1:8765/chart-cashflow.webp",
-  "chart-assets.webp": "http://127.0.0.1:8765/chart-assets.webp",
-  "chart-peer-roe.webp": "http://127.0.0.1:8765/chart-peer-roe.webp",
-  "evidence-card.webp": "http://127.0.0.1:8765/evidence-card.webp",
-  "conclusion-card.webp": "http://127.0.0.1:8765/conclusion-card.webp",
-  "risk-card.webp": "http://127.0.0.1:8765/risk-card.webp"
+  "cover.webp": "https://at.adobe.com/8D8IIVaWjsEDpplB",
+  "evidence-card.webp": "https://at.adobe.com/6IeiNXyVXVgCCTte",
+  "chart-profitability.webp": "https://at.adobe.com/eJFxWFYcsx2k14j8",
+  "chart-cashflow.webp": "https://at.adobe.com/ReGenf0ZNbIF2O4M",
+  "chart-assets.webp": "https://at.adobe.com/NFTkg1rYBkycwXG9",
+  "chart-peer-roe.webp": "https://at.adobe.com/Np5WDRB4rMqHESSu",
+  "conclusion-card.webp": "https://at.adobe.com/RHTOFPwVSB8CtXnv",
+  "risk-card.webp": "https://at.adobe.com/gOBGKCCox2cZu6BQ"
 }
