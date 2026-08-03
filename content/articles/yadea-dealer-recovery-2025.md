@@ -324,18 +324,15 @@ source: "雅迪控股、爱玛科技、九号公司历年年报及已核验研�
 
 ### 三家公司渠道模型对比
 
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin:24px 0;">
-<table style="width:100%;min-width:720px;border-collapse:collapse;font-size:15px;line-height:1.55;">
-<thead><tr><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">维度</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">雅迪</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">爱玛</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">九号</th></tr></thead>
-<tbody>
-<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">核心增长逻辑</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">规模、网络密度、供应链效率</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">设计差异化、区域制造、传统渠道深化</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">智能化、高价格带、产品溢价</td></tr>
-<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">经销商主要价值</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">渠道覆盖、快速补货与售后网络</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">产品差异化提高终端成交率</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">高客单、高单车利润与体验式成交</td></tr>
-<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">生存关键</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">库存周转与补货效率</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">新品动销、成交率与真实成交价</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">单店产出与产品热度</td></tr>
-<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">公开正面信号</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">2025销量、毛利率和现金流强劲恢复</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">经销收入增长、经销毛利率提升</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">两轮车收入与销量高速增长、毛利率较高</td></tr>
-<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">公开风险信号</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">网点增速快于销量，合同负债下降</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">预收下降、应收增速较快、2026Q1现金承压</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">建店补贴、公司端库存大增、渠道快速扩张</td></tr>
-<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">当前能否证明经销商更赚钱</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">不能</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">不能</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">不能</td></tr>
-<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">最值得验证</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">同店销量、库存天数、补单率</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">设计溢价、折扣、库存周转</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">单店销量、补贴退出后盈利、售后成本</td></tr>
-</tbody></table></div>
+| 维度 | 雅迪 | 爱玛 | 九号 |
+|---|---|---|---|
+| 核心增长逻辑 | 规模、网络密度、供应链效率 | 设计差异化、区域制造、传统渠道深化 | 智能化、高价格带、产品溢价 |
+| 经销商主要价值 | 渠道覆盖、快速补货与售后网络 | 产品差异化提高终端成交率 | 高客单、高单车利润与体验式成交 |
+| 生存关键 | 库存周转与补货效率 | 新品动销、成交率与真实成交价 | 单店产出与产品热度 |
+| 公开正面信号 | 2025销量、毛利率和现金流强劲恢复 | 经销收入增长、经销毛利率提升 | 两轮车收入与销量高速增长、毛利率较高 |
+| 公开风险信号 | 网点增速快于销量，合同负债下降 | 预收下降、应收增速较快、2026Q1现金承压 | 建店补贴、公司端库存大增、渠道快速扩张 |
+| 当前能否证明经销商更赚钱 | 不能 | 不能 | 不能 |
+| 最值得验证 | 同店销量、库存天数、补单率 | 设计溢价、折扣、库存周转 | 单店销量、补贴退出后盈利、售后成本 |
 
 这张表最重要的结论，不是谁绝对更好。
 
@@ -353,15 +350,12 @@ source: "雅迪控股、爱玛科技、九号公司历年年报及已核验研�
 
 雅迪2022—2025年的三因素杜邦拆解如下：
 
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin:24px 0;">
-<table style="width:100%;min-width:720px;border-collapse:collapse;font-size:15px;line-height:1.55;">
-<thead><tr><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">年份</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">销售净利率</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">总资产周转率</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">权益乘数</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">平均ROE</th></tr></thead>
-<tbody>
-<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">2022</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">6.96%</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">1.400次</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">3.976倍</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">38.75%</td></tr>
-<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">2023</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">7.59%</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">1.374次</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">3.364倍</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">35.10%</td></tr>
-<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">2024</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">4.51%</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">1.123次</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">2.930倍</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">14.83%</td></tr>
-<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">2025</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">7.87%</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">1.355次</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">2.842倍</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">30.30%</td></tr>
-</tbody></table></div>
+| 年份 | 销售净利率 | 总资产周转率 | 权益乘数 | 平均ROE |
+|---|---|---|---|---|
+| 2022 | 6.96% | 1.400次 | 3.976倍 | 38.75% |
+| 2023 | 7.59% | 1.374次 | 3.364倍 | 35.10% |
+| 2024 | 4.51% | 1.123次 | 2.930倍 | 14.83% |
+| 2025 | 7.87% | 1.355次 | 2.842倍 | 30.30% |
 
 2025年ROE恢复，主要来自净利率和资产周转率改善，权益乘数反而下降。五因素拆解中，EBIT利润率从5.90%升到9.83%，是最主要的推动力。
 
@@ -382,14 +376,11 @@ source: "雅迪控股、爱玛科技、九号公司历年年报及已核验研�
 
 我的正常化ROE仍采用约15%—30%的三情景，基准约22%：
 
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin:24px 0;">
-<table style="width:100%;min-width:720px;border-collapse:collapse;font-size:15px;line-height:1.55;">
-<thead><tr><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">情景</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">渠道状态</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">净利率</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">总资产周转率</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">权益乘数</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">推导ROE</th></tr></thead>
-<tbody>
-<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">保守</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">库存偏高、折扣扩大、补货减弱</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">5.5%</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">1.15次</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">2.4倍</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">15.2%</td></tr>
-<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">基准</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">库存正常、补单稳定、价格平稳</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">6.5%</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">1.25次</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">2.7倍</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">21.9%</td></tr>
-<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">乐观</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">同店增长、产品升级、渠道扩张有效</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">7.5%</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">1.35次</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">3.0倍</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">30.4%</td></tr>
-</tbody></table></div>
+| 情景 | 渠道状态 | 净利率 | 总资产周转率 | 权益乘数 | 推导ROE |
+|---|---|---|---|---|---|
+| 保守 | 库存偏高、折扣扩大、补货减弱 | 5.5% | 1.15次 | 2.4倍 | 15.2% |
+| 基准 | 库存正常、补单稳定、价格平稳 | 6.5% | 1.25次 | 2.7倍 | 21.9% |
+| 乐观 | 同店增长、产品升级、渠道扩张有效 | 7.5% | 1.35次 | 3.0倍 | 30.4% |
 
 30%可以出现，但要成为长期中枢，必须建立在经销商持续健康之上。
 
@@ -409,14 +400,11 @@ source: "雅迪控股、爱玛科技、九号公司历年年报及已核验研�
 
 我没有改变原有估值框架，但把三种情景与经销商状态绑定：
 
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin:24px 0;">
-<table style="width:100%;min-width:720px;border-collapse:collapse;font-size:15px;line-height:1.55;">
-<thead><tr><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">情景</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">经销商与终端假设</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">正常化归母利润</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">标准化FCF</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">加回超额现金</th><th style="padding:10px 12px;border:1px solid #e3e7ef;background:#f5f5ff;text-align:left;white-space:nowrap;">合理价值</th></tr></thead>
-<tbody>
-<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">保守</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">库存重新上升、折扣加深、返利加码、补货放缓</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">19亿元</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">22亿元</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">55亿元</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">8.3—9.4港元/股</td></tr>
-<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">基准</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">库存健康、真实成交价稳定、持续补单、同店基本平稳</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">26亿元</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">25亿元</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">75亿元</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">14.4—16.4港元/股</td></tr>
-<tr><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">乐观</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">同店销量增长、产品升级兑现、渠道扩张不稀释单店盈利</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">32亿元</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">28亿元</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">100亿元</td><td style="padding:10px 12px;border:1px solid #e3e7ef;vertical-align:top;">20.4—28.4港元/股</td></tr>
-</tbody></table></div>
+| 情景 | 经销商与终端假设 | 正常化归母利润 | 标准化FCF | 加回超额现金 | 合理价值 |
+|---|---|---|---|---|---|
+| 保守 | 库存重新上升、折扣加深、返利加码、补货放缓 | 19亿元 | 22亿元 | 55亿元 | 8.3—9.4港元/股 |
+| 基准 | 库存健康、真实成交价稳定、持续补单、同店基本平稳 | 26亿元 | 25亿元 | 75亿元 | 14.4—16.4港元/股 |
+| 乐观 | 同店销量增长、产品升级兑现、渠道扩张不稀释单店盈利 | 32亿元 | 28亿元 | 100亿元 | 20.4—28.4港元/股 |
 
 这套估值最关键的不是倍数，而是利润中枢的判断。
 
