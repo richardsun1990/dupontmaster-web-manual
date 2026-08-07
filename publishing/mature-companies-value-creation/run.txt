@@ -1,4 +1,0 @@
-publish mature-companies-value-creation
-triggered_at=2026-08-07T23:11:00+08:00
-mode=temporary-local-source-to-aliyun-oss
-expected_assets=1

@@ -1,8 +1,16 @@
+---
+title: "增长停下来以后，价值还会继续吗？"
+date: "2026-08-07"
+tag: "投资干货"
+description: "从格力、茅台、腾讯、苹果与可口可乐出发，分析成熟企业如何依靠现金流、每股增长、资本配置和估值继续创造股东价值。"
+slug: "mature-companies-value-creation"
+source: "公司年报、公告、官方业绩资料、SEC文件及 DupontMaster 整理。"
+---
 # 增长停下来以后，价值还会继续吗？
 
 ## 从可口可乐、茅台、苹果、腾讯到格力，重新理解成熟企业
 
-![增长停下来以后，价值还会继续吗？]({{image:cover.webp}})
+![增长停下来以后，价值还会继续吗？](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/mature-companies-value-creation/20260807-cover.webp-b2389df418)
 
 投资者天然喜欢年轻的公司。
 
