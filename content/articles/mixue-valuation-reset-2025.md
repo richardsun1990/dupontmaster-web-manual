@@ -12,6 +12,9 @@ source: "蜜雪集团2025年度报告、2025年度业绩公告、2026年年度�
 
 到了2026年7月下旬，股价只剩下212.6港元，差不多跌掉了一半。
 
+![蜜雪集团年内股价走势](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/mixue-valuation-reset-2025/20260811-stock-ytd.webp-ee4c80dc85)
+
+
 但公司业绩并没有腰斩。
 
 2025年，蜜雪收入335.6亿元，同比增长35.2%；净利润59.3亿元，同比增长33.1%。从利润表看，这仍然是一家增长很快、现金很多、负债很低的消费公司。
@@ -34,9 +37,8 @@ source: "蜜雪集团2025年度报告、2025年度业绩公告、2026年年度�
 
 **利润没有腰斩，腰斩的是市场对旧增长模式的信心。**
 
-![蜜雪2025年核心财务与估值矛盾](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/mixue-valuation-reset-2025/20260811-cover.webp-2660109902)
+![蜜雪集团2025年核心财务与估值看点](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/mixue-valuation-reset-2025/20260811-cover.webp-efd848219b)
 
-![蜜雪营业收入与归母净利润趋势](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/mixue-valuation-reset-2025/20260811-revenue_profit.webp-62c237faa7)
 
 ## 一、先别把蜜雪看成一家奶茶店公司
 
@@ -53,6 +55,9 @@ source: "蜜雪集团2025年度报告、2025年度业绩公告、2026年年度�
 2025年，蜜雪商品及设备销售收入达到327.66亿元，占总收入的97.6%；加盟及相关服务收入只有7.94亿元。
 
 换句话说，蜜雪表面上卖的是四元柠檬水，真正的生意却是一套覆盖采购、生产、仓储、物流和设备的供应链系统。
+
+![蜜雪集团2025年利润分配结构](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/mixue-valuation-reset-2025/20260811-profit-structure.webp-f81c6ba679)
+
 
 这套模式非常好。
 
@@ -193,13 +198,12 @@ source: "蜜雪集团2025年度报告、2025年度业绩公告、2026年年度�
 
 当市场开始怀疑增长天花板后，投资者会用这些数据判断：这种担心到底是过度悲观，还是已经开始出现在报表里。
 
-![蜜雪经营现金流与自由现金流趋势](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/mixue-valuation-reset-2025/20260811-cashflow.webp-06a7d1b5f7)
-
-![蜜雪库存与原材料变化](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/mixue-valuation-reset-2025/20260811-inventory.webp-790ffd8478)
-
 ## 五、账上接近200亿元，为什么没有带来安全感？
 
 截至2025年末，蜜雪现金及银行结余约110.55亿元，金融资产约89.35亿元，合计接近200亿元人民币。
+
+![蜜雪集团2025年资产结构](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/mixue-valuation-reset-2025/20260811-asset-structure.webp-009a90b49f)
+
 
 公司2025年净利润约59.27亿元，却没有派发年度股息。
 
@@ -225,8 +229,6 @@ source: "蜜雪集团2025年度报告、2025年度业绩公告、2026年年度�
 市场同时拿走了成长溢价和现金回报溢价。
 
 这也是为什么股价跌幅，会明显大于公司内在价值可能发生的变化。
-
-![蜜雪2025年资产结构](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/mixue-valuation-reset-2025/20260811-asset_structure.webp-bf418f1b78)
 
 ## 六、创始团队为什么选择不分钱？
 
@@ -285,6 +287,9 @@ source: "蜜雪集团2025年度报告、2025年度业绩公告、2026年年度�
 真正需要看的只有一个指标：
 
 **公司留下来的每一元利润，未来能不能创造高于资本成本的回报。**
+
+![蜜雪集团2025年杜邦分析与ROE趋势](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/mixue-valuation-reset-2025/20260811-roe.webp-f0ad1c7b0f)
+
 
 如果未来三到五年，蜜雪能够做到以下几件事，那么今天不分红是合理的：
 
@@ -346,6 +351,9 @@ source: "蜜雪集团2025年度报告、2025年度业绩公告、2026年年度�
 
 **终局增长率被下调；账上现金的价值也被打折。**
 
+![蜜雪集团DCF估值框架](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/mixue-valuation-reset-2025/20260811-dcf.webp-42963c8c1c)
+
+
 ## 九、三种情景：便宜，但还没有便宜到可以闭眼
 
 按照研究模型，蜜雪大致可以分成三种情景。
@@ -369,8 +377,6 @@ source: "蜜雪集团2025年度报告、2025年度业绩公告、2026年年度�
 212港元已经反映了相当强的增长折价和资本配置折价，却还没有低到可以忽略库存、加盟商经济和海外执行。
 
 换句话说，蜜雪现在看起来便宜，但这份便宜需要后续数据确认。
-
-![蜜雪三种估值情景](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/mixue-valuation-reset-2025/20260811-valuation_scenarios.webp-6aa266d8b2)
 
 ## 十、最强反方：也许市场并没有错
 
