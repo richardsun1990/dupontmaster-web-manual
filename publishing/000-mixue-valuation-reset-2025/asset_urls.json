@@ -1,0 +1,8 @@
+{
+  "cover.webp": "http://127.0.0.1:8765/cover.webp",
+  "revenue_profit.webp": "http://127.0.0.1:8765/revenue_profit.webp",
+  "cashflow.webp": "http://127.0.0.1:8765/cashflow.webp",
+  "inventory.webp": "http://127.0.0.1:8765/inventory.webp",
+  "asset_structure.webp": "http://127.0.0.1:8765/asset_structure.webp",
+  "valuation_scenarios.webp": "http://127.0.0.1:8765/valuation_scenarios.webp"
+}
