@@ -1,8 +1,8 @@
 {
-  "cover.webp": "http://127.0.0.1:8765/cover.webp?v=2",
-  "revenue_profit.webp": "http://127.0.0.1:8765/revenue_profit.webp?v=2",
-  "cashflow.webp": "http://127.0.0.1:8765/cashflow.webp?v=2",
-  "inventory.webp": "http://127.0.0.1:8765/inventory.webp?v=2",
-  "asset_structure.webp": "http://127.0.0.1:8765/asset_structure.webp?v=2",
-  "valuation_scenarios.webp": "http://127.0.0.1:8765/valuation_scenarios.webp?v=2"
+  "cover.webp": "http://127.0.0.1:8765/cover.webp?v=3",
+  "revenue_profit.webp": "http://127.0.0.1:8765/revenue_profit.webp?v=3",
+  "cashflow.webp": "http://127.0.0.1:8765/cashflow.webp?v=3",
+  "inventory.webp": "http://127.0.0.1:8765/inventory.webp?v=3",
+  "asset_structure.webp": "http://127.0.0.1:8765/asset_structure.webp?v=3",
+  "valuation_scenarios.webp": "http://127.0.0.1:8765/valuation_scenarios.webp?v=3"
 }
