@@ -1,2 +1,4 @@
 .vercel
 .oss.env
+__pycache__/
+*.pyc
