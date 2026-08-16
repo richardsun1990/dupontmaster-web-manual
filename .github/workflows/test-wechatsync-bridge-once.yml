@@ -1,0 +1,74 @@
+name: Test Wechatsync Bridge Once
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/test-wechatsync-bridge-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build representative Wechatsync ZIP
+        shell: bash
+        run: |
+          mkdir -p /tmp/wechatsync-test/images
+          cat > /tmp/wechatsync-test/article.md <<'EOF'
+          # 发布桥自动化自检文章
+
+          这是用于验证文章同步助手官网发布桥的临时正文，不会提交到正式网站。
+
+          ![第一张测试图](https://www.dupontmaster.com/icon-512.png)
+
+          ## 二级标题
+
+          正文中的第二张图片也必须被保留。
+
+          ![第二张测试图](https://www.dupontmaster.com/logo.svg)
+          EOF
+          cd /tmp/wechatsync-test
+          zip -qr /tmp/wechatsync-test.zip article.md images
+
+      - name: Run bridge without Git push
+        run: python scripts/publish_wechatsync_zip.py /tmp/wechatsync-test.zip --no-git
+
+      - name: Verify two body images survived
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import re
+          from pathlib import Path
+
+          data = json.loads(Path('blog/articles.json').read_text(encoding='utf-8'))
+          item = next(x for x in data if x.get('title') == '发布桥自动化自检文章')
+          html = Path('blog/articles') / f"{item['slug']}.html"
+          text = html.read_text(encoding='utf-8')
+          count = len(re.findall(r'<img\b', text, re.I))
+          if count < 2:
+              raise SystemExit(f'body image verification failed: {count}')
+          if '发布桥自动化自检文章' not in text or '二级标题' not in text:
+              raise SystemExit('content verification failed')
+          print(f'bridge test passed, images={count}')
+          PY
+
+      - name: Clean test output and remove workflow
+        shell: bash
+        run: |
+          git reset --hard HEAD
+          git clean -fd
+          rm -f .github/workflows/test-wechatsync-bridge-once.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "ci: remove one-time Wechatsync bridge test" || exit 0
+          git push
