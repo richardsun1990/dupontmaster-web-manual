@@ -242,7 +242,7 @@ def main() -> None:
         output_md = CONTENT_DIR / f"{slug}.md"
         output_md.write_text(final_md, encoding="utf-8")
 
-        published = run(sys.executable, "scripts/publish_article.py", str(output_md.relative_to(ROOT)))
+        published = run(sys.executable, "scripts/render_article.py", str(output_md.relative_to(ROOT)))
         if published.stdout:
             print(published.stdout.strip())
 

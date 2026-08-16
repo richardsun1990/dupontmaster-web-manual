@@ -38,9 +38,15 @@
   </url>
   <url>
     <loc>https://www.dupontmaster.com/blog/topics/capital-allocation.html</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.dupontmaster.com/blog/articles/tencent-ai-capital-allocation-2026.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.dupontmaster.com/blog/articles/laopu-gold-10b-store-cycle-test.html</loc>
