@@ -1,6 +1,14 @@
+---
+title: "老铺黄金的10亿单店：真正的考试，不在金价上涨时"
+date: "2026-08-16"
+tag: "企业分析"
+description: "老铺黄金单店收入已进入5亿元级别，徐高明目标10亿元。真正需要验证的，不是黄金上涨期的高店效，而是金价下行、扩店和创始人逐步退出后，品牌溢价、库存周转和现金流能否继续成立。"
+slug: "laopu-gold-10b-store-cycle-test"
+source: "老铺黄金招股书、2025年年度业绩公告与年报、Hermès 2025 Key Figures 与 Strategy、世界黄金协会及公开市场数据；DupontMaster 整理。"
+---
 # 老铺黄金的10亿单店：真正的考试，不在金价上涨时
 
-![老铺黄金品牌主题视觉示意图]({{image:cover.webp}})
+![老铺黄金品牌主题视觉示意图](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/laopu-gold-10b-store-cycle-test/20260816-cover.webp-b97c196873)
 
 *品牌主题视觉示意图，非门店实拍。*
 

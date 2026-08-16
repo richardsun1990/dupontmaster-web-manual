@@ -1,4 +1,0 @@
-publish laopu-gold-10b-store-cycle-test
-triggered_at=2026-08-16T09:19:00+08:00
-mode=github-temporary-source-to-aliyun-oss
-expected_assets=1
