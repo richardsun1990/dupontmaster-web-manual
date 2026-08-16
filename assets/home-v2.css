@@ -236,7 +236,7 @@ button, input { font: inherit; }
 }
 .portfolio-float-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 12px; }
 .portfolio-float-head strong { font-size: 15px; }
-.portfolio-float-head span { color: var(--green); font-size: 12px; font-weight: 700; }
+.portfolio-float-head span { color: var(--blue); font-size: 12px; font-weight: 700; }
 .mini-table { display: grid; gap: 0; }
 .mini-row {
   display: grid;
@@ -249,8 +249,8 @@ button, input { font: inherit; }
 }
 .mini-row:first-child { border-top: 0; }
 .mini-row span:nth-child(2) { color: var(--text-3); text-align: right; }
-.mini-row strong { text-align: right; color: var(--green); }
-.mini-row strong.neg { color: var(--red); }
+.mini-row strong { text-align: right; color: var(--red); }
+.mini-row strong.neg { color: var(--green); }
 
 .workflow { padding: 34px 0 62px; }
 .workflow-head { text-align: center; margin-bottom: 32px; }
@@ -362,8 +362,8 @@ button, input { font: inherit; }
 .bars { display: flex; align-items: end; gap: 11px; height: 190px; padding: 24px 12px 0; border-top: 1px solid var(--border); background: linear-gradient(to top, rgba(223,230,239,.55) 1px, transparent 1px); background-size: 100% 47px; }
 .bar-item { flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 7px; min-width: 0; }
 .bar-val { color: var(--text-2); font-size: 9px; font-weight: 700; }
-.bar-shape { width: min(44px, 72%); min-height: 3px; border-radius: 4px 4px 0 0; background: var(--green); }
-.bar-shape.down { background: var(--red); }
+.bar-shape { width: min(44px, 72%); min-height: 3px; border-radius: 4px 4px 0 0; background: var(--red); }
+.bar-shape.down { background: var(--green); }
 .bar-label { min-height: 31px; color: var(--text-3); font-size: 9px; text-align: center; }
 .performance-note { margin: 12px 0 0; color: var(--text-3); font-size: 11px; }
 
