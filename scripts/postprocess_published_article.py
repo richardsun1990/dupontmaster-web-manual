@@ -15,6 +15,23 @@ slug = result["slug"]
 md_path = ROOT / "content" / "articles" / f"{slug}.md"
 html_path = ROOT / "blog" / "articles" / f"{slug}.html"
 
+# 所有新发布文章都挂上统一正文视觉、分享与 GA 阅读统计。
+if html_path.exists():
+    html_text = html_path.read_text(encoding="utf-8")
+    if '/assets/article-v2.css' not in html_text:
+        html_text = html_text.replace(
+            '</head>',
+            '  <link rel="stylesheet" href="/assets/article-v2.css">\n</head>',
+            1,
+        )
+    if '/assets/article-v2.js' not in html_text:
+        html_text = html_text.replace(
+            '</body>',
+            '  <script src="/assets/article-v2.js"></script>\n</body>',
+            1,
+        )
+    html_path.write_text(html_text, encoding="utf-8")
+
 # 如果正文已经包含统一的“投研说明”，则删除旧模板在正文末尾重复追加的资料来源与 CTA。
 if md_path.exists() and html_path.exists():
     md_text = md_path.read_text(encoding="utf-8")
