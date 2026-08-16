@@ -37,6 +37,10 @@ CONTENT_DIR = ROOT / "content" / "articles"
 ARTICLE_DIR = ROOT / "blog" / "articles"
 ARTICLES_JSON = ROOT / "blog" / "articles.json"
 RESULT_JSON = ROOT / "publishing-result.json"
+RESERVED_SLUG_BY_TITLE = {
+    "528亿之后，马化腾迎来腾讯最大的一次资本配置考试": "tencent-ai-capital-allocation-2026",
+    "老铺黄金的10亿单店：真正的考试，不在金价上涨时": "laopu-gold-10b-store-cycle-test",
+}
 IMAGE_RE = re.compile(r"!\[[^\]]*\]\(([^)]+)\)")
 
 
@@ -239,7 +243,7 @@ def main() -> None:
         md_path = find_article_md(folder)
         raw = md_path.read_text(encoding="utf-8")
         title = extract_title(raw)
-        slug = args.slug or existing_slug_for_title(title) or stable_slug(title)
+        slug = args.slug or existing_slug_for_title(title) or RESERVED_SLUG_BY_TITLE.get(title.strip()) or stable_slug(title)
         input_image_count = len(IMAGE_RE.findall(raw))
 
         rewritten = rewrite_images(raw, md_path, slug)
