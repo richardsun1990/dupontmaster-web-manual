@@ -33,6 +33,112 @@
 
   window.DMAnalytics = { track };
 
+  const getMeta = (selector) => document.querySelector(selector)?.content?.trim() || '';
+  const canonicalUrl = document.querySelector('link[rel="canonical"]')?.href || `${location.origin}${location.pathname}`;
+  const siteUrl = 'https://www.dupontmaster.com';
+  const logoUrl = `${siteUrl}/icon-512.png`;
+
+  const addMeta = (attribute, key, value) => {
+    if (!value || document.querySelector(`meta[${attribute}="${key}"]`)) return;
+    const meta = document.createElement('meta');
+    meta.setAttribute(attribute, key);
+    meta.content = value;
+    document.head.appendChild(meta);
+  };
+
+  const addStructuredData = (graph) => {
+    if (!graph?.length || document.getElementById('dm-structured-data-v1')) return;
+    const script = document.createElement('script');
+    script.id = 'dm-structured-data-v1';
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@graph': graph,
+    });
+    document.head.appendChild(script);
+  };
+
+  if (pageType === 'home') {
+    addStructuredData([
+      {
+        '@type': 'WebSite',
+        '@id': `${siteUrl}/#website`,
+        url: `${siteUrl}/`,
+        name: 'DupontMaster 杜邦大师',
+        description: getMeta('meta[name="description"]') || '企业研究、自定义图表、持仓管理与长期表现跟踪工作台',
+        inLanguage: 'zh-CN',
+      },
+      {
+        '@type': 'SoftwareApplication',
+        '@id': `${siteUrl}/#app`,
+        name: 'DupontMaster 杜邦大师',
+        applicationCategory: 'FinanceApplication',
+        operatingSystem: 'Web',
+        url: 'https://app.dupontmaster.com/',
+        description: getMeta('meta[name="description"]') || '企业研究、自定义图表、持仓管理与长期表现跟踪工作台',
+        offers: [
+          { '@type': 'Offer', price: '0', priceCurrency: 'CNY', name: '免费版' },
+          { '@type': 'Offer', price: '199', priceCurrency: 'CNY', name: 'Pro 年度会员' },
+        ],
+      },
+    ]);
+  }
+
+  if (pageType === 'blog') {
+    addStructuredData([
+      {
+        '@type': 'Blog',
+        '@id': `${siteUrl}/blog/#blog`,
+        url: `${siteUrl}/blog/`,
+        name: 'DupontMaster 研究与文章',
+        description: getMeta('meta[name="description"]') || '从财报、资本回报、商业模式、估值与风险出发，持续研究上市公司与长期投资问题。',
+        inLanguage: 'zh-CN',
+        publisher: {
+          '@type': 'Organization',
+          name: 'DupontMaster 杜邦大师',
+          url: `${siteUrl}/`,
+          logo: { '@type': 'ImageObject', url: logoUrl },
+        },
+      },
+    ]);
+  }
+
+  if (pageType === 'article') {
+    const title = cleanText(document.querySelector('.title, h1')?.textContent || document.title.replace(/\s*[-|｜]\s*DupontMaster.*$/i, ''));
+    const description = document.querySelector('.desc')?.textContent?.trim() || getMeta('meta[name="description"]');
+    const image = getMeta('meta[property="og:image"]') || logoUrl;
+    const metaText = document.querySelector('.meta')?.textContent || '';
+    const published = metaText.match(/\d{4}-\d{2}-\d{2}/)?.[0] || '';
+    const section = document.querySelector('.tag')?.textContent?.trim() || '企业研究';
+
+    addMeta('name', 'author', 'DupontMaster 研究院');
+    addMeta('property', 'article:published_time', published);
+    addMeta('property', 'article:section', section);
+
+    addStructuredData([
+      {
+        '@type': 'BlogPosting',
+        '@id': `${canonicalUrl}#article`,
+        mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+        headline: title,
+        description,
+        image: [image],
+        datePublished: published || undefined,
+        dateModified: published || undefined,
+        articleSection: section,
+        inLanguage: 'zh-CN',
+        author: { '@type': 'Organization', name: 'DupontMaster 研究院', url: `${siteUrl}/blog/` },
+        publisher: {
+          '@type': 'Organization',
+          name: 'DupontMaster 杜邦大师',
+          url: `${siteUrl}/`,
+          logo: { '@type': 'ImageObject', url: logoUrl },
+        },
+        isPartOf: { '@type': 'Blog', '@id': `${siteUrl}/blog/#blog` },
+      },
+    ]);
+  }
+
   const classifyAppClick = (anchor) => {
     if (anchor.closest('.hero')) return 'hero_start_analysis';
     if (anchor.closest('#portfolio')) return 'portfolio_cta';
