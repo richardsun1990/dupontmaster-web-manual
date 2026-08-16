@@ -1,0 +1,61 @@
+[
+  {
+    "id": "baijiu",
+    "title": "白酒研究",
+    "description": "从渠道、品牌、资本回报与区域竞争出发，持续研究白酒公司的经营质量。",
+    "keywords": ["白酒", "茅台", "泸州老窖", "今世缘", "洋河", "五粮液", "古井贡酒", "酒企", "经销商库存"],
+    "slugs": [
+      "luzhou-laozhao-revival-2026",
+      "jinshiyuan-yanghe-analysis"
+    ]
+  },
+  {
+    "id": "consumer-brands",
+    "title": "消费品牌与新零售",
+    "description": "研究品牌溢价、门店模型、加盟体系、IP、库存与扩张效率如何共同决定消费公司的长期回报。",
+    "keywords": ["消费", "品牌", "门店", "零售", "加盟", "蜜雪", "古茗", "泡泡玛特", "名创优品", "锅圈", "老铺黄金", "黄金", "IP", "茶饮"],
+    "slugs": [
+      "laopu-gold-10b-store-cycle-test",
+      "mixue-valuation-reset-2025",
+      "mixue-reunderstanding",
+      "mixue-inverse-thinking",
+      "guming-reunderstanding",
+      "guoquan-risk-analysis",
+      "popmart-ip-philosophy"
+    ]
+  },
+  {
+    "id": "two-wheel-mobility",
+    "title": "两轮出行与制造",
+    "description": "从渠道库存、产品周期、产能投入和品牌升级理解电动车与智能出行公司的竞争。",
+    "keywords": ["电动车", "两轮", "出行", "雅迪", "爱玛", "九号", "经销商", "产能", "制造"],
+    "slugs": [
+      "yadea-dealer-recovery-2025",
+      "rethink-aima-technology",
+      "ninebot-origin-story"
+    ]
+  },
+  {
+    "id": "semiconductors-ai",
+    "title": "半导体与 AI",
+    "description": "围绕芯片制造、AI 算力、资本开支、技术周期与国产替代，研究高投入科技公司的回报逻辑。",
+    "keywords": ["半导体", "芯片", "AI", "人工智能", "中芯国际", "寒武纪", "英伟达", "长鑫", "DRAM", "算力", "晶圆", "资本开支"],
+    "slugs": [
+      "zhongxinguoji",
+      "寒武纪-重新认识这家公司",
+      "英伟达-重新认识这家公司"
+    ]
+  },
+  {
+    "id": "capital-allocation",
+    "title": "资本配置与长期价值",
+    "description": "当增长放缓以后，回购、分红、再投资、估值与每股价值如何继续决定股东回报。",
+    "keywords": ["资本配置", "回购", "分红", "股东回报", "自由现金流", "长期价值", "估值", "成熟企业", "便宜", "ROIC", "资本回报"],
+    "slugs": [
+      "mature-companies-value-creation",
+      "value-investing-cheap-principle",
+      "kingsoft-office-analysis",
+      "catl-inverse-thinking"
+    ]
+  }
+]
