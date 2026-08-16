@@ -7,8 +7,8 @@ if (!document.querySelector(`script[src="${analyticsSrc}"]`)) {
 }
 
 // Keep real product screenshots fully visible at every viewport.
-// On wide desktop layouts, align the screenshot column with the copy column
-// instead of vertically centering two columns with very different heights.
+// Desktop hero uses a deliberate layered composition: company research stays
+// as the primary surface and the holdings card overlaps its lower-right area.
 const productMediaStyle = document.createElement('style');
 productMediaStyle.textContent = `
   .browser-frame img,
@@ -27,11 +27,20 @@ productMediaStyle.textContent = `
     }
 
     .hero-media {
-      min-height: 640px;
+      min-height: 540px;
     }
 
     .browser-frame {
       inset: 8px 0 auto 0;
+      z-index: 1;
+    }
+
+    .portfolio-float {
+      top: clamp(280px, 58%, 340px);
+      right: -18px;
+      bottom: auto;
+      width: min(520px, 68%);
+      z-index: 2;
     }
 
     .research-media {
