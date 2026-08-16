@@ -36,8 +36,8 @@ productMediaStyle.textContent = `
     }
 
     .portfolio-float {
-      top: clamp(280px, 58%, 340px);
-      right: -18px;
+      top: clamp(205px, 44%, 260px);
+      right: -12px;
       bottom: auto;
       width: min(520px, 68%);
       z-index: 2;
