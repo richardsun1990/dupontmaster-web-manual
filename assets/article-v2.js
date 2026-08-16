@@ -1,6 +1,14 @@
 (() => {
   document.body.classList.add('article-page-v2');
 
+  const analyticsSrc = '/assets/analytics-v1.js';
+  if (!document.querySelector(`script[src="${analyticsSrc}"]`)) {
+    const analyticsScript = document.createElement('script');
+    analyticsScript.src = analyticsSrc;
+    analyticsScript.async = true;
+    document.head.appendChild(analyticsScript);
+  }
+
   const shareStyleHref = '/assets/article-share-v2.css';
   if (!document.querySelector(`link[href="${shareStyleHref}"]`)) {
     const shareStyle = document.createElement('link');
