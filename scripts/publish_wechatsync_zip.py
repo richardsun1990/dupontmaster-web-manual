@@ -86,6 +86,27 @@ def stable_slug(title: str) -> str:
     return f"{latin}-{digest}".strip("-") if latin else f"article-{digest}"
 
 
+def normalized_title(value: str) -> str:
+    value = value.lower().strip()
+    return re.sub(r"[\s：:，,。！？!?《》“”‘’\"'·—_-]+", "", value)
+
+
+def existing_slug_for_title(title: str) -> str | None:
+    if not ARTICLES_JSON.exists():
+        return None
+    try:
+        data = json.loads(ARTICLES_JSON.read_text(encoding="utf-8"))
+    except Exception:
+        return None
+    target = normalized_title(title)
+    for item in data:
+        existing_title = str(item.get("title", ""))
+        slug = str(item.get("slug", ""))
+        if slug and normalized_title(existing_title) == target:
+            return slug
+    return None
+
+
 def yaml_safe(value: str) -> str:
     # publish_article.py uses a deliberately simple frontmatter parser. Keep each value one line
     # and avoid surrounding quotes so Chinese punctuation is preserved literally.
@@ -218,7 +239,7 @@ def main() -> None:
         md_path = find_article_md(folder)
         raw = md_path.read_text(encoding="utf-8")
         title = extract_title(raw)
-        slug = args.slug or stable_slug(title)
+        slug = args.slug or existing_slug_for_title(title) or stable_slug(title)
         input_image_count = len(IMAGE_RE.findall(raw))
 
         rewritten = rewrite_images(raw, md_path, slug)
