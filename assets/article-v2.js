@@ -22,7 +22,7 @@
         <a class="article-brand" href="/">DupontMaster</a>
         <div class="article-nav-actions">
           <a class="article-nav-home" href="/">首页</a>
-          <a href="/blog/">研究与文章</a>
+          <a class="article-nav-blog" href="/blog/">研究与文章</a>
           <a class="article-primary" href="https://app.dupontmaster.com/">开始分析</a>
         </div>
       </div>`;
