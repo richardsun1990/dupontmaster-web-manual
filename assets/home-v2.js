@@ -6,20 +6,40 @@ if (!document.querySelector(`script[src="${analyticsSrc}"]`)) {
   document.head.appendChild(analyticsScript);
 }
 
-const mobileMediaStyle = document.createElement('style');
-mobileMediaStyle.textContent = `
-  @media (max-width: 760px) {
-    .browser-frame img,
-    .product-shot img {
-      width: 100%;
-      height: auto !important;
-      aspect-ratio: auto !important;
-      object-fit: contain !important;
-      object-position: top left !important;
+// Keep real product screenshots fully visible at every viewport.
+// On wide desktop layouts, align the screenshot column with the copy column
+// instead of vertically centering two columns with very different heights.
+const productMediaStyle = document.createElement('style');
+productMediaStyle.textContent = `
+  .browser-frame img,
+  .product-shot img {
+    width: 100%;
+    height: auto !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+    object-position: top left !important;
+  }
+
+  @media (min-width: 1051px) {
+    .hero-grid,
+    .research-grid {
+      align-items: start;
+    }
+
+    .hero-media {
+      min-height: 640px;
+    }
+
+    .browser-frame {
+      inset: 8px 0 auto 0;
+    }
+
+    .research-media {
+      padding-top: 8px;
     }
   }
 `;
-document.head.appendChild(mobileMediaStyle);
+document.head.appendChild(productMediaStyle);
 
 const menuButton = document.querySelector('[data-menu-button]');
 const mobileMenu = document.querySelector('[data-mobile-menu]');
