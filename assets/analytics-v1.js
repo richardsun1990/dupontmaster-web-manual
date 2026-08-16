@@ -19,7 +19,16 @@
     ? 'blog'
     : location.pathname.startsWith('/blog/articles/') || location.pathname === '/blog/article.html'
       ? 'article'
-      : 'home';
+      : location.pathname.startsWith('/blog/topics/')
+        ? 'topic'
+        : 'home';
+
+  if (pageType === 'article' && !document.querySelector('script[src="/assets/article-related-v1.js"]')) {
+    const relatedScript = document.createElement('script');
+    relatedScript.src = '/assets/article-related-v1.js';
+    relatedScript.async = true;
+    document.head.appendChild(relatedScript);
+  }
 
   const cleanText = (value = '') => String(value).replace(/\s+/g, ' ').trim().slice(0, 120);
   const track = (eventName, params = {}) => {
@@ -147,8 +156,9 @@
       return text.includes('pro') || text.includes('会员') ? 'pricing_pro' : 'pricing_free';
     }
     if (anchor.closest('.cta-box')) return 'article_start_analysis';
-    if (anchor.closest('.site-header, .nav')) return pageType === 'blog' ? 'blog_start_analysis' : 'header_start_analysis';
+    if (anchor.closest('.site-header, .nav, .topic-header')) return pageType === 'blog' ? 'blog_start_analysis' : 'header_start_analysis';
     if (pageType === 'article') return 'article_start_analysis';
+    if (pageType === 'topic') return 'topic_start_analysis';
     return 'start_analysis_click';
   };
 
@@ -178,8 +188,21 @@
       return;
     }
 
+    if (url.pathname.startsWith('/blog/topics/')) {
+      track('topic_open', { topic_path: url.pathname, link_text: cleanText(anchor.textContent) });
+      return;
+    }
+
     if (url.pathname.startsWith('/blog/articles/')) {
-      const title = cleanText(anchor.querySelector('h3')?.textContent || anchor.textContent);
+      const title = cleanText(anchor.querySelector('h3')?.textContent || anchor.querySelector('strong')?.textContent || anchor.textContent);
+      if (anchor.closest('.article-related-v1')) {
+        track('related_article_click', { article_title: title, article_path: url.pathname });
+        return;
+      }
+      if (anchor.closest('.topic-list')) {
+        track('topic_article_click', { article_title: title, article_path: url.pathname });
+        return;
+      }
       if (anchor.closest('.case-list')) {
         track('blog_case_click', { article_title: title, article_path: url.pathname });
         return;
