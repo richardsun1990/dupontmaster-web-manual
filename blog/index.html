@@ -1,469 +1,133 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DuPont Master 博客 - 财务分析专业文章</title>
-    <meta name="description" content="DuPont Master官方博客，提供专业的财报分析、杜邦分析、ROE计算等投资分析文章。">
-    <link rel="canonical" href="https://www.dupontmaster.com/blog/">
-    
-    <style>
-        :root {
-            --primary: #0071e3;
-            --primary-hover: #0077ed;
-            --text: #1d1d1f;
-            --text-secondary: #86868b;
-            --background: #ffffff;
-            --background-alt: #f5f5f7;
-            --card-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            background: var(--background-alt);
-        }
-        
-        /* Header */
-        header {
-            background: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(20px);
-            padding: 14px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            color: white;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 20px;
-        }
-        
-        nav a {
-            color: rgba(255,255,255,0.85);
-            text-decoration: none;
-            margin-left: 28px;
-            font-size: 14px;
-            font-weight: 500;
-        }
-        
-        nav a:hover {
-            color: white;
-        }
-        
-        /* Hero */
-        .hero {
-            background: linear-gradient(135deg, #1e3a5f 0%, #0d1b2a 100%);
-            color: white;
-            padding: 80px 24px;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 52px;
-            font-weight: 700;
-            margin-bottom: 16px;
-            letter-spacing: -0.02em;
-        }
-        
-        .hero p {
-            font-size: 20px;
-            color: rgba(255,255,255,0.75);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        /* Blog Grid */
-        .blog-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 48px 24px 80px;
-        }
-        
-        .section-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 32px;
-        }
-        
-        .section-title {
-            font-size: 28px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        
-        .section-title::before {
-            content: '';
-            width: 5px;
-            height: 28px;
-            background: var(--primary);
-            border-radius: 2px;
-        }
-        
-        .filter-tags {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-        
-        .filter-tag {
-            background: white;
-            border: 1px solid #e0e0e0;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 13px;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        
-        .filter-tag:hover, .filter-tag.active {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-        }
-        
-        /* Article Grid */
-        .article-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 24px;
-        }
-        
-        .article-card {
-            display: block;
-            text-decoration: none;
-            color: inherit;
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            box-shadow: var(--card-shadow);
-        }
-        
-        .article-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(0,0,0,0.12);
-        }
-        
-        .card-image {
-            height: 180px;
-            background: linear-gradient(135deg, #e8e8ed 0%, #d0d0d5 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 48px;
-        }
-        
-        .card-content {
-            padding: 24px;
-        }
-        
-        .card-tag {
-            display: inline-block;
-            background: rgba(0,113,227,0.1);
-            color: var(--primary);
-            padding: 5px 12px;
-            border-radius: 6px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        
-        .card-title {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            line-height: 1.4;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-        
-        .card-excerpt {
-            color: var(--text-secondary);
-            font-size: 14px;
-            line-height: 1.6;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            margin-bottom: 16px;
-        }
-        
-        .card-meta {
-            display: flex;
-            justify-content: space-between;
-            font-size: 13px;
-            color: #999;
-            padding-top: 16px;
-            border-top: 1px solid #f0f0f0;
-        }
-        
-        /* Footer */
-        footer {
-            background: white;
-            padding: 40px 24px;
-            text-align: center;
-            border-top: 1px solid #e0e0e0;
-        }
-        
-        footer p {
-            color: var(--text-secondary);
-            font-size: 14px;
-        }
-        
-        footer a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-        
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 36px;
-            }
-            
-            .article-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .section-header {
-                flex-direction: column;
-                gap: 16px;
-                align-items: flex-start;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DupontMaster 研究与文章｜企业分析、财报与投资思考</title>
+  <meta name="description" content="DupontMaster 杜邦大师研究与文章：从财报、资本回报、商业模式、估值与风险出发，持续研究上市公司与长期投资问题。">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.dupontmaster.com/blog/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="DupontMaster 研究与文章">
+  <meta property="og:description" content="从公开数据和企业基本面出发，把一家公司的关键问题研究清楚。">
+  <meta property="og:url" content="https://www.dupontmaster.com/blog/">
+  <meta property="og:image" content="https://www.dupontmaster.com/icon-512.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+  <link rel="stylesheet" href="/assets/blog-v2.css">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <a href="https://www.dupontmaster.com" class="logo">DuPont Master</a>
-            <nav>
-                <a href="https://www.dupontmaster.com">首页</a>
-                <a href="/blog/">博客</a>
-                <a href="https://app.dupontmaster.com">控制台</a>
-            </nav>
-        </div>
-    </header>
-    
-    <section class="hero">
-        <h1>DuPont Master 博客</h1>
-        <p>专业的财报分析知识，助您做出更明智的投资决策</p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="DupontMaster 杜邦大师首页"><img src="/logo.svg" alt="" width="30" height="30"><span>DupontMaster</span><span>杜邦大师</span></a>
+      <nav class="header-nav" aria-label="博客导航">
+        <a href="/">首页</a>
+        <a href="/blog/" aria-current="page">研究与文章</a>
+        <a href="/#pricing">价格</a>
+      </nav>
+      <a class="header-cta" href="https://app.dupontmaster.com/">开始分析</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="blog-hero">
+      <div class="container blog-hero-grid">
+        <h1>DupontMaster<br>研究与文章</h1>
+        <p>从财报、资本回报、商业模式、估值与风险出发，把一家公司的关键问题研究清楚。这里记录结论，也保留推导过程和可以继续验证的问题。</p>
+      </div>
     </section>
-    
-    <main class="blog-container">
-        <div class="section-header">
-            <h2 class="section-title">全部文章</h2>
-            <div class="filter-tags"><span class="filter-tag active" data-tag="全部">全部</span><span class="filter-tag" data-tag="企业分析">企业分析</span><span class="filter-tag" data-tag="创始故事">创始故事</span><span class="filter-tag" data-tag="行业分析">行业分析</span></div>
+
+    <section class="latest-section">
+      <div class="container">
+        <div class="section-heading"><h2>最新研究</h2><p>筛选分类时，这里会同步显示该分类的最新一篇</p></div>
+        <article class="featured-article" data-featured>
+          <div class="featured-media" data-featured-media></div>
+          <div class="featured-copy">
+            <div class="featured-meta"><span data-featured-tag>企业分析</span><span data-featured-date></span></div>
+            <h3 data-featured-title>正在载入最新研究</h3>
+            <p data-featured-description>从公开数据和企业基本面出发，记录一篇可反复检验的研究。</p>
+            <a class="featured-link" data-featured-link href="#archive">阅读全文</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="archive-section" id="archive">
+      <div class="container">
+        <div class="archive-toolbar">
+          <div class="archive-title"><h2>全部文章</h2><p data-article-count>22 篇</p></div>
+          <div class="filter-tabs" role="group" aria-label="文章分类">
+            <button class="filter-tab active" type="button" data-tag="全部">全部</button>
+            <button class="filter-tab" type="button" data-tag="企业分析">企业分析</button>
+            <button class="filter-tab" type="button" data-tag="投资干货">投资干货</button>
+            <button class="filter-tab" type="button" data-tag="投资思考">投资思考</button>
+            <button class="filter-tab" type="button" data-tag="行业分析">行业分析</button>
+            <button class="filter-tab" type="button" data-tag="创始故事">创始故事</button>
+          </div>
         </div>
-        
-        <div class="article-list" data-md-articles="blog" style="display: flex; flex-direction: column; gap: 16px;">
-                <a href="/blog/articles/laopu-gold-10b-store-cycle-test.html" style="display:block;background:white;border-radius:12px;padding:20px;text-decoration:none;color:inherit;transition:all .2s;">
-                    <div style="display:grid;grid-template-columns:minmax(180px,280px) 1fr;gap:20px;align-items:center;">
-                      <img src="https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/laopu-gold-10b-store-cycle-test/20260816-cover.webp-b97c196873" alt="老铺黄金的10亿单店：真正的考试，不在金价上涨时" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:9px;">
-                      <div>
-                        <span style="display:inline-block;background:rgba(82,74,232,.10);color:#5148dc;padding:4px 10px;border-radius:4px;font-size:12px;margin-bottom:8px;">企业分析</span>
-                        <h3 style="font-size:20px;font-weight:650;margin-bottom:8px;">老铺黄金的10亿单店：真正的考试，不在金价上涨时</h3>
-                        <p style="color:#657086;font-size:14px;margin-bottom:10px;">老铺黄金单店收入已进入5亿元级别，徐高明目标10亿元。真正需要验证的，不是黄金上涨期的高店效，而是金价下行、扩店和创始人逐步退出后，品牌溢价、库存周转和现金流能否继续成立。</p>
-                        <p style="color:#8b94a5;font-size:13px;">2026-08-16</p>
-                      </div>
-                    </div>
-                </a>
 
-                <a href="/blog/articles/mixue-valuation-reset-2025.html" style="display:block;background:white;border-radius:12px;padding:20px;text-decoration:none;color:inherit;transition:all .2s;">
-                    <div style="display:grid;grid-template-columns:minmax(180px,280px) 1fr;gap:20px;align-items:center;">
-                      <img src="https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/mixue-valuation-reset-2025/20260811-cover.webp-efd848219b" alt="蜜雪股价腰斩：利润没崩，市场为什么不愿再给高估值？" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:9px;">
-                      <div>
-                        <span style="display:inline-block;background:rgba(82,74,232,.10);color:#5148dc;padding:4px 10px;border-radius:4px;font-size:12px;margin-bottom:8px;">企业分析</span>
-                        <h3 style="font-size:20px;font-weight:650;margin-bottom:8px;">蜜雪股价腰斩：利润没崩，市场为什么不愿再给高估值？</h3>
-                        <p style="color:#657086;font-size:14px;margin-bottom:10px;">蜜雪2025年收入与利润仍保持高增长，但股价较2025年末一度跌近一半。真正被重新定价的，是国内开店红利、海外复制能力，以及接近200亿元留存资本能否创造更高回报。</p>
-                        <p style="color:#8b94a5;font-size:13px;">2026-08-11</p>
-                      </div>
-                    </div>
-                </a>
+        <div class="article-list" data-md-articles="blog">
+          <a class="article-row" data-tag="企业分析" href="/blog/articles/mixue-valuation-reset-2025.html">
+            <span class="article-thumb"><img src="https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/mixue-valuation-reset-2025/20260811-cover.webp-efd848219b" alt="蜜雪股价腰斩：利润没崩，市场为什么不愿再给高估值？" loading="lazy"></span>
+            <span class="article-main"><span class="article-kicker">企业分析</span><h3>蜜雪股价腰斩：利润没崩，市场为什么不愿再给高估值？</h3><p>蜜雪2025年收入与利润仍保持高增长，但股价较2025年末一度跌近一半。真正被重新定价的，是国内开店红利、海外复制能力，以及接近200亿元留存资本能否创造更高回报。</p></span>
+            <time class="article-date" datetime="2026-08-11">2026-08-11</time>
+          </a>
 
+          <a class="article-row" data-tag="投资干货" href="/blog/articles/mature-companies-value-creation.html">
+            <span class="article-thumb"><img src="https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/mature-companies-value-creation/20260807-cover.webp-b2389df418" alt="增长停下来以后，价值还会继续吗？" loading="lazy"></span>
+            <span class="article-main"><span class="article-kicker">投资干货</span><h3>增长停下来以后，价值还会继续吗？</h3><p>从格力、茅台、腾讯、苹果与可口可乐出发，分析成熟企业如何依靠现金流、每股增长、资本配置和估值继续创造股东价值。</p></span>
+            <time class="article-date" datetime="2026-08-07">2026-08-07</time>
+          </a>
 
-                <a href="/blog/articles/mature-companies-value-creation.html" style="display:block;background:white;border-radius:12px;padding:20px;text-decoration:none;color:inherit;transition:all .2s;">
-                    <div style="display:grid;grid-template-columns:minmax(180px,280px) 1fr;gap:20px;align-items:center;">
-                      <img src="https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/mature-companies-value-creation/20260807-cover.webp-b2389df418" alt="增长停下来以后，价值还会继续吗？" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:9px;">
-                      <div>
-                        <span style="display:inline-block;background:rgba(82,74,232,.10);color:#5148dc;padding:4px 10px;border-radius:4px;font-size:12px;margin-bottom:8px;">投资干货</span>
-                        <h3 style="font-size:20px;font-weight:650;margin-bottom:8px;">增长停下来以后，价值还会继续吗？</h3>
-                        <p style="color:#657086;font-size:14px;margin-bottom:10px;">从格力、茅台、腾讯、苹果与可口可乐出发，分析成熟企业如何依靠现金流、每股增长、资本配置和估值继续创造股东价值。</p>
-                        <p style="color:#8b94a5;font-size:13px;">2026-08-07</p>
-                      </div>
-                    </div>
-                </a>
+          <a class="article-row" data-tag="企业分析" href="/blog/articles/yadea-dealer-recovery-2025.html">
+            <span class="article-thumb"><img src="https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/yadea-dealer-recovery-2025/20260801-cover.webp-34b7ca55d8" alt="从清库存到利润翻倍：雅迪的经销商，真的活过来了吗？" loading="lazy"></span>
+            <span class="article-main"><span class="article-kicker">企业分析</span><h3>从清库存到利润翻倍：雅迪的经销商，真的活过来了吗？</h3><p>雅迪2025年利润翻倍，但厂家出货不等于终端动销。真正决定这轮修复质量的，是经销商库存回报率、持续补单和渠道资本是否健康。</p></span>
+            <time class="article-date" datetime="2026-08-01">2026-08-01</time>
+          </a>
 
-                <a href="/blog/articles/yadea-dealer-recovery-2025.html" style="display:block;background:white;border-radius:12px;padding:20px;text-decoration:none;color:inherit;transition:all .2s;">
-                    <div style="display:grid;grid-template-columns:minmax(180px,280px) 1fr;gap:20px;align-items:center;">
-                      <img src="https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/yadea-dealer-recovery-2025/20260801-cover.webp-34b7ca55d8" alt="从清库存到利润翻倍：雅迪的经销商，真的活过来了吗？" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:9px;">
-                      <div>
-                        <span style="display:inline-block;background:rgba(82,74,232,.10);color:#5148dc;padding:4px 10px;border-radius:4px;font-size:12px;margin-bottom:8px;">企业分析</span>
-                        <h3 style="font-size:20px;font-weight:650;margin-bottom:8px;">从清库存到利润翻倍：雅迪的经销商，真的活过来了吗？</h3>
-                        <p style="color:#657086;font-size:14px;margin-bottom:10px;">雅迪2025年利润翻倍，但厂家出货不等于终端动销。真正决定这轮修复质量的，是经销商库存回报率、持续补单和渠道资本是否健康。</p>
-                        <p style="color:#8b94a5;font-size:13px;">2026-08-01</p>
-                      </div>
-                    </div>
-                </a>
+          <a class="article-row" data-tag="企业分析" href="/blog/articles/rethink-aima-technology.html">
+            <span class="article-thumb"><img src="https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/rethink-aima-technology/20260728-aima-cover.webp-6639c0cd43" alt="重新认识 爱玛科技" loading="lazy"></span>
+            <span class="article-main"><span class="article-kicker">企业分析</span><h3>重新认识 爱玛科技</h3><p>从女性审美到重资产扩张，重新理解这家电动车龙头：爱玛为什么在成熟市场中持续建厂，这些投入能否带来足够的资本回报？</p></span>
+            <time class="article-date" datetime="2026-07-28">2026-07-28</time>
+          </a>
 
-                <a href="/blog/articles/rethink-aima-technology.html" style="display:block;background:white;border-radius:12px;padding:20px;text-decoration:none;color:inherit;transition:all .2s;">
-                    <div style="display:grid;grid-template-columns:minmax(180px,280px) 1fr;gap:20px;align-items:center;">
-                      <img src="https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/rethink-aima-technology/20260728-aima-cover.webp-6639c0cd43" alt="重新认识 爱玛科技" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:9px;">
-                      <div>
-                        <span style="display:inline-block;background:rgba(82,74,232,.10);color:#5148dc;padding:4px 10px;border-radius:4px;font-size:12px;margin-bottom:8px;">企业分析</span>
-                        <h3 style="font-size:20px;font-weight:650;margin-bottom:8px;">重新认识 爱玛科技</h3>
-                        <p style="color:#657086;font-size:14px;margin-bottom:10px;">从女性审美到重资产扩张，重新理解这家电动车龙头：爱玛为什么在成熟市场中持续建厂，这些投入能否带来足够的资本回报？</p>
-                        <p style="color:#8b94a5;font-size:13px;">2026-07-28</p>
-                      </div>
-                    </div>
-                </a>
+          <a class="article-row" data-tag="企业分析" href="/blog/articles/zhongxinguoji.html"><span class="article-thumb placeholder"><img src="/logo.svg" alt="" loading="lazy"></span><span class="article-main"><span class="article-kicker">企业分析</span><h3>中芯国际不是中国版台积电</h3></span><time class="article-date" datetime="2026-07-13">2026-07-13</time></a>
+          <a class="article-row" data-tag="企业分析" href="/blog/articles/%E5%AF%92%E6%AD%A6%E7%BA%AA-%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86%E8%BF%99%E5%AE%B6%E5%85%AC%E5%8F%B8.html"><span class="article-thumb placeholder"><img src="/logo.svg" alt="" loading="lazy"></span><span class="article-main"><span class="article-kicker">企业分析</span><h3>寒武纪：重新认识这家公司</h3></span><time class="article-date" datetime="2026-07-02">2026-07-02</time></a>
+          <a class="article-row" data-tag="企业分析" href="/blog/articles/%E8%8B%B1%E4%BC%9F%E8%BE%BE-%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86%E8%BF%99%E5%AE%B6%E5%85%AC%E5%8F%B8.html"><span class="article-thumb placeholder"><img src="/logo.svg" alt="" loading="lazy"></span><span class="article-main"><span class="article-kicker">企业分析</span><h3>英伟达：重新认识这家公司</h3></span><time class="article-date" datetime="2026-06-23">2026-06-23</time></a>
+          <a class="article-row" data-tag="企业分析" href="/blog/articles/luzhou-laozhao-revival-2026.html"><span class="article-thumb placeholder"><img src="/logo.svg" alt="" loading="lazy"></span><span class="article-main"><span class="article-kicker">企业分析</span><h3>泸州老窖：重新认识这家公司</h3></span><time class="article-date" datetime="2026-05-19">2026-05-19</time></a>
+          <a class="article-row" data-tag="企业分析" href="/blog/articles/huazhu-reunderstanding.html"><span class="article-thumb placeholder"><img src="/logo.svg" alt="" loading="lazy"></span><span class="article-main"><span class="article-kicker">企业分析</span><h3>华住集团：重新认识这家公司</h3></span><time class="article-date" datetime="2026-05-13">2026-05-13</time></a>
+          <a class="article-row" data-tag="投资思考" href="/blog/articles/value-investing-cheap-principle.html"><span class="article-thumb placeholder"><img src="/logo.svg" alt="" loading="lazy"></span><span class="article-main"><span class="article-kicker">投资思考</span><h3>便宜才是硬道理</h3></span><time class="article-date" datetime="2026-05-09">2026-05-09</time></a>
+          <a class="article-row" data-tag="企业分析" href="/blog/articles/guming-reunderstanding.html"><span class="article-thumb placeholder"><img src="/logo.svg" alt="" loading="lazy"></span><span class="article-main"><span class="article-kicker">企业分析</span><h3>古茗：重新认识这家公司</h3></span><time class="article-date" datetime="2026-05-06">2026-05-06</time></a>
+          <a class="article-row" data-tag="企业分析" href="/blog/articles/guoquan-risk-analysis.html"><span class="article-thumb placeholder"><img src="/logo.svg" alt="" loading="lazy"></span><span class="article-main"><span class="article-kicker">企业分析</span><h3>锅圈：反过来思考这家公司</h3></span><time class="article-date" datetime="2026-05-06">2026-05-06</time></a>
+          <a class="article-row" data-tag="企业分析" href="/blog/articles/kingsoft-office-analysis.html"><span class="article-thumb placeholder"><img src="/logo.svg" alt="" loading="lazy"></span><span class="article-main"><span class="article-kicker">企业分析</span><h3>金山办公：重新认识这家公司</h3></span><time class="article-date" datetime="2026-04-22">2026-04-22</time></a>
+          <a class="article-row" data-tag="企业分析" href="/blog/articles/mixue-reunderstanding.html"><span class="article-thumb placeholder"><img src="/logo.svg" alt="" loading="lazy"></span><span class="article-main"><span class="article-kicker">企业分析</span><h3>蜜雪集团：重新认识这家公司</h3></span><time class="article-date" datetime="2026-04-21">2026-04-21</time></a>
+          <a class="article-row" data-tag="企业分析" href="/blog/articles/mixue-inverse-thinking.html"><span class="article-thumb placeholder"><img src="/logo.svg" alt="" loading="lazy"></span><span class="article-main"><span class="article-kicker">企业分析</span><h3>蜜雪集团：反过来思考这家公司</h3></span><time class="article-date" datetime="2026-04-18">2026-04-18</time></a>
+          <a class="article-row" data-tag="企业分析" href="/blog/articles/jinshiyuan-yanghe-analysis.html"><span class="article-thumb placeholder"><img src="/logo.svg" alt="" loading="lazy"></span><span class="article-main"><span class="article-kicker">企业分析</span><h3>今世缘：蚕食洋河的秘密</h3></span><time class="article-date" datetime="2026-04-15">2026-04-15</time></a>
+          <a class="article-row" data-tag="投资干货" href="/blog/articles/gemini3-lobster-dupontmaster-launch.html"><span class="article-thumb placeholder"><img src="/logo.svg" alt="" loading="lazy"></span><span class="article-main"><span class="article-kicker">投资干货</span><h3>NO.83 Gemini3+龙虾联手，财报分析网站上线！</h3></span><time class="article-date" datetime="2026-04-10">2026-04-10</time></a>
+          <a class="article-row" data-tag="企业分析" href="/blog/articles/popmart-ip-philosophy.html"><span class="article-thumb placeholder"><img src="/logo.svg" alt="" loading="lazy"></span><span class="article-main"><span class="article-kicker">企业分析</span><h3>泡泡玛特与名创优品的IP哲学：两种商业哲学的深度对比</h3></span><time class="article-date" datetime="2026-04-07">2026-04-07</time></a>
+          <a class="article-row" data-tag="行业分析" href="/blog/articles/catl-power-battery.html"><span class="article-thumb placeholder"><img src="/logo.svg" alt="" loading="lazy"></span><span class="article-main"><span class="article-kicker">行业分析</span><h3>宁德时代：动力电池产业逻辑</h3></span><time class="article-date" datetime="2026-04-06">2026-04-06</time></a>
+          <a class="article-row" data-tag="创始故事" href="/blog/articles/ninebot-origin-story.html"><span class="article-thumb placeholder"><img src="/logo.svg" alt="" loading="lazy"></span><span class="article-main"><span class="article-kicker">创始故事</span><h3>九号公司：创始故事</h3></span><time class="article-date" datetime="2026-04-03">2026-04-03</time></a>
+          <a class="article-row" data-tag="企业分析" href="/blog/articles/dongao-yanji.html"><span class="article-thumb placeholder"><img src="/logo.svg" alt="" loading="lazy"></span><span class="article-main"><span class="article-kicker">企业分析</span><h3>东阿阿胶深度研究：从资产结构看懂滋补老字号的战略分野</h3></span><time class="article-date" datetime="2026-04-02">2026-04-02</time></a>
+          <a class="article-row" data-tag="企业分析" href="/blog/articles/catl-inverse-thinking.html"><span class="article-thumb placeholder"><img src="/logo.svg" alt="" loading="lazy"></span><span class="article-main"><span class="article-kicker">企业分析</span><h3>宁德时代：反过来思考这家公司</h3></span><time class="article-date" datetime="2026-04-02">2026-04-02</time></a>
+        </div>
+        <div class="empty-state" data-empty-state hidden>这个分类暂时还没有文章。</div>
+      </div>
+    </section>
 
-                <a href="/blog/articles/zhongxinguoji.html" style="display: block; background: white; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.2s;">
-                    <span style="display: inline-block; background: rgba(0,113,227,0.1); color: #0071e3; padding: 4px 10px; border-radius: 4px; font-size: 12px; margin-bottom: 8px;">企业分析</span>
-                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">中芯国际不是中国版台积电</h3>
-                    <p style="color: #86868b; font-size: 14px;">2026-07-13</p>
-                </a>
+    <section class="blog-cta">
+      <div class="container blog-cta-inner">
+        <div><h2>文章看完，回到公司本身</h2><p>用 DupontMaster 把财报、图表、估值和持仓放进同一个研究工作台。</p></div>
+        <a href="https://app.dupontmaster.com/">开始分析公司</a>
+      </div>
+    </section>
+  </main>
 
-                <a href="/blog/articles/%E5%AF%92%E6%AD%A6%E7%BA%AA-%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86%E8%BF%99%E5%AE%B6%E5%85%AC%E5%8F%B8.html" style="display: block; background: white; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.2s;">
-                    <span style="display: inline-block; background: rgba(0,113,227,0.1); color: #0071e3; padding: 4px 10px; border-radius: 4px; font-size: 12px; margin-bottom: 8px;">企业分析</span>
-                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">寒武纪：重新认识这家公司</h3>
-                    <p style="color: #86868b; font-size: 14px;">2026-07-02</p>
-                </a>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 DupontMaster 杜邦大师 · 文章与数据仅供研究参考，不构成投资建议。</span>
+      <span class="footer-links"><a href="/">返回首页</a><a href="/terms.html">用户协议</a><a href="/privacy.html">隐私政策</a><a href="/disclaimer.html">免责声明</a></span>
+    </div>
+  </footer>
 
-
-                <a href="/blog/articles/%E8%8B%B1%E4%BC%9F%E8%BE%BE-%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86%E8%BF%99%E5%AE%B6%E5%85%AC%E5%8F%B8.html" style="display: block; background: white; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.2s;">
-                    <span style="display: inline-block; background: rgba(0,113,227,0.1); color: #0071e3; padding: 4px 10px; border-radius: 4px; font-size: 12px; margin-bottom: 8px;">企业分析</span>
-                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">英伟达：重新认识这家公司</h3>
-                    <p style="color: #86868b; font-size: 14px;">2026-06-23</p>
-                </a>
-
-                                                                                                                        <a href="/blog/articles/luzhou-laozhao-revival-2026.html" style="display: block; background: white; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.2s;">
-                    <span style="display: inline-block; background: rgba(0,113,227,0.1); color: #0071e3; padding: 4px 10px; border-radius: 4px; font-size: 12px; margin-bottom: 8px;">企业分析</span>
-                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">泸州老窖：重新认识这家公司</h3>
-                    <p style="color: #86868b; font-size: 14px;">2026-05-19</p>
-                </a>
-                                                                                                                        <a href="/blog/articles/huazhu-reunderstanding.html" style="display: block; background: white; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.2s;">
-                    <span style="display: inline-block; background: rgba(0,113,227,0.1); color: #0071e3; padding: 4px 10px; border-radius: 4px; font-size: 12px; margin-bottom: 8px;">企业分析</span>
-                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">华住集团：重新认识这家公司</h3>
-                    <p style="color: #86868b; font-size: 14px;">2026-05-13</p>
-                </a>
-                                                                                                                        <a href="/blog/articles/value-investing-cheap-principle.html" style="display: block; background: white; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.2s;">
-                    <span style="display: inline-block; background: rgba(0,113,227,0.1); color: #0071e3; padding: 4px 10px; border-radius: 4px; font-size: 12px; margin-bottom: 8px;">投资思考</span>
-                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">便宜才是硬道理</h3>
-                    <p style="color: #86868b; font-size: 14px;">2026-05-09</p>
-                </a>
-                                        <a href="/blog/articles/guming-reunderstanding.html" style="display: block; background: white; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.2s;">
-                    <span style="display: inline-block; background: rgba(0,113,227,0.1); color: #0071e3; padding: 4px 10px; border-radius: 4px; font-size: 12px; margin-bottom: 8px;">企业分析</span>
-                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">古茗：重新认识这家公司</h3>
-                    <p style="color: #86868b; font-size: 14px;">2026-05-06</p>
-                </a>
-                                        <a href="/blog/articles/guoquan-risk-analysis.html" style="display: block; background: white; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.2s;">
-                    <span style="display: inline-block; background: rgba(0,113,227,0.1); color: #0071e3; padding: 4px 10px; border-radius: 4px; font-size: 12px; margin-bottom: 8px;">企业分析</span>
-                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">锅圈：反过来思考这家公司</h3>
-                    <p style="color: #86868b; font-size: 14px;">2026-05-06</p>
-                </a>
-                                        <a href="/blog/articles/kingsoft-office-analysis.html" style="display: block; background: white; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.2s;">
-                    <span style="display: inline-block; background: rgba(0,113,227,0.1); color: #0071e3; padding: 4px 10px; border-radius: 4px; font-size: 12px; margin-bottom: 8px;">企业分析</span>
-                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">金山办公：重新认识这家公司</h3>
-                    <p style="color: #86868b; font-size: 14px;">2026-04-22</p>
-                </a>
-
-                                        <a href="/blog/articles/mixue-reunderstanding.html" style="display: block; background: white; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.2s;">
-                    <span style="display: inline-block; background: rgba(0,113,227,0.1); color: #0071e3; padding: 4px 10px; border-radius: 4px; font-size: 12px; margin-bottom: 8px;">企业分析</span>
-                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">蜜雪集团：重新认识这家公司</h3>
-                    <p style="color: #86868b; font-size: 14px;">2026-04-21</p>
-                </a>
-                                        <a href="/blog/articles/mixue-inverse-thinking.html" style="display: block; background: white; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.2s;">
-                    <span style="display: inline-block; background: rgba(0,113,227,0.1); color: #0071e3; padding: 4px 10px; border-radius: 4px; font-size: 12px; margin-bottom: 8px;">企业分析</span>
-                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">蜜雪集团：反过来思考这家公司</h3>
-                    <p style="color: #86868b; font-size: 14px;">2026-04-18</p>
-                </a>
-                                        <a href="/blog/articles/jinshiyuan-yanghe-analysis.html" style="display: block; background: white; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.2s;">
-                    <span style="display: inline-block; background: rgba(0,113,227,0.1); color: #0071e3; padding: 4px 10px; border-radius: 4px; font-size: 12px; margin-bottom: 8px;">企业分析</span>
-                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">今世缘：蚕食洋河的秘密</h3>
-                    <p style="color: #86868b; font-size: 14px;">2026-04-15</p>
-                </a><a href="/blog/articles/gemini3-lobster-dupontmaster-launch.html" style="display: block; background: white; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.2s;">
-                    <span style="display: inline-block; background: rgba(0,113,227,0.1); color: #0071e3; padding: 4px 10px; border-radius: 4px; font-size: 12px; margin-bottom: 8px;">投资干货</span>
-                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">NO.83 Gemini3+龙虾联手，财报分析网站上线！</h3>
-                    <p style="color: #86868b; font-size: 14px;">2026-04-10</p>
-                </a>
-                        <a href="/blog/articles/popmart-ip-philosophy.html" style="display: block; background: white; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.2s;">
-                    <span style="display: inline-block; background: rgba(0,113,227,0.1); color: #0071e3; padding: 4px 10px; border-radius: 4px; font-size: 12px; margin-bottom: 8px;">企业分析</span>
-                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">泡泡玛特与名创优品的IP哲学：两种商业哲学的深度对比</h3>
-                    <p style="color: #86868b; font-size: 14px;">2026-04-07</p>
-                </a>
-                        <a href="/blog/articles/catl-power-battery.html" style="display: block; background: white; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.2s;">
-                    <span style="display: inline-block; background: rgba(0,113,227,0.1); color: #0071e3; padding: 4px 10px; border-radius: 4px; font-size: 12px; margin-bottom: 8px;">行业分析</span>
-                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">宁德时代：动力电池产业逻辑</h3>
-                    <p style="color: #86868b; font-size: 14px;">2026-04-06</p>
-                </a>
-                <a href="/blog/articles/ninebot-origin-story.html" style="display: block; background: white; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.2s;">
-                    <span style="display: inline-block; background: rgba(0,113,227,0.1); color: #0071e3; padding: 4px 10px; border-radius: 4px; font-size: 12px; margin-bottom: 8px;">创始故事</span>
-                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">九号公司：创始故事</h3>
-                    <p style="color: #86868b; font-size: 14px;">2026-04-03</p>
-                </a>
-                <a href="/blog/articles/dongao-yanji.html" style="display: block; background: white; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.2s;">
-                    <span style="display: inline-block; background: rgba(0,113,227,0.1); color: #0071e3; padding: 4px 10px; border-radius: 4px; font-size: 12px; margin-bottom: 8px;">企业分析</span>
-                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">东阿阿胶深度研究：从资产结构看懂滋补老字号的战略分野</h3>
-                    <p style="color: #86868b; font-size: 14px;">2026-04-02</p>
-                </a>
-                <a href="/blog/articles/catl-inverse-thinking.html" style="display: block; background: white; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.2s;">
-                    <span style="display: inline-block; background: rgba(0,113,227,0.1); color: #0071e3; padding: 4px 10px; border-radius: 4px; font-size: 12px; margin-bottom: 8px;">企业分析</span>
-                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">宁德时代：反过来思考这家公司</h3>
-                    <p style="color: #86868b; font-size: 14px;">2026-04-02</p>
-                </a>
-        </div></main>
-    
-    <footer>
-        <p><strong>DuPont Master</strong> © 2026 · 让投资分析更简单</p>
-        <p><a href="https://www.dupontmaster.com">返回首页</a> · <a href="https://app.dupontmaster.com">控制台</a></p>
-    </footer>
-    
-    <script>
-        // 标签筛选功能
-        document.querySelectorAll('.filter-tag').forEach(tag => {
-            tag.addEventListener('click', function() {
-                // 更新选中状态
-                document.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active'));
-                this.classList.add('active');
-                
-                const selectedTag = this.dataset.tag;
-                
-                // 筛选文章
-                document.querySelectorAll('.article-card').forEach(card => {
-                    const cardTag = card.querySelector('.card-tag').textContent;
-                    if (selectedTag === '全部' || cardTag === selectedTag) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
-    </script>
-    <script src="/blog/markdown-loader.js"></script>
+  <script src="/assets/blog-v2.js" defer></script>
 </body>
 </html>
