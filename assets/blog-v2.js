@@ -1,3 +1,11 @@
+const analyticsSrc = '/assets/analytics-v1.js';
+if (!document.querySelector(`script[src="${analyticsSrc}"]`)) {
+  const analyticsScript = document.createElement('script');
+  analyticsScript.src = analyticsSrc;
+  analyticsScript.async = true;
+  document.head.appendChild(analyticsScript);
+}
+
 const rows = Array.from(document.querySelectorAll('.article-row'));
 const tabs = Array.from(document.querySelectorAll('.filter-tab'));
 const count = document.querySelector('[data-article-count]');
