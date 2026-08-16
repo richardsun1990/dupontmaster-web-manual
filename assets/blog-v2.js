@@ -6,11 +6,37 @@ if (!document.querySelector(`script[src="${analyticsSrc}"]`)) {
   document.head.appendChild(analyticsScript);
 }
 
-const rows = Array.from(document.querySelectorAll('.article-row'));
+let rows = Array.from(document.querySelectorAll('.article-row'));
 const tabs = Array.from(document.querySelectorAll('.filter-tab'));
 const count = document.querySelector('[data-article-count]');
 const empty = document.querySelector('[data-empty-state]');
 const featured = document.querySelector('[data-featured]');
+const list = document.querySelector('.article-list');
+
+const escapeHtml = (value = '') => String(value)
+  .replace(/&/g, '&amp;')
+  .replace(/</g, '&lt;')
+  .replace(/>/g, '&gt;')
+  .replace(/"/g, '&quot;');
+
+const articleHref = (slug = '') => `/blog/articles/${encodeURIComponent(slug)}.html`;
+
+const articleRowHtml = (item) => {
+  const title = escapeHtml(item.title || item.slug || '未命名文章');
+  const tag = escapeHtml(item.tag || '文章');
+  const date = escapeHtml(item.date || '');
+  const description = escapeHtml(item.description || '');
+  const usePlaceholder = !item.image || /icon-512\.png$/i.test(item.image);
+  const image = usePlaceholder ? '/logo.svg' : escapeHtml(item.image);
+  const thumbClass = usePlaceholder ? 'article-thumb placeholder' : 'article-thumb';
+  const descriptionHtml = description ? `<p>${description}</p>` : '';
+
+  return `<a class="article-row" data-tag="${tag}" href="${articleHref(item.slug)}">
+    <span class="${thumbClass}"><img src="${image}" alt="${title}" loading="lazy"></span>
+    <span class="article-main"><span class="article-kicker">${tag}</span><h3>${title}</h3>${descriptionHtml}</span>
+    <time class="article-date" datetime="${date}">${date}</time>
+  </a>`;
+};
 
 const readRow = (row) => ({
   href: row.getAttribute('href'),
@@ -33,7 +59,7 @@ const renderFeatured = (row) => {
   const link = featured.querySelector('[data-featured-link]');
 
   media.classList.toggle('featured-placeholder', item.placeholder);
-  media.innerHTML = `<img src="${item.image}" alt="${item.title.replaceAll('"', '&quot;')}" loading="eager">`;
+  media.innerHTML = `<img src="${item.image}" alt="${escapeHtml(item.title)}" loading="eager">`;
   tag.textContent = item.tag;
   date.textContent = item.date;
   title.textContent = item.title;
@@ -59,6 +85,24 @@ const applyFilter = (selectedTag) => {
   if (firstVisible) renderFeatured(firstVisible);
 };
 
+const hydrateFromArticlesJson = async () => {
+  if (!list) return;
+  try {
+    const response = await fetch('/blog/articles.json', { cache: 'no-cache' });
+    if (!response.ok) return;
+    const articles = await response.json();
+    if (!Array.isArray(articles) || !articles.length) return;
+
+    const valid = articles.filter((item) => item && item.slug && item.title);
+    if (!valid.length) return;
+
+    list.innerHTML = valid.map(articleRowHtml).join('');
+    rows = Array.from(list.querySelectorAll('.article-row'));
+  } catch (error) {
+    console.warn('articles.json load failed, using static fallback:', error);
+  }
+};
+
 tabs.forEach((tab) => {
   tab.addEventListener('click', () => {
     tabs.forEach((item) => item.classList.remove('active'));
@@ -67,9 +111,11 @@ tabs.forEach((tab) => {
   });
 });
 
-if (rows.length) {
-  renderFeatured(rows[0]);
-  if (count) count.textContent = `${rows.length} 篇`;
-} else if (empty) {
-  empty.hidden = false;
-}
+(async () => {
+  await hydrateFromArticlesJson();
+  if (rows.length) {
+    applyFilter('全部');
+  } else if (empty) {
+    empty.hidden = false;
+  }
+})();
