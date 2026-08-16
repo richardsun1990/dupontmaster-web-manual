@@ -1,123 +1,139 @@
-# Notion 文章上传说明
+# DupontMaster 文章发布方式
 
-以后可以直接在 Notion 写文章，再导出 Markdown 上传。
+以后官网文章统一以「文章同步助手」为主入口，不再为每篇文章临时制作 HTML。
 
-## 最简单方式：一键导入 Notion 导出包
+## 统一发布链路
 
-第一次使用前，复制配置文件并填入 OSS 信息：
+推荐把微信公众号编辑器作为文章排版母版：
+
+1. 在微信公众号里完成标题、正文、段落层级和全部配图。
+2. 打开浏览器里的「文章同步助手」。
+3. 勾选需要同步的平台。
+4. **固定同时勾选「Markdown 压缩包」**。
+5. 点击同步。
+
+文章同步助手会把其他平台按各自能力同步/保存草稿，同时下载一个 Markdown 压缩包。这个压缩包包含：
+
+```text
+article.md
+images/
+  image_....jpg
+  image_....png
+  ...
+```
+
+Mac 上的 DupontMaster 发布桥会自动发现这个 ZIP，并完成：
+
+```text
+同步助手 ZIP
+→ 读取 article.md
+→ 检查正文图片
+→ 全部图片上传阿里云 OSS
+→ 图片地址改为 OSS URL
+→ 保存 Markdown 母稿
+→ 生成静态 HTML
+→ 更新 articles.json
+→ 自动加入匹配专题
+→ 更新博客首页 / 官网案例 / sitemap
+→ 校验正文图片数量
+→ Git commit + push main
+→ Vercel 自动部署
+```
+
+**图片完整性是硬校验。** 如果同步助手压缩包里有 8 张正文图片，而官网生成页只有 7 张，发布桥会停止 Git 推送，不允许缺图文章上线。
+
+## 第一次安装
+
+前提：本地官网仓库已经配置好 `.oss.env`。如果没有：
 
 ```bash
 cd /Users/Richard/Downloads/codex_dupontmaster/dupontmaster-web-manual-work
 cp .oss.env.example .oss.env
 ```
 
-然后打开 `.oss.env`，填好你的阿里云 OSS 信息。这个文件已被 Git 忽略，不会上传到 GitHub。
-
-之后每次发文章：
-
-1. 在 Notion 写好文章
-2. 右上角 `...` → `Export`
-3. 格式选择 `Markdown & CSV`
-4. 勾选 `Include subpages` 可以关闭
-5. 导出后解压 zip
-6. 执行：
+填好阿里云 OSS 配置后，在官网仓库执行一次：
 
 ```bash
 cd /Users/Richard/Downloads/codex_dupontmaster/dupontmaster-web-manual-work
-python3 scripts/import_notion_article.py ~/Downloads/Notion导出的文件.zip --slug article-slug
-git add content/articles
-git commit -m "发布文章：文章标题"
-git push origin main
+git pull --ff-only origin main
+bash scripts/install_wechatsync_watcher.sh
 ```
 
-如果 zip 识别不到 Markdown，也可以先解压，再直接传 `.md` 文件：
+安装器会创建 macOS LaunchAgent，大约每 30 秒检查一次 `~/Downloads`。它只处理真正包含 `article.md` 的文章同步助手 ZIP，普通下载压缩包会忽略。
 
-```bash
-python3 scripts/import_notion_article.py "$HOME/Downloads/英伟达：重新认识这家公司/英伟达：重新认识这家公司 399c4c3fa1598086a342ec54272a5010.md" --slug nvidia-reunderstanding
-```
-
-脚本会自动完成：
-
-- 读取 Notion 导出的 Markdown
-- 找到 Markdown 里引用的本地图片
-- 上传图片到阿里云 OSS
-- 把图片路径替换成 OSS 链接
-- 把最终文章保存到 `content/articles/`
-- 自动补上基础 frontmatter
-
-不需要配置 GitHub Actions，也不需要额外创建 HTML 文件。
-
-## 图片怎么处理
-
-推荐图片走阿里云 OSS，不放进网站仓库。
-
-如果你想手动处理图片，也可以：
-
-1. 把图片上传到阿里云 OSS
-2. 复制图片的公开访问链接
-3. 在 Notion 里用图片链接插入图片
-4. 导出 Markdown 后，网站会直接读取 OSS 图片
-
-Markdown 中图片大概会长这样：
-
-```markdown
-![公司 ROE 趋势图](https://你的-bucket.oss-cn-hangzhou.aliyuncs.com/blog/company/roe.png)
-```
-
-这样做的好处：
-
-- GitHub 仓库不会越来越大
-- 网站页面加载图片时主要走阿里云 OSS
-- 后续替换图片时，只需要换 OSS 图片链接
-- Notion 导出的 Markdown 可以直接上传
-
-如果你使用上面的一键脚本，就不需要手动复制 OSS 链接。
-
-## 推荐文件名
-
-Notion 导出的文件名可以直接用，但更建议改成英文短横线：
+日志：
 
 ```text
-maotai-2026-analysis.md
-guming-reunderstanding.md
+~/Library/Logs/dupontmaster-wechatsync.log
+~/Library/Logs/dupontmaster-wechatsync-error.log
 ```
 
-图片文件夹可以保持 Notion 导出的名字，只要 Markdown 里的图片路径和文件夹对应即可。
+## 手动发布 / 调试
 
-## 可选：文章头部信息
-
-如果希望标题、日期、标签更准确，可以在 Markdown 最前面加：
-
-```markdown
----
-title: 文章标题
-date: 2026-07-10
-tag: 企业分析
-description: 用一句话说明这篇文章在分析什么。
-source: 公司公告、年报、交易所披露文件及 DupontMaster 整理。
----
-```
-
-如果不加，网站会自动用 Markdown 的一级标题作为文章标题。
-
-## 本地方式
-
-如果你在电脑本地更新文章：
+如果暂时不启用自动监听，也可以直接运行：
 
 ```bash
 cd /Users/Richard/Downloads/codex_dupontmaster/dupontmaster-web-manual-work
-python3 scripts/publish_article.py --all
-git add .
-git commit -m "发布文章：文章标题"
-git push origin main
+python3 scripts/publish_wechatsync_zip.py "$HOME/Downloads/文章标题.zip"
 ```
 
-本地方式会额外生成静态 HTML 文章页，适合你想提前检查页面效果时使用。
+需要固定英文 URL 时：
 
-只要正文写好，数据来源和免责声明会自动追加到文章底部。
+```bash
+python3 scripts/publish_wechatsync_zip.py "$HOME/Downloads/文章标题.zip" \
+  --slug tencent-ai-capital-allocation-2026
+```
 
-## 注意
+只生成网站文件、不推 GitHub：
 
-- 不要写确定性投资建议，例如“必涨”“稳赚”“绝对低估”。
-- 财务数据尽量写清楚来源。
-- Notion 导出的图片相对路径可以保留，网站会自动转换为可访问路径。
+```bash
+python3 scripts/publish_wechatsync_zip.py "$HOME/Downloads/文章标题.zip" --no-git
+```
+
+## 什么会保留，什么不会 1:1 保留
+
+官网会可靠保留文章的：
+
+- 标题和正文顺序；
+- H1/H2/H3 层级；
+- 粗体、引用、列表和普通链接；
+- 正文图片及图片顺序；
+- 图片说明文字。
+
+微信公众号编辑器里的特殊字体、复杂背景框、第三方 SVG 装饰、平台私有组件等，不承诺 1:1 搬到官网。官网统一使用 DupontMaster 自己的文章 CSS，以保证电脑、手机、SEO 和长期维护的一致性。
+
+所以原则是：**内容和图片跟着微信公众号走，官网视觉跟着 DupontMaster 设计系统走。**
+
+## 为什么不直接把官网伪装成 WordPress
+
+文章同步助手原生支持 WordPress / Typecho CMS，并会通过 CMS 接口上传图片。但 DupontMaster 当前是静态站点，并不是 WordPress。
+
+为了让插件直接识别而给官网增加一套假的 WordPress XML-RPC、写入权限、GitHub Token 和图片上传接口，会增加安全面和维护成本。当前方案使用文章同步助手已经提供的「Markdown 压缩包」出口，再由本地发布桥接现有 OSS + GitHub + Vercel 链路，更简单也更稳定。
+
+从使用体验上仍然是一次同步：只要「Markdown 压缩包」被选中，下载完成后官网发布桥会自动接管。
+
+## 老铺黄金这次为什么缺图
+
+当前官网的老铺黄金 HTML 正文里实际上只写入了 1 张图片，也就是封面。缺失的公众号正文配图从一开始就没有进入网站发布源，因此不是 CSS 隐藏或浏览器加载失败。
+
+新的发布桥不会再依赖“人工记得上传图片”：同步助手 ZIP 自带正文图片，发布前又会做图片数量校验，少图即停止。
+
+## Notion 仍可作为备用入口
+
+如果某篇文章不经过微信公众号，仍然可以用旧的 Notion Markdown 导出方式：
+
+```bash
+python3 scripts/import_notion_article.py ~/Downloads/Notion导出的文件.zip --slug article-slug
+python3 scripts/publish_article.py content/articles/article-slug.md
+```
+
+但默认工作流统一使用：
+
+**微信公众号排版 → 文章同步助手 → Markdown 压缩包 → DupontMaster 自动发布桥。**
+
+## 发布原则
+
+- 不写“必涨”“稳赚”等确定性收益承诺。
+- 财务数据尽量注明公司公告、年报、交易所披露或其他可验证来源。
+- 官网继续保留研究免责声明。
+- 发布桥只在 Git 工作区干净时自动提交，避免把其他开发修改混入文章发布。
