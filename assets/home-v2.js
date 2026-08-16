@@ -1,3 +1,11 @@
+const analyticsSrc = '/assets/analytics-v1.js';
+if (!document.querySelector(`script[src="${analyticsSrc}"]`)) {
+  const analyticsScript = document.createElement('script');
+  analyticsScript.src = analyticsSrc;
+  analyticsScript.async = true;
+  document.head.appendChild(analyticsScript);
+}
+
 const mobileMediaStyle = document.createElement('style');
 mobileMediaStyle.textContent = `
   @media (max-width: 760px) {
