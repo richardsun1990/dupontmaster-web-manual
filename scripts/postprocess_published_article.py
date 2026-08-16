@@ -262,14 +262,6 @@ if articles:
             "0.85",
         ))
 
-    changxin_path = ROOT / "content" / "articles" / "changxin-technology-cycle-and-qimonda.md"
-    if changxin_path.exists():
-        urls.append((
-            f"{SITE_URL}/blog/article.html?slug=changxin-technology-cycle-and-qimonda",
-            "2026-07-22",
-            "monthly",
-            "0.8",
-        ))
 
     for item in articles:
         item_slug = item.get("slug")

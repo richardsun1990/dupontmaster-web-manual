@@ -17,6 +17,14 @@
     document.head.appendChild(shareStyle);
   }
 
+  const relatedSrc = '/assets/article-related-v1.js';
+  if (!document.querySelector(`script[src="${relatedSrc}"]`)) {
+    const relatedScript = document.createElement('script');
+    relatedScript.src = relatedSrc;
+    relatedScript.async = true;
+    document.body.appendChild(relatedScript);
+  }
+
   const progress = document.createElement('div');
   progress.className = 'article-progress';
   document.body.appendChild(progress);
