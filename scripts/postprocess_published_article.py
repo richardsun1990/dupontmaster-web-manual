@@ -75,7 +75,7 @@ if html_path.exists():
     if tag and 'property="article:section"' not in html_text:
         head_bits.append(f'  <meta property="article:section" content="{html.escape(tag)}">')
 
-    if '"@type": "BlogPosting"' not in html_text and "'@type': 'BlogPosting'" not in html_text:
+    if not re.search(r'[\"\']@type[\"\']\\s*:\s*[\"\']BlogPosting[\"\']', html_text):
         structured = {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
