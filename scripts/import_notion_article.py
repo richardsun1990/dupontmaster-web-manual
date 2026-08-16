@@ -30,6 +30,7 @@ import os
 import re
 import shutil
 import tempfile
+import urllib.error
 import urllib.parse
 import urllib.request
 import zipfile
@@ -145,9 +146,31 @@ def oss_put(file_path: Path, object_key: str) -> str:
     request.add_header("Date", date_header)
     request.add_header("Content-Type", content_type)
     request.add_header("Content-MD5", content_md5)
-    with urllib.request.urlopen(request, timeout=60) as response:
-        if response.status not in (200, 201):
-            raise RuntimeError(f"OSS 上传失败：{response.status}")
+    try:
+        with urllib.request.urlopen(request, timeout=60) as response:
+            if response.status not in (200, 201):
+                raise RuntimeError(f"OSS 上传失败：HTTP {response.status}")
+    except urllib.error.HTTPError as exc:
+        try:
+            detail = exc.read().decode("utf-8", errors="replace")
+        except Exception:
+            detail = ""
+        code_match = re.search(r"<Code>([^<]+)</Code>", detail)
+        message_match = re.search(r"<Message>([^<]+)</Message>", detail)
+        oss_code = code_match.group(1) if code_match else "Unknown"
+        oss_message = message_match.group(1) if message_match else ""
+        raise RuntimeError(
+            "OSS 上传失败："
+            f"HTTP {exc.code} / {oss_code}"
+            + (f" / {oss_message}" if oss_message else "")
+            + f"\nBucket={bucket}\nEndpoint={endpoint}\n"
+            "请检查 .oss.env 中的 Bucket、Endpoint、AccessKey 是否匹配，以及该 AccessKey 是否具有 oss:PutObject 权限。"
+        ) from None
+    except urllib.error.URLError as exc:
+        raise RuntimeError(
+            f"无法连接 OSS：{exc.reason}\nBucket={bucket}\nEndpoint={endpoint}\n"
+            "请检查网络和 ALIYUN_OSS_ENDPOINT。"
+        ) from None
     return public_url(bucket, endpoint, object_key)
 
 
