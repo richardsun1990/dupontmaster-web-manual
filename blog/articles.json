@@ -60,7 +60,7 @@
     "date": "2026-07-13",
     "image": "https://www.dupontmaster.com/icon-512.png",
     "slug": "zhongxinguoji",
-    "description": ""
+    "description": "台积电是全球晶圆代工龙头，中芯国际是中国大陆晶圆代工龙头，那中芯国际是不是就是“中国版台积电”？"
   },
   {
     "id": "寒武纪-重新认识这家公司",
@@ -69,7 +69,7 @@
     "date": "2026-07-02",
     "image": "https://www.dupontmaster.com/icon-512.png",
     "slug": "寒武纪-重新认识这家公司",
-    "description": ""
+    "description": "分析寒武纪，最容易陷入两个极端。"
   },
   {
     "id": "英伟达-重新认识这家公司",
@@ -78,7 +78,7 @@
     "date": "2026-06-23",
     "image": "https://www.dupontmaster.com/icon-512.png",
     "slug": "英伟达-重新认识这家公司",
-    "description": ""
+    "description": "过去两年，几乎所有云巨头、互联网公司、国家级项目都在疯狂砸钱建 AI 工厂，买算力、买 GPU、建数据中心。而这场“全球 AI 基建大跃进”背后，有一个最大的承包商，就是英伟达。"
   },
   {
     "id": "luzhou-laozhao-revival-2026",
@@ -87,7 +87,7 @@
     "date": "2026-05-19",
     "image": "https://www.dupontmaster.com/icon-512.png",
     "slug": "luzhou-laozhao-revival-2026",
-    "description": ""
+    "description": "深度拆解泸州老窖的挺价策略：为什么要挺价、怎么做到的、代价和好处分别是什么？"
   },
   {
     "id": "huazhu-reunderstanding",
@@ -96,7 +96,7 @@
     "date": "2026-05-13",
     "image": "https://www.dupontmaster.com/icon-512.png",
     "slug": "huazhu-reunderstanding",
-    "description": ""
+    "description": "深度分析华住的商业模式、护城河与未来空间，揭示这家品牌运营商的真正价值。"
   },
   {
     "id": "value-investing-cheap-principle",
@@ -105,7 +105,7 @@
     "date": "2026-05-09",
     "image": "https://www.dupontmaster.com/icon-512.png",
     "slug": "value-investing-cheap-principle",
-    "description": ""
+    "description": "用格力电器、贵州茅台、片仔癀三家公司的数据，验证买入时的估值高低对长期回报的影响。"
   },
   {
     "id": "guming-reunderstanding",
@@ -114,7 +114,7 @@
     "date": "2026-05-06",
     "image": "https://www.dupontmaster.com/icon-512.png",
     "slug": "guming-reunderstanding",
-    "description": ""
+    "description": "当蜜雪冰城以6元柠檬水横扫全国、门店突破6万家的时候，同样从县城起家的古茗，选择了一条截然不同的路——做10-18元价格带的水果茶。"
   },
   {
     "id": "guoquan-risk-analysis",
@@ -123,7 +123,7 @@
     "date": "2026-05-06",
     "image": "https://www.dupontmaster.com/icon-512.png",
     "slug": "guoquan-risk-analysis",
-    "description": ""
+    "description": "从商业模式、核心竞争力、脆弱性等多维度，反过来思考锅圈这家火锅食材供应链加盟平台的风险与机遇。"
   },
   {
     "id": "kingsoft-office-analysis",
@@ -132,16 +132,16 @@
     "date": "2026-04-22",
     "image": "https://www.dupontmaster.com/icon-512.png",
     "slug": "kingsoft-office-analysis",
-    "description": ""
+    "description": "从股价波动、收入结构、ROE拆解、资产质量等多维度深度分析金山办公的投资价值。"
   },
   {
     "id": "mixue-reunderstanding",
     "title": "蜜雪集团：重新认识这家公司",
     "tag": "企业分析",
     "date": "2026-04-21",
-    "image": "https://www.dupontmaster.com/icon-512.png",
+    "image": "https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/mixue-cover.png",
     "slug": "mixue-reunderstanding",
-    "description": ""
+    "description": "深度解析蜜雪集团商业模式，解读近6万家门店背后的供应链帝国。"
   },
   {
     "id": "mixue-inverse-thinking",
@@ -150,7 +150,7 @@
     "date": "2026-04-18",
     "image": "https://www.dupontmaster.com/icon-512.png",
     "slug": "mixue-inverse-thinking",
-    "description": ""
+    "description": "深度分析蜜雪冰城的风险与挑战，解读低价护城河背后的隐忧。"
   },
   {
     "id": "jinshiyuan-yanghe-analysis",
@@ -159,7 +159,7 @@
     "date": "2026-04-15",
     "image": "https://www.dupontmaster.com/icon-512.png",
     "slug": "jinshiyuan-yanghe-analysis",
-    "description": ""
+    "description": "深度分析今世缘与洋河的市场竞争格局。"
   },
   {
     "id": "gemini3-lobster-dupontmaster-launch",
@@ -168,7 +168,7 @@
     "date": "2026-04-10",
     "image": "https://www.dupontmaster.com/icon-512.png",
     "slug": "gemini3-lobster-dupontmaster-launch",
-    "description": ""
+    "description": "我和搭档「龙虾费曼」共同开发的财报分析网站正式上线，5分钟了解任意公司财务状况。"
   },
   {
     "id": "popmart-ip-philosophy",
@@ -177,7 +177,7 @@
     "date": "2026-04-07",
     "image": "https://www.dupontmaster.com/icon-512.png",
     "slug": "popmart-ip-philosophy",
-    "description": ""
+    "description": "深度对比泡泡玛特与名创优品的IP运营战略，揭示两种截然不同的商业哲学。"
   },
   {
     "id": "catl-power-battery",
@@ -186,7 +186,7 @@
     "date": "2026-04-06",
     "image": "https://www.dupontmaster.com/icon-512.png",
     "slug": "catl-power-battery",
-    "description": ""
+    "description": "深度解析动力电池产业逻辑，解读宁德时代护城河。"
   },
   {
     "id": "ninebot-origin-story",
