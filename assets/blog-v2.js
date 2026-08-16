@@ -1,33 +1,3 @@
-const escapeHtml = (value = '') => value
-  .replaceAll('&', '&amp;')
-  .replaceAll('<', '&lt;')
-  .replaceAll('>', '&gt;')
-  .replaceAll('"', '&quot;')
-  .replaceAll("'", '&#039;');
-
-// 兼容现有文章发布脚本：新文章仍会以旧版内联卡片插入，页面加载时自动升级成新版文章行。
-const articleList = document.querySelector('.article-list');
-if (articleList) {
-  Array.from(articleList.children).forEach((node) => {
-    if (!(node instanceof HTMLAnchorElement) || node.classList.contains('article-row')) return;
-
-    const title = node.querySelector('h3')?.textContent?.trim() || '';
-    const tag = node.querySelector('span')?.textContent?.trim() || '文章';
-    const paragraphs = Array.from(node.querySelectorAll('p')).map((item) => item.textContent?.trim() || '').filter(Boolean);
-    const date = paragraphs.findLast((item) => /^\d{4}-\d{2}-\d{2}$/.test(item)) || '';
-    const description = paragraphs.find((item) => item !== date) || '';
-    const image = node.querySelector('img')?.getAttribute('src') || '';
-
-    node.className = 'article-row';
-    node.dataset.tag = tag;
-    node.removeAttribute('style');
-    node.innerHTML = `
-      <span class="article-thumb${image ? '' : ' placeholder'}">${image ? `<img src="${escapeHtml(image)}" alt="${escapeHtml(title)}" loading="lazy">` : '<img src="/logo.svg" alt="" loading="lazy">'}</span>
-      <span class="article-main"><span class="article-kicker">${escapeHtml(tag)}</span><h3>${escapeHtml(title)}</h3>${description ? `<p>${escapeHtml(description)}</p>` : ''}</span>
-      <time class="article-date"${date ? ` datetime="${escapeHtml(date)}"` : ''}>${escapeHtml(date)}</time>`;
-  });
-}
-
 const rows = Array.from(document.querySelectorAll('.article-row'));
 const tabs = Array.from(document.querySelectorAll('.filter-tab'));
 const count = document.querySelector('[data-article-count]');
@@ -55,7 +25,7 @@ const renderFeatured = (row) => {
   const link = featured.querySelector('[data-featured-link]');
 
   media.classList.toggle('featured-placeholder', item.placeholder);
-  media.innerHTML = `<img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.title)}" loading="eager">`;
+  media.innerHTML = `<img src="${item.image}" alt="${item.title.replaceAll('"', '&quot;')}" loading="eager">`;
   tag.textContent = item.tag;
   date.textContent = item.date;
   title.textContent = item.title;
