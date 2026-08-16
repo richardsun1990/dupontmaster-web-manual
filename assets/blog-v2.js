@@ -6,6 +6,14 @@ if (!document.querySelector(`script[src="${analyticsSrc}"]`)) {
   document.head.appendChild(analyticsScript);
 }
 
+const topicStyleHref = '/assets/blog-topics-v1.css';
+if (!document.querySelector(`link[href="${topicStyleHref}"]`)) {
+  const topicStyle = document.createElement('link');
+  topicStyle.rel = 'stylesheet';
+  topicStyle.href = topicStyleHref;
+  document.head.appendChild(topicStyle);
+}
+
 let rows = Array.from(document.querySelectorAll('.article-row'));
 const tabs = Array.from(document.querySelectorAll('.filter-tab'));
 const count = document.querySelector('[data-article-count]');
@@ -20,6 +28,39 @@ const escapeHtml = (value = '') => String(value)
   .replace(/"/g, '&quot;');
 
 const articleHref = (slug = '') => `/blog/articles/${encodeURIComponent(slug)}.html`;
+
+const renderTopicDirectory = async () => {
+  const archive = document.querySelector('.archive-section');
+  if (!archive || document.querySelector('.topic-directory')) return;
+  try {
+    const response = await fetch('/blog/topics.json', { cache: 'no-cache' });
+    if (!response.ok) return;
+    const topics = await response.json();
+    if (!Array.isArray(topics) || !topics.length) return;
+
+    const section = document.createElement('section');
+    section.className = 'topic-directory';
+    section.id = 'topics';
+    section.innerHTML = `
+      <div class="container">
+        <div class="topic-directory-head">
+          <h2>专题研究</h2>
+          <p>把单篇文章连接成可以持续追踪的问题</p>
+        </div>
+        <div class="topic-directory-list">
+          ${topics.map((topic, index) => `
+            <a class="topic-directory-link" href="/blog/topics/${encodeURIComponent(topic.id)}.html">
+              <span class="topic-directory-no">${String(index + 1).padStart(2, '0')}</span>
+              <span class="topic-directory-main"><h3>${escapeHtml(topic.title)}</h3><p>${escapeHtml(topic.description)}</p></span>
+              <strong>查看专题 →</strong>
+            </a>`).join('')}
+        </div>
+      </div>`;
+    archive.parentNode.insertBefore(section, archive);
+  } catch (error) {
+    console.warn('topics.json load failed:', error);
+  }
+};
 
 const articleRowHtml = (item) => {
   const title = escapeHtml(item.title || item.slug || '未命名文章');
@@ -112,7 +153,7 @@ tabs.forEach((tab) => {
 });
 
 (async () => {
-  await hydrateFromArticlesJson();
+  await Promise.all([hydrateFromArticlesJson(), renderTopicDirectory()]);
   if (rows.length) {
     applyFilter('全部');
   } else if (empty) {
