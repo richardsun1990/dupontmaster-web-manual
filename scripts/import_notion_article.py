@@ -41,6 +41,16 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = ROOT / "content" / "articles"
 IMAGE_PATTERN = re.compile(r"!\[([^\]]*)\]\(([^)]+)\)")
+PLACEHOLDER_MARKERS = (
+    "你的 accesskey",
+    "你的 accesskey id",
+    "你的 accesskey secret",
+    "你的 bucket",
+    "your accesskey",
+    "your bucket",
+    "example",
+    "changeme",
+)
 
 
 def load_env_file() -> None:
@@ -59,6 +69,13 @@ def env(name: str, required: bool = True, default: str = "") -> str:
     value = os.environ.get(name, default).strip()
     if required and not value:
         raise SystemExit(f"缺少环境变量：{name}")
+    lowered = value.lower()
+    if required and any(marker in lowered for marker in PLACEHOLDER_MARKERS):
+        raise SystemExit(
+            f"{name} 仍然是示例占位值，请编辑 .oss.env 填写真实阿里云 OSS 配置后再发布。"
+        )
+    if name in {"ALIYUN_OSS_BUCKET", "ALIYUN_OSS_ENDPOINT"} and any(ch.isspace() for ch in value):
+        raise SystemExit(f"{name} 中包含空格，请检查 .oss.env。")
     return value
 
 
