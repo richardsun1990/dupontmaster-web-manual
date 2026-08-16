@@ -1,0 +1,222 @@
+.article-share-v2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 46px 0 0;
+  padding: 24px 0;
+  border-top: 1px solid var(--article-border, #e3e8f0);
+  border-bottom: 1px solid var(--article-border, #e3e8f0);
+}
+
+.article-share-v2-copy {
+  min-width: 0;
+}
+
+.article-share-v2-label {
+  display: block;
+  margin-bottom: 4px;
+  color: #172033;
+  font-size: 15px;
+  font-weight: 720;
+  line-height: 1.5;
+}
+
+.article-share-v2-copy p {
+  margin: 0 !important;
+  color: #8a94a6 !important;
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+}
+
+.article-share-v2-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
+}
+
+.article-share-v2-btn {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 9px 14px;
+  border: 1px solid #dfe4ec;
+  border-radius: 8px;
+  background: #fff;
+  color: #344054;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color .18s ease, background .18s ease, transform .18s ease;
+}
+
+.article-share-v2-btn:hover {
+  border-color: #c8d0dc;
+  background: #f8fafc;
+  transform: translateY(-1px);
+}
+
+.article-share-v2-btn:focus-visible,
+.article-share-modal-close:focus-visible {
+  outline: 3px solid rgba(49, 91, 232, .18);
+  outline-offset: 2px;
+}
+
+.article-share-v2-btn svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+}
+
+.article-share-v2-btn.wechat svg { color: #20a162; }
+.article-share-v2-btn.weibo svg { color: #d94b4b; }
+
+.article-share-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(15, 23, 42, .48);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.article-share-modal.is-open { display: flex; }
+
+.article-share-modal-card {
+  position: relative;
+  width: min(360px, 100%);
+  padding: 28px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 22px 60px rgba(15, 23, 42, .18);
+  text-align: center;
+}
+
+.article-share-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: #f5f7fa;
+  color: #667085;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.article-share-modal-kicker {
+  display: block;
+  margin-bottom: 8px;
+  color: #315be8;
+  font-size: 12px;
+  font-weight: 760;
+  letter-spacing: .08em;
+}
+
+.article-share-modal h3 {
+  margin: 0 0 8px !important;
+  color: #101828 !important;
+  font-size: 21px !important;
+  font-weight: 740 !important;
+  line-height: 1.45 !important;
+}
+
+.article-share-modal p {
+  margin: 0 !important;
+  color: #667085 !important;
+  font-size: 14px !important;
+  line-height: 1.7 !important;
+}
+
+.article-share-qrcode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 208px;
+  margin: 22px auto 16px;
+}
+
+.article-share-qrcode canvas,
+.article-share-qrcode img {
+  display: block;
+  width: 196px !important;
+  height: 196px !important;
+  margin: 0 !important;
+  padding: 8px;
+  border: 1px solid #edf0f5 !important;
+  border-radius: 10px !important;
+  background: #fff;
+  object-fit: contain !important;
+}
+
+.article-share-modal-tip {
+  margin-top: 8px !important;
+  color: #98a2b3 !important;
+  font-size: 12px !important;
+}
+
+.article-share-wechat-guide {
+  display: none;
+  margin: 22px 0 4px;
+  padding: 18px;
+  border-radius: 10px;
+  background: #f7f9fc;
+  color: #344054;
+  font-size: 14px;
+  line-height: 1.75;
+  text-align: left;
+}
+
+.article-share-modal.guide-mode .article-share-qrcode,
+.article-share-modal.guide-mode .article-share-modal-tip { display: none; }
+.article-share-modal.guide-mode .article-share-wechat-guide { display: block; }
+
+@media (max-width: 760px) {
+  .article-share-v2 {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 38px;
+    padding: 22px 0;
+  }
+
+  .article-share-v2-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+  }
+
+  .article-share-v2-btn {
+    width: 100%;
+    min-height: 44px;
+  }
+
+  .article-share-modal {
+    align-items: flex-end;
+    padding: 12px;
+  }
+
+  .article-share-modal-card {
+    width: 100%;
+    padding: 28px 22px 24px;
+    border-radius: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .article-share-v2-btn { transition: none; }
+}
