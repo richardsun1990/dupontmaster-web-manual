@@ -21,8 +21,11 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Point Wechatsync bridge at current renderer
+        run: sed -i 's#scripts/publish_article.py#scripts/render_article.py#g' scripts/publish_wechatsync_zip.py
+
       - name: Generate Tencent static article
-        run: python scripts/publish_article.py content/articles/tencent-ai-capital-allocation-2026.md
+        run: python scripts/render_article.py content/articles/tencent-ai-capital-allocation-2026.md
 
       - name: Restore catalog description and href
         shell: bash
