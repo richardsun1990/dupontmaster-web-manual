@@ -1,3 +1,18 @@
+const mobileMediaStyle = document.createElement('style');
+mobileMediaStyle.textContent = `
+  @media (max-width: 760px) {
+    .browser-frame img,
+    .product-shot img {
+      width: 100%;
+      height: auto !important;
+      aspect-ratio: auto !important;
+      object-fit: contain !important;
+      object-position: top left !important;
+    }
+  }
+`;
+document.head.appendChild(mobileMediaStyle);
+
 const menuButton = document.querySelector('[data-menu-button]');
 const mobileMenu = document.querySelector('[data-mobile-menu]');
 
