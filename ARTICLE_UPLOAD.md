@@ -118,14 +118,18 @@ python3 scripts/publish_wechatsync_zip.py "$HOME/Downloads/文章标题.zip" --n
 
 新的发布桥不会再依赖“人工记得上传图片”：同步助手 ZIP 自带正文图片，发布前又会做图片数量校验，少图即停止。
 
+如果重新同步一篇官网已经存在的文章，发布桥会按规范化后的文章标题匹配现有 `articles.json`，优先复用原来的 slug 和 URL。也就是说，重新同步老铺黄金会更新原文章，不会生成第二个重复页面。
+
 ## Notion 仍可作为备用入口
 
 如果某篇文章不经过微信公众号，仍然可以用旧的 Notion Markdown 导出方式：
 
 ```bash
 python3 scripts/import_notion_article.py ~/Downloads/Notion导出的文件.zip --slug article-slug
-python3 scripts/publish_article.py content/articles/article-slug.md
+python3 scripts/render_article.py content/articles/article-slug.md
 ```
+
+`render_article.py` 会使用当前博客结构，自动完成摘要目录、专题、首页、sitemap 和 SEO 后处理；不要再使用旧 `publish_article.py` 作为新文章入口。
 
 但默认工作流统一使用：
 
