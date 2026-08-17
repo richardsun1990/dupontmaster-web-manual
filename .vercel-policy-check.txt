@@ -1,0 +1,1 @@
+This branch intentionally verifies that non-main branches do not create Vercel deployments.
