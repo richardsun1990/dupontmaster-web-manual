@@ -1,0 +1,4 @@
+publish cfmoto-growth-after-20-percent-global-share
+triggered_at=2026-08-25T19:43:00+08:00
+mode=temporary-https-source-to-aliyun-oss
+expected_assets=21
