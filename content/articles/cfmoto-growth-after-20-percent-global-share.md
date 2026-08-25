@@ -1,3 +1,11 @@
+---
+title: "全球份额接近20%之后，春风动力还能怎么增长？"
+date: "2026-08-25"
+tag: "企业分析"
+description: "春风动力全地形车全球单位份额粗略接近20%后，下一轮增长从哪里来？从利润率、资产周转、供应商融资、自由现金流与资本开支拆解增长质量。"
+slug: "cfmoto-growth-after-20-percent-global-share"
+source: "春风动力2025年年报、2026年一季报、公司公告、Polaris公开行业数据及研究底稿整理。文中20%为不同口径下的粗略交叉计算，并非公司披露的官方统一口径全球市占率。"
+---
 # 全球份额接近20%之后，春风动力还能怎么增长？
 
 有一家公司，放在传统制造业里看，增长速度快得有些不真实。
@@ -32,7 +40,7 @@
 
 2025年收入结构是：
 
-![图片]({{image:chart-01.webp}})
+![图片](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/cfmoto-growth-after-20-percent-global-share/20260825-chart-01.webp-29a2329d08)
 
 单看收入，全地形车大约占公司一半。但如果用“收入×毛利率”做一个粗略毛利贡献测算，全地形车大约贡献上述四类业务毛利的60%。
 
@@ -58,13 +66,13 @@
 
 2022—2025年：
 
-![图片]({{image:chart-02.webp}})
+![图片](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/cfmoto-growth-after-20-percent-global-share/20260825-chart-02.webp-8592b6caee)
 
 2022—2025年，收入复合增速约20.2%，归母净利润复合增速约33.7%。
 
 只看这张表，春风几乎具备成长股最讨人喜欢的全部特征：收入增长、利润增长、ROE提升，而且经营现金流长期高于净利润。
 
-![春风动力营业收入与归母净利润]({{image:chart-03.webp}})
+![春风动力营业收入与归母净利润](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/cfmoto-growth-after-20-percent-global-share/20260825-chart-03.webp-6a65529521)
 
 *图1｜春风动力营业收入与归母净利润，2016—2025。规模继续扩张，但2025年利润增速已经明显落后于收入。*
 
@@ -72,7 +80,7 @@
 
 这一年收入增长31.3%，但归母净利润只增长13.8%。公司仍然高速增长，可利润没有跟上。
 
-![春风动力毛利率与归母净利率]({{image:chart-04.webp}})
+![春风动力毛利率与归母净利率](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/cfmoto-growth-after-20-percent-global-share/20260825-chart-04.webp-24fa55ba10)
 
 *图2｜毛利率与归母净利率。利润增长开始跟不上收入，首先要看利润率是否还能继续抬升。*
 
@@ -82,17 +90,17 @@
 
 ### 2022—2025年三因素杜邦
 
-![图片]({{image:chart-05.webp}})
+![图片](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/cfmoto-growth-after-20-percent-global-share/20260825-chart-05.webp-c542647cdf)
 
 过去春风ROE变好，主要不是因为资产转得更快，也不是靠银行加杠杆，而是因为利润率明显提升。
 
-![春风动力ROE与归母净利率]({{image:chart-06.webp}})
+![春风动力ROE与归母净利率](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/cfmoto-growth-after-20-percent-global-share/20260825-chart-06.webp-d8eeb379bc)
 
 *图3｜ROE与归母净利率。2022—2024年两者同步改善，2025年利润率回落后ROE也随之回落。*
 
 这里有一个容易被忽视的细节：**总资产周转率其实已经连续下降，从1.30降到1.16。**
 
-![春风动力总资产周转率与权益乘数]({{image:chart-07.webp}})
+![春风动力总资产周转率与权益乘数](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/cfmoto-growth-after-20-percent-global-share/20260825-chart-07.webp-798c1029ff)
 
 *图4｜总资产周转率与权益乘数。过去几年ROE改善并不是来自资产周转效率提升。*
 
@@ -258,11 +266,11 @@ Polaris估算2023—2025年全球ORV销量分别大约96.5万、94.5万和97万�
 
 单看这组数字，很容易得出一个结论：春风的利润含金量极高，赚1元利润能拿回接近2元经营现金。
 
-![春风动力经营现金流归母净利润自由现金流]({{image:chart-08.webp}})
+![春风动力经营现金流归母净利润自由现金流](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/cfmoto-growth-after-20-percent-global-share/20260825-chart-08.webp-9771db7280)
 
 *图5｜经营现金流、归母净利润与自由现金流。绝对值很漂亮，但高OCF仍需要继续拆营运资金来源。*
 
-![春风动力现金实现率]({{image:chart-09.webp}})
+![春风动力现金实现率](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/cfmoto-growth-after-20-percent-global-share/20260825-chart-09.webp-09163f5d3a)
 
 *图6｜现金实现率。OCF/归母净利润长期较高，但自由现金流同样会受到营运资金和资本开支影响。*
 
@@ -296,7 +304,7 @@ Polaris估算2023—2025年全球ORV销量分别大约96.5万、94.5万和97万�
 
 本文不展开系统估值，只保留这个方法论提醒：看到高自由现金流时，先问一句——其中有多少来自企业真正赚到的现金，又有多少来自暂时还没有付出去的钱。
 
-![春风动力净利率与自由现金流率]({{image:chart-13.webp}})
+![春风动力净利率与自由现金流率](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/cfmoto-growth-after-20-percent-global-share/20260825-chart-13.webp-a23863476b)
 
 *图7｜净利率与自由现金流率。会计利润与最终留下的现金需要交叉验证，不能只取某一年高FCF外推。*
 
@@ -308,7 +316,7 @@ Polaris估算2023—2025年全球ORV销量分别大约96.5万、94.5万和97万�
 
 > **这些新增资本最终能赚到多少回报？**
 
-![春风动力固定资产与在建工程强度]({{image:chart-10.webp}})
+![春风动力固定资产与在建工程强度](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/cfmoto-growth-after-20-percent-global-share/20260825-chart-10.webp-bceaf3131c)
 
 *图8｜（固定资产+在建工程）/营业收入。过去十年资本投入绝对额上升，但资本强度并没有持续恶化。*
 
@@ -318,7 +326,7 @@ Polaris估算2023—2025年全球ORV销量分别大约96.5万、94.5万和97万�
 
 资本投入增加本身不是问题，问题是新增资产能不能带来足够快的收入、利润和现金流。
 
-![春风动力再投资强度]({{image:chart-11.webp}})
+![春风动力再投资强度](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/cfmoto-growth-after-20-percent-global-share/20260825-chart-11.webp-29983698b7)
 
 *图9｜再投资强度。资本开支占收入和经营现金流的比例，决定了经营赚到的钱有多少必须重新投回去。*
 
@@ -330,7 +338,7 @@ Polaris估算2023—2025年全球ORV销量分别大约96.5万、94.5万和97万�
 
 但季度数据非常适合做一张最新体检表。
 
-![图片]({{image:chart-12.webp}})
+![图片](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/cfmoto-growth-after-20-percent-global-share/20260825-chart-12.webp-7acf0d8d04)
 
 最醒目的当然是：收入增长26%，利润只增长2%。
 
@@ -349,7 +357,7 @@ Polaris估算2023—2025年全球ORV销量分别大约96.5万、94.5万和97万�
 
 这四项合计增加的费用，已经大致吃掉了新增毛利。
 
-![春风动力期间费用率趋势]({{image:chart-14.webp}})
+![春风动力期间费用率趋势](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/cfmoto-growth-after-20-percent-global-share/20260825-chart-14.webp-063a775c18)
 
 *图10｜期间费用率趋势（年度数据）。2026Q1不混入年度趋势，但这张图可以帮助判断一季度费用抬升是短期扰动，还是长期费用结构变化的延续。*
 
@@ -383,7 +391,7 @@ Polaris估算2023—2025年全球ORV销量分别大约96.5万、94.5万和97万�
 - 在建工程从5.08亿元增加到7.39亿元，约+45%；
 - 总资产反而小幅下降0.47%，主要因为货币资金下降。
 
-![春风动力应收与存货强度]({{image:chart-16.webp}})
+![春风动力应收与存货强度](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/cfmoto-growth-after-20-percent-global-share/20260825-chart-16.webp-7ee1e9f5bf)
 
 *图11｜应收与存货强度。高速扩张阶段不仅要看利润率，也要观察营运资本是否开始占用更多资金。*
 
@@ -415,13 +423,13 @@ ROE本身不是答案，拆开之后才有意义。
 
 过去几年春风ROE改善主要靠净利率提升，而总资产周转率从2022年的约1.30降到2025年的约1.16。未来如果净利率恢复、资产周转率止跌，说明扩张仍然有效；如果两者同时下滑，即使收入还在增长，资本回报也会明显恶化。
 
-![图片]({{image:chart-15.webp}})
+![图片](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/cfmoto-growth-after-20-percent-global-share/20260825-chart-15.webp-d27d99eb63)
 
 *图12｜营业收入与总资产。未来最关键的不是总资产继续增长，而是新增资产能否带来足够快的收入增长。*
 
 ### 3. （固定资产+在建工程）/营业收入 + 资本开支/经营现金流
 
-![图片]({{image:chart-19.webp}})
+![图片](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/cfmoto-growth-after-20-percent-global-share/20260825-chart-19.webp-731c2d6115)
 
 这组指标回答的是：增长到底需要多重的资本投入。
 
@@ -431,15 +439,15 @@ ROE本身不是答案，拆开之后才有意义。
 
 这是我认为最值得新增的一组。
 
-![图片]({{image:chart-20.webp}})
+![图片](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/cfmoto-growth-after-20-percent-global-share/20260825-chart-20.webp-936da8dd8b)
 
 OCF/净利润告诉我们利润有没有变成现金；
 
-![图片]({{image:chart-17.webp}})
+![图片](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/cfmoto-growth-after-20-percent-global-share/20260825-chart-17.webp-96425f1ddc)
 
 （应付票据+应付账款）/营业成本告诉我们现金流里有多少来自供应商融资；
 
-![图片]({{image:chart-18.webp}})
+![图片](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/cfmoto-growth-after-20-percent-global-share/20260825-chart-18.webp-23cce54bf6)
 
 FCF/营业收入则告诉我们扣除资本开支之后，一元收入最终留下多少自由现金。
 
