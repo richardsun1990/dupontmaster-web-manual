@@ -3,4 +3,4 @@ triggered_at=2026-09-01T13:09:00+08:00
 mode=temporary-https-source-to-aliyun-oss
 expected_assets=7
 source_repo=richardsun1990/dupontmaster-research-workbench
-source_commit=2eeca2a29a8ab5f56eb0cc7d99f40360177c
+source_commit=2eeca2a29a8ab5f56eb0cc0db87d99f40360177c
