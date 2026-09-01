@@ -1,0 +1,4 @@
+2026-09-01
+Fix: Adobe temporary hostname was not resolvable in GitHub Actions.
+New path: Panasonic official archive images -> local Action processing -> localhost -> Aliyun OSS.
+Cover: composited from 1933 historical factory + 2014 modern Panasonic project + official Panasonic logo.
