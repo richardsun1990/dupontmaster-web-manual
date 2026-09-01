@@ -1,2 +1,0 @@
-- Blue Yonder收购资料：https://media.blueyonder.com/panasonic-accelerates-the-autonomous-supply-chain-with-acquisition-of-blue-yonder/
-- 历史年度股价参考：https://s.kabutan.jp/stocks/6752/historical_prices/yearly/

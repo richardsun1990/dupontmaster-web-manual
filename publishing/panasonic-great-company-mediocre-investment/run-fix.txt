@@ -1,3 +1,0 @@
-republish panasonic-great-company-mediocre-investment
-fix=panasonic-official-archive-to-localhost-to-oss
-triggered_at=2026-09-01T14:45:00+08:00
