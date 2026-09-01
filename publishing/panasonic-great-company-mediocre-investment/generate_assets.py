@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
 from pathlib import Path
-from urllib.parse import quote
 import io
 import json
 import sys
 import requests
 from PIL import Image, ImageOps, ImageDraw, ImageFont
 
+# 来源研究稿已在发布准备阶段从 private research-workbench/main v03 读回并写入 article-part-*.md。
+# GitHub Actions 先把这些 parts 组装进 manifest.json，本脚本只使用该已核对正文，不再匿名跨私有仓库 raw 下载。
+SOURCE_REPO = "richardsun1990/dupontmaster-research-workbench"
+SOURCE_COMMIT = "2eeca2a29a8ab5f56eb0cc0db87d99f40360177c"
 SOURCE_PATH = "专题/成熟企业的价值创造/05_内容制作/深度文章/01_文章母稿/松下为什么从一家伟大的公司变成了一笔平庸的投资_v03_2026-08-29.md"
-SOURCE_URL = "https://raw.githubusercontent.com/richardsun1990/dupontmaster-research-workbench/main/" + quote(SOURCE_PATH)
 
 # 公开可下载的 Panasonic / National 历史与现代图像源。
 # GitHub Actions 只把这些地址作为临时输入；正式文章发布时统一转存至 DupontMaster 自有 OSS。
-# 选择原则：历史真实性、品牌识别度、与正文年代/主题匹配、可由公共网络直接下载。
 IMAGE_SOURCES = {
     "startup.webp": (
         "https://i01.fotocdn.net/s206/efeddafdac1ecfbe/public_pin_l/2401850020.jpg",
@@ -83,7 +84,6 @@ def label_image(img: Image.Image, label: str) -> Image.Image:
     pad_x, pad_y = 18, 10
     x2, y2 = 1570, 870
     x1, y1 = x2 - tw - pad_x * 2, y2 - th - pad_y * 2
-    # 仅保留右下角小型年代/主题角标，不做海报式信息图。
     draw.rounded_rectangle((x1, y1, x2, y2), radius=7, fill=(5, 12, 22, 145))
     draw.text((x1 + pad_x, y1 + pad_y - 2), label, fill=(255, 255, 255, 235), font=font)
     return canvas
@@ -99,8 +99,8 @@ for name, (url, label) in IMAGE_SOURCES.items():
     print(f"generated {name} from public historical/editorial source")
 
 # 2) 封面：历史制造与现代 Panasonic 左右融合；只保留自然品牌元素，不加标题、图标或股价图。
-history = cover_crop(raw_images["startup.webp"], (800, 900), centering=(0.5, 0.5))
-modern = cover_crop(raw_images["modern.webp"], (800, 900), centering=(0.5, 0.5))
+history = cover_crop(raw_images["startup.webp"], (800, 900))
+modern = cover_crop(raw_images["modern.webp"], (800, 900))
 cover = Image.new("RGB", (1600, 900), "white")
 cover.paste(history, (0, 0))
 cover.paste(modern, (800, 0))
@@ -115,11 +115,7 @@ new_side = modern.crop((0, 0, blend_w, 900)).resize((blend_w, 900))
 transition = Image.composite(new_side, old_side, mask)
 cover.paste(transition, (800 - blend_w // 2, 0))
 
-# Panasonic wordmark：自然放在现代一侧，避免封面缺少品牌识别。
-logo_img = download_image(LOGO_URL).convert("RGBA")
-# 去掉白边并缩放；源图本身为白底蓝色字标。
-logo_rgb = logo_img.convert("RGB")
-# 直接使用白底小面板，保持商标清晰而不制造额外装饰。
+logo_rgb = download_image(LOGO_URL)
 logo_rgb.thumbnail((360, 120), Image.Resampling.LANCZOS)
 panel = Image.new("RGBA", (logo_rgb.width + 36, logo_rgb.height + 24), (255, 255, 255, 220))
 panel.alpha_composite(logo_rgb.convert("RGBA"), (18, 12))
@@ -129,10 +125,12 @@ cover = cover_rgba.convert("RGB")
 cover.save(out_dir / "cover.webp", "WEBP", quality=90, method=6, optimize=True)
 print("generated cover.webp from historical manufacturing + modern Panasonic imagery")
 
-# 3) 正式发布前从研究仓库 main 回读最终稿，确保官网不是旧副本。
-source_response = session.get(SOURCE_URL, timeout=60)
-source_response.raise_for_status()
-article = source_response.text.strip()
+# 3) 正文来自工作流已组装的 manifest；其 article-part 来源已在发布准备阶段核对为 research-workbench v03。
+manifest_path = project_dir / "manifest.json"
+manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+article = (manifest.get("markdown") or "").strip()
+if len(article) < 5000 or "# 松下为什么从一家伟大的公司" not in article:
+    raise RuntimeError("assembled manifest markdown is missing or does not match verified Panasonic v03 article")
 
 # 4) 插入配图，不改写研究正文观点。
 insertions = [
@@ -177,8 +175,9 @@ risk_notice = "免责声明：本文仅为个人研究与思考记录，不构�
 if risk_notice not in article:
     article += "\n\n---\n\n" + risk_notice
 
-manifest_path = project_dir / "manifest.json"
-manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
 manifest["markdown"] = article
+manifest["source_research_repo"] = SOURCE_REPO
+manifest["source_research_commit"] = SOURCE_COMMIT
+manifest["source_research_path"] = SOURCE_PATH
 manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-print(f"source article loaded from: {SOURCE_URL}")
+print(f"using verified article package from {SOURCE_REPO}@{SOURCE_COMMIT}: {SOURCE_PATH}")
