@@ -8,7 +8,7 @@ source: "美的集团2026年半年度报告及公司公开经营资料；美的�
 ---
 # 美的为什么主动放弃“好看的收入”？
 
-https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/midea-channel-reform-sell-in-sell-out/20260903-cover.webp-579f241e07
+![图片](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/midea-channel-reform-sell-in-sell-out/20260903-cover.webp-579f241e07)
 
 有一笔钱，大多数企业都巴不得早点收到。
 
@@ -58,7 +58,7 @@ Sell-in低于Sell-out，则意味着消费者正在消化过去已经压在渠�
 
 美的这次渠道改革，本质上就是想把第三种状态做得更彻底。
 
-https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/midea-channel-reform-sell-in-sell-out/20260903-chart-01.webp-94b171bf78
+![图片](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/midea-channel-reform-sell-in-sell-out/20260903-chart-01.webp-94b171bf78)
 
 ---
 
@@ -147,7 +147,7 @@ https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/midea-channel-refor
 
 美的这次改革真正有意思的地方，是它不仅改变渠道库存，还会同时影响利润表、资产负债表和现金流量表。
 
-https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/midea-channel-reform-sell-in-sell-out/20260903-chart-02.webp-6c5f6fc3d8
+![图片](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/midea-channel-reform-sell-in-sell-out/20260903-chart-02.webp-6c5f6fc3d8)
 
 首先是收入。
 
@@ -235,7 +235,7 @@ https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/midea-channel-refor
 
 它真正能证明的是：在正式放弃集中开盘之前，美的已经把后台基础设施建到了什么程度。
 
-https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/midea-channel-reform-sell-in-sell-out/20260903-chart-03.webp-b24e76acbf
+![图片](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/midea-channel-reform-sell-in-sell-out/20260903-chart-03.webp-b24e76acbf)
 
 2026年上半年，美的营业收入约2600.42亿元，同比增长3.55%；归母净利润约264.46亿元，同比增长1.66%；经营活动现金流约375.52亿元，同比增长0.73%。
 
@@ -269,7 +269,7 @@ https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/midea-channel-refor
 
 同一组奥维监测数据还显示，7月美的系线上零售均价同比下降比较明显。这意味着终端份额提升，也可能部分来自更积极的价格策略。
 
-https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/midea-channel-reform-sell-in-sell-out/20260903-chart-04.webp-80e80a97f0
+![图片](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/midea-channel-reform-sell-in-sell-out/20260903-chart-04.webp-80e80a97f0)
 
 如果最终出现的是“库存下降、份额上升，但毛利率明显下滑”，那么渠道改革对股东创造的价值就要打折扣。
 
@@ -297,7 +297,7 @@ https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/midea-channel-refor
 
 > 用信息和速度，对抗不确定性。
 
-https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/midea-channel-reform-sell-in-sell-out/20260903-chart-05.webp-8a47aa62d6
+![图片](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/midea-channel-reform-sell-in-sell-out/20260903-chart-05.webp-8a47aa62d6)
 
 终端Sell-out数据不断回流；AI帮助做需求预测；一盘货让全渠道库存变得可视；云仓承担区域共享和调拨；T+3则把生产与补货周期进一步压缩。
 
@@ -384,7 +384,7 @@ https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/midea-channel-refor
 
 美的渠道改革不能靠一个季度、一个库存指标或者一张财报来判断。
 
-https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/midea-channel-reform-sell-in-sell-out/20260903-chart-06.webp-22ccbbafd8
+![图片](https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/midea-channel-reform-sell-in-sell-out/20260903-chart-06.webp-22ccbbafd8)
 
 我会长期看七个核心指标，再加一个辅助指标。
 
