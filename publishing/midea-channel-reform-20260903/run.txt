@@ -1,5 +1,0 @@
-publish midea-channel-reform-sell-in-sell-out
-triggered_at=2026-09-03T09:34:00+08:00
-mode=user-uploaded-zip-to-actions-to-aliyun-oss
-expected_assets=7
-source_zip=chatgpt-uploaded-package
