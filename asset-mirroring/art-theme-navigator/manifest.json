@@ -789,6 +789,28 @@
       "credit": "New Zealand Office of the Governor-General",
       "reference_kind": "portrait",
       "alt": "Portrait of Cindy Sherman"
+    },
+    {
+      "key": "artist-david-carson-portrait",
+      "group": "artist-reference",
+      "source_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/20190513-BT-Dus-David%20Carson-NP.jpg?width=1600",
+      "source_page": "https://commons.wikimedia.org/wiki/File:20190513-BT-Dus-David_Carson-NP.jpg",
+      "license_name": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Norman Posselt",
+      "reference_kind": "portrait",
+      "alt": "Portrait of graphic designer David Carson at Beyond Tellerrand Düsseldorf in 2019"
+    },
+    {
+      "key": "artist-edward-hopper-house-by-railroad",
+      "group": "artist-reference",
+      "source_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20House%20by%20the%20Railroad%20by%20Edward%20Hopper%201925.jpg?width=1600",
+      "source_page": "https://commons.wikimedia.org/wiki/File:The_House_by_the_Railroad_by_Edward_Hopper_1925.jpg",
+      "license_name": "Public domain",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "credit": "Edward Hopper / Museum of Modern Art",
+      "reference_kind": "public-domain-work",
+      "alt": "House by the Railroad by Edward Hopper, 1925"
     }
   ]
 }
