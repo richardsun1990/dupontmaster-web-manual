@@ -37,7 +37,7 @@ retry = Retry(
     backoff_factor=2,
     status_forcelist=(429, 500, 502, 503, 504),
     allowed_methods=frozenset({"GET"}),
-    respect_retry_after_header=True,
+    respect_retry_after_header=False,
 )
 session.mount("https://", HTTPAdapter(max_retries=retry))
 bucket = oss2.Bucket(oss2.Auth(ak, sk), "https://" + endpoint, bucket_name)
@@ -60,8 +60,22 @@ def to_webp(url: str) -> tuple[bytes, int, int]:
         image.save(output, "WEBP", quality=84, method=6, optimize=True)
         return output.getvalue(), width, height
 
+existing_by_key = {}
+if result_path.exists():
+    try:
+        previous = json.loads(result_path.read_text(encoding="utf-8"))
+        existing_by_key = {item["key"]: item for item in previous.get("assets", [])}
+    except (OSError, json.JSONDecodeError, KeyError):
+        existing_by_key = {}
+
 results = []
 for asset in manifest["assets"]:
+    existing = existing_by_key.get(asset["key"])
+    if existing and existing.get("source_url") == asset["source_url"] and existing.get("oss_url"):
+        results.append({**existing, **asset})
+        print(f"reused {asset['key']} -> {existing['oss_url']}")
+        continue
+
     source_url = asset["source_url"]
     if "commons.wikimedia.org" in source_url or "upload.wikimedia.org" in source_url:
         time.sleep(2)
