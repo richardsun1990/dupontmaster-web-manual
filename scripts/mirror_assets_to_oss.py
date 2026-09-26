@@ -4,11 +4,14 @@ import io
 import json
 import os
 import re
+import time
 from pathlib import Path
 from urllib.parse import quote
 
 import oss2
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 from PIL import Image, ImageOps
 
 manifest_path = Path(os.environ["ASSET_MANIFEST"])
@@ -23,7 +26,20 @@ public_base = os.environ.get("ALIYUN_OSS_PUBLIC_BASE_URL", "").strip().rstrip("/
 prefix = os.environ.get("ALIYUN_OSS_PREFIX", "art-theme-navigator/assets").strip().strip("/")
 
 session = requests.Session()
-session.headers.update({"User-Agent": "ArtThemeNavigatorAssetMirror/1.0"})
+session.headers.update({
+    "User-Agent": "ArtThemeNavigatorAssetMirror/1.1 (educational asset mirror; contact via github.com/richardsun1990)",
+})
+retry = Retry(
+    total=6,
+    connect=4,
+    read=4,
+    status=6,
+    backoff_factor=2,
+    status_forcelist=(429, 500, 502, 503, 504),
+    allowed_methods=frozenset({"GET"}),
+    respect_retry_after_header=True,
+)
+session.mount("https://", HTTPAdapter(max_retries=retry))
 bucket = oss2.Bucket(oss2.Auth(ak, sk), "https://" + endpoint, bucket_name)
 
 def to_webp(url: str) -> tuple[bytes, int, int]:
@@ -46,7 +62,10 @@ def to_webp(url: str) -> tuple[bytes, int, int]:
 
 results = []
 for asset in manifest["assets"]:
-    raw, width, height = to_webp(asset["source_url"])
+    source_url = asset["source_url"]
+    if "commons.wikimedia.org" in source_url or "upload.wikimedia.org" in source_url:
+        time.sleep(2)
+    raw, width, height = to_webp(source_url)
     digest = hashlib.sha256(raw).hexdigest()[:12]
     safe_key = re.sub(r"[^a-z0-9-]+", "-", asset["key"].lower()).strip("-")
     object_key = f"{prefix}/{safe_key}-{digest}.webp"
