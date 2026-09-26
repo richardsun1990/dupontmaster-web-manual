@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "purpose": "Art Theme Navigator 页面母题图与主题观察图。仅收录允许商业使用的 Pexels 与 Unsplash 素材，并保留来源及许可链接。",
+  "assets": [
+    {
+      "key": "mother-01",
+      "group": "mother-theme",
+      "source_url": "https://images.pexels.com/photos/6337335/pexels-photo-6337335.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "source_page": "https://www.pexels.com/photo/reflection-of-a-woman-on-a-mirror-6337335/",
+      "license_name": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "alt": "人物、镜面与身份反思"
+    },
+    {
+      "key": "mother-02",
+      "group": "mother-theme",
+      "source_url": "https://images.pexels.com/photos/5370364/pexels-photo-5370364.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "source_page": "https://www.pexels.com/photo/asian-man-doing-exercises-on-street-5370364/",
+      "license_name": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "alt": "运动中的身体与动作"
+    },
+    {
+      "key": "mother-03",
+      "group": "mother-theme",
+      "source_url": "https://images.pexels.com/photos/5498233/pexels-photo-5498233.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "source_page": "https://www.pexels.com/photo/shopping-cart-in-a-supermarket-5498233/",
+      "license_name": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "alt": "超市购物车与消费空间"
+    },
+    {
+      "key": "mother-04",
+      "group": "mother-theme",
+      "source_url": "https://images.pexels.com/photos/18259218/pexels-photo-18259218.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "source_page": "https://www.pexels.com/photo/singer-holding-a-mic-at-the-concert-18259218/",
+      "license_name": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "alt": "舞台上的歌手与音乐表演"
+    },
+    {
+      "key": "mother-05",
+      "group": "mother-theme",
+      "source_url": "https://images.pexels.com/photos/4545948/pexels-photo-4545948.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "source_page": "https://www.pexels.com/photo/family-sitting-together-with-their-dog-4545948/",
+      "license_name": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "alt": "家庭成员与宠物相处"
+    },
+    {
+      "key": "mother-06",
+      "group": "mother-theme",
+      "source_url": "https://images.pexels.com/photos/18367509/pexels-photo-18367509.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "source_page": "https://www.pexels.com/photo/urban-building-by-the-street-18367509/",
+      "license_name": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "alt": "城市建筑、街道与公共空间"
+    },
+    {
+      "key": "mother-07",
+      "group": "mother-theme",
+      "source_url": "https://images.pexels.com/photos/22725831/pexels-photo-22725831.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "source_page": "https://www.pexels.com/photo/leaf-in-a-forest-22725831/",
+      "license_name": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "alt": "森林植物与生态环境"
+    },
+    {
+      "key": "mother-08",
+      "group": "mother-theme",
+      "source_url": "https://images.pexels.com/photos/5984873/pexels-photo-5984873.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "source_page": "https://www.pexels.com/photo/collection-of-vintage-toys-on-shelf-5984873/",
+      "license_name": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "alt": "复古玩具与物件收藏"
+    },
+    {
+      "key": "mother-09",
+      "group": "mother-theme",
+      "source_url": "https://images.pexels.com/photos/5234584/pexels-photo-5234584.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "source_page": "https://www.pexels.com/photo/a-woman-in-a-therapy-session-5234584/",
+      "license_name": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "alt": "心理咨询与情绪支持"
+    },
+    {
+      "key": "mother-10",
+      "group": "mother-theme",
+      "source_url": "https://images.pexels.com/photos/21337283/pexels-photo-21337283.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "source_page": "https://www.pexels.com/photo/traditional-ritual-with-offering-ceremony-21337283/",
+      "license_name": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "alt": "传统仪式与文化物件"
+    },
+    {
+      "key": "mother-11",
+      "group": "mother-theme",
+      "source_url": "https://images.pexels.com/photos/7915255/pexels-photo-7915255.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "source_page": "https://www.pexels.com/photo/men-playing-computer-games-7915255/",
+      "license_name": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "alt": "电子游戏与数字技术"
+    },
+    {
+      "key": "mother-12",
+      "group": "mother-theme",
+      "source_url": "https://images.pexels.com/photos/2554743/pexels-photo-2554743.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "source_page": "https://www.pexels.com/photo/person-standing-near-smoke-2554743/",
+      "license_name": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "alt": "雾气中的人物与神秘氛围"
+    },
+    {
+      "key": "observation-11",
+      "group": "observation",
+      "source_url": "https://images.unsplash.com/photo-1523879713148-2115447173db?auto=format&fit=crop&w=1600&q=85",
+      "source_page": "https://unsplash.com/photos/person-lying-on-bed-ifgqd3CiK1U",
+      "license_name": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "alt": "睡眠、夜晚与梦境边界"
+    },
+    {
+      "key": "observation-12",
+      "group": "observation",
+      "source_url": "https://images.unsplash.com/photo-1762021441224-a04b2a5ab90d?auto=format&fit=crop&w=1600&q=85",
+      "source_page": "https://unsplash.com/photos/a-gymnast-performs-with-a-ball-oDiD6EqcISQ",
+      "license_name": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "alt": "艺术体操、器械与身体控制"
+    },
+    {
+      "key": "observation-13",
+      "group": "observation",
+      "source_url": "https://images.unsplash.com/photo-1569254983547-44dc559f038f?auto=format&fit=crop&w=1600&q=85",
+      "source_page": "https://unsplash.com/photos/garbage-on-seashore-0G2jF-c704s",
+      "license_name": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "alt": "海岸塑料垃圾与污染证据"
+    },
+    {
+      "key": "observation-14",
+      "group": "observation",
+      "source_url": "https://images.unsplash.com/photo-1756037020444-5e33a019e103?auto=format&fit=crop&w=1600&q=85",
+      "source_page": "https://unsplash.com/photos/two-people-looking-out-a-window-at-city-cGnQUaUYAJg",
+      "license_name": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "alt": "窗框、人物与城市景观"
+    },
+    {
+      "key": "observation-15",
+      "group": "observation",
+      "source_url": "https://images.unsplash.com/photo-1774978236819-1cfbb59793c0?auto=format&fit=crop&w=1600&q=85",
+      "source_page": "https://unsplash.com/photos/delivery-person-on-a-motorcycle-in-a-city-cNid0SqA0Kc",
+      "license_name": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "alt": "城市中的配送劳动者"
+    },
+    {
+      "key": "observation-16",
+      "group": "observation",
+      "source_url": "https://images.pexels.com/photos/8091603/pexels-photo-8091603.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "source_page": "https://www.pexels.com/photo/photo-of-man-holding-white-face-mask-8091603/",
+      "license_name": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "alt": "人物、面具与隐藏身份"
+    },
+    {
+      "key": "observation-17",
+      "group": "observation",
+      "source_url": "https://images.unsplash.com/photo-1771582115301-04b7e1fab7d9?auto=format&fit=crop&w=1600&q=85",
+      "source_page": "https://unsplash.com/photos/person-sitting-alone-on-a-spiral-staircase-lz8ofSDmbbI",
+      "license_name": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "alt": "孤立人物与压迫空间"
+    },
+    {
+      "key": "observation-18",
+      "group": "observation",
+      "source_url": "https://images.unsplash.com/photo-1774694766760-8c27a3c5b8a3?auto=format&fit=crop&w=1600&q=85",
+      "source_page": "https://unsplash.com/photos/a-collection-of-stuffed-animals-on-wooden-shelves-4Uu8TLWpgDA",
+      "license_name": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "alt": "毛绒玩具收藏与童年记忆"
+    },
+    {
+      "key": "observation-19",
+      "group": "observation",
+      "source_url": "https://images.unsplash.com/photo-1766532721742-186e96e3db3a?auto=format&fit=crop&w=1600&q=85",
+      "source_page": "https://unsplash.com/photos/rapper-performing-on-stage-for-an-audience-wQ9SWUYTvpg",
+      "license_name": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "alt": "说唱舞台与青年文化"
+    },
+    {
+      "key": "observation-20",
+      "group": "observation",
+      "source_url": "https://images.unsplash.com/photo-1756149754890-5b11fa791bcf?auto=format&fit=crop&w=1600&q=85",
+      "source_page": "https://unsplash.com/photos/a-person-sits-alone-on-a-bench-in-a-school-hallway-9z-3lH1UU2M",
+      "license_name": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "alt": "校园走廊中的孤立人物"
+    },
+    {
+      "key": "observation-55",
+      "group": "observation",
+      "source_url": "https://images.unsplash.com/photo-1768349027552-0b2b52b68c7c?auto=format&fit=crop&w=1600&q=85",
+      "source_page": "https://unsplash.com/photos/basketball-player-holding-ball-on-court-G-FUM4ng6vo",
+      "license_name": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "alt": "篮球、球场与训练状态"
+    }
+  ]
+}

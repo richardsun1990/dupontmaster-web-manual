@@ -1,0 +1,51 @@
+name: Mirror Art Theme Images to OSS
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'asset-mirroring/art-theme-navigator/manifest.json'
+      - 'scripts/mirror_assets_to_oss.py'
+      - '.github/workflows/mirror-art-theme-assets.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mirror-art-theme-assets
+  cancel-in-progress: false
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install image and OSS dependencies
+        run: pip install --disable-pip-version-check oss2 pillow requests
+
+      - name: Download, optimise and upload licensed images
+        env:
+          ASSET_MANIFEST: asset-mirroring/art-theme-navigator/manifest.json
+          ASSET_RESULT: asset-mirroring/art-theme-navigator/result.json
+          ALIYUN_OSS_ACCESS_KEY_ID: ${{ secrets.ALIYUN_OSS_ACCESS_KEY_ID }}
+          ALIYUN_OSS_ACCESS_KEY_SECRET: ${{ secrets.ALIYUN_OSS_ACCESS_KEY_SECRET }}
+          ALIYUN_OSS_BUCKET: ${{ vars.ALIYUN_OSS_BUCKET || secrets.ALIYUN_OSS_BUCKET }}
+          ALIYUN_OSS_ENDPOINT: ${{ vars.ALIYUN_OSS_ENDPOINT || secrets.ALIYUN_OSS_ENDPOINT }}
+          ALIYUN_OSS_PUBLIC_BASE_URL: ${{ vars.ALIYUN_OSS_PUBLIC_BASE_URL || secrets.ALIYUN_OSS_PUBLIC_BASE_URL }}
+          ALIYUN_OSS_PREFIX: art-theme-navigator/assets
+        run: python scripts/mirror_assets_to_oss.py
+
+      - name: Commit immutable OSS URL map
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add asset-mirroring/art-theme-navigator/result.json
+          git commit -m "assets: mirror art theme images to OSS" || exit 0
+          git push
