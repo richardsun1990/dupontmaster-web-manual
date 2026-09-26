@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "purpose": "Art Theme Navigator 页面母题图与主题观察图。仅收录允许商业使用的 Pexels 与 Unsplash 素材，并保留来源及许可链接。",
+  "purpose": "Art Theme Navigator 页面母题图、主题观察图与艺术家参考图。仅收录公共领域、开放许可或允许网站使用的素材，并保留来源、作者及许可链接。",
   "assets": [
     {
       "key": "mother-01",
@@ -613,6 +613,193 @@
       "license_name": "Pexels License",
       "license_url": "https://www.pexels.com/license/",
       "alt": "机械齿轮、精密结构与动力传递"
+    },
+    {
+      "key": "artist-michael-craig-martin",
+      "group": "artist-reference",
+      "source_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Michael%20Craig%20Martin%20(cropped).jpg?width=1600",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Michael_Craig_Martin_(cropped).jpg",
+      "license_name": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Rowead",
+      "reference_kind": "portrait",
+      "alt": "Michael Craig-Martin at the Royal Academy"
+    },
+    {
+      "key": "artist-martin-parr",
+      "group": "artist-reference",
+      "source_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Martin%20Parr%20at%20the%20High%20Museum%2C%20Atlanta%20(7374632876)%20(cropped).jpg?width=1600",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Martin_Parr_at_the_High_Museum,_Atlanta_(7374632876)_(cropped).jpg",
+      "license_name": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "credit": "BurnAway",
+      "reference_kind": "portrait",
+      "alt": "Martin Parr speaking at the High Museum of Art"
+    },
+    {
+      "key": "artist-paula-scher",
+      "group": "artist-reference",
+      "source_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Paula%20Scher%20interview%20OnCreativity.jpg?width=1600",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Paula_Scher_interview_OnCreativity.jpg",
+      "license_name": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "credit": "OnCreativity",
+      "reference_kind": "portrait",
+      "alt": "Paula Scher during an interview"
+    },
+    {
+      "key": "artist-david-carson",
+      "group": "artist-reference",
+      "source_url": "https://images.pexels.com/photos/6061/pexels-photo-6061.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "source_page": "https://www.pexels.com/photo/typography-book-6061/",
+      "license_name": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "credit": "Pexels contributor",
+      "reference_kind": "method-reference",
+      "alt": "Typography and editorial layout method reference"
+    },
+    {
+      "key": "artist-kara-walker",
+      "group": "artist-reference",
+      "source_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kara%20Walker%20Interview%20Camden%20Arts%20Centre%2001.47%20(cropped).jpg?width=1600",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Kara_Walker_Interview_Camden_Arts_Centre_01.47_(cropped).jpg",
+      "license_name": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "credit": "Studio International",
+      "reference_kind": "portrait",
+      "alt": "Kara Walker during an interview at Camden Arts Centre"
+    },
+    {
+      "key": "artist-edward-hopper",
+      "group": "artist-reference",
+      "source_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Edward%20Hopper%2C%20New%20York%20artist%20LCCN2016871478%20(cropped).jpg?width=1600",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Edward_Hopper,_New_York_artist_LCCN2016871478_(cropped).jpg",
+      "license_name": "Public domain",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "credit": "Library of Congress",
+      "reference_kind": "portrait",
+      "alt": "Edward Hopper in his New York studio"
+    },
+    {
+      "key": "artist-rene-magritte",
+      "group": "artist-reference",
+      "source_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Portrait%20en%20buste%20du%20peintre%20surr%C3%A9aliste%20Ren%C3%A9%20Magritte%20(cropped).jpg?width=1600",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Portrait_en_buste_du_peintre_surréaliste_René_Magritte_(cropped).jpg",
+      "license_name": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Paris Musées / Musée Carnavalet",
+      "reference_kind": "portrait",
+      "alt": "René Magritte in 1961"
+    },
+    {
+      "key": "artist-david-hockney",
+      "group": "artist-reference",
+      "source_url": "https://images.pexels.com/photos/6957108/pexels-photo-6957108.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "source_page": "https://www.pexels.com/photo/swimming-pool-in-modern-building-6957108/",
+      "license_name": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "credit": "Max Vakhtbovych",
+      "reference_kind": "method-reference",
+      "alt": "Blue swimming pool and modern interior as a visual-method reference"
+    },
+    {
+      "key": "artist-georgia-okeeffe",
+      "group": "artist-reference",
+      "source_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Georgia%20O'Keeffe.jpg?width=1600",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Georgia_O'Keeffe.jpg",
+      "license_name": "Public domain",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "credit": "Alfred Stieglitz",
+      "reference_kind": "portrait",
+      "alt": "Portrait of Georgia O'Keeffe"
+    },
+    {
+      "key": "artist-jean-michel-basquiat",
+      "group": "artist-reference",
+      "source_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/AsPoster-SAMO-Mania-D.-363x500.jpg?width=1600",
+      "source_page": "https://commons.wikimedia.org/wiki/File:AsPoster-SAMO-Mania-D.-363x500.jpg",
+      "license_name": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "credit": "Eva-Maria Gössling",
+      "reference_kind": "method-reference",
+      "alt": "SAMO typography poster as a contextual method reference"
+    },
+    {
+      "key": "artist-leonardo-da-vinci",
+      "group": "artist-reference",
+      "source_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Mona%20Lisa%2C%20by%20Leonardo%20da%20Vinci%2C%20from%20C2RMF%20retouched.jpg?width=1600",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg",
+      "license_name": "Public domain",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "credit": "Louvre / C2RMF",
+      "reference_kind": "public-domain-work",
+      "alt": "Mona Lisa by Leonardo da Vinci"
+    },
+    {
+      "key": "artist-mc-escher",
+      "group": "artist-reference",
+      "source_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Maurits%20Cornelis%20Escher.jpg?width=1600",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Maurits_Cornelis_Escher.jpg",
+      "license_name": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Anefo / Nationaal Archief",
+      "reference_kind": "portrait",
+      "alt": "Portrait of M. C. Escher"
+    },
+    {
+      "key": "artist-francis-bacon",
+      "group": "artist-reference",
+      "source_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Francis%20Bacon%20artist%20(cropped).jpg?width=1600",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Francis_Bacon_artist_(cropped).jpg",
+      "license_name": "Public domain",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "credit": "Reginald Gray",
+      "reference_kind": "licensed-portrait-artwork",
+      "alt": "Portrait of Francis Bacon by Reginald Gray"
+    },
+    {
+      "key": "artist-vincent-van-gogh",
+      "group": "artist-reference",
+      "source_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Vincent%20Van%20Gogh%20Starry%20Night.jpg?width=1600",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Vincent_Van_Gogh_Starry_Night.jpg",
+      "license_name": "Public domain",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "credit": "Museum of Modern Art",
+      "reference_kind": "public-domain-work",
+      "alt": "The Starry Night by Vincent van Gogh"
+    },
+    {
+      "key": "artist-andy-warhol",
+      "group": "artist-reference",
+      "source_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Warhol.jpg?width=1600",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Warhol.jpg",
+      "license_name": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "credit": "Gorupdebesanez",
+      "reference_kind": "portrait",
+      "alt": "Andy Warhol in 1982"
+    },
+    {
+      "key": "artist-frida-kahlo",
+      "group": "artist-reference",
+      "source_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Frida%20Kahlo%2C%20by%20Guillermo%20Kahlo%202.jpg?width=1600",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Frida_Kahlo,_by_Guillermo_Kahlo_2.jpg",
+      "license_name": "Public domain",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "credit": "Guillermo Kahlo",
+      "reference_kind": "portrait",
+      "alt": "Portrait of Frida Kahlo by Guillermo Kahlo"
+    },
+    {
+      "key": "artist-cindy-sherman",
+      "group": "artist-reference",
+      "source_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cindy%20Sherman%20(cropped).jpg?width=1600",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Cindy_Sherman_(cropped).jpg",
+      "license_name": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "New Zealand Office of the Governor-General",
+      "reference_kind": "portrait",
+      "alt": "Portrait of Cindy Sherman"
     }
   ]
 }
