@@ -1,0 +1,86 @@
+
+/* Creator landing page: scoped styles; homepage and paid research app remain unchanged. */
+.creator-hero{padding:92px 0 82px;background:linear-gradient(115deg,#081d3e 0%,#0b3469 57%,#0b4b80 100%);color:#fff;overflow:hidden}
+.creator-hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.07fr);gap:64px;align-items:center}
+.creator-eyebrow{display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#b9d6ff;padding:7px 13px;font-size:12px;font-weight:750;border-radius:50px;letter-spacing:.04em}
+.creator-hero h1{margin:23px 0 0;font-size:clamp(36px,4.4vw,60px);font-weight:800;letter-spacing:-.06em;line-height:1.21}
+.creator-hero h1 em{font-style:normal;color:#8ed8f7}
+.creator-lead{margin:25px 0 0;font-size:17px;line-height:1.9;max-width:580px;color:#d1def2}
+.creator-actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:32px}
+.creator-actions .button-primary{padding:0 24px;background:#fff;color:#093768}
+.creator-actions .button-primary:hover{background:#e7f0ff}
+.creator-alt{padding:0 22px;color:#fff;border:1px solid rgba(255,255,255,.5);background:transparent}
+.creator-alt:hover{background:rgba(255,255,255,.08)}
+.creator-note{margin-top:17px;font-size:12px;color:#a8bed9;line-height:1.7}
+.creator-main-visual{margin:0;border:1px solid rgba(255,255,255,.2);border-radius:16px;background:#fff;box-shadow:0 28px 90px rgba(0,0,0,.25);overflow:hidden}
+.creator-browser-chrome{height:37px;background:#f1f5fa;display:flex;gap:5px;align-items:center;padding:0 15px}
+.creator-browser-chrome span{width:7px;height:7px;background:#c2cbd8;border-radius:50%}
+.creator-browser-chrome strong{margin-left:11px;color:#5b6880;font-size:11px;font-weight:600}
+.creator-main-visual img{display:block;width:100%;height:auto;object-fit:contain}
+.creator-main-visual figcaption{padding:12px 14px;color:#627083;font-size:11px;line-height:1.6}
+.creator-strap{border-bottom:1px solid var(--border);background:#f7fafe}
+.creator-strap-inner{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:21px 0}
+.creator-strap strong{font-size:13px;margin-right:8px;color:#364860}
+.creator-strap span{font-size:12px;padding:6px 12px;border:1px solid #dce5f0;background:#fff;border-radius:30px;color:#41556f}
+.creator-heading{max-width:740px;margin-bottom:42px}
+.creator-heading h2{font-size:clamp(30px,3.2vw,46px);font-weight:800;line-height:1.28;letter-spacing:-.042em;margin:10px 0 14px;color:var(--text)}
+.creator-heading p{font-size:16px;color:var(--text-2);line-height:1.88;margin:0}
+.creator-kicker{font-size:11px;letter-spacing:.12em;font-weight:850;color:#1b66cb}
+.creator-feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.creator-feature{border:1px solid var(--border);border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 10px 40px rgba(13,32,62,.035)}
+.creator-feature img{width:100%;height:auto;aspect-ratio:16/10;object-fit:contain;object-position:top center;background:#f6f8fb}
+.creator-feature-body{padding:22px 22px 26px}
+.creator-feature-body span{font-size:11px;color:#0b63e5;font-weight:800;letter-spacing:.05em}
+.creator-feature-body h3{font-size:19px;line-height:1.46;margin:10px 0 12px;letter-spacing:-.02em}
+.creator-feature-body p{font-size:13px;line-height:1.8;color:var(--text-2);margin:0}
+.creator-inline-links{display:flex;flex-wrap:wrap;gap:22px;margin-top:28px}
+.creator-inline-links a{font-size:13px;color:var(--blue);text-decoration:none;font-weight:700}
+.creator-inline-links a:hover{text-decoration:underline}
+.creator-step-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.creator-step-grid article{border:1px solid var(--border);background:#fff;border-radius:12px;padding:24px 21px 27px}
+.creator-step-no{font-size:28px;font-weight:830;color:#a8bad3}
+.creator-step-grid h3{font-size:18px;margin:15px 0 9px;letter-spacing:-.015em}
+.creator-step-grid p{font-size:13px;line-height:1.85;margin:0;color:var(--text-2)}
+.creator-terms{margin-top:25px;padding:23px 27px;background:#eaf2ff;border-left:3px solid var(--blue);border-radius:8px}
+.creator-terms strong{font-size:14px;color:#123c73}
+.creator-terms p{margin:7px 0 0;font-size:13px;line-height:1.85;color:#34516f}
+.creator-faq-grid{display:grid;grid-template-columns:1fr 1.18fr;gap:85px;align-items:start}
+.creator-faq-items{border-top:1px solid var(--border)}
+.creator-faq-items details{border-bottom:1px solid var(--border);padding:18px 0}
+.creator-faq-items summary{font-size:15px;font-weight:700;color:var(--text);cursor:pointer;list-style-position:inside}
+.creator-faq-items summary:hover{color:var(--blue)}
+.creator-faq-items p{font-size:13px;margin:11px 0 3px;color:var(--text-2);line-height:1.9}
+.creator-faq-items p a{color:var(--blue)}
+.creator-contact{background:#082d68;color:#fff;padding:73px 0}
+.creator-contact-grid{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+.creator-contact .creator-kicker{color:#9dceff}
+.creator-contact h2{font-size:clamp(29px,3.8vw,43px);font-weight:800;line-height:1.25;letter-spacing:-.03em;margin:14px 0 15px}
+.creator-contact p{max-width:700px;color:#cbddf1;line-height:1.8;margin:0;font-size:14px}
+.creator-contact .creator-contact-email{font-size:12px;margin-top:12px;color:#a9c1da}
+.creator-contact-email a{color:#f2f8ff}
+.creator-contact .button-primary{background:#fff;color:#082d68;padding:0 25px;white-space:nowrap}
+.creator-contact .button-primary:hover{background:#eaf2ff}
+@media(max-width:1050px){
+  .creator-hero-grid{gap:35px}
+  .creator-step-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .creator-faq-grid{gap:35px}
+}
+@media(max-width:760px){
+  .creator-hero{padding:57px 0 57px}
+  .creator-hero-grid,.creator-faq-grid,.creator-contact-grid{grid-template-columns:1fr;gap:32px}
+  .creator-hero h1{font-size:clamp(33px,9.5vw,43px)}
+  .creator-lead{font-size:15px;line-height:1.85}
+  .creator-actions{flex-direction:column;align-items:stretch;gap:10px}
+  .creator-actions .button-primary,.creator-actions .button-secondary{width:100%;min-height:45px}
+  .creator-feature-grid{grid-template-columns:1fr;gap:16px}
+  .creator-feature img{aspect-ratio:16/9}
+  .creator-heading{margin-bottom:27px}
+  .creator-heading p{font-size:14px}
+  .creator-step-grid{grid-template-columns:1fr}
+  .creator-step-grid article{padding:20px}
+  .creator-step-grid h3{margin:8px 0 7px}
+  .creator-strap-inner{padding:18px 0}
+  .creator-contact{padding:58px 0}
+  .creator-contact .button-primary{width:100%}
+  .creator-terms{padding:19px}
+}

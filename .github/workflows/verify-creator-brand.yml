@@ -1,0 +1,29 @@
+name: Verify creator brand landing page
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'creator/**'
+      - 'assets/creator-v1.*'
+      - 'assets/home-v2.css'
+      - 'assets/analytics-v1.js'
+      - 'scripts/check_creator_brand.py'
+      - '.github/workflows/verify-creator-brand.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'creator/**'
+      - 'assets/creator-v1.*'
+      - 'assets/home-v2.css'
+      - 'assets/analytics-v1.js'
+      - 'scripts/check_creator_brand.py'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate homepage and creator landing page
+        run: python3 scripts/check_creator_brand.py
