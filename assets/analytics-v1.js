@@ -15,8 +15,10 @@
     window.gtag('config', MEASUREMENT_ID);
   }
 
-  const pageType = location.pathname === '/blog/' || location.pathname === '/blog/index.html'
-    ? 'blog'
+  const pageType = location.pathname === '/creator/' || location.pathname === '/creator/index.html'
+    ? 'creator'
+    : location.pathname === '/blog/' || location.pathname === '/blog/index.html'
+      ? 'blog'
     : location.pathname.startsWith('/blog/articles/') || location.pathname === '/blog/article.html'
       ? 'article'
       : location.pathname.startsWith('/blog/topics/')
