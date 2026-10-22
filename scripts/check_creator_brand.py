@@ -47,8 +47,8 @@ for entry, p in [('index.html', home), ('creator/index.html', creator)]:
     if len(p.ids) != len(set(p.ids)):
         errors.append(f'{entry}: duplicate element ID')
     for img in p.images:
-        if not img.get('alt'):
-            errors.append(f'{entry}: missing image alt')
+        if 'alt' not in img:
+            errors.append(f'{entry}: missing alt attribute (empty alt is valid for decorative logos)')
     for _, _, link in p.references:
         if link.startswith(('mailto:', 'https:', 'http:', 'data:', 'javascript:', '//')):
             continue
