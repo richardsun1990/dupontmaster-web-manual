@@ -67,7 +67,7 @@ for entry, p in [('index.html', home), ('creator/index.html', creator)]:
             errors.append(f'{entry}: missing homepage fragment {url.fragment}')
 
 required_creator = ('申请创作者体验', '真实研究与反馈', '一次性体验码',
-                    '一个账号只支持兑换一次', '14 天 Pro', '不要求好评', 'mailto:crazymanrichard1990@gmail.com')
+                    '一个账号只支持兑换一次', '10 天 Pro', '不要求好评', 'mailto:crazymanrichard1990@gmail.com')
 for phrase in required_creator:
     if phrase not in html:
         errors.append(f'creator page missing: {phrase}')
