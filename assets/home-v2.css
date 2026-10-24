@@ -375,9 +375,9 @@ button, input { font: inherit; }
 .principle h3 { margin: 22px 0 8px; font-size: 22px; }
 .principle p { margin: 0; color: var(--text-2); font-size: 15px; line-height: 1.75; }
 
-.pricing-wrap { display: grid; grid-template-columns: .72fr 1.28fr; gap: 72px; align-items: start; }
-.pricing-intro { position: sticky; top: 100px; }
-.pricing-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.pricing-wrap { display: grid; grid-template-columns: 1fr; gap: 34px; }
+.pricing-intro { position: static; max-width: 850px; }
+.pricing-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
 .plan-card { padding: 30px; border: 1px solid var(--border-strong); background: #fff; }
 .plan-card.pro { border: 2px solid var(--blue); }
 .plan-card h3 { margin: 0; font-size: 22px; }
@@ -425,6 +425,7 @@ button, input { font: inherit; }
   .portfolio-grid { grid-template-columns: 1fr; }
   .pricing-wrap { grid-template-columns: 1fr; gap: 40px; }
   .pricing-intro { position: static; }
+  .pricing-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 760px) {
