@@ -30,8 +30,6 @@ html { scroll-behavior: smooth; }
 .feedback-result { min-height: 0; margin: 0; color: #1d4ed8; font-size: 13px; line-height: 1.6; overflow-wrap: anywhere; }
 .feedback-result[data-type="error"] { color: #b91c1c; }
 .feedback-result[data-type="success"] { color: #166534; }
-.feedback-floating-button { position: fixed; right: 18px; bottom: calc(20px + env(safe-area-inset-bottom)); z-index: 90; display: inline-flex; justify-content: center; align-items: center; min-height: 48px; padding: 0 21px; border: 2px solid #fff; border-radius: 26px; background: #2563eb; color: white !important; font-size: 14px; font-weight: 800; text-decoration: none; box-shadow: 0 8px 28px rgba(30, 64, 175, .28); }
-.feedback-floating-button:hover { background: #1d4ed8; transform: translateY(-1px); }
 @media (max-width: 800px) {
   .feedback-section { padding: 44px 0; }
   .feedback-layout { grid-template-columns: 1fr; gap: 21px; }
@@ -41,5 +39,4 @@ html { scroll-behavior: smooth; }
 @media (max-width: 520px) {
   .feedback-intro h2 { font-size: 27px; }
   .feedback-contact-fields { grid-template-columns: 1fr; }
-  .feedback-floating-button { right: 12px; bottom: calc(14px + env(safe-area-inset-bottom)); min-height: 45px; padding: 0 16px; }
 }
