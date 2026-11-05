@@ -790,3 +790,102 @@ html{scroll-padding-top:94px}
 @media (prefers-reduced-motion:reduce){
   .thread-actual{animation:none!important;stroke-dashoffset:0}
 }
+
+
+/* Information architecture refinement: one research path, thematic content.
+   Remove ordinal-looking labels from principle, case, and note collections.
+   Keep the original five concepts but draw the path with unnumbered nodes. */
+.thread-phase{padding-top:54px}
+.thread-node{
+  width:22px;
+  height:22px;
+  min-width:22px;
+  min-height:22px;
+  font-size:0;
+  border:3px solid #7da8e5;
+  background:#fff;
+  box-shadow:0 0 0 7px #f7f9fc,0 4px 12px rgba(8,45,104,.08);
+}
+.thread-first .thread-node{
+  background:#4f46e5;
+  border-color:#4f46e5;
+}
+.thread-last .thread-node{
+  background:#082d68;
+  border-color:#082d68;
+}
+.thread-phase h3{margin-top:31px}
+.thread-desktop-footer span:last-child{
+  font-size:11px;
+  letter-spacing:.015em;
+}
+.offer-line>a{gap:9px}
+.offer-line>a .offer-topic{
+  font-family:var(--sans);
+  font-size:12px;
+  line-height:1.4;
+  letter-spacing:0;
+  color:#0b3f8f;
+  font-weight:750;
+  white-space:nowrap;
+}
+.offer-line>a .arrow-up{
+  font-family:var(--sans);
+  flex:none;
+}
+.principle-label{gap:13px}
+.principle-label::before{
+  content:"";
+  display:block;
+  flex:none;
+  width:19px;
+  height:2px;
+  background:#4f46e5;
+}
+.principle-label>span:first-child{
+  font-family:var(--sans);
+  font-size:13px;
+  font-weight:750;
+  color:#0b3f8f;
+  letter-spacing:.015em;
+}
+.principle-row:hover .principle-label>span:first-child{color:#0b63e5}
+.case-notebook ul{
+  list-style:none;
+  padding:0;
+  margin:26px 0;
+}
+.case-notebook li{
+  grid-template-columns:91px minmax(0,1fr);
+  gap:12px;
+}
+.case-notebook li>span{
+  color:#4f46e5;
+  font-family:var(--sans);
+  font-size:12px;
+  line-height:1.85;
+  font-weight:700;
+  white-space:nowrap;
+}
+.note-index{
+  font-family:var(--sans);
+  font-size:12px;
+  font-weight:700;
+  line-height:1.8;
+  white-space:nowrap;
+  color:#4f46e5;
+}
+.note-item:hover .note-index{color:#0b63e5}
+@media(max-width:1060px){
+  .offer-line>a .offer-topic{font-size:11px}
+}
+@media(max-width:570px){
+  .thread-phase{padding-top:54px}
+  .offer-line>a{font-size:12px;gap:9px}
+  .offer-line>a .offer-topic{font-size:12px}
+  .principle-label>span:first-child{font-size:12px}
+  .case-notebook li{grid-template-columns:74px minmax(0,1fr);gap:9px}
+  .case-notebook li>span{font-size:11px}
+  .note-item{grid-template-columns:65px minmax(0,1fr) 14px;gap:8px}
+  .note-index{font-size:11px}
+}
