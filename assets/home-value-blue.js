@@ -10,7 +10,7 @@
   toggle.addEventListener('click', () => setMenu(menu.hidden));
   menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenu(false)));
   document.addEventListener('keydown', (event) => { if(event.key === 'Escape') setMenu(false); });
-  window.addEventListener('resize', () => { if(window.innerWidth > 860) setMenu(false); });
+  window.addEventListener('resize', () => { if(window.innerWidth > 1060) setMenu(false); });
   const values = [
     { step:'第 01 步 / 认识所有权', number:'01', title:'买股票，就是买公司。',copy:'持有股票，意味着持有企业的一部分股权。先把注意力从每天的股价波动转回企业本身：它卖什么，向谁销售，为什么能持续经营？',link:'#philosophy' },
     { step:'第 02 步 / 观察生意',number:'02',title:'先看看它怎么赚钱。',copy:'选择一家自己熟悉的公司，了解产品、客户、竞争对手和行业。没有理解生意之前，财务数字也很难真正说明问题。',link:'#practice' },
