@@ -47,7 +47,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
 .opening{padding:0;position:relative}.opening-grid{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);max-width:1520px;margin:0 auto;min-height:725px}
 .opening-story{padding:108px min(6vw,112px) 100px max(56px,calc((100vw - 1280px)/2));display:flex;flex-direction:column;align-items:flex-start;position:relative}
 .opening-stripe{width:61px;height:4px;background:var(--accent);margin-bottom:35px}
-.opening h1{font-family:var(--serif);font-size:clamp(51px,4.75vw,78px);font-weight:750;line-height:1.37;letter-spacing:-.07em;color:#223c30;white-space:nowrap;margin-bottom:38px}
+.opening h1{font-family:var(--serif);font-size:clamp(44px,3.8vw,62px);font-weight:750;line-height:1.37;letter-spacing:-.07em;color:#223c30;white-space:nowrap;margin-bottom:38px}
 .opening h1 em{font-style:normal;color:#a66e4b}
 .opening-leading{font-size:19px;line-height:1.9;letter-spacing:.005em;color:#355746;font-weight:680;max-width:650px}
 .opening-copy{max-width:640px;font-size:14px;line-height:2.1;color:#738176;margin-top:12px}
