@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>杜邦大师官网改版 · 三种设计方向对比</title>
+<meta name="description" content="杜邦大师价值投资分享型官网的三种不同首页视觉方案：一封信、研究地图、独立财经杂志。">
+<link rel="icon" href="/logo.svg" type="image/svg+xml">
+<style>
+:root{--ink:#24332d;--muted:#6c786d;--stroke:#d5dfd5;--paper:#f4f5ef}*{box-sizing:border-box}
+html{scroll-behavior:smooth}body{margin:0;background:var(--paper);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink)}a{text-decoration:none;color:inherit}a:focus-visible{outline:3px solid #d0a35c;outline-offset:4px}.wrap{max-width:1240px;width:calc(100% - 70px);margin:auto}
+.topbar{height:72px;display:flex;align-items:center;justify-content:space-between;gap:25px;border-bottom:1px solid #d4ded4}.logo{font-size:16px;font-weight:750;letter-spacing:.02em}.logo b{background:#214539;color:#fff;padding:9px 12px;margin-right:12px;font:700 17px Georgia,serif}.topbar a:last-child{font-size:12px;color:#5d765f}
+main{padding:64px 0 92px}.intro{max-width:830px;margin-bottom:49px}.intro .kicker{font-size:10px;letter-spacing:.17em;font-weight:800;color:#a18257}.intro h1{font-family:"Songti SC","Noto Serif SC",serif;font-size:clamp(38px,4.8vw,67px);line-height:1.45;letter-spacing:-.05em;margin:14px 0 20px;font-weight:750}.intro h1 span{color:#7c986f}.intro p{color:#728077;font-size:15px;line-height:2;max-width:745px}.intro strong{color:#345847}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:21px}.card{display:flex;flex-direction:column;border:1px solid #d7dfd5;background:white;overflow:hidden;min-height:580px;transition:transform .2s,box-shadow .2s}.card:hover{transform:translateY(-6px);box-shadow:0 21px 46px rgba(25,48,34,.1)}
+.card-image{min-height:315px;display:flex;position:relative;overflow:hidden}.mock{padding:29px 30px 34px;position:relative;flex:1}.mock small{display:block;font-size:10px;letter-spacing:.12em}.mock h2{font-size:clamp(28px,2.6vw,40px);font-family:"Songti SC","Noto Serif SC",serif;line-height:1.45;font-weight:800;margin:35px 0 0;letter-spacing:-.045em}.mock p{font-size:12px;line-height:1.9;margin-top:15px;max-width:290px}
+.image-a{background:#efece3;color:#254235}.image-a .mock:after{content:"";position:absolute;right:15px;bottom:17px;width:120px;height:100px;background:#fffdfa;box-shadow:5px 7px 0 #dcd5c7;transform:rotate(8deg);border-top:2px solid #c1a57e}.image-a .mock h2 span{color:#b3875b}.image-a .mock p{color:#687c6a}
+.image-b{background:#183831;color:#f7f2e7}.image-b .mock:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:42px 42px}.image-b .mock>*{position:relative}.image-b .mock h2 span{color:#e0bb86}.image-b .mock p{color:#c2d0c3}.image-b .mock:after{content:"01 — 02 — 03 — 04 — 05";position:absolute;left:29px;bottom:27px;border:1px solid rgba(255,255,255,.34);padding:14px 18px;font:10px Georgia,serif;letter-spacing:.12em;color:#d5dfd4}
+.image-c{background:#fbfaf7;color:#1c2f29}.image-c .mock{border-top:6px solid #1c2f29;margin:20px;padding:13px 9px}.image-c .mock h2{font-size:clamp(31px,3.1vw,46px);line-height:1.25;margin-top:28px}.image-c .mock h2 span{color:#c45c47}.image-c .mock p{color:#495b52}.image-c .mock:after{content:"ISSUE 001 / 2026";position:absolute;bottom:13px;right:10px;font:10px Georgia,serif;color:#b3634a}
+.details{padding:26px 27px 29px;display:flex;flex-direction:column;flex:1;gap:13px}.details .code{font:12px Georgia,serif;letter-spacing:.09em;color:#a18c67}.details h3{font-size:23px;font-weight:750;margin:0}.details p{font-size:13px;color:#78887a;line-height:1.9;flex:1;margin:0}.note{font-size:12px;color:#a29a85}.open{display:flex;align-items:center;justify-content:space-between;gap:15px;background:#244637;color:white;padding:14px 16px;font-size:13px;font-weight:700}.card:hover .open{background:#37684f}
+.bottom{border-top:1px solid #d1d9d1;padding-top:30px;margin-top:52px;display:flex;justify-content:space-between;gap:20px;align-items:center}.bottom p{font-size:12px;color:#69786e;line-height:1.9}.bottom a{padding:12px 17px;border:1px solid #a4b6a6;font-size:12px;font-weight:700;white-space:nowrap}
+footer{background:#1d382d;padding:21px 0;color:#b8cbb8;font-size:11px}.footer-wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:15px}
+@media(max-width:900px){.cards{grid-template-columns:1fr 1fr}.card:last-child{grid-column:span 2;display:grid;grid-template-columns:1fr 1fr;min-height:350px}.card:last-child .card-image{min-height:350px}}
+@media(max-width:650px){.wrap{width:calc(100% - 38px)}.topbar{height:65px}.logo{font-size:14px}.logo b{padding:8px;margin-right:6px}.topbar a:last-child{font-size:11px}.intro{margin-bottom:29px}.intro h1{font-size:34px}.intro p{font-size:13px}.cards{grid-template-columns:1fr;gap:21px}.card,.card:last-child{display:flex;grid-column:auto;min-height:unset}.card-image,.card:last-child .card-image{min-height:265px}.mock h2{font-size:33px;margin-top:22px}.details{padding:22px}.details h3{font-size:21px}.bottom{align-items:stretch;flex-direction:column}main{padding:47px 0 65px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body><header class="topbar wrap"><a class="logo" href="/"><b>D.</b> 杜邦大师 <span style="font-weight:400;color:#7c897c;font-size:12px;margin-left:6px">设计方案对比</span></a><a href="index.html">回看初版 V1 ↗</a></header>
+<main class="wrap">
+<div class="intro"><div class="kicker">DUPONTMASTER / HOMEPAGE DIRECTIONS</div><h1>网站为什么存在，<br><span>应该成为第一句话。</span></h1><p>三版都从<strong>「我也是价值投资的学习者」</strong>开始，先解释创办网站的初衷、用户能获得什么，再自然走向具体公司研究。区别在于表达形式与访问体验。请选择一版完整浏览，尤其观察第一屏和手机端效果。</p></div>
+<section class="cards" aria-label="三种新版官网方案">
+<a class="card" href="letter.html"><div class="card-image image-a"><div class="mock"><small>01 / A PERSONAL LETTER</small><h2>我也在学习<br><span>价值投资。</span></h2><p>写给第一次来到这里的人。</p></div></div><div class="details"><span class="code">DIRECTION A / LETTER</span><h3>一封信 · 投资手记</h3><p>以个人来信的方式建立信任。文字是主角，像翻开一本认真写下的研究手记。突出谦逊、耐心和长期分享。</p><span class="note">适合：强调个人理念与长期品牌感</span><span class="open">浏览完整 A 版 <span aria-hidden="true">↗</span></span></div></a>
+<a class="card" href="map.html"><div class="card-image image-b"><div class="mock"><small>02 / AN INTERACTIVE RESEARCH MAP</small><h2>不知道从哪开始？<br><span>先研究一家公司。</span></h2><p>一张可以点击的问题地图。</p></div></div><div class="details"><span class="code">DIRECTION B / EXPLORATION</span><h3>研究地图 · 互动探索</h3><p>深色数字化研究界面，五个研究节点可切换。访问者不用先读很长的理论，就能选择自己最想弄明白的问题。</p><span class="note">适合：提高零基础用户的动手意愿</span><span class="open">浏览完整 B 版 <span aria-hidden="true">↗</span></span></div></a>
+<a class="card" href="journal.html"><div class="card-image image-c"><div class="mock"><small>03 / AN INDEPENDENT INVESTING JOURNAL</small><h2>你好，<br>我也只是一个<br><span>学习者。</span></h2><p>一份由真实研究组成的独立杂志。</p></div></div><div class="details"><span class="code">DIRECTION C / EDITORIAL</span><h3>独立杂志 · 长期主义</h3><p>大字报刊式排版，真实杜邦大师界面在首屏出现。把创办缘由和产品价值同时呈现，辨识度更强。</p><span class="note">适合：兼顾创始人理念、企业研究与品牌识别</span><span class="open">浏览完整 C 版 <span aria-hidden="true">↗</span></span></div></a>
+</section>
+<div class="bottom"><p>这三版是独立设计原型，均保留完整投资理念、真实公司研究、价值投资笔记和杜邦大师工具入口。<br>官方首页、会员定价和实际研究平台未改动。</p><a href="index.html">查看上一版官网原型 V1 ↗</a></div>
+</main>
+<footer><div class="wrap footer-wrap"><span>© 2026 DupontMaster · 设计预览，不构成投资建议</span><span>三种方向 · 一份初心 · 保留原版</span></div></footer>
+</body></html>
