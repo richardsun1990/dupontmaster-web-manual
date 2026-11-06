@@ -1,0 +1,273 @@
+
+/*
+ DupontMaster website chapters, November 2026.
+ Layout hierarchy: home (purpose), philosophy (why), research (how),
+ practice (examples & reading), tools (implementation), contact.
+ Built as extension of verified brand-blue editorial system.
+*/
+:root{
+  --chapter-blue:#0b63e5;
+  --chapter-navy:#082d68;
+  --chapter-indigo:#4f46e5;
+  --chapter-ink:#0d1b2e;
+  --chapter-muted:#4e5f73;
+  --chapter-paper:#f7f9fc;
+  --chapter-border:#dfe6ef;
+}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body.editorial-site{background:white;color:var(--chapter-ink)}
+body.editorial-site h1,body.editorial-site h2,body.editorial-site h3,body.editorial-site p{margin:0}
+body.editorial-site img{max-width:100%;display:block}
+body.editorial-site .main-nav a[aria-current="page"],
+body.editorial-site .mobile-nav a[aria-current="page"]{color:#0b63e5;font-weight:730}
+body.editorial-site .main-nav a[aria-current="page"]{position:relative}
+body.editorial-site .main-nav a[aria-current="page"]::after{content:"";height:2px;position:absolute;left:0;right:0;bottom:-15px;background:#0b63e5}
+body.editorial-site a:focus-visible,body.editorial-site button:focus-visible{outline:3px solid #7cb8ff;outline-offset:4px}
+body.editorial-site .site-footer{margin-top:0}
+body.editorial-site .footer-main nav{display:flex;flex-wrap:wrap}
+.chapter-container{width:min(1230px,calc(100% - 112px));margin-inline:auto}
+.chapter-wide{width:min(1410px,calc(100% - 112px));margin-inline:auto}
+.chapter-serif{font-family:var(--serif)}
+.chapter-subtle{color:#71829a}
+.chapter-lead{color:#4e5f73;line-height:2.15;font-size:16px;max-width:730px}
+.chapter-text{font-size:15px;line-height:2.15;color:#4e5f73}
+.chapter-eyebrow{font-size:12px;font-weight:700;color:#4f46e5;letter-spacing:.07em}
+.chapter-link{display:inline-flex;align-items:center;gap:13px;color:#0b63e5;font-size:13px;font-weight:750;line-height:1.7;border-bottom:1px solid #b9d1f6;padding-bottom:7px}
+.chapter-link:hover{color:#0757ca}
+.chapter-link svg{height:16px;width:16px}
+.chapter-button{display:inline-flex;align-items:center;justify-content:center;gap:20px;background:#0b63e5;color:#fff;border-radius:4px;padding:16px 23px;font-size:13px;font-weight:730;min-height:52px}
+.chapter-button:hover{background:#0757ca}
+.chapter-button.secondary{background:#eaf2ff;color:#0b3f8f}
+.chapter-button.secondary:hover{background:#d7e7ff}
+.chapter-section{padding:clamp(75px,9vw,135px) 0;border-bottom:1px solid #e5eaf2}
+.chapter-section.alt{background:#f7f9fc}
+.chapter-section-label{font-size:12px;color:#4f46e5;font-weight:700;letter-spacing:.07em;margin-bottom:21px!important}
+.chapter-section h2{font-family:var(--serif);color:#0d1b2e;font-weight:710;line-height:1.49;letter-spacing:-.058em;font-size:clamp(32px,3.8vw,54px)}
+.chapter-section .intro{color:#4e5f73;font-size:15px;line-height:2.2;max-width:680px;margin-top:20px}
+.chapter-two-col{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(46px,7vw,135px);align-items:start}
+.chapter-inset{padding:30px 33px;background:#eff5ff;border-left:3px solid #0b63e5}
+.chapter-inset strong{display:block;color:#082d68;font-size:13px;margin-bottom:15px}
+.chapter-inset p{color:#4e5f73;font-size:14px;line-height:2.1}
+.chapter-prose p+p{margin-top:18px}
+.chapter-thesis{font-family:var(--serif);font-size:clamp(21px,2.3vw,30px);line-height:1.7;font-weight:670;color:#082d68}
+.chapter-cover{background:#fff;min-height:min(660px,80svh);display:flex;align-items:center;position:relative;padding:105px 0 103px;border-bottom:1px solid #dfe6ef}
+.chapter-cover:after{content:"";position:absolute;top:0;right:0;width:36%;height:100%;pointer-events:none;background:linear-gradient(135deg,transparent 30%,rgba(11,99,229,.035) 100%)}
+.chapter-cover-inner{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(230px,.65fr);gap:90px;align-items:end;position:relative;z-index:1}
+.chapter-cover h1{font-family:var(--serif);font-size:clamp(45px,5.3vw,78px);line-height:1.45;letter-spacing:-.07em;font-weight:720;color:#0d1b2e}
+.chapter-cover h1 em{color:#4f46e5;font-style:normal}
+.chapter-cover p{font-size:16px;line-height:2.15;color:#4e5f73;max-width:760px;margin-top:24px}
+.chapter-cover-aside{border-top:2px solid #0b63e5;padding-top:23px;color:#7a8899;line-height:2;font-size:13px}
+.chapter-cover-aside strong{display:block;color:#0b3f8f;font-size:15px;margin-bottom:8px;font-family:var(--serif)}
+.chapter-footer-next{padding:75px 0;background:#082d68;color:#fff}
+.chapter-footer-next .chapter-container{display:flex;align-items:center;justify-content:space-between;gap:40px}
+.chapter-footer-next h2{font-family:var(--serif);font-size:clamp(26px,3vw,40px);line-height:1.5;color:#fff;letter-spacing:-.04em}
+.chapter-footer-next p{font-size:13px;line-height:2;color:#cedeff;margin-top:10px}
+.chapter-footer-next .chapter-button{background:#fff;color:#082d68;flex:none}
+.chapter-footer-next .chapter-button:hover{background:#eaf2ff}
+
+/* HOME: full-screen founder-first introduction, with chapter directory below */
+.landing-intro{min-height:calc(100svh - 80px);display:flex;align-items:center;border-bottom:1px solid #dfe6ef}
+.landing-intro-inner{width:min(1260px,calc(100% - 112px));margin:auto;padding:clamp(42px,7vh,100px) 0}
+.landing-intro h1{font-family:var(--serif);font-size:clamp(42px,5.7vw,88px);line-height:1.44;letter-spacing:-.074em;font-weight:750;max-width:1190px}
+.landing-intro h1 em{font-style:normal;color:#4f46e5}
+.landing-intro .landing-mission{font-family:var(--serif);font-size:clamp(22px,2.4vw,35px);color:#082d68;font-weight:720;line-height:1.68;max-width:940px;margin:clamp(23px,4vh,42px) 0 14px}
+.landing-intro .landing-detail{color:#4e5f73;max-width:840px;line-height:2.15;font-size:15px}
+.landing-ctas{display:flex;gap:16px 26px;flex-wrap:wrap;align-items:center;margin-top:clamp(25px,4vh,46px)}
+.landing-promise{padding:58px 0;background:#f7f9fc;border-bottom:1px solid #dfe6ef}
+.landing-promise-inner{display:flex;gap:45px;align-items:center;justify-content:space-between}
+.landing-promise strong{font-family:var(--serif);font-size:clamp(20px,2vw,27px);line-height:1.7;color:#082d68;font-weight:700}
+.landing-promise p{max-width:510px;color:#61738a;font-size:13px;line-height:2}
+.landing-index{padding:clamp(84px,9vw,140px) 0}
+.landing-index-heading{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:end;margin-bottom:54px}
+.landing-index-heading h2{font-size:clamp(35px,4.5vw,62px);font-family:var(--serif);letter-spacing:-.065em;line-height:1.45;font-weight:710}
+.landing-index-heading p{color:#4e5f73;font-size:15px;line-height:2}
+.chapter-directory{border-top:1px solid #dfe6ef}
+.chapter-directory a{display:grid;grid-template-columns:220px minmax(0,1fr) 275px 28px;gap:18px;align-items:center;border-bottom:1px solid #dfe6ef;padding:32px 9px;transition:background .2s,padding .2s}
+.chapter-directory a:hover{padding-left:20px;background:#f5f9ff}
+.chapter-directory .directory-type{color:#4f46e5;font-size:13px;font-weight:750}
+.chapter-directory h3{font-family:var(--serif);font-size:clamp(24px,2.5vw,35px);letter-spacing:-.04em;line-height:1.5;color:#0d1b2e}
+.chapter-directory p{font-size:13px;line-height:1.9;color:#687d94}
+.chapter-directory .directory-arrow{font-size:24px;color:#0b63e5;text-align:right}
+.landing-coda{padding:66px 0 73px;background:#fff}
+.landing-coda-inner{display:flex;align-items:center;justify-content:space-between;gap:60px}
+.landing-coda h2{font-family:var(--serif);font-size:clamp(25px,3vw,38px);line-height:1.5;letter-spacing:-.05em}
+.landing-coda p{color:#71829a;line-height:2;font-size:13px;margin-top:10px}
+
+/* PHILOSOPHY: essays not a second checklist */
+.philosophy-article{padding:95px 0;border-bottom:1px solid #e0e7f1}
+.philosophy-article:nth-child(even){background:#f7f9fc}
+.philosophy-article .chapter-two-col{align-items:center}
+.philosophy-article h2{font-family:var(--serif);font-size:clamp(34px,3.65vw,52px);line-height:1.58;letter-spacing:-.062em;font-weight:720;color:#0d1b2e;margin:15px 0 22px}
+.philosophy-article .philosophy-name{font-size:13px;color:#4f46e5;font-weight:760}
+.philosophy-article .chapter-prose{font-size:15px;color:#4e5f73;line-height:2.25}
+.philosophy-article .chapter-inset{max-width:470px}
+.philosophy-aside{background:#082d68;color:#fff;padding:90px 0}
+.philosophy-aside h2{font-family:var(--serif);font-size:clamp(31px,3.8vw,52px);line-height:1.58;letter-spacing:-.055em;font-weight:710;color:#fff}
+.philosophy-aside p{max-width:790px;font-size:15px;color:#cedcf0;line-height:2.2;margin-top:26px}
+
+/* RESEARCH: exactly one five-concept line, then explanations */
+.method-opening{padding:110px 0 48px}
+.method-opening h1{font-family:var(--serif);font-size:clamp(44px,5vw,70px);line-height:1.5;letter-spacing:-.067em;font-weight:740}
+.method-opening h1 em{font-style:normal;color:#4f46e5}
+.method-opening p{color:#4e5f73;line-height:2.1;font-size:15px;max-width:710px;margin-top:20px}
+.editorial-site .story-thread{min-height:calc(100svh - 80px)}
+.method-reading{padding:115px 0 100px}
+.method-reading-header{display:grid;grid-template-columns:1fr 1fr;gap:65px;padding-bottom:43px;border-bottom:1px solid #dfe6ef}
+.method-reading-header h2{font-family:var(--serif);font-size:clamp(31px,3.6vw,48px);font-weight:700;line-height:1.55;letter-spacing:-.055em}
+.method-reading-header p{color:#4e5f73;font-size:14px;line-height:2.1}
+.method-entries{display:grid}
+.method-entry{scroll-margin-top:95px;display:grid;grid-template-columns:240px minmax(0,1fr);gap:clamp(34px,6vw,92px);padding:46px 0;border-bottom:1px solid #dfe6ef}
+.method-entry h3{font-family:var(--serif);font-size:clamp(25px,2.5vw,37px);line-height:1.52;letter-spacing:-.04em;color:#082d68}
+.method-entry p{font-size:15px;line-height:2.2;color:#4e5f73}
+.method-entry .method-question{font-weight:650;color:#0d1b2e;margin-bottom:12px}
+.method-entry .method-signals{display:block;color:#4f46e5;font-size:12px;margin-top:16px;font-weight:650}
+.method-notes{background:#f7f9fc;padding:70px 0}
+.method-notes h2{font-family:var(--serif);font-size:clamp(28px,3vw,42px);line-height:1.55;font-weight:700}
+.method-notes p{font-size:14px;line-height:2.2;color:#4e5f73;margin:16px 0 22px;max-width:900px}
+
+/* PRACTICE: actual published company examples, not placeholder article links */
+.practice-feature{padding:95px 0;background:#f7f9fc;border-bottom:1px solid #dfe6ef}
+.practice-feature h2{font-family:var(--serif);font-size:clamp(31px,3.8vw,55px);line-height:1.5;letter-spacing:-.05em;font-weight:720}
+.practice-feature .practice-lead{margin-top:20px;color:#4e5f73;line-height:2.15;max-width:780px}
+.practice-feature-layout{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(275px,.8fr);margin-top:45px;border:1px solid #dfe6ef;background:#fff}
+.practice-screen{padding:22px;background:#fff;border-right:1px solid #dfe6ef}
+.practice-screen img{height:auto;width:100%;border:1px solid #e2e9f2}
+.practice-screen figcaption{margin-top:12px;font-size:12px;color:#8798ab;line-height:1.8}
+.practice-questions{padding:35px 32px}
+.practice-questions h3{font-family:var(--serif);font-size:24px;line-height:1.5;font-weight:710;color:#082d68}
+.practice-questions dl{margin:23px 0 27px}
+.practice-questions dt{font-size:13px;color:#4f46e5;font-weight:750;margin:18px 0 6px}
+.practice-questions dd{font-size:13px;line-height:1.9;color:#4e5f73;margin:0}
+.practice-library{padding:104px 0}
+.practice-library h2{font-family:var(--serif);font-size:clamp(32px,3.6vw,51px);line-height:1.55;letter-spacing:-.05em;font-weight:720}
+.practice-library .library-intro{font-size:14px;line-height:2.1;color:#4e5f73;margin-top:15px;max-width:810px}
+.practice-articles{border-top:1px solid #dfe6ef;margin-top:49px}
+.practice-article{border-bottom:1px solid #dfe6ef;display:grid;grid-template-columns:155px 1fr 25px;gap:25px;align-items:start;padding:29px 8px;transition:background .2s}
+.practice-article:hover{background:#f4f8fe}
+.practice-article small{color:#4f46e5;font-size:12px;line-height:1.8}
+.practice-article h3{font-family:var(--serif);font-size:clamp(19px,2vw,25px);line-height:1.6;font-weight:700;color:#0d1b2e}
+.practice-article p{font-size:13px;color:#6b7b90;margin-top:8px;line-height:1.95}
+.practice-article .arrow{font-size:20px;color:#0b63e5}
+.practice-disclaimer{font-size:12px;color:#8994a3;line-height:1.9;margin-top:21px}
+
+/* TOOLS: functions follow investor questions, no new flow-number system */
+.tools-feature{padding:98px 0;background:#f7f9fc}
+.tools-feature-inner{display:grid;grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);gap:65px;align-items:center}
+.tools-feature h2{font-family:var(--serif);font-size:clamp(34px,3.8vw,52px);line-height:1.55;letter-spacing:-.05em;font-weight:700}
+.tools-feature p{color:#4e5f73;line-height:2.2;font-size:14px;margin-top:21px}
+.tools-screenshot{padding:12px;background:#fff;border:1px solid #dfe6ef;box-shadow:0 20px 55px rgba(8,45,104,.07)}
+.tools-screenshot img{width:100%;height:auto}
+.tools-screenshot figcaption{font-size:12px;color:#8292a6;line-height:1.8;padding:14px 12px 5px}
+.tool-capabilities{padding:100px 0}
+.tool-capabilities h2{font-family:var(--serif);font-size:clamp(32px,3.9vw,53px);font-weight:710;line-height:1.5;letter-spacing:-.055em}
+.tool-capabilities>div>p{color:#4e5f73;font-size:14px;line-height:2;margin-top:18px;max-width:730px}
+.capability-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:40px;border-top:1px solid #dfe6ef;border-left:1px solid #dfe6ef}
+.capability{padding:34px 32px 39px;border-right:1px solid #dfe6ef;border-bottom:1px solid #dfe6ef;min-height:204px}
+.capability h3{font-family:var(--serif);font-size:24px;line-height:1.5;color:#082d68;font-weight:710;margin-bottom:13px}
+.capability p{font-size:13px;color:#687d90;line-height:2}
+.membership-compact{padding:95px 0;background:#f7f9fc}
+.membership-compact .membership-layout{grid-template-columns:minmax(0,.83fr) minmax(0,1.17fr)}
+.membership-compact .membership-card{min-height:308px}
+
+/* FEEDBACK: preserve the real endpoint, form fields, privacy consent */
+.feedback-chapter{padding:80px 0 105px}
+.feedback-chapter .feedback-section{padding:0;border:0;background:transparent}
+.feedback-chapter .feedback-layout{width:100%}
+.feedback-chapter .feedback-form{box-shadow:0 12px 34px rgba(8,45,104,.05)}
+.feedback-chapter .feedback-intro{padding-top:12px}
+
+@media(max-width:1200px){
+ .chapter-directory a{grid-template-columns:150px minmax(0,1fr) 205px 25px}
+ .chapter-cover-inner{gap:50px}
+ .tools-feature-inner{gap:40px}
+}
+@media(max-width:1060px){
+ .chapter-container,.chapter-wide,.landing-intro-inner{width:calc(100% - 76px)}
+ .chapter-cover{min-height:550px}
+ .chapter-cover-inner{grid-template-columns:1fr 260px;gap:36px}
+ .chapter-directory a{grid-template-columns:130px minmax(0,1fr) 175px 22px}
+ .editorial-site .site-header .main-nav a[aria-current="page"]::after{display:none}
+ .membership-compact .membership-layout{grid-template-columns:1fr;gap:35px}
+}
+@media(max-width:860px){
+ .chapter-container,.chapter-wide,.landing-intro-inner{width:calc(100% - 56px)}
+ .landing-intro{min-height:calc(100svh - 69px)}
+ .landing-intro h1{font-size:clamp(43px,7vw,64px)}
+ .landing-index-heading{grid-template-columns:1fr;gap:20px}
+ .chapter-directory a{grid-template-columns:116px minmax(0,1fr) 22px;gap:14px}
+ .chapter-directory p{grid-column:2;grid-row:2}
+ .chapter-directory .directory-arrow{grid-column:3;grid-row:1/3}
+ .chapter-two-col,.chapter-cover-inner,.method-reading-header,.practice-feature-layout,.tools-feature-inner{grid-template-columns:1fr;gap:34px}
+ .chapter-cover{min-height:500px;padding:88px 0 73px}
+ .chapter-cover-aside{max-width:560px}
+ .practice-screen{border-right:0;border-bottom:1px solid #dfe6ef}
+ .practice-article{grid-template-columns:108px 1fr 22px;gap:18px}
+ .capability-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .chapter-footer-next .chapter-container{align-items:flex-start;flex-direction:column}
+ .landing-promise-inner,.landing-coda-inner{align-items:flex-start;flex-direction:column;gap:20px}
+ .method-entry{grid-template-columns:170px 1fr;gap:30px}
+}
+@media(max-width:570px){
+ .chapter-container,.chapter-wide,.landing-intro-inner{width:calc(100% - 42px)}
+ .landing-intro-inner{padding:30px 0}
+ .landing-intro h1{font-size:clamp(32px,8.9vw,47px);line-height:1.45}
+ .landing-intro .landing-mission{font-size:clamp(19px,5.7vw,27px);line-height:1.65;margin:20px 0 11px}
+ .landing-intro .landing-detail{font-size:13px;line-height:1.85}
+ .landing-ctas{gap:13px;margin-top:24px}
+ .chapter-button{min-height:47px;padding:13px 19px}
+ .landing-promise{padding:39px 0}
+ .landing-index{padding:74px 0 82px}
+ .landing-index-heading h2{font-size:34px}
+ .landing-index-heading p{font-size:13px}
+ .chapter-directory a{grid-template-columns:1fr 25px;padding:23px 4px;gap:5px}
+ .chapter-directory .directory-type{grid-column:1;grid-row:1;font-size:12px}
+ .chapter-directory h3{grid-column:1;grid-row:2;font-size:24px}
+ .chapter-directory p{grid-column:1;grid-row:3;font-size:12px}
+ .chapter-directory .directory-arrow{grid-column:2;grid-row:1/4}
+ .landing-coda{padding:48px 0}
+ .chapter-cover{min-height:auto;padding:87px 0 70px}
+ .chapter-cover h1{font-size:clamp(37px,9.1vw,51px);line-height:1.51}
+ .chapter-cover p{font-size:14px;line-height:1.98}
+ .chapter-cover-aside strong{font-size:14px}
+ .chapter-section{padding:70px 0}
+ .chapter-section h2{font-size:34px}
+ .chapter-prose p{font-size:14px}
+ .chapter-inset{padding:25px 23px}
+ .philosophy-article{padding:70px 0}
+ .philosophy-article h2{font-size:34px}
+ .philosophy-article .chapter-prose{font-size:14px}
+ .philosophy-aside{padding:70px 0}
+ .method-opening{padding:76px 0 20px}
+ .method-opening h1{font-size:38px}
+ .method-opening p{font-size:13px}
+ .method-reading{padding:73px 0}
+ .method-entry{grid-template-columns:1fr;gap:8px;padding:32px 0}
+ .method-entry h3{font-size:27px}
+ .method-entry p{font-size:14px}
+ .practice-feature{padding:73px 0}
+ .practice-questions{padding:27px 21px}
+ .practice-library{padding:75px 0}
+ .practice-article{grid-template-columns:1fr 20px;gap:9px;padding:23px 4px}
+ .practice-article small{grid-column:1}
+ .practice-article h3,.practice-article p{grid-column:1}
+ .practice-article .arrow{grid-column:2;grid-row:1/4}
+ .tools-feature{padding:73px 0}
+ .tool-capabilities{padding:73px 0}
+ .capability-grid{grid-template-columns:1fr}
+ .capability{min-height:0;padding:24px 23px}
+ .membership-compact{padding:73px 0}
+ .feedback-chapter{padding:48px 0 75px}
+ .feedback-chapter .feedback-layout{width:100%}
+ .chapter-footer-next{padding:59px 0}
+ .chapter-footer-next h2{font-size:28px}
+}
+@media(max-width:570px) and (max-height:715px){
+ .landing-intro h1{font-size:clamp(30px,8vw,39px)}
+ .landing-intro .landing-mission{font-size:19px;margin:14px 0 8px}
+ .landing-intro .landing-detail{font-size:12px;line-height:1.75}
+ .landing-ctas{margin-top:16px}
+ .landing-intro-inner{padding:18px 0}
+}
+@media(prefers-reduced-motion:reduce){
+ .chapter-directory a{transition:none}
+}
