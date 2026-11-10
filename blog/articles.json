@@ -1,5 +1,25 @@
 [
   {
+    "id": "china-consumption-history",
+    "title": "中国消费史：从买不到，到为什么愿意买",
+    "tag": "投资干货",
+    "tags": [
+      "中国消费史",
+      "消费升级",
+      "消费降级",
+      "渠道变迁",
+      "品牌",
+      "城镇化",
+      "投资框架",
+      "消费品"
+    ],
+    "date": "2026-11-10",
+    "image": "https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/china-consumption-history/20261110-cover.webp",
+    "slug": "china-consumption-history",
+    "description": "从 1979 年的自行车、缝纫机、收音机，到冰箱彩电、空调汽车，再到今天的茶饮、潮玩、演唱会——这不是简单的一部消费升级史。贯穿中国消费史的轴线，是消费者选择权的扩大，以及企业竞争优势随之转移。理解这条轴线，才能判断：过去曾经成就一家公司的历史条件，今天还在不在？",
+    "href": "/blog/articles/china-consumption-history.html"
+  },
+  {
     "id": "byhealth-earnings-quality-risk",
     "title": "汤臣倍健：为什么财报越优秀，投资反而可能越危险？",
     "tag": "企业分析",
