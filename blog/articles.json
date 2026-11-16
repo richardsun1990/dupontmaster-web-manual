@@ -1,5 +1,25 @@
 [
   {
+    "id": "ninebot-five-year-review",
+    "title": "九号公司五年业绩会复盘：管理层说过的话，后来做到了多少？",
+    "tag": "企业分析",
+    "tags": [
+      "九号公司",
+      "业绩会复盘",
+      "电动两轮车",
+      "割草机器人",
+      "去小米化",
+      "管理层兑现",
+      "股东回报",
+      "全球化"
+    ],
+    "date": "2026-11-16",
+    "image": "https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/ninebot-five-year-review/20261116-cover.webp",
+    "slug": "ninebot-five-year-review",
+    "description": "九号公司2022—2026年五年业绩会复盘：10场官方记录、126条投资者问答，逐一核对管理层当初的目标兑现了多少，战略判断发生了哪些变化，以及2026年利润下滑背后的真正考验。",
+    "href": "/blog/articles/ninebot-five-year-review.html"
+  },
+  {
     "id": "hikvision-roe-decline",
     "title": "重新认识海康威视：30%的ROE去哪了？",
     "tag": "企业分析",
