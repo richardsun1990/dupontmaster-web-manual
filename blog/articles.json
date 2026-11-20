@@ -1,5 +1,25 @@
 [
   {
+    "id": "baijiu-thirty-years-history",
+    "title": "白酒三十年发展史",
+    "tag": "投资干货",
+    "tags": [
+      "白酒",
+      "白酒历史",
+      "白酒行业",
+      "茅台",
+      "五粮液",
+      "泸州老窖",
+      "价格放开",
+      "行业周期"
+    ],
+    "date": "2026-11-20",
+    "image": "https://dupontmaster.oss-cn-hangzhou.aliyuncs.com/blog/admin/baijiu-thirty-years-history/20261120-cover.webp",
+    "slug": "baijiu-thirty-years-history",
+    "description": "从1988年名酒价格放开到2026年存量竞争，复盘中国白酒三十多年的发展史：央视广告大战、黄金十年、政策冲击、消费升级与酱酒热，以及今天年轻人和商务场景变化下的新考验。白酒企业真正的护城河究竟是什么？",
+    "href": "/blog/articles/baijiu-thirty-years-history.html"
+  },
+  {
     "id": "akeso-biopharma-commercialization",
     "title": "康方生物：从双抗研发到商业化兑现，十余年走到了哪一步？",
     "tag": "企业分析",
